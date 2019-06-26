@@ -1,7 +1,6 @@
 
 package com.onco.pages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,7 +25,9 @@ public class Login extends BaseClass {
     WebElement OTP;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[3]/button")
-    WebElement LoginButton;
+    WebElement ProceedButton;
+    
+    
   
    
 	
@@ -50,7 +51,7 @@ public class Login extends BaseClass {
     	  PhoneNumber.sendKeys(Phone);
     	  System.out.print("Phone Number present");
     	}else {
-    	  System.out.print("Phone Num,ber not present");
+    	  System.out.print("Phone Number not present");
     		
     	}
     	
@@ -80,17 +81,19 @@ public class Login extends BaseClass {
     	}else {
     		System.out.print("OTP is not present");
     	}
-    	if(LoginButton.isDisplayed()) {
-    		LoginButton.click();
-    		System.out.print("Loginbutton present");
+    	if(ProceedButton.isDisplayed()) {
+    		ProceedButton.click();
+    		System.out.print("Proceed button present");
     	}else {
-    		System.out.print("Loginbutton not present");
-    		Thread.sleep(3000);
+    		
+    		System.out.print("Proceed button not present");
+    		
     	}
     		
     
        }
     	
+    
     }
     
     

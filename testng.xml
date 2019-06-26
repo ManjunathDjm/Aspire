@@ -4,7 +4,7 @@
     <parameter name="browser" value="chrome"/>
   <test thread-count="1" name="Test">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointment"/>
+      <class name="com.onco.webtests.NewUserAppointment_Payathospital"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -14,12 +14,6 @@ import com.onco.util.PropertiesData;
 import com.onco.util.TestUtil;
 
 public class BaseClass {
-	
-    
-	public static final String USERNAME = "manjunathdj1";
-    public static final String AUTOMATE_KEY = "PkujzMABisfx9BvMUtF5";
-    public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
-	  
 	  
 	public static WebDriver driver;
 	Properties prop=new Properties();
@@ -31,18 +25,17 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
                 System.setProperty("webdriver.chrome.driver", "/Users/manjunathdj/Applications/OncoWeb/exe/chromedriver");
                 driver = new ChromeDriver();
+                driver.manage().deleteAllCookies();
+                Thread.sleep(5000);
                 driver.manage().window().maximize();
-        
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+        		
         		
             } else if (browser.equalsIgnoreCase("Firefox")) {
                 System.setProperty("webdriver.chrome.driver", "/Users/manjunathdj/Applications/");
                 driver = new FirefoxDriver();
-                driver.manage().window().maximize();
-              
- 
-                
+                driver.manage().window().maximize();            
                          
       }
             

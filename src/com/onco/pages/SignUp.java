@@ -37,23 +37,23 @@ public class SignUp extends BaseClass{
     WebElement StartNowButton;
     
     
-	public SignUp() {
+public SignUp() {
 		PageFactory.initElements(driver, this);
-	}
+    	}
 	
-    public String verifyHomeTitle() {
+      public String verifyHomeTitle() {
 		
 		return driver.getTitle();
 		
-	}
+	 }
 	
-    public void SignupPage(String name,String email, String phone) throws InterruptedException  {
+public void SignupPage(String name,String email, String phone) throws InterruptedException  {
     	
        	if(SignUpIcon.isDisplayed()) {
-          SignUpIcon.click();
-   	      System.out.println("Signup icon is Present");
+           SignUpIcon.click();
+   	       System.out.println("Signup icon is Present");
        	} else {
-          System.out.println("Signup icon is Absent");
+           System.out.println("Signup icon is Absent");
     		
   	
     }
@@ -63,32 +63,32 @@ public class SignUp extends BaseClass{
           System.out.println("Signuplink is Present");	    
 	    }else {
 	      System.out.println("Signuplink is Absent");
-		
+		  
    }
     	
     	
         if(Name.isDisplayed()) {	
-	      Name.sendKeys(name);
-	      System.out.print("Name is present");
+	       Name.sendKeys(name);
+	       System.out.print("Name is present");
         } else {
-   	      System.out.println("Name not present");
+   	       System.out.println("Name not present");
    
    }
     	
         if(Email.isDisplayed()) {
-          Email.sendKeys(email);
-          System.out.print("Email is present");
+           Email.sendKeys(email);
+           System.out.print("Email is present");
         } else {
-   	      System.out.print("Email is absent");
+   	       System.out.print("Email is absent");
    
    }
 	
         if(PhoneNumber.isDisplayed()) {	 
-          PhoneNumber.sendKeys(phone);
-          System.out.print("Phone Number is present");
+           PhoneNumber.sendKeys(phone);
+           System.out.print("Phone Number is present");
         }else {	 
-          System.out.print("Phone number  is absent");
-          Thread.sleep(3000);
+           System.out.print("Phone number  is absent");
+           Thread.sleep(3000);
    
    }
 		
@@ -96,34 +96,32 @@ public class SignUp extends BaseClass{
 		
  }
    
-  
-    
-   public void CountryCode() throws Exception {
+     
+public void CountryCode() throws Exception {
     	
       if(CountryCode.isDisplayed()) {
-        Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
-        countrycode.selectByIndex(0);
-        CountryCode.click();
-        System.out.print("Country code is present");
+         Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
+         countrycode.selectByIndex(0);
+         CountryCode.click();
+         System.out.print("Country code is present");
       }else {
-        System.out.print("Country code not present");
-        Thread.sleep(3000);
+         System.out.print("Country code not present");
+         Thread.sleep(3000);
     
       
       }
    
    }
-
-    	
-    public void patientQuery() throws Exception {
+   	
+public void patientQuery() throws Exception {
     	
       if(PatientQuery.isDisplayed()) {
-        Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
-        patientquery.selectByIndex(1);
-        PatientQuery.click();
-        System.out.print("Patient Query present");
+         Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
+         patientquery.selectByIndex(1);
+         PatientQuery.click();
+         System.out.print("Patient Query present");
       }else {
-        System.out.print("patient Query not present");
+         System.out.print("patient Query not present");
       }
       
       if(StartNowButton.isDisplayed()) {
@@ -135,8 +133,14 @@ public class SignUp extends BaseClass{
       }
     	
     }
+ 
+ }	 
+
+ 
+
+ 
     
-  
-    }
+
+
 
   

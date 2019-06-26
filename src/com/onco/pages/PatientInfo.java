@@ -1,6 +1,5 @@
 package com.onco.pages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,6 +35,7 @@ public class PatientInfo extends BaseClass{
     WebElement Continuebutton;
     
     
+    
 	public PatientInfo() {
 		PageFactory.initElements(driver, this);
 	}
@@ -48,29 +48,55 @@ public class PatientInfo extends BaseClass{
 	
     public void patientInfo(String patientname) throws InterruptedException  {
     	
-    	
-		PatientName.sendKeys(patientname);
+    	if(PatientName.isDisplayed()) {
+    		PatientName.sendKeys(patientname);
+    		System.out.print("Patient name present");
+    	}else {
+    		System.out.print("patient name not present");
+    		
+    	}
 		
-		Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
-		TypeofCancer.selectByIndex(0);
-		typeofcancer.click();
+    	if(typeofcancer.isDisplayed()) {
+		   Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+		   TypeofCancer.selectByIndex(1);
+		   typeofcancer.click();
+		   System.out.println("Cancer type dropdown present");
+		}else {
+		   System.out.println("Cancer type dropdown not present");
+		}
 		
-		Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
-		Cancerstage.selectByIndex(0);
-		cancerstage.click();
+		if(cancerstage.isDisplayed()) {
+		  Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
+		  Cancerstage.selectByIndex(1);
+		  cancerstage.click();
+		  System.out.println("cancer stage dropdown present");
+		}else {
+		  System.out.print("Cancer stage dropdown not present");
+		}
 		
-		Select Condition = new Select(driver.findElement(By.name("condition")));
-		Condition.selectByIndex(0);
-		generalcondition.click();
+		if(generalcondition.isDisplayed()) {
+		  Select Condition = new Select(driver.findElement(By.name("condition")));
+		  Condition.selectByIndex(2);
+	      generalcondition.click();
+	      System.out.println("General condition dropdown present");
+		}else {
+		  System.out.println("General condition dropdown not present");
+		}
 		
-		Continuebutton.click();
-    	Thread.sleep(3000);
+		if(Continuebutton.isDisplayed()) {
+		   Continuebutton.click();
+		   System.out.println("Continue button present");
+		}
+		else {
+		   System.out.println("Continue button not present");
+		   Thread.sleep(3000);
+		}
 		
-		
-    }
+   }
   
     
-    }
+    
+}
     
     	
    
