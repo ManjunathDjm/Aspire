@@ -1,13 +1,25 @@
 package com.onco.pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 import com.onco.testbase.BaseClass;
+import org.apache.log4j.Logger;
+
+/**
+ * 
+ * @author manjunathdj
+ *
+ */
 
 public class Appointment extends BaseClass {
+	
 
+
+	private static final Logger logger = Logger.getLogger(Appointment.class);
 
 	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[1]/div/div[3]/div/div[2]/div/div[2]/button")
 	WebElement bookappointment;
@@ -29,49 +41,45 @@ public class Appointment extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-    public String verifyHomeTitle() {
-		
-		return driver.getTitle();
-		
-	}
-	
-    public void appointment() throws InterruptedException  {
+    public void appointment()   {
     	
-    	if(bookappointment.isDisplayed()) {
-    		bookappointment.click();
-    		Thread.sleep(3000);
-    	   System.out.print("Book appointment is present");
-    	} else {
-    	   System.out.print("Book appointment is not present");
-    	}
-    	
-    	if(cal.isDisplayed()) {	
-    		driver.switchTo().defaultContent();
-    		cal.click();
-    		Thread.sleep(3000);
-    	   System.out.print("calendar day is displayed");
-    	} else {
-    	   System.out.print("calendar day is not displayed");
-    	}
-    	if(calendar_time.isDisplayed()) {
-    	   calendar_time.click();
-    	   Thread.sleep(3000);
-    	   System.out.println("calendar day is displayed");	
+    	    
+    	 if (logger.isDebugEnabled()) {
+			logger.debug("entering appointment()");
+		}
+		try {
+    	    	
+    	    	bookappointment.click();
+        		driver.switchTo().defaultContent();
+        		cal.click();
+        	    calendar_time.click();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting appointment()");
+		}
+    	  
     }
-  }
-    
-    public void exploremore() throws InterruptedException {
+  
+    public void exploreMore()  {
     	
-    	if(calendar.isDisplayed()) {
-    		calendar.click();
-    	   System.out.println("explore options link is present");
-    	} else {
-    	   System.out.print("explore options link is not present");
-    	   Thread.sleep(3000);
+    		
+    		if (logger.isDebugEnabled()) {
+			logger.debug("entering exploreMore()");
+		}
+			try {
+    			calendar.click();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (logger.isDebugEnabled()) {
+				logger.debug("exiting exploreMore()");
+			}
+    	
     	}
-    	
-    	
-    }
-    }
+    }   	    
 
   

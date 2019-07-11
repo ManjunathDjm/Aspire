@@ -1,23 +1,28 @@
 package com.onco.pages;
 
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
+
 import com.onco.testbase.BaseClass;
+import org.apache.log4j.Logger;
 
 public class InitialAssessment extends BaseClass {
 
     
-    @FindBy(xpath="/html[1]/body[1]/app-root[1]/select-service[1]/initial-assessment-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]")
-    WebElement initial_assessment_close;
+    private static final Logger logger = Logger.getLogger(InitialAssessment.class);
+
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/select-service[1]/initial-assessment-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]")
+    WebElement initiAlassessmentClose;
     
     @FindBy(partialLinkText = "VIEW ASSESSME")
-    WebElement view_assessment;
+    WebElement viewAssessment;
     
     @FindBy(xpath="//div[@class='download-assessment cursor-pointer']")
-    WebElement download_assessment;
+    WebElement downloadAssessment;
     
   
    
@@ -26,41 +31,68 @@ public class InitialAssessment extends BaseClass {
 	
 	}
        
-   public void initial_assessment_close() throws InterruptedException {
+   public void initialAssessmentClose()  {
 	   
-	   Thread.sleep(3000);
+	   if (logger.isDebugEnabled()) {
+		logger.debug("entering initialAssessmentClose()");
+	}
+	try {
+		Thread.sleep(4000);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
 	   driver.switchTo().defaultContent();
-	   initial_assessment_close.click();
+	   initiAlassessmentClose.click();
+	if (logger.isDebugEnabled()) {
+		logger.debug("exiting initialAssessmentClose()");
+	}
 	  
 	   
    }
    
-   public void view_assessment() throws InterruptedException {
+   public void viewAssessment()  {
 	   
-	    if(view_assessment.isDisplayed()) {
-	    	view_assessment.click();
-	    	System.out.println("view assessment present");
-	    }else {
-	    	 System.out.println("view assessment not present");
-	    	 Thread.sleep(3000);
-	    }
+	    if (logger.isDebugEnabled()) {
+		logger.debug("entering viewAssessment()");
+	}
+		try {
+	        	viewAssessment.click();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting viewAssessment()");
+		}
    }
 	 
-   public void download_assessment() throws InterruptedException {
+   public void downloadAssessment()  {
 	   
-	   if(download_assessment.isDisplayed()) {
-		   download_assessment.click();
-	   }else {
-		   System.out.println("download assessment not present");
-		   Thread.sleep(3000);
+	 
+		if (logger.isDebugEnabled()) {
+		logger.debug("entering downloadAssessment()");
+	}
+		try {
+			   downloadAssessment.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting downloadAssessment()");
+		}
 	   }
 	 
-	  
    }
+   
+ 
+	  
+   
      
     	
     	
-    }
+
     
 
     

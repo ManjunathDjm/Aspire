@@ -1,38 +1,42 @@
 package com.onco.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.onco.testbase.BaseClass;
+import org.apache.log4j.Logger;
 
 public class PatientInfo extends BaseClass{
 
 
 	
+	private static final Logger logger = Logger.getLogger(PatientInfo.class);
+
 	@FindBy(name = "patientName")
-	WebElement PatientName;
+	WebElement patientName;
 	
 	@FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[2]/div[2]/select")
-	WebElement typeofcancer;
+	WebElement typeofCancer;
 	
 	@FindBy(xpath = "/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[3]/div[2]/select")
-	WebElement cancerstage;
+	WebElement cancerStage;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
-	WebElement Email;
+	WebElement email;
 	
 	@FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
-	WebElement generalcondition;
+	WebElement generalCondition;
 
 	
     @FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
-    WebElement Fileupload;
+    WebElement fileupload;
     
     @FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
-    WebElement Continuebutton;
+    WebElement continueButton;
     
     
     
@@ -42,63 +46,47 @@ public class PatientInfo extends BaseClass{
 	
     public String verifyHomeTitle() {
 		
+		if (logger.isDebugEnabled()) {
+			logger.debug("entering verifyHomeTitle()");
+			logger.debug("exiting verifyHomeTitle()");
+		}
 		return driver.getTitle();
 		
 	}
 	
-    public void patientInfo(String patientname) throws InterruptedException  {
+    public void PatientInfo(String patientname)  {
     	
-    	if(PatientName.isDisplayed()) {
-    		PatientName.sendKeys(patientname);
-    		System.out.print("Patient name present");
-    	}else {
-    		System.out.print("patient name not present");
-    		
-    	}
-		
-    	if(typeofcancer.isDisplayed()) {
-		   Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
-		   TypeofCancer.selectByIndex(1);
-		   typeofcancer.click();
-		   System.out.println("Cancer type dropdown present");
-		}else {
-		   System.out.println("Cancer type dropdown not present");
+	        if (logger.isDebugEnabled()) {
+			logger.debug("entering PatientInfo(String)");
+			logger.debug("patientname: \"" + patientname + "\"");
 		}
-		
-		if(cancerstage.isDisplayed()) {
-		  Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
-		  Cancerstage.selectByIndex(1);
-		  cancerstage.click();
-		  System.out.println("cancer stage dropdown present");
-		}else {
-		  System.out.print("Cancer stage dropdown not present");
-		}
-		
-		if(generalcondition.isDisplayed()) {
-		  Select Condition = new Select(driver.findElement(By.name("condition")));
-		  Condition.selectByIndex(2);
-	      generalcondition.click();
-	      System.out.println("General condition dropdown present");
-		}else {
-		  System.out.println("General condition dropdown not present");
-		}
-		
-		if(Continuebutton.isDisplayed()) {
-		   Continuebutton.click();
-		   System.out.println("Continue button present");
-		}
-		else {
-		   System.out.println("Continue button not present");
-		   Thread.sleep(3000);
-		}
-		
-   }
-  
-    
-    
+			try {
+	        	patientName.sendKeys(patientname);
+	    		
+			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+			    TypeofCancer.selectByIndex(1);
+			    typeofCancer.click();
+			
+			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
+			    Cancerstage.selectByIndex(1);
+			    cancerStage.click();
+			
+			    Select Condition = new Select(driver.findElement(By.name("condition")));
+			    Condition.selectByIndex(2);
+		        generalCondition.click();
+		    
+		        continueButton.click();
+		        
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (logger.isDebugEnabled()) {
+				logger.debug("exiting PatientInfo()");
+			}
 }
     
-    	
+}  	
    
 
     

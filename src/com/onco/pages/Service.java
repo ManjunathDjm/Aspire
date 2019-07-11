@@ -1,14 +1,18 @@
 package com.onco.pages;
 
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
+import org.apache.log4j.Logger;
 
 public class Service extends BaseClass {
 
 	
+	private static final Logger logger = Logger.getLogger(Service.class);
+
 	@FindBy(xpath="//div[@class='row']//div[1]//div[1]//div[2]")
 	WebElement appointment;
 	
@@ -19,53 +23,72 @@ public class Service extends BaseClass {
     WebElement labtest;
     
     @FindBy(xpath="//div[@class='row']//button[@class='close']")
-    WebElement initial_assessment_close;
+    WebElement initialAssessmentClose;
     
    
 	public Service() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void appointment() throws InterruptedException  {
+    public void appointment()   {
     
-    	
-    	Thread.sleep(3000);
-        if(appointment.isDisplayed()) {
-        	appointment.click();
-        	Thread.sleep(3000);
-    	   System.out.println("appointemnt button is displayed");
-        }else {
-           System.out.println("appointment button is not displayed");
-         
-        }
+        	
+        	if (logger.isDebugEnabled()) {
+			logger.debug("entering appointment()");
+		}
+			try {
+        		try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+        		appointment.click();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (logger.isDebugEnabled()) {
+				logger.debug("exiting appointment()");
+			}
+    	  
     }
      
-   public void opinion()throws InterruptedException {
-   
-        if(opinion.isDisplayed()) {
-           opinion.click();
-           System.out.println("opinion is displayed");
-        }else {
-           System.out.println("opinion is not displayed");
-           Thread.sleep(3000);
-        }
+   public void opinion() {
+           
+           if (logger.isDebugEnabled()) {
+		logger.debug("entering opinion()");
+	}
+		try {
+        	   opinion.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting opinion()");
+		}
    }
       
-   public void labtest()throws InterruptedException { 
+   public void labtest() { 
 	   
-   
-        if(labtest.isDisplayed()) {
-        	labtest.click();
-        	System.out.println("labtest button is preseent");
-        }else {
-        	System.out.println("labtest button is not present");
-        	Thread.sleep(3000);
+        
+        	if (logger.isDebugEnabled()) {
+		logger.debug("entering labtest()");
+	}
+			try {
+        		labtest.click();
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			if (logger.isDebugEnabled()) {
+				logger.debug("exiting labtest()");
+			}
         }
    }
-  
-	   
-	   
-   }
+  	   
+
      
     	
     	

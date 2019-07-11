@@ -1,8 +1,13 @@
 package com.onco.testbase;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import com.onco.util.PropertiesData;
 import com.onco.util.TestUtil;
+
 
 public class BaseClass {
 	  
@@ -23,17 +29,16 @@ public class BaseClass {
        
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
-                System.setProperty("webdriver.chrome.driver", "/Users/manjunathdj/Applications/OncoWeb/exe/chromedriver");
-                driver = new ChromeDriver();
-                driver.manage().deleteAllCookies();
-                Thread.sleep(5000);
+            	
+            	System.setProperty("webdriver.chrome.driver", PropertiesData.getObject("chromedriver"));
+            	driver = new ChromeDriver();
+                Thread.sleep(3000);
                 driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-        		
+        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);          
         		
             } else if (browser.equalsIgnoreCase("Firefox")) {
-                System.setProperty("webdriver.chrome.driver", "/Users/manjunathdj/Applications/");
+                System.setProperty("webdriver.gecko.driver", PropertiesData.getObject("geckodriver"));
                 driver = new FirefoxDriver();
                 driver.manage().window().maximize();            
                          
@@ -42,13 +47,16 @@ public class BaseClass {
         } catch (WebDriverException e) {
             System.out.println(e.getMessage());
         }
-     	driver.get(PropertiesData.getObject("URL"));
+		driver.get(PropertiesData.getObject("URL"));
      	driver.manage().deleteAllCookies();
     }
    
-	   @AfterMethod
-       public void teardown() {
-       driver.quit();
+	    @AfterMethod
+	    public static void takeScreenshotAtEndOfTest() throws IOException {
+
+	        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	        FileUtils.copyFile(scrFile, new File("/Users/manjunathdj/Applications/OncoWeb/screenshot/fail.png"));	
+	        driver.quit();
 		
 		}
           
