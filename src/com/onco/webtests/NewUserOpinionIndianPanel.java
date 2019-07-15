@@ -1,52 +1,46 @@
 package com.onco.webtests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.onco.pages.Appointment;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.Login;
+import com.onco.pages.OpinionType;
 import com.onco.pages.PatientInfo;
 import com.onco.pages.PaymentsRazorPay;
-import com.onco.pages.RequestDoctorAppointment;
 import com.onco.pages.Service;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 import com.onco.util.PropertiesData;
 
 
-public class NewUserAppointmentBookOnPriority extends BaseClass {
+public class NewUserOpinionIndianPanel extends BaseClass {
 	
 	
-	@Test(priority = 2)
-	public void newuser() throws Exception {
+	@Test(priority = 3)
+	public void newUserappointment() throws Exception {
 		
 	Homepage home= new Homepage();
 	home.Formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
 	home.Patientq();
 	home.Submit();
-	
+		
 	Login login= new Login();
-    login.OtpDetails(PropertiesData.getObject("otp"));
-	
-    PatientInfo info=new PatientInfo();
-    info.PatientInfo(PropertiesData.getObject("patientname"));
-    
-    InitialAssessment assessment= new InitialAssessment();
-    assessment.initialAssessmentClose();
-    
+	login.OtpDetails(PropertiesData.getObject("otp"));
+		
+	PatientInfo info=new PatientInfo();
+	info.PatientInfo(PropertiesData.getObject("patientname"));
+	    
+	InitialAssessment assessment= new InitialAssessment();
+	assessment.initialAssessmentClose();
+	    
     Service service=new Service();
-    service.Appointment();
+    service.Opinion();
     
-    RequestDoctorAppointment appointment=new RequestDoctorAppointment();
-    appointment.Appointment();
-    appointment.RadiationOncologist();
-    appointment.Button();
+    OpinionType opinion =new OpinionType();
+    opinion.IndianPanelButton();
     
-    Appointment app= new Appointment();
-    app.Appointment();
-    
+    Thread.sleep(2000);
     Summary summary= new Summary();
     summary.Summary();
     
@@ -54,6 +48,8 @@ public class NewUserAppointmentBookOnPriority extends BaseClass {
     pay.Netbanking();
     
    
+    
+    
 
 	}
 		

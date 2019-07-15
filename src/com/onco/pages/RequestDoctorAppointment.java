@@ -12,6 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
+/**
+ * Locators and methods for Request doctor appointment page
+ * @author manjunathdj
+ *
+ */
 public class RequestDoctorAppointment extends BaseClass {
 
 	
@@ -35,7 +40,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void appointment()   {
+    public void Appointment()   {
   
          
 		   if (logger.isDebugEnabled()) {
@@ -54,7 +59,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		  
     }
     
-    public void surgicalOncologist() {
+    public void SurgicalOncologist() {
     	
     	
 	     if (logger.isDebugEnabled()) {
@@ -74,7 +79,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
     }
 		
-    public void radiationOncologist() {
+    public void RadiationOncologist() {
 
 	     if (logger.isDebugEnabled()) {
 			logger.debug("entering radiationOncologist()");

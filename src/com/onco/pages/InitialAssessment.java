@@ -10,6 +10,11 @@ import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
+/**
+ * Locators and methods for InitialAssessment Model 
+ * @author manjunathdj
+ *
+ */
 public class InitialAssessment extends BaseClass {
 
     
@@ -51,7 +56,7 @@ public class InitialAssessment extends BaseClass {
 	   
    }
    
-   public void viewAssessment()  {
+   public void ViewAssessment()  {
 	   
 	    if (logger.isDebugEnabled()) {
 		logger.debug("entering viewAssessment()");

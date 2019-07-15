@@ -18,7 +18,7 @@ import com.onco.util.PropertiesData;
 public class NewUserAppointmentPayathospital extends BaseClass {
 	
 	
-	@Test
+	@Test(priority = 1)
 	public void newUserappointment() throws Exception {
 		
 	SignUp sign=new SignUp();
@@ -27,7 +27,7 @@ public class NewUserAppointmentPayathospital extends BaseClass {
     sign.PatientQuery();
    
     Login login= new Login();
-    login.otpDetails(PropertiesData.getObject("otp"));
+    login.OtpDetails(PropertiesData.getObject("otp"));
     
     PatientInfo info=new PatientInfo();
     info.PatientInfo(PropertiesData.getObject("patientname"));
@@ -36,21 +36,23 @@ public class NewUserAppointmentPayathospital extends BaseClass {
     assessment.initialAssessmentClose();
     
     Service service=new Service();
-    service.appointment();
+    service.Appointment();
    
     RequestDoctorAppointment appointment=new RequestDoctorAppointment();
-    appointment.appointment();
-    appointment.surgicalOncologist();
+    appointment.Appointment();
+    appointment.SurgicalOncologist();
     appointment.Button();
     
     Appointment app= new Appointment();
-    app.appointment();
+    app.Appointment();
     
     Summary summary= new Summary();
     summary.Summary();
     
     Dashboard dashboard= new Dashboard();
-    dashboard.logout();
+    dashboard.Logout();
+    
+    
 
 	}
 		

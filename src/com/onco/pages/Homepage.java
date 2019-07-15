@@ -7,7 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
-
+/**
+ * Locators and methods for Homepage page
+ * @author manjunathdj
+ *
+ */
 public class Homepage extends BaseClass {
 
 	
@@ -41,7 +45,7 @@ public class Homepage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void formfill(String name, String email,String contact)   {
+    public void Formfill(String name, String email,String contact)   {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering formfill(String,String,String)");
@@ -62,7 +66,7 @@ public class Homepage extends BaseClass {
 		}
 		} 	
   
- public void patientq()  {
+ public void Patientq()  {
       
 	 if (logger.isDebugEnabled()) {
 		logger.debug("entering patientq()");

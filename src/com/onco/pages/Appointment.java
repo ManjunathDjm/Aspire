@@ -10,7 +10,7 @@ import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
 /**
- * 
+ * Locators and methods for appointment page
  * @author manjunathdj
  *
  */
@@ -41,7 +41,7 @@ public class Appointment extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void appointment()   {
+    public void Appointment()   {
     	
     	    
     	 if (logger.isDebugEnabled()) {
@@ -63,7 +63,7 @@ public class Appointment extends BaseClass {
     	  
     }
   
-    public void exploreMore()  {
+    public void ExploreMore()  {
     	
     		
     		if (logger.isDebugEnabled()) {

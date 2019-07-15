@@ -1,13 +1,7 @@
 
 package com.onco.pages;
 
-import java.io.File;
-import java.io.IOException;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -16,7 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
-
+/**
+ * Locators and methods for Login page
+ * @author manjunathdj
+ *
+ */
 public class Login extends BaseClass {
 
 	
@@ -61,7 +59,7 @@ public class Login extends BaseClass {
     	
     }
      	
-    public void otpDetails(String Otp) {
+    public void OtpDetails(String Otp) {
     	
     		if (logger.isDebugEnabled()) {
 			logger.debug("entering otpDetails(String)");

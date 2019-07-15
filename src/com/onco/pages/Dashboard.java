@@ -7,6 +7,11 @@ import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
+/**
+ * Locators and methods for Dsahboard page
+ * @author manjunathdj
+ *
+ */
 public class Dashboard extends BaseClass {
 
 	
@@ -30,7 +35,7 @@ public class Dashboard extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void dashboard()   {
+    public void Dashboard()   {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering dashboard()");
@@ -46,7 +51,7 @@ public class Dashboard extends BaseClass {
 		}
     } 	
     
-    public void logout() {
+    public void Logout() {
     
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering logout()");

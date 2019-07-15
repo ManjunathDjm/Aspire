@@ -10,7 +10,11 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
-
+/**
+ * Locators and methods for signup page
+ * @author manjunathdj
+ *
+ */
 public class SignUp extends BaseClass{
 
 	

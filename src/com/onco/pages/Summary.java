@@ -1,13 +1,18 @@
 package com.onco.pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
-
+/**
+ * Locators and methods for Summary page
+ * @author manjunathdj
+ *
+ */
 public class Summary extends BaseClass {
 
 	
@@ -37,7 +42,9 @@ public class Summary extends BaseClass {
 			logger.debug("entering Summary()");
 		}
 			try {
-    			payNow.click();
+    			String paymentbreakup= driver.findElement(By.xpath("/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[3]")).getText();
+    			System.out.println("breakup: " + paymentbreakup);
+				payNow.click();
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

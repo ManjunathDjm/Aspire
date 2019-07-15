@@ -18,7 +18,11 @@ import org.testng.annotations.Parameters;
 import com.onco.util.PropertiesData;
 import com.onco.util.TestUtil;
 
-
+/**
+ * Methods to launch browsers and take screenshots on test case fail
+ * @author manjunathdj
+ *
+ */
 public class BaseClass {
 	  
 	public static WebDriver driver;
@@ -55,7 +59,7 @@ public class BaseClass {
 	    public static void takeScreenshotAtEndOfTest() throws IOException {
 
 	        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	        FileUtils.copyFile(scrFile, new File("/Users/manjunathdj/Applications/OncoWeb/screenshot/fail.png"));	
+	        FileUtils.copyFile(scrFile, new File("/Users/manjunathdj/Applications/OncoWeb/screenshot/oncofail.png"));	
 	        driver.quit();
 		
 		}

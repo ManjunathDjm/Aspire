@@ -1,6 +1,8 @@
 package com.onco.pages;
 
 
+import java.util.Set;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -10,6 +12,11 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.onco.testbase.BaseClass;
 
+/**
+ * Locators and methods for Payments page
+ * @author manjunathdj
+ *
+ */
 public class PaymentsRazorPay extends BaseClass {
 
     
@@ -24,12 +31,21 @@ public class PaymentsRazorPay extends BaseClass {
     @FindBy(xpath="//*[@id=\"form-netbanking\"]/div[2]")
     WebElement selectBank;
     
+    @FindBy(xpath="//button[@class='success']")
+    WebElement successButton;
+    
+    @FindBy(xpath="//*[@id=\"netb-banks\"]/div[1]/label")
+    WebElement sbiNetbanking;
+    
+    @FindBy(id="footer")
+    WebElement payNow;
+    
  
 	public PaymentsRazorPay() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void netbanking()   {
+    public void Netbanking()   {
   
          
 		   if (logger.isDebugEnabled()) {
@@ -38,10 +54,14 @@ public class PaymentsRazorPay extends BaseClass {
 		try {
 			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
 		    netBanking.click();
-		    driver.findElement(By.xpath("//*[@id=\"netb-banks\"]/div[1]/label")).click();
-		    driver.findElement(By.id("footer")).click(); 
-		    driver.switchTo().defaultContent();
-		    driver.findElement(By.xpath("//button[@class='success']")).click();
+		    sbiNetbanking.click();
+		    payNow.click();
+		    //Switch to child window and click on success button 
+		    Set <String> windowhandles=driver.getWindowHandles();
+		    for( String windowHandle:windowhandles){
+				driver.switchTo().window(windowHandle);
+ }
+		     successButton.click();
 	    		 
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
@@ -49,8 +69,9 @@ public class PaymentsRazorPay extends BaseClass {
 			}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting appointment()");
-		}
-		  
+		
+    }
+    
     }
     
   
