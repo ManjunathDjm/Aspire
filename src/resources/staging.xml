@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<profiles>
+<profile>
+<id>Config</id>
+<activation>
+<activeByDefault>true</activeByDefault>
+</activation>
+<properties>
+<URL>${env.URL}</URL>
+<name>${env.name}</name>
+<email>${env.email}</email>
+<phone>${env.phone}</phone>
+<otp>${env.otp}</otp>
+<patientname>${env.patientname}</patientname>
+<location>${env.location}</location>
+</properties>
+</profile>

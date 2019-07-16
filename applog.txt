@@ -571,3 +571,9 @@ DEBUG   2019-07-15 13:05:52,255 [main] com.onco.pages.Summary  - entering Summar
 DEBUG   2019-07-15 13:05:54,509 [main] com.onco.pages.Summary  - exiting Summary()
 DEBUG   2019-07-15 13:05:54,511 [main] com.onco.pages.PaymentsRazorPay  - entering appointment()
 DEBUG   2019-07-15 13:05:58,245 [main] com.onco.pages.PaymentsRazorPay  - exiting appointment()
+DEBUG   2019-07-15 21:14:59,625 [main] com.onco.pages.Homepage  - entering formfill(String,String,String)
+DEBUG   2019-07-15 21:14:59,628 [main] com.onco.pages.Homepage  - name: "test_manjunath"
+DEBUG   2019-07-15 21:14:59,629 [main] com.onco.pages.Homepage  - email: "manjunath.11j@gmail.com"
+DEBUG   2019-07-15 21:14:59,629 [main] com.onco.pages.Homepage  - contact: "9036890379"
+DEBUG   2019-07-15 21:15:01,137 [main] com.onco.pages.Homepage  - exiting formfill()
+DEBUG   2019-07-15 21:15:01,137 [main] com.onco.pages.Homepage  - entering patientq()
