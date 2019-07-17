@@ -6,11 +6,13 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -31,10 +33,14 @@ public class BaseClass {
     @BeforeMethod
     public void openBrowser(String browser) throws Exception {
        
+    	String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
+    	PropertyConfigurator.configure(log4jConfPath);
+    	
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
-            	
             	System.setProperty("webdriver.chrome.driver", PropertiesData.getObject("chromedriver"));
+            	//ChromeOptions options = new ChromeOptions();  
+            	//options.addArguments("--headless");   
             	driver = new ChromeDriver();
                 Thread.sleep(3000);
                 driver.manage().window().maximize();

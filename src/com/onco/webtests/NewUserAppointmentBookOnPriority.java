@@ -1,5 +1,6 @@
 package com.onco.webtests;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
@@ -52,7 +53,7 @@ public class NewUserAppointmentBookOnPriority extends BaseClass {
     PaymentsRazorPay pay= new PaymentsRazorPay();
     pay.Netbanking();
     
-   
+
 
 	}
 		
