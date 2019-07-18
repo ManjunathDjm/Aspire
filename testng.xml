@@ -5,6 +5,9 @@
   <test thread-count="4" name="Test">
     <classes>
       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
+      <class name="com.onco.webtests.NewUserDiagnostictests"/>
+      <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

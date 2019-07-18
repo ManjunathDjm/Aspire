@@ -21,7 +21,7 @@ public class NewUserDiagnostictests extends BaseClass {
 		
 	Homepage home= new Homepage();
 	home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
-	home.patientq();
+	home.patientquery();
 	home.submit();
 		
 	Login login= new Login();

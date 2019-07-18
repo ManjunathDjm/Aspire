@@ -42,12 +42,12 @@ public class Login extends BaseClass {
 	}
     
     public void login(String phone) {
-    	
+    	  	
     	  if (logger.isDebugEnabled()) {
 			logger.debug("entering login(String)");
 			logger.debug("phone: \"" + phone + "\"");
 		}
-		Select countrycode = new Select(driver.findElement(By.name("countryCode")));
+    	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
     	  phoneNumber.sendKeys(phone); 

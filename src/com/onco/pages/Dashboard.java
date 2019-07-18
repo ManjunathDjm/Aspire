@@ -17,7 +17,7 @@ public class Dashboard extends BaseClass {
 	
 	private static final Logger logger = Logger.getLogger(Dashboard.class);
 
-	@FindBy(xpath="/html/body/app-root/patient-dashboard-component/div[2]/div/div[2]/div/div/div[6]/div[3]/div[2]/div/div[2]/div")
+	@FindBy(xpath = "/html/body/app-root/patient-dashboard-component/div[2]/div/div[2]/div/div/div[3]/div[3]/div[2]/div/div[2]/div/button")
 	WebElement continuebutton;
 	
     @FindBy(xpath="/html/body/app-root/app-reports/div[2]/div[1]/onboarding-nav/div/div/div[1]/ul/li[2]/a")

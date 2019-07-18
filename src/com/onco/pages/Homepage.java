@@ -66,7 +66,7 @@ public class Homepage extends BaseClass {
 		}
 		} 	
   
- public void patientq() {
+ public void patientquery() {
       
 	 if (logger.isDebugEnabled()) {
 		logger.debug("entering patientq()");
