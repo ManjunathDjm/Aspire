@@ -36,7 +36,7 @@ public class Service extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Appointment()   {
+    public void appointment()   {
     
         	
         	if (logger.isDebugEnabled()) {
@@ -62,7 +62,7 @@ public class Service extends BaseClass {
     	  
     }
      
-   public void Opinion() {
+   public void opinion() {
            
            if (logger.isDebugEnabled()) {
 		logger.debug("entering opinion()");
@@ -84,7 +84,7 @@ public class Service extends BaseClass {
 		}
    }
       
-   public void Labtest() { 
+   public void labtest() { 
 	   
         
         	if (logger.isDebugEnabled()) {

@@ -28,15 +28,13 @@ public class InitialAssessment extends BaseClass {
     
     @FindBy(xpath="//div[@class='download-assessment cursor-pointer']")
     WebElement downloadAssessment;
-    
-  
-   
+     
   public InitialAssessment() {
 		PageFactory.initElements(driver, this);
 	
 	}
        
-   public void initialAssessmentClose()  {
+   public void initialAssessmentClose() {
 	   
 	   if (logger.isDebugEnabled()) {
 		logger.debug("entering initialAssessmentClose()");
@@ -52,11 +50,9 @@ public class InitialAssessment extends BaseClass {
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting initialAssessmentClose()");
 	}
-	  
-	   
-   }
+  }
    
-   public void ViewAssessment()  {
+   public void ViewAssessment() {
 	   
 	    if (logger.isDebugEnabled()) {
 		logger.debug("entering viewAssessment()");
@@ -72,7 +68,7 @@ public class InitialAssessment extends BaseClass {
 		}
    }
 	 
-   public void downloadAssessment()  {
+   public void downloadAssessment() {
 	   
 	 
 		if (logger.isDebugEnabled()) {
@@ -87,8 +83,7 @@ public class InitialAssessment extends BaseClass {
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting downloadAssessment()");
 		}
-	   }
-	 
+	  }
    }
    
  

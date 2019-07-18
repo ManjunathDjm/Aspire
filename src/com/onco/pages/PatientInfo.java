@@ -59,7 +59,7 @@ public class PatientInfo extends BaseClass{
 		
 	}
 	
-    public void PatientInfo(String patientname)  {
+    public void patientInfo(String patientname) {
     	
 	        if (logger.isDebugEnabled()) {
 			logger.debug("entering PatientInfo(String)");
@@ -89,9 +89,9 @@ public class PatientInfo extends BaseClass{
 			if (logger.isDebugEnabled()) {
 				logger.debug("exiting PatientInfo()");
 			}
-}
-    
-}  	
+        }
+   }
+
    
 
     

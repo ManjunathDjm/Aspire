@@ -45,7 +45,7 @@ public class Homepage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Formfill(String name, String email,String contact)   {
+    public void formfill(String name, String email,String contact) {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering formfill(String,String,String)");
@@ -66,7 +66,7 @@ public class Homepage extends BaseClass {
 		}
 		} 	
   
- public void Patientq()  {
+ public void patientq() {
       
 	 if (logger.isDebugEnabled()) {
 		logger.debug("entering patientq()");
@@ -82,10 +82,8 @@ public class Homepage extends BaseClass {
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting patientq()");
 	}
-	   
-   
  }
- public void Submit() {
+ public void submit() {
 	 
 	 if (logger.isDebugEnabled()) {
 		logger.debug("entering Submit()");

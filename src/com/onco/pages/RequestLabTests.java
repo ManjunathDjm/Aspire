@@ -42,7 +42,7 @@ public class RequestLabTests extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Location()   {
+    public void location() {
   
     	 
 		   if (logger.isDebugEnabled()) {
@@ -59,14 +59,13 @@ public class RequestLabTests extends BaseClass {
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+       }
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting appointment()");
-		}
-		  
- }
+		}	  
+     }
 		
-    public void Labtest() {
+    public void labtest() {
     	
     	
 	     if (logger.isDebugEnabled()) {
@@ -86,7 +85,7 @@ public class RequestLabTests extends BaseClass {
 		}
    }
 		
-   public void ContinueButton() {
+   public void continueButton() {
 	   
 	   if (logger.isDebugEnabled()) {
 		logger.debug("entering continueButton()");
@@ -102,7 +101,7 @@ public class RequestLabTests extends BaseClass {
 	}
 	   
    }
-   public void RequestCallback() {
+   public void requestCallback() {
 	   
 	   if (logger.isDebugEnabled()) {
 		logger.debug("entering RequestCallback()");

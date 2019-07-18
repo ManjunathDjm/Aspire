@@ -29,7 +29,7 @@ public class OpinionType extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void IndianPanelButton()   {
+    public void indianPanelButton() {
   
          
 		   if (logger.isDebugEnabled()) {
@@ -44,11 +44,10 @@ public class OpinionType extends BaseClass {
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");
-		
+			logger.debug("exiting appointment()");		
     }
     
-    }
+  }
     
   
 		          

@@ -1,6 +1,5 @@
 package com.onco.webtests;
 
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
@@ -23,37 +22,37 @@ public class NewUserAppointmentBookOnPriority extends BaseClass {
 	public void newuser() throws Exception {
 		
 	Homepage home= new Homepage();
-	home.Formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
-	home.Patientq();
-	home.Submit();
+	home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
+	home.patientq();
+	home.submit();
 	
 	Login login= new Login();
     login.OtpDetails(PropertiesData.getObject("otp"));
 	
     PatientInfo info=new PatientInfo();
-    info.PatientInfo(PropertiesData.getObject("patientname"));
+    info.patientInfo(PropertiesData.getObject("patientname"));
     
     InitialAssessment assessment= new InitialAssessment();
     assessment.initialAssessmentClose();
     
     Service service=new Service();
-    service.Appointment();
+    service.appointment();
     
     RequestDoctorAppointment appointment=new RequestDoctorAppointment();
-    appointment.Appointment();
-    appointment.RadiationOncologist();
-    appointment.Button();
+    appointment.appointment();
+    appointment.radiationOncologist();
+    appointment.button();
     
     Appointment app= new Appointment();
-    app.Appointment();
+    app.appointment();
     
     Summary summary= new Summary();
-    summary.Summary();
+    summary.summary();
     
     PaymentsRazorPay pay= new PaymentsRazorPay();
-    pay.Netbanking();
+    pay.netbanking();
     
-
+    
 
 	}
 		

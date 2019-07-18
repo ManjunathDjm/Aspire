@@ -45,7 +45,7 @@ public class PaymentsRazorPay extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Netbanking()   {
+    public void netbanking() {
   
          
 		   if (logger.isDebugEnabled()) {
@@ -60,7 +60,7 @@ public class PaymentsRazorPay extends BaseClass {
 		    Set <String> windowhandles=driver.getWindowHandles();
 		    for( String windowHandle:windowhandles){
 				driver.switchTo().window(windowHandle);
- }
+    }
 		     successButton.click();
 	    		 
 			} catch (NoSuchElementException e) {
@@ -68,16 +68,10 @@ public class PaymentsRazorPay extends BaseClass {
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");
-		
+			logger.debug("exiting appointment()");	
+     }
     }
-    
-    }
-    
-  
-		          
-		             
-}
+   }
 			 
 		
 			

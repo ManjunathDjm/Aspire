@@ -29,13 +29,12 @@ public class Dashboard extends BaseClass {
     @FindBy(xpath="//a[@class='logout item ng-star-inserted']")
     WebElement logout;
    
-    
 	
 	public Dashboard() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Dashboard()   {
+    public void dashboard() {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering dashboard()");
@@ -51,7 +50,7 @@ public class Dashboard extends BaseClass {
 		}
     } 	
     
-    public void Logout() {
+    public void logout() {
     
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering logout()");
@@ -65,8 +64,7 @@ public class Dashboard extends BaseClass {
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting logout()");
 		}
-    }
-    	
+    } 	
     
 }
     

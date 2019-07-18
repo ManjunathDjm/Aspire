@@ -60,10 +60,10 @@ public SignUp() {
 		
 	 }
 	
-public void SignupPage(String name,String email, String phone)    {
+public void signupPage(String name,String email, String phone) {
     	
           
-          if (logger.isDebugEnabled()) {
+        if (logger.isDebugEnabled()) {
 		logger.debug("entering SignupPage(String,String,String)");
 		logger.debug("name: \"" + name + "\"");
 		logger.debug("email: \"" + email + "\"");
@@ -75,17 +75,15 @@ public void SignupPage(String name,String email, String phone)    {
               yourName.sendKeys(name);
               yourEmail.sendKeys(email);
               phoneNumber.sendKeys(phone);
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		}
+		     } catch (NoSuchElementException e) {
+			  e.printStackTrace();
+		     }
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting SignupPage()");
-		}
-          
-   
+		}  
    }
 		  	      
-public void CountryCode()  {
+public void countryCode()  {
       
          if (logger.isDebugEnabled()) {
 		logger.debug("entering CountryCode()");
@@ -104,7 +102,7 @@ public void CountryCode()  {
       
    }
      	
-public void PatientQuery()  {
+public void patientQuery()  {
     	
          if (logger.isDebugEnabled()) {
 		logger.debug("entering PatientQuery()");
@@ -121,9 +119,7 @@ public void PatientQuery()  {
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting PatientQuery()");
 		}
-      
-      }
-
+     }
 }
 
 

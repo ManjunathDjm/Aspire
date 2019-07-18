@@ -22,35 +22,35 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 	public void newUserappointment() throws Exception {
 		
 	SignUp sign=new SignUp();
-	sign.SignupPage(PropertiesData.getObject("name"), PropertiesData.getObject("email"), PropertiesData.getObject("phone"));
-    sign.CountryCode();
-    sign.PatientQuery();
+	sign.signupPage(PropertiesData.getObject("name"), PropertiesData.getObject("email"), PropertiesData.getObject("phone"));
+    sign.countryCode();
+    sign.patientQuery();
    
     Login login= new Login();
     login.OtpDetails(PropertiesData.getObject("otp"));
     
     PatientInfo info=new PatientInfo();
-    info.PatientInfo(PropertiesData.getObject("patientname"));
+    info.patientInfo(PropertiesData.getObject("patientname"));
     
     InitialAssessment assessment= new InitialAssessment();
     assessment.initialAssessmentClose();
     
     Service service=new Service();
-    service.Appointment();
+    service.appointment();
    
     RequestDoctorAppointment appointment=new RequestDoctorAppointment();
-    appointment.Appointment();
-    appointment.SurgicalOncologist();
-    appointment.Button();
+    appointment.appointment();
+    appointment.surgicalOncologist();
+    appointment.button();
     
     Appointment app= new Appointment();
-    app.Appointment();
+    app.appointment();
     
     Summary summary= new Summary();
-    summary.Summary();
+    summary.summary();
     
     Dashboard dashboard= new Dashboard();
-    dashboard.Logout();
+    dashboard.logout();
     
     
 

@@ -20,29 +20,29 @@ public class NewUserDiagnostictests extends BaseClass {
 	public void newUserappointment() throws Exception {
 		
 	Homepage home= new Homepage();
-	home.Formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
-	home.Patientq();
-	home.Submit();
+	home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
+	home.patientq();
+	home.submit();
 		
 	Login login= new Login();
 	login.OtpDetails(PropertiesData.getObject("otp"));
 		
 	PatientInfo info=new PatientInfo();
-	info.PatientInfo(PropertiesData.getObject("patientname"));
+	info.patientInfo(PropertiesData.getObject("patientname"));
 	    
 	InitialAssessment assessment= new InitialAssessment();
 	assessment.initialAssessmentClose();
 	    
     Service service=new Service();
-    service.Labtest();
+    service.labtest();
     
     RequestLabTests labtest=new RequestLabTests();
-    labtest.Location();
-    labtest.Labtest();
-    labtest.ContinueButton();
+    labtest.location();
+    labtest.labtest();
+    labtest.continueButton();
     
     Summary summary= new Summary();
-    summary.Summary();
+    summary.summary();
     
     
 

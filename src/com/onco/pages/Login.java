@@ -41,7 +41,7 @@ public class Login extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void login(String phone)  {
+    public void login(String phone) {
     	
     	  if (logger.isDebugEnabled()) {
 			logger.debug("entering login(String)");
@@ -70,11 +70,9 @@ public class Login extends BaseClass {
     		proceedButton.click();
 			if (logger.isDebugEnabled()) {
 				logger.debug("exiting otpDetails()");
-			}
-    		
+			}	
     	}
-    
-}
+    }
     
 
   

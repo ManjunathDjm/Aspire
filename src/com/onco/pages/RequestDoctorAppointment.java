@@ -40,7 +40,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Appointment()   {
+    public void appointment()   {
   
          
 		   if (logger.isDebugEnabled()) {
@@ -59,7 +59,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		  
     }
     
-    public void SurgicalOncologist() {
+    public void surgicalOncologist() {
     	
     	
 	     if (logger.isDebugEnabled()) {
@@ -79,7 +79,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
     }
 		
-    public void RadiationOncologist() {
+    public void radiationOncologist() {
 
 	     if (logger.isDebugEnabled()) {
 			logger.debug("entering radiationOncologist()");
@@ -98,7 +98,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
    }
     	
-   public void Button()  {
+   public void button()  {
 		   		   
 		 	
 	      if (logger.isDebugEnabled()) {
@@ -112,13 +112,10 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting Button()");
-		}
-		   		   
-		
-  }
-		          
-		             
-}
+		}   		   
+       
+      }          	             
+   }
 			 
 		
 			

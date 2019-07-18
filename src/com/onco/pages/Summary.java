@@ -35,7 +35,7 @@ public class Summary extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void Summary()   {
+    public void summary() {
     	
     		
     		if (logger.isDebugEnabled()) {
@@ -54,9 +54,6 @@ public class Summary extends BaseClass {
 			}
   
     	}
-    	
-    	
-    	
     
     }
     

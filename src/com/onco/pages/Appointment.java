@@ -41,7 +41,7 @@ public class Appointment extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void Appointment()   {
+    public void appointment() {
     	
     	    
     	 if (logger.isDebugEnabled()) {
@@ -63,9 +63,8 @@ public class Appointment extends BaseClass {
     	  
     }
   
-    public void ExploreMore()  {
+    public void exploreMore() {
     	
-    		
     		if (logger.isDebugEnabled()) {
 			logger.debug("entering exploreMore()");
 		}
