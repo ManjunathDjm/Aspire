@@ -8,10 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.onco.testbase.BaseClass;
+
 import org.apache.log4j.Logger;
 
 /**
  * Locators and methods for Login page
+ * We will call these locator and methods to create test cases in webtests package
  * @author manjunathdj
  *
  */

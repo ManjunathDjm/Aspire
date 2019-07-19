@@ -1,5 +1,7 @@
 package com.onco.webtests;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
@@ -18,7 +20,7 @@ import com.onco.util.PropertiesData;
 public class NewUserAppointmentPayathospital extends BaseClass {
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void newUserappointment() throws Exception {
 		
 	SignUp sign=new SignUp();
@@ -51,11 +53,9 @@ public class NewUserAppointmentPayathospital extends BaseClass {
     
     Dashboard dashboard= new Dashboard();
     dashboard.logout();
-    
-    
 
 	}
-		
-	
+
 }
+
 

@@ -1,8 +1,10 @@
 package com.onco.webtests;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
+import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.Login;
@@ -18,7 +20,7 @@ import com.onco.util.PropertiesData;
 public class NewUserAppointmentBookOnPriority extends BaseClass {
 	
 	
-	@Test(priority = 2)
+	@Test(priority = 1)
 	public void newuser() throws Exception {
 		
 	Homepage home= new Homepage();
@@ -52,10 +54,9 @@ public class NewUserAppointmentBookOnPriority extends BaseClass {
     PaymentsRazorPay pay= new PaymentsRazorPay();
     pay.netbanking();
     
-    
 
 	}
-		
-	
+
+
 }
 

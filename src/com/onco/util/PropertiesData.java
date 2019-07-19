@@ -4,7 +4,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Properties;
 /**
- * Method to read and write data to test cases 
+ * Method is used to read write test data in to property files
+ * 
  * @author manjunathdj
  *
  */

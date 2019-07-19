@@ -9,6 +9,7 @@ import org.apache.log4j.Logger;
 
 /**
  * Locators and methods for Dsahboard page
+ * We will call these locator and methods to create test cases in webtests packege
  * @author manjunathdj
  *
  */
@@ -28,6 +29,9 @@ public class Dashboard extends BaseClass {
     
     @FindBy(xpath="//a[@class='logout item ng-star-inserted']")
     WebElement logout;
+    
+    @FindBy(xpath="//div[@class='dashboard-container']//a[2]")
+    WebElement deleteuser;
    
 	
 	public Dashboard() {
@@ -66,6 +70,16 @@ public class Dashboard extends BaseClass {
 		}
     } 	
     
+    public void deleteUser() {
+    	
+    	try {
+    		deleteuser.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	deleteuser.click();
+    }
 }
     
 

@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 /**
  * Locators and methods for patient info page
+ * We will call these locator and methods to create test cases webtests package
  * @author manjunathdj
  *
  */

@@ -11,6 +11,8 @@ import org.apache.log4j.Logger;
 
 /**
  * Locators and methods for appointment page
+ * We will call these locator and methods to create test cases in webtests packege
+ *
  * @author manjunathdj
  *
  */

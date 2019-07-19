@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
     <parameter name="browser" value="Chrome"/>
-  <test thread-count="4" name="Test">
+  <test thread-count="5" name="Test">
     <classes>
       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
       <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
       <class name="com.onco.webtests.NewUserDiagnostictests"/>
       <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
+      <class name="com.onco.webtests.ExistingUserBookAppointment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

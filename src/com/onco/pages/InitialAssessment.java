@@ -12,6 +12,7 @@ import org.apache.log4j.Logger;
 
 /**
  * Locators and methods for InitialAssessment Model 
+ * We will call these locator and methods to create test cases in webtests package
  * @author manjunathdj
  *
  */

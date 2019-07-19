@@ -14,6 +14,7 @@ import com.onco.testbase.BaseClass;
 
 /**
  * Locators and methods for Payments page
+ * We will call these locator and methods to create test cases webtests package
  * @author manjunathdj
  *
  */

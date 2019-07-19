@@ -10,6 +10,7 @@ import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 /**
  * Locators and methods for Summary page
+ * We will call these locator and methods to create test cases webtests package
  * @author manjunathdj
  *
  */

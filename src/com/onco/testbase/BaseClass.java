@@ -12,16 +12,17 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import com.onco.util.PropertiesData;
-import com.onco.util.TestUtil;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Methods to launch browsers and take screenshots on test case fail
+ * Base class will be used for all the test to launch browsers
  * @author manjunathdj
  *
  */
@@ -38,9 +39,8 @@ public class BaseClass {
     	
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
-            	System.setProperty("webdriver.chrome.driver", PropertiesData.getObject("chromedriver"));
-            	//ChromeOptions options = new ChromeOptions();  
-            	//options.addArguments("--headless");   
+            	
+            	WebDriverManager.chromedriver().setup(); 
             	driver = new ChromeDriver();
                 Thread.sleep(3000);
                 driver.manage().window().maximize();

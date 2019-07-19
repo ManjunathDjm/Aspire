@@ -1,5 +1,7 @@
 package com.onco.webtests;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
@@ -18,7 +20,7 @@ import com.onco.util.PropertiesData;
 public class ExistingUserBookAppointment extends BaseClass {
 	
 	
-	@Test(priority = 2)
+	@Test(priority = 5)
 	public void newuser() throws Exception {
 		
 		Homepage home= new Homepage();
@@ -54,6 +56,10 @@ public class ExistingUserBookAppointment extends BaseClass {
 	    
 	    Summary summary= new Summary();
 	    summary.summary();
+	    
+	    Dashboard dash=new Dashboard();
+	    dash.deleteUser();
 	}
+	
 }
 

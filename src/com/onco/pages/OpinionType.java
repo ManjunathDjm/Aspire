@@ -11,6 +11,7 @@ import com.onco.testbase.BaseClass;
 
 /**
  * Locators and methods for opinion page
+ * We will call these locator and methods to create test cases in webtests package
  * @author manjunathdj
  *
  */
