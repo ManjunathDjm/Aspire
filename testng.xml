@@ -7,7 +7,7 @@
       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
       <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
       <class name="com.onco.webtests.NewUserDiagnostictests"/>
-      <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
+      <class name="com.onco.webtests.NewUserOpinionIndiaPanal"/>
       <class name="com.onco.webtests.ExistingUserBookAppointment"/>
     </classes>
   </test> <!-- Test -->

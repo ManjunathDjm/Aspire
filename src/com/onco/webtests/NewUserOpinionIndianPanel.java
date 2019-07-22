@@ -43,7 +43,6 @@ public class NewUserOpinionIndianPanel extends BaseClass {
     OpinionType opinion =new OpinionType();
     opinion.indianPanelButton();
     
-    Thread.sleep(2000);
     Summary summary= new Summary();
     summary.summary();
     

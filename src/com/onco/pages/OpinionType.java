@@ -23,37 +23,43 @@ public class OpinionType extends BaseClass {
     @FindBy(xpath = "/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[1]/div/div[2]/div/div[2]")
     WebElement selectIndianPanelButton;
     
-    @FindBy(xpath="//div[@class='col-md-4 col-lg-4 col-xl-4 flex-justify-center']//div//div[@class='orange-rounded-inner-btn'][contains(text(),'SELECT US PANEL')]")
+    @FindBy(xpath="/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
     WebElement selectUsPanelButton;
+    
  
 	public void Opiniontype() {
+		if (logger.isDebugEnabled()) {
+			logger.debug("entering Opiniontype()");
+		}
 		PageFactory.initElements(driver, this);
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting Opiniontype()");
+		}
 	}
     
     public void indianPanelButton() {
-  
-         
-		   if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
+		
+		if (logger.isDebugEnabled()) {
+			logger.debug("entering indianPanelButton()");
 		}
 		try {
-			
-		     selectIndianPanelButton.click();
-	    		 
+		
+		     selectIndianPanelButton.click();	 
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");		
-    }
-    
-  }
-    
+			logger.debug("exiting indianPanelButton()");
+		}
+			
+    } 	
+ 
+}
   
 		          
 		             
-}
+
 			 
 		
 			

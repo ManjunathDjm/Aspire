@@ -45,7 +45,6 @@ public class ExistingUserBookAppointment extends BaseClass {
 	    Service service=new Service();
 	    service.appointment();
 	    
-
 	    RequestDoctorAppointment appointment=new RequestDoctorAppointment();
 	    appointment.appointment();
 	    appointment.surgicalOncologist();
