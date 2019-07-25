@@ -1,7 +1,5 @@
 package com.onco.webtests;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;

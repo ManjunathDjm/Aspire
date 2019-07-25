@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Staging">
+    <parameter name="env" value="staging"/>
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url"  value="http://18.136.208.196/"/>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -29,13 +29,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.14.1</version>
-                <configuration>
-                    <!-- Suite testng xml file to consider for test execution -->
-                    <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                </configuration>
+                <version>2.19.1</version>
             </plugin>
             <!-- Compiler plugin configures the java version to be used for compiling
                 the code -->
@@ -123,7 +117,6 @@
     <artifactId>poi-scratchpad</artifactId>
     <version>4.1.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>

@@ -1,7 +1,5 @@
 package com.onco.webtests;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import com.onco.pages.Dashboard;
@@ -48,6 +46,7 @@ public class NewUserOpinionIndianPanel extends BaseClass {
     
     PaymentsRazorPay pay= new PaymentsRazorPay();
     pay.netbanking();
+    
     
 	}
 

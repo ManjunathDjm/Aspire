@@ -23,7 +23,7 @@ public class OpinionType extends BaseClass {
     @FindBy(xpath = "/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[1]/div/div[2]/div/div[2]")
     WebElement selectIndianPanelButton;
     
-    @FindBy(xpath="/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/select-opinion-type[1]/div[2]/div[2]/section[1]/div[3]/div[1]/section[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[2]")
     WebElement selectUsPanelButton;
     
  
@@ -43,7 +43,6 @@ public class OpinionType extends BaseClass {
 			logger.debug("entering indianPanelButton()");
 		}
 		try {
-		
 		     selectIndianPanelButton.click();	 
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
@@ -55,6 +54,22 @@ public class OpinionType extends BaseClass {
 			
     } 	
  
+    public void USPanalButton() {
+    	
+    	
+    	if (logger.isDebugEnabled()) {
+			logger.debug("entering USPanal()");
+		}
+		try {
+			selectUsPanelButton.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting USPanal()");
+		}
+    }
 }
   
 		          

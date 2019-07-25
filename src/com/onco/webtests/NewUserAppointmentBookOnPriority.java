@@ -1,10 +1,7 @@
 package com.onco.webtests;
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-
 import com.onco.pages.Appointment;
-import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.Login;
@@ -54,9 +51,21 @@ public class NewUserAppointmentBookOnPriority extends BaseClass {
     PaymentsRazorPay pay= new PaymentsRazorPay();
     pay.netbanking();
     
-
 	}
+	
+	
+    	
+    }
+    
+	
+ 
+    
+	
+		
+ 
+
+	
 
 
-}
+
 
