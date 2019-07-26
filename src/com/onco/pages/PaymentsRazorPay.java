@@ -59,13 +59,12 @@ public class PaymentsRazorPay extends BaseClass {
 		    payNow.click();
 		    //Switch to child window and click on success button 
 		    Set <String> windowhandles=driver.getWindowHandles();
-		    for( String windowHandle:windowhandles){
+		    for(String windowHandle:windowhandles){
 				driver.switchTo().window(windowHandle);
     }
 		     successButton.click();
 	    		 
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {

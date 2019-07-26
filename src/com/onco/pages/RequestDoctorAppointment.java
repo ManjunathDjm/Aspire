@@ -42,7 +42,6 @@ public class RequestDoctorAppointment extends BaseClass {
 	}
     
     public void appointment()   {
-  
          
 		   if (logger.isDebugEnabled()) {
 			logger.debug("entering appointment()");
@@ -51,7 +50,6 @@ public class RequestDoctorAppointment extends BaseClass {
 	        	 location.click(); 
 	    		 location.sendKeys("Mumbai",Keys.TAB);
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
@@ -72,7 +70,6 @@ public class RequestDoctorAppointment extends BaseClass {
 		     specialisation.selectByIndex(1);
 		     specialisationDropdownSurgicalOncologist.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -91,7 +88,6 @@ public class RequestDoctorAppointment extends BaseClass {
 		     specialisation.selectByIndex(2);
 		     specialisationDropdownSurgicalOncologist.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -101,14 +97,12 @@ public class RequestDoctorAppointment extends BaseClass {
     	
    public void button()  {
 		   		   
-		 	
 	      if (logger.isDebugEnabled()) {
 			logger.debug("entering Button()");
 		}
 		try {
 	    	  find_cancer_specialist.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {

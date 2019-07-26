@@ -59,7 +59,6 @@ public class Homepage extends BaseClass {
 				emailField.sendKeys(email);	
 				phone.sendKeys(contact);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
@@ -69,35 +68,33 @@ public class Homepage extends BaseClass {
   
  public void patientquery() {
       
-	 if (logger.isDebugEnabled()) {
-		logger.debug("entering patientq()");
-	}
-	try {
-		 patientChoice.click();
-		 dropOption1.click();
-		 selectTerms.click();
-	} catch (NoSuchElementException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	    if (logger.isDebugEnabled()) {
+		   logger.debug("entering patientq()");
+	    }
+	    try {
+		   patientChoice.click();
+		   dropOption1.click();
+		   selectTerms.click();
+	     } catch (NoSuchElementException e) {
+		    e.printStackTrace();
 	}
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting patientq()");
 	}
  }
  public void submit() {
-	 
-	 if (logger.isDebugEnabled()) {
+	  
+	   if (logger.isDebugEnabled()) {
 		logger.debug("entering Submit()");
-	}
-	try {
+	  }
+	    try {
 		 submit.click();
-	} catch (NoSuchElementException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+	     } catch (NoSuchElementException e) {
+	    	e.printStackTrace(); 
 	}
-	if (logger.isDebugEnabled()) {
+	    if (logger.isDebugEnabled()) {
 		logger.debug("exiting Submit()");
-	}
+	} 
  }
 
 }

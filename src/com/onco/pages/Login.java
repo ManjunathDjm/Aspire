@@ -37,6 +37,9 @@ public class Login extends BaseClass {
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[3]/button")
     WebElement proceedButton;
     
+    @FindBy(xpath="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
+    WebElement delete;
+    
      
 	
 	public Login() {
@@ -45,7 +48,7 @@ public class Login extends BaseClass {
     
     public void login(String phone) {
     	  	
-    	  if (logger.isDebugEnabled()) {
+    	if (logger.isDebugEnabled()) {
 			logger.debug("entering login(String)");
 			logger.debug("phone: \"" + phone + "\"");
 		}
@@ -63,18 +66,31 @@ public class Login extends BaseClass {
      	
     public void OtpDetails(String Otp) {
     	
-    		if (logger.isDebugEnabled()) {
+    	if (logger.isDebugEnabled()) {
 			logger.debug("entering otpDetails(String)");
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			otp.click();  
     		otp.sendKeys(Otp);
     		proceedButton.click();
-			if (logger.isDebugEnabled()) {
+		if (logger.isDebugEnabled()) {
 				logger.debug("exiting otpDetails()");
 			}	
     	}
-    }
+    
+    public void delete() {
+    	
+		if (logger.isDebugEnabled()) {
+		logger.debug("entering delete");
+	    }
+		  driver.switchTo().defaultContent();
+		  delete.click();
+		if (logger.isDebugEnabled()) {
+		    	logger.debug("exiting delete()");
+		}	
+	}
+
+}
     
 
   

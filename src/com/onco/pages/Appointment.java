@@ -56,7 +56,6 @@ public class Appointment extends BaseClass {
         		cal.click();
         	    calendar_time.click();
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
@@ -72,8 +71,7 @@ public class Appointment extends BaseClass {
 		}
 			try {
     			calendar.click();
-			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
+			} catch (NoSuchElementException e) {		
 				e.printStackTrace();
 			}
 			if (logger.isDebugEnabled()) {

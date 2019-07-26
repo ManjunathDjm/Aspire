@@ -33,7 +33,7 @@
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
-                        <suiteXmlFile>${Suites}</suiteXmlFile>
+                        <suiteXmlFile>Suites/testngstaging.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
@@ -56,7 +56,6 @@
             <artifactId>testng</artifactId>
             <version>6.3.1</version>
         </dependency>
- 
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>

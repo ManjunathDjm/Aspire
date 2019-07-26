@@ -46,7 +46,6 @@ public class Dashboard extends BaseClass {
 		try {
     		continuebutton.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -62,7 +61,6 @@ public class Dashboard extends BaseClass {
 		try {
     		logout.click();	
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -75,7 +73,6 @@ public class Dashboard extends BaseClass {
     	try {
     		deleteuser.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     	deleteuser.click();

@@ -43,7 +43,6 @@ public class InitialAssessment extends BaseClass {
 	try {
 		Thread.sleep(4000);
 	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	   driver.switchTo().defaultContent();
@@ -61,7 +60,6 @@ public class InitialAssessment extends BaseClass {
 		try {
 	        	viewAssessment.click();
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
@@ -78,7 +76,6 @@ public class InitialAssessment extends BaseClass {
 		try {
 			   downloadAssessment.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {

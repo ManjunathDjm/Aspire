@@ -6,7 +6,7 @@
     <parameter name="url"  value="http://18.136.208.196/"/>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

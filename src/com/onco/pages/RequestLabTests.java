@@ -46,19 +46,17 @@ public class RequestLabTests extends BaseClass {
     public void location() {
   
     	 
-		   if (logger.isDebugEnabled()) {
+		if (logger.isDebugEnabled()) {
 			logger.debug("entering appointment()");
 		}
 		try {    try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	        	 location.click(); 
 	    		 location.sendKeys("Mumbai",Keys.TAB);
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
        }
 		if (logger.isDebugEnabled()) {
@@ -78,7 +76,6 @@ public class RequestLabTests extends BaseClass {
 	    	 test.selectByIndex(1);
 	    	 testtype.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
@@ -94,7 +91,6 @@ public class RequestLabTests extends BaseClass {
 	try {
 		   continueButton.click();
 	} catch (NoSuchElementException e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 	if (logger.isDebugEnabled()) {
@@ -104,11 +100,11 @@ public class RequestLabTests extends BaseClass {
    }
    public void requestCallback() {
 	   
-	   if (logger.isDebugEnabled()) {
+	  if (logger.isDebugEnabled()) {
 		logger.debug("entering RequestCallback()");
 	}
-	requestCallback.click();
-	   Requestcallclose.click();
+    	requestCallback.click();
+	    Requestcallclose.click();
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting RequestCallback()");
 	}

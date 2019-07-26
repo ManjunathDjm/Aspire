@@ -45,7 +45,6 @@ public class OpinionType extends BaseClass {
 		try {
 		     selectIndianPanelButton.click();	 
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
@@ -63,7 +62,6 @@ public class OpinionType extends BaseClass {
 		try {
 			selectUsPanelButton.click();
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {

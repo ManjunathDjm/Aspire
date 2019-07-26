@@ -47,14 +47,12 @@ public class Service extends BaseClass {
         		try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
         		String data =driver.findElement(By.xpath("/html/body/app-root/select-service/div[2]/div[2]/section/div[3]/section/div/div/div[1]")).getText();
         		System.out.println("Result:" + data);
         		appointment.click();
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if (logger.isDebugEnabled()) {

@@ -84,7 +84,6 @@ public class PatientInfo extends BaseClass{
 		        continueButton.click();
 		        
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			if (logger.isDebugEnabled()) {

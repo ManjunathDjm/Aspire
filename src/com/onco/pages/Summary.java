@@ -28,10 +28,7 @@ public class Summary extends BaseClass {
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[5]/button")
     WebElement payNow;
     
-    @FindBy(xpath="//div[@class='dashboard-container']//a[2]")
-    WebElement delete;
     
-	
 	public Summary() {
 		PageFactory.initElements(driver, this);
 	}
@@ -39,7 +36,7 @@ public class Summary extends BaseClass {
     public void summary() {
     	
     		
-    		if (logger.isDebugEnabled()) {
+    	if (logger.isDebugEnabled()) {
 			logger.debug("entering Summary()");
 		}
 			try {
@@ -47,10 +44,9 @@ public class Summary extends BaseClass {
     			System.out.println("breakup: " + paymentbreakup);
 				payNow.click();
 			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			if (logger.isDebugEnabled()) {
+		if (logger.isDebugEnabled()) {
 				logger.debug("exiting Summary()");
 			}
   
