@@ -6,3 +6,4 @@
 .metadata
 target/
 test-output/
+applog.txt
