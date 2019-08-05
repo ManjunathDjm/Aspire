@@ -22,6 +22,7 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 public void newUserappointment() throws Exception {
     
 SignUp sign=new SignUp();
+sign.signupicon();
 sign.signupPage(PropertiesData.getObject("name"), PropertiesData.getObject("email"), PropertiesData.getObject("phone"));
 sign.countryCode();
 sign.patientQuery();
@@ -50,10 +51,9 @@ Summary summary= new Summary();
 summary.summary();
 
 Dashboard dashboard= new Dashboard();
-dashboard.logout();
+driver.quit();
 
 }
-
 }
 
 

@@ -7,3 +7,4 @@
 target/
 test-output/
 applog.txt
+.idea/

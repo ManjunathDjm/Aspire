@@ -3,6 +3,7 @@
 <suite name="Production">
     <parameter name="env" value="production"/>
     <parameter name="url" value="http:onco.com"/>
+    <parameter name="deleteURL" value="http:onco.com/start/delete-me"/>
     <parameter name="browser" value="Chrome"/>
   <test thread-count="5" name="Test">
     <classes>

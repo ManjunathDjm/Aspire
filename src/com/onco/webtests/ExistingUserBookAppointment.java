@@ -51,6 +51,7 @@ summary.summary();
      
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
+
     
 	}
 }

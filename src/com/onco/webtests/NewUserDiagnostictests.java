@@ -1,7 +1,8 @@
 package com.onco.webtests;
 
-
 import org.testng.annotations.Test;
+
+import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.Login;
@@ -13,10 +14,11 @@ import com.onco.testbase.BaseClass;
 import com.onco.util.PropertiesData;
 
 
+
 public class NewUserDiagnostictests extends BaseClass {
 	
 
-@Test(priority = 3)
+@Test
 public void newUserappointment() throws Exception {
 	
 Homepage home= new Homepage();
@@ -44,7 +46,11 @@ labtest.continueButton();
 Summary summary= new Summary();
 summary.summary();
 
+Dashboard dashboard= new Dashboard();
+driver.quit();
+
 }
 
 }
+
 

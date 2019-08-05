@@ -60,6 +60,13 @@ public SignUp() {
 		return driver.getTitle();
 		
 	 }
+      
+      
+public void signupicon() {
+	
+	
+	    signUpIcon.click();
+}
 	
 public void signupPage(String name,String email, String phone) {
     	
@@ -71,7 +78,7 @@ public void signupPage(String name,String email, String phone) {
 		logger.debug("phone: \"" + phone + "\"");
 	}
 		try {
-        	  signUpIcon.click();
+        	  //signUpIcon.click();
               signUplink.click();		
               yourName.sendKeys(name);
               yourEmail.sendKeys(email);

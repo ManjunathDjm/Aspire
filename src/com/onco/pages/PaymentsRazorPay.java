@@ -50,7 +50,7 @@ public class PaymentsRazorPay extends BaseClass {
   
          
 		   if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
+			logger.debug("entering razorpay()");
 		}
 		try {
 			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
@@ -60,6 +60,7 @@ public class PaymentsRazorPay extends BaseClass {
 		    //Switch to child window and click on success button 
 		    Set <String> windowhandles=driver.getWindowHandles();
 		    for(String windowHandle:windowhandles){
+		    	driver.getWindowHandle();
 				driver.switchTo().window(windowHandle);
     }
 		     successButton.click();
@@ -68,7 +69,7 @@ public class PaymentsRazorPay extends BaseClass {
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");	
+			logger.debug("exiting razorpay()");	
      }
     }
    }

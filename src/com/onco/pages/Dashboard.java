@@ -30,7 +30,7 @@ public class Dashboard extends BaseClass {
     @FindBy(xpath="//a[@class='logout item ng-star-inserted']")
     WebElement logout;
     
-    @FindBy(xpath="//div[@class='dashboard-container']//a[2]")
+    @FindBy(xpath="1")
     WebElement deleteuser;
    
 	
@@ -68,16 +68,9 @@ public class Dashboard extends BaseClass {
 		}
     } 	
     
-    public void deleteUser() {
     	
-    	try {
-    		deleteuser.click();
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		}
-    	deleteuser.click();
-    }
-}
+ }
+
     
 
     

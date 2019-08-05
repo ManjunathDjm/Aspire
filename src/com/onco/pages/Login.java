@@ -78,19 +78,9 @@ public class Login extends BaseClass {
 			}	
     	}
     
-    public void delete() {
-    	
-		if (logger.isDebugEnabled()) {
-		logger.debug("entering delete");
-	    }
-		  driver.switchTo().defaultContent();
-		  delete.click();
-		if (logger.isDebugEnabled()) {
-		    	logger.debug("exiting delete()");
-		}	
 	}
 
-}
+
     
 
   

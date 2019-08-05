@@ -1,6 +1,6 @@
 package com.onco.webtests;
-
 import org.testng.annotations.Test;
+import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.Login;
@@ -16,7 +16,7 @@ import com.onco.util.PropertiesData;
 public class NewUserOpinionIndianPanel extends BaseClass {
 	
 	
-@Test(priority = 4)
+@Test
 public void newUserappointment() throws Exception {
 	
 Homepage home= new Homepage();
@@ -39,14 +39,20 @@ service.opinion();
 OpinionType opinion =new OpinionType();
 opinion.indianPanelButton();
 
+Thread.sleep(3000);
 Summary summary= new Summary();
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
 
+Thread.sleep(3000);
+Dashboard dashboard= new Dashboard();
+driver.quit();
+
+
+
 
 }
-
+	
 }
-
