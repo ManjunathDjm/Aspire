@@ -12,21 +12,20 @@ cache:
 stages:
   - build
   - test
-  - package 
-  - deploy
 
 codebuild:
   tags:
+tags:
+    - build
     - ansible
-    - build      
   stage: build
   script: 
     - mvn compile
 
 codetest:
   tags:
-    - ansible
     - build
+    - ansible
   stage: test
   script:
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
