@@ -17,6 +17,7 @@ stages:
 
 codebuild:
   tags:
+    - ansible
     - build      
   stage: build
   script: 
@@ -24,6 +25,7 @@ codebuild:
 
 codetest:
   tags:
+    - ansible
     - build
   stage: test
   script:
