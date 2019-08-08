@@ -1,6 +1,36 @@
-image: maven:3.5.3-jdk-8
+image: maven
 
-build_and_test:
+variables:
+  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+  paths:
+    - .m2/repository/
+    - target/
+
+stages:
+  - build
+  - test
+  - package 
+  - deploy
+
+codebuild:
+  tags:
+    - build      
+  stage: build
+  script: 
+    - mvn compile
+
+codetest:
+  tags:
+    - build
+  stage: test
   script:
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
- 
+    - echo "The code has been tested"
+
+
+
+
+
