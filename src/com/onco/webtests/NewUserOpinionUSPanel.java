@@ -17,7 +17,7 @@ public class NewUserOpinionUSPanel extends BaseClass {
 	
 	
 @Test
-public void newUserappointment() throws Exception {
+public void newUserOpinionUSPanal() throws Exception {
 	
 Homepage home= new Homepage();
 home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));

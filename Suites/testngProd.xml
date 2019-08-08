@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Production">
+<suite name="Onco Production">
+<listeners>
+		<listener class-name="com.onco.extinctreport.ExtinctTestNG" />
+</listeners>
     <parameter name="env" value="production"/>
     <parameter name="url" value="http:onco.com"/>
     <parameter name="deleteURL" value="http:onco.com/start/delete-me"/>
     <parameter name="browser" value="Chrome"/>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="PatientPortal">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+      <class name="com.onco.webtests.NewUserOpinionUSPanel"/> 
+      <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>    
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>  
+      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/> 
+      <class name="com.onco.webtests.NewUserDiagnostictests"/>  
+      <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -18,7 +18,7 @@ import com.onco.util.PropertiesData;
 public class NewUserAppointmentBookOnPriority extends BaseClass {
 
 @Test
-public void newuser() throws Exception {
+public void newUserAppointmentBookOnPriority() throws Exception {
     
 Homepage home= new Homepage();
 home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));

@@ -19,7 +19,7 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 	
 
 @Test(priority = 2)
-public void newUserappointment() throws Exception {
+public void newUserAppointmentPayAtHospital() throws Exception {
     
 SignUp sign=new SignUp();
 sign.signupicon();
