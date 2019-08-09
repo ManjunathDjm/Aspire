@@ -1,10 +1,11 @@
-
 stages:
   - build
   - test
   - deploy
 maven_build:
-  stage: test
+  stage: 
+    -build
+    -test
   tags:
     - maven
   script:
