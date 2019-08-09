@@ -3,8 +3,7 @@ stages:
   - test
   - deploy
 maven_build:
-  stage: 
-    -test
+  stage:test
   tags:
     - maven
   script:
