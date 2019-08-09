@@ -17,4 +17,4 @@ build:
 test:
   stage: test
   script:
-    - mvn clean test -DSuites/testngStaging=testngStaging.xml
+    - mvn clean test -DSuites/testngstaging=testngstaging.xml
