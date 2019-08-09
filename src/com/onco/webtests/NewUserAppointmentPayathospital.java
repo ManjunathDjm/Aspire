@@ -51,7 +51,7 @@ Summary summary= new Summary();
 summary.summary();
 
 Dashboard dashboard= new Dashboard();
-driver.quit();
+
 
 }
 }

@@ -38,7 +38,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class BaseClass {
 	  
-	private static final BaseClass Oncotest = null;
 	public static WebDriver driver;
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
@@ -141,7 +140,6 @@ public class BaseClass {
 				extentTest.log(LogStatus.PASS, "Test Case PASSED IS " + result.getName());
 
 			}
-			
 			
 			extent.endTest(extentTest); //ending test and ends the current test and prepare to create html report
 			driver.quit();

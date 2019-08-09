@@ -19,7 +19,7 @@ public class NewUserDiagnostictests extends BaseClass {
 	
 
 @Test
-public void newUserDisgnostic() throws Exception {
+public void newUserDiagnostic() throws Exception {
 	
 Homepage home= new Homepage();
 home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
@@ -47,7 +47,7 @@ Summary summary= new Summary();
 summary.summary();
 
 Dashboard dashboard= new Dashboard();
-driver.quit();
+
 
 }
 

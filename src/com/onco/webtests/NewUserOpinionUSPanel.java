@@ -48,7 +48,7 @@ pay.netbanking();
 
 Thread.sleep(3000);
 Dashboard dashboard= new Dashboard();
-driver.quit();
+
 
 
 
