@@ -2,8 +2,7 @@ stages:
   - build
   - test
 maven_build:
-  stage: build
-         test
+  stage: test
   tags:
     - maven
   script:
