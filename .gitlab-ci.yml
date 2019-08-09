@@ -1,20 +1,10 @@
-image: maven:latest
-
-variables:
-  MAVEN_CLI_OPTS: "-s .m2/settings.xml --batch-mode"
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
-
-cache:
-  paths:
-    - .m2/repository/
-    - target/
-
-build:
-  stage: build
-  script:
-    - mvn clean build
-
-test:
+stages:
+  - build
+  - test
+maven_build:
   stage: test
+  tags:
+    - maven
   script:
-    - mvn clean test -DSuites/testngstaging=testngstaging.xml
+    - echo "Build project with maven"
+    - mvn clean test -DSuites/testngStaging=testngStaging.xml
