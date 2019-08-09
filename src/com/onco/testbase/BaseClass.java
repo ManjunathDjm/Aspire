@@ -18,6 +18,7 @@ import org.testng.annotations.Parameters;
 import com.onco.pages.Login;
 import com.onco.pages.SignUp;
 import com.onco.util.PropertiesData;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -46,6 +47,7 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	driver = new ChromeDriver();
+            	WebDriverWait wait = new WebDriverWait(driver,30);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
                 driver.manage().window().maximize();
