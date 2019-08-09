@@ -5,6 +5,7 @@ stages:
 maven_build:
   stage: 
     -build
+maven_test:    
     -test
   tags:
     - maven
