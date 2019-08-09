@@ -5,6 +5,5 @@
 .settings
 .metadata
 target/
-test-output/
 applog.txt
 .idea/

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Onco Production]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="deleteURL" value="http:onco.com/start/delete-me"/>
+  <parameter name="env" value="production"/>
+  <parameter name="url" value="http:onco.com"/>
+  <test thread-count="5" name="PatientPortal(failed)">
+    <classes>
+      <class name="com.onco.webtests.NewUserOpinionUSPanel">
+        <methods>
+          <include name="delete"/>
+          <include name="newUserappointment"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanel -->
+      <class name="com.onco.webtests.NewUserAppointmentPayathospital">
+        <methods>
+          <include name="delete"/>
+          <include name="newUserappointment"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserAppointmentPayathospital -->
+      <class name="com.onco.webtests.NewUserDiagnostictests">
+        <methods>
+          <include name="delete"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+          <include name="newUserappointment"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserDiagnostictests -->
+      <class name="com.onco.webtests.NewUserOpinionIndianPanel">
+        <methods>
+          <include name="newUserappointment"/>
+          <include name="delete"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionIndianPanel -->
+      <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal">
+        <methods>
+          <include name="delete"/>
+          <include name="newuser"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.ExistingUserOpinionIndiaPanal -->
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority">
+        <methods>
+          <include name="delete"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+          <include name="newuser"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserAppointmentBookOnPriority -->
+    </classes>
+  </test> <!-- PatientPortal(failed) -->
+</suite> <!-- Failed suite [Onco Production] -->

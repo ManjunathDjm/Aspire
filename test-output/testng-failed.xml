@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Onco Staging]" guice-stage="DEVELOPMENT">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="deleteURL" value="http://18.136.208.196/start/delete-me"/>
+  <parameter name="env" value="staging"/>
+  <parameter name="url" value="http://18.136.208.196/"/>
+  <listeners>
+    <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
+  </listeners>
+  <test thread-count="5" name="PatientPortal(failed)">
+    <classes>
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority">
+        <methods>
+          <include name="delete"/>
+          <include name="openBrowser"/>
+          <include name="setExtent"/>
+          <include name="newUserAppointmentBookOnPriority"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserAppointmentBookOnPriority -->
+    </classes>
+  </test> <!-- PatientPortal(failed) -->
+</suite> <!-- Failed suite [Onco Staging] -->

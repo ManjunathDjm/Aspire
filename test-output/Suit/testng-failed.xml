@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suit]" parallel="tests">
+  <test thread-count="1" name="ParallelTest3 Browser Firefox(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.silvermine.test.SingleTruckFilingTaxable">
+        <methods>
+          <include name="SingleTruckTaxableTest"/>
+          <include name="openBrowser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.silvermine.test.SingleTruckFilingTaxable -->
+      <class name="com.silvermine.test.SingleTruckFilingUsingCoupon">
+        <methods>
+          <include name="SingleTruckUsingCoupon"/>
+          <include name="openBrowser"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.silvermine.test.SingleTruckFilingUsingCoupon -->
+    </classes>
+  </test> <!-- ParallelTest3 Browser Firefox(failed) -->
+</suite> <!-- Failed suite [Suit] -->

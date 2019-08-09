@@ -161,5 +161,10 @@
     <artifactId>extentreports</artifactId>
     <version>2.41.2</version>
 </dependency>
-  </dependencies>
+<dependency>
+  <groupId>com.example.dep</groupId>
+  <artifactId>simple-maven-dep</artifactId>
+  <version>1.0</version>
+</dependency>
+</dependencies>
 </project>

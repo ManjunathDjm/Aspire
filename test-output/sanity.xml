@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="eFromRegression" parallel="tests" thread-count="1">
+	<!-- Suite -->
+    	<test name="ParallelTest1 Browser Chrome" preserve-order="true">
+        <parameter name="browser" value="chrome" />
+	<classes>
+         <class name="com.silvermine.test.GmailLogin" />
+         <class name="com.silvermine.test.FacebookLogin" />
+         </classes>
+    </test>
+   </suite>
