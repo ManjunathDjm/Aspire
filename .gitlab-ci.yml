@@ -12,7 +12,7 @@ cache:
 build:
   stage: build
   script:
-    - mvn clean
+    - mvn clean build
 
 test:
   stage: test
