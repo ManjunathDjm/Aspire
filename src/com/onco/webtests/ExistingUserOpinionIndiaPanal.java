@@ -11,13 +11,14 @@ import com.onco.pages.PaymentsRazorPay;
 import com.onco.pages.Service;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
+import com.onco.util.JiraPolicy;
 import com.onco.util.PropertiesData;
 
 
 public class ExistingUserOpinionIndiaPanal extends BaseClass {
 	
-	
-@Test
+@JiraPolicy(logTicketReady=true)	
+@Test(priority = 6)
 public void newuser() throws Exception {
 		
 Homepage home= new Homepage();

@@ -7,8 +7,10 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -44,6 +46,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
+     
             	WebDriverManager.chromedriver().setup(); 
             	driver = new ChromeDriver();
             	driver.get(url);
@@ -60,30 +63,30 @@ public class BaseClass {
 	
     }
 	
-	@BeforeClass
-	@Parameters({"deleteURL","url","browser"})
-	public void delete(String deleteURL,String url,String browser) throws Exception {
+	//@BeforeClass
+	//@Parameters({"deleteURL","url","browser"})
+	//public void delete(String deleteURL,String url,String browser) throws Exception {
 		
-		WebDriverManager.chromedriver().setup(); 
-		driver = new ChromeDriver();
-		driver.get(url);
-		driver.manage().deleteAllCookies();
-	    driver.manage().window().maximize();
+		//WebDriverManager.chromedriver().setup(); 
+		//driver = new ChromeDriver();
+		//driver.get(url);
+		//driver.manage().deleteAllCookies();
+	    //driver.manage().window().maximize();
 		
-		SignUp sign=new SignUp();
-		sign.signupicon();
+		//SignUp sign=new SignUp();
+		//sign.signupicon();
 			
-		Login login= new Login();
-		login.login(PropertiesData.getObject("phone"));
-		Thread.sleep(3000);
-		login.OtpDetails(PropertiesData.getObject("otp"));
-		Thread.sleep(5000);
-		driver.get(deleteURL);
-		Thread.sleep(3000);
-		driver.close();
+		//Login login= new Login();
+		//login.login(PropertiesData.getObject("phone"));
+		//Thread.sleep(3000);
+		//login.OtpDetails(PropertiesData.getObject("otp"));
+		//Thread.sleep(5000);
+		//driver.get(deleteURL);
+		//Thread.sleep(3000);
+		//driver.close();
 		
 		
-	}
+	//}
 	
 	   @AfterMethod
 	   public static void quit(ITestResult result) throws IOException {    

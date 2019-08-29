@@ -3,7 +3,8 @@
 <suite name="Onco Staging">
 
 <listeners>
-		<listener class-name="com.onco.extinctreport.ExtinctTestNG" />
+		<listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
+		<listener class-name="com.onco.listeners.TestJiraListners" />
 </listeners>
 
     <parameter name="env" value="staging"/>
@@ -17,6 +18,7 @@
       <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>  
       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/> 
       <class name="com.onco.webtests.NewUserDiagnostictests"/>  
+      <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,4 +1,7 @@
 package com.onco.webtests;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
@@ -8,15 +11,45 @@ import com.onco.pages.OpinionType;
 import com.onco.pages.PatientInfo;
 import com.onco.pages.PaymentsRazorPay;
 import com.onco.pages.Service;
+import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
+import com.onco.util.JiraPolicy;
 import com.onco.util.PropertiesData;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class NewUserOpinionIndianPanel extends BaseClass {
 	
+@BeforeClass
+@Parameters({"deleteURL","url","browser"})
+public void delete(String deleteURL,String url,String browser) throws Exception {
+			
+WebDriverManager.chromedriver().setup(); 
+driver = new ChromeDriver();
+driver.get(url);
+driver.manage().deleteAllCookies();
+driver.manage().window().maximize();
+			
+SignUp sign=new SignUp();
+sign.signupicon();
+				
+Login login= new Login();
+login.login(PropertiesData.getObject("phone"));
+Thread.sleep(3000);
+login.OtpDetails(PropertiesData.getObject("otp"));
+Thread.sleep(5000);
+driver.get(deleteURL);
+Thread.sleep(3000);
+driver.close();
+			
+			
+}		
 	
-@Test
+	
+@JiraPolicy(logTicketReady=true)
+@Test(priority = 2)
 public void newUserOpinionIndiaPanal() throws Exception {
 	
 Homepage home= new Homepage();

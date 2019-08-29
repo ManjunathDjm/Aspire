@@ -7,18 +7,56 @@
   <parameter name="url" value="http://18.136.208.196/"/>
   <listeners>
     <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
+    <listener class-name="com.onco.listeners.TestJiraListners"/>
   </listeners>
   <test thread-count="5" name="PatientPortal(failed)">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority">
+      <class name="com.onco.webtests.NewUserAppointmentPayathospital">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+          <include name="delete"/>
+          <include name="newUserAppointmentPayAtHospital"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserAppointmentPayathospital -->
+      <class name="com.onco.webtests.NewUserDiagnostictests">
         <methods>
           <include name="delete"/>
           <include name="openBrowser"/>
-          <include name="setExtent"/>
+          <include name="quit"/>
+          <include name="newUserDiagnostic"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserDiagnostictests -->
+      <class name="com.onco.webtests.NewUserOpinionUSPanel">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="delete"/>
+          <include name="quit"/>
+          <include name="newUserOpinionUSPanal"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanel -->
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority">
+        <methods>
+          <include name="openBrowser"/>
           <include name="newUserAppointmentBookOnPriority"/>
           <include name="quit"/>
         </methods>
       </class> <!-- com.onco.webtests.NewUserAppointmentBookOnPriority -->
+      <class name="com.onco.webtests.NewUserOpinionIndianPanel">
+        <methods>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+          <include name="delete"/>
+          <include name="newUserOpinionIndiaPanal"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionIndianPanel -->
+      <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal">
+        <methods>
+          <include name="newuser"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.onco.webtests.ExistingUserOpinionIndiaPanal -->
     </classes>
   </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->
