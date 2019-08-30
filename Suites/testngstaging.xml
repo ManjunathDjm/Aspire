@@ -4,7 +4,6 @@
 
 <listeners>
 		<listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
-		<listener class-name="com.onco.listeners.TestJiraListners" />
 </listeners>
 
     <parameter name="env" value="staging"/>
