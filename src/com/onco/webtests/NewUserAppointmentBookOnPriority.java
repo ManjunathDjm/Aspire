@@ -12,7 +12,6 @@ import com.onco.pages.RequestDoctorAppointment;
 import com.onco.pages.Service;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-import com.onco.util.JiraPolicy;
 import com.onco.util.PropertiesData;
 
 

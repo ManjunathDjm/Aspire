@@ -15,7 +15,6 @@ import com.onco.pages.Service;
 import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-import com.onco.util.JiraPolicy;
 import com.onco.util.PropertiesData;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -48,7 +47,6 @@ driver.close();
 			
 }		
 	
-@JiraPolicy(logTicketReady=true)
 @Test(priority = 4)
 public void newUserAppointmentPayAtHospital() throws Exception {
     
