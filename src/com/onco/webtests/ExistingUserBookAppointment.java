@@ -17,7 +17,7 @@ import com.onco.util.PropertiesData;
 
 public class ExistingUserBookAppointment extends BaseClass {
 		
-@JiraPolicy(logTicketReady=true)
+@JiraPolicy(logTicketReady=false)
 @Test
 public void newuser() throws Exception {
 		

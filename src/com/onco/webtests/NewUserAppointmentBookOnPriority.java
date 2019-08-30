@@ -19,7 +19,6 @@ import com.onco.util.PropertiesData;
 public class NewUserAppointmentBookOnPriority extends BaseClass {
 		
 
-@JiraPolicy(logTicketReady=true)
 @Test(priority = 5)
 public void newUserAppointmentBookOnPriority() throws Exception {
     

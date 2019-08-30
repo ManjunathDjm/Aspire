@@ -17,7 +17,6 @@ import com.onco.util.PropertiesData;
 
 public class ExistingUserOpinionIndiaPanal extends BaseClass {
 	
-@JiraPolicy(logTicketReady=true)	
 @Test(priority = 6)
 public void newuser() throws Exception {
 		

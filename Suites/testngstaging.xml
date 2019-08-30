@@ -18,7 +18,6 @@
       <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>  
       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/> 
       <class name="com.onco.webtests.NewUserDiagnostictests"/>  
-      <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
