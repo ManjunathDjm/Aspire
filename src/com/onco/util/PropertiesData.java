@@ -16,7 +16,7 @@ public class PropertiesData {
 	public static void loadData() throws Exception {
 
 		properties = new Properties();
-		File f = new File("manjunath/onco-qa-automation/src/resources/application.properties");
+		File f = new File("/Users/manjunathdj/Applications/OncoWeb/src/resources/application.properties");
 		FileReader obj = new FileReader(f);
 		properties.load(obj);
 		
