@@ -46,7 +46,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-     
+            	
             	WebDriverManager.chromedriver().setup(); 
             	driver = new ChromeDriver();
             	driver.get(url);

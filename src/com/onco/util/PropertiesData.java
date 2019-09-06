@@ -11,8 +11,8 @@ import java.util.Properties;
  */
 public class PropertiesData {
 
-	static Properties properties;
-
+	private static Properties properties;
+	
 	public static void loadData() throws Exception {
 
 		properties = new Properties();
