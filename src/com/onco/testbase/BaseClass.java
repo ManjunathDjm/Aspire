@@ -7,21 +7,14 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
-import com.onco.pages.Login;
-import com.onco.pages.SignUp;
-import com.onco.util.PropertiesData;
-
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
@@ -49,6 +42,9 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	driver = new ChromeDriver();
+            	ChromeOptions options = new ChromeOptions();
+            	options.addArguments("--no-sandbox");
+            	options.addArguments("--disable-dev-shm-usage");
             	driver.get(url);
             	driver.manage().deleteAllCookies();
                 driver.manage().window().maximize();
