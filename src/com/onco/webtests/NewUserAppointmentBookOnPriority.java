@@ -1,5 +1,9 @@
 package com.onco.webtests;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.onco.pages.Appointment;
 import com.onco.pages.Dashboard;
@@ -14,9 +18,28 @@ import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 import com.onco.util.PropertiesData;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 public class NewUserAppointmentBookOnPriority extends BaseClass {
-		
+
+	@BeforeClass
+	@Parameters({"deleteURL","url","browser"})
+	public void delete(String deleteURL,String url,String browser) throws Exception {
+				
+	WebDriverManager.chromedriver().setup(); 
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("--no-sandbox"); //Bypass OS security model   
+	options.addArguments("--start-maximized");
+	options.addArguments("--disable-dev-shm-usage");
+	options.addArguments("--headless");
+	driver = new ChromeDriver(options);
+	WebDriverManager.chromedriver().setup(); 
+	driver.get(url);
+	driver.manage().deleteAllCookies();
+	driver.manage().window().maximize();
+	
+	}
 
 @Test(priority = 5)
 public void newUserAppointmentBookOnPriority() throws Exception {

@@ -1,6 +1,7 @@
 package com.onco.webtests;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -27,7 +28,13 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 public void delete(String deleteURL,String url,String browser) throws Exception {
 			
 WebDriverManager.chromedriver().setup(); 
-driver = new ChromeDriver();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--no-sandbox"); //Bypass OS security model   
+options.addArguments("--start-maximized");
+options.addArguments("--disable-dev-shm-usage");
+options.addArguments("--headless");
+driver = new ChromeDriver(options);
+WebDriverManager.chromedriver().setup(); 
 driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
