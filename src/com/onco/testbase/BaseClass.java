@@ -42,11 +42,6 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("--no-sandbox"); //Bypass OS security model   
-            	options.addArguments("--start-maximized");
-            	options.addArguments("--disable-dev-shm-usage");
-            	options.addArguments("--headless");
-            	options.addArguments("--disable-features=VizDisplayCompositor");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();

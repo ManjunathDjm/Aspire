@@ -29,13 +29,7 @@ public class NewUserOpinionUSPanel extends BaseClass {
 public void delete(String deleteURL,String url,String browser) throws Exception {
 		
 WebDriverManager.chromedriver().setup(); 
-ChromeOptions options = new ChromeOptions();
-options.addArguments("--no-sandbox"); //Bypass OS security model   
-options.addArguments("--start-maximized");
-options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--headless");
-options.addArguments("--window-size=1920,1080'");
-driver = new ChromeDriver(options);
+driver = new ChromeDriver();
 driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
