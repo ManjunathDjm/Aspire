@@ -46,6 +46,7 @@ public class BaseClass {
             	options.addArguments("--start-maximized");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--headless");
+            	options.addArguments("--disable-features=VizDisplayCompositor");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();

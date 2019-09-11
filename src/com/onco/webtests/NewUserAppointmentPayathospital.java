@@ -33,6 +33,7 @@ options.addArguments("--no-sandbox"); //Bypass OS security model
 options.addArguments("--start-maximized");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--headless");
+options.addArguments("--disable-features=VizDisplayCompositor");
 driver = new ChromeDriver(options);
 WebDriverManager.chromedriver().setup(); 
 driver.get(url);
