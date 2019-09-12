@@ -77,7 +77,7 @@ public class PatientInfo extends BaseClass{
 			    cancerStage.click();
 			
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
-			    Condition.selectByIndex(2);
+			    Condition.selectByIndex(1);
 		        generalCondition.click();
 		    
 		        continueButton.click();
