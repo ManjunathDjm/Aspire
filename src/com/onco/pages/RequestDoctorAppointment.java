@@ -33,7 +33,7 @@ public class RequestDoctorAppointment extends BaseClass {
     @FindBy(xpath="//input[@placeholder='Any specific requirements']")
     WebElement specific_test;
     
-    @FindBy(xpath="//div[@class='col-md-3 col-lg-3 col-xl-3']")
+    @FindBy(xpath="/html/body/app-root/req-doc-appointment/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div[1]/div[3]/div")
     WebElement find_cancer_specialist;
     
 
@@ -48,6 +48,12 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
 		try {
 	        	 location.click(); 
+	        	 try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 	    		 location.sendKeys("Mumbai",Keys.TAB);
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

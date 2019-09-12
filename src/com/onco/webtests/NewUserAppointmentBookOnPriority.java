@@ -23,18 +23,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NewUserAppointmentBookOnPriority extends BaseClass {
 
-	@BeforeClass
-	@Parameters({"deleteURL","url","browser"})
-	public void delete(String deleteURL,String url,String browser) throws Exception {
-				
-	WebDriverManager.chromedriver().setup(); 
-	driver = new ChromeDriver();
-	WebDriverManager.chromedriver().setup(); 
-	driver.get(url);
-	driver.manage().deleteAllCookies();
-	driver.manage().window().maximize();
 	
-	}
+@BeforeClass
+@Parameters({"deleteURL","url","browser"})
+public void delete(String deleteURL,String url,String browser) throws Exception {
+				
+WebDriverManager.chromedriver().setup(); 
+ChromeOptions options = new ChromeOptions();
+options.addArguments("window-size=1280,800");
+options.addArguments("--no-sandbox");
+options.addArguments("--headless");
+options.setExperimentalOption("useAutomationExtension", false);
+driver = new ChromeDriver(options);
+driver.get(url);
+driver.manage().deleteAllCookies();
+driver.manage().window().maximize();
+	
+}
 
 @Test(priority = 5)
 public void newUserAppointmentBookOnPriority() throws Exception {

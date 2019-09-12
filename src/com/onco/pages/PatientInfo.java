@@ -34,8 +34,9 @@ public class PatientInfo extends BaseClass{
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
 	WebElement email;
 	
-	@FindBy(name="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
+	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
 	WebElement generalCondition;
+	
 	
     @FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
     WebElement fileupload;

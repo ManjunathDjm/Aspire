@@ -25,7 +25,7 @@ public class Summary extends BaseClass {
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
     WebElement checkbox;
     
-    @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[5]/button")
+    @FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[5]/button")
     WebElement payNow;
     
     
@@ -40,8 +40,8 @@ public class Summary extends BaseClass {
 			logger.debug("entering Summary()");
 		}
 			try {
-    			String paymentbreakup= driver.findElement(By.xpath("/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[3]")).getText();
-    			System.out.println("breakup: " + paymentbreakup);
+    			//String paymentbreakup= driver.findElement(By.xpath("/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[3]")).getText();
+    			//System.out.println("breakup: " + paymentbreakup);
 				payNow.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

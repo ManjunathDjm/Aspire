@@ -20,10 +20,10 @@ public class OpinionType extends BaseClass {
     
     private static final Logger logger = Logger.getLogger(OpinionType.class);
     
-    @FindBy(xpath = "/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[1]/div/div[2]/div/div[2]")
+    @FindBy(xpath = "/html/body/app-root/select-opinion-type/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[1]/div/div[2]/div/div[2]")
     WebElement indianPanelButton;
     
-    @FindBy(xpath="/html/body/app-root/select-opinion-type/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
+    @FindBy(xpath="/html/body/app-root/select-opinion-type/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
     WebElement selectUsPanelButton;
         
     public OpinionType() {

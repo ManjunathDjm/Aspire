@@ -27,12 +27,17 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 @Parameters({"deleteURL","url","browser"})
 public void delete(String deleteURL,String url,String browser) throws Exception {
 			
-WebDriverManager.chromedriver().setup(); 
-driver = new ChromeDriver();
-WebDriverManager.chromedriver().setup(); 
-driver.get(url);
-driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
+	WebDriverManager.chromedriver().setup(); 
+	ChromeOptions options = new ChromeOptions();
+	options.addArguments("window-size=1280,800");
+	options.addArguments("--no-sandbox");
+	options.addArguments("--headless");
+	options.setExperimentalOption("useAutomationExtension", false);
+	driver = new ChromeDriver(options);
+	driver.get(url);
+	driver.manage().deleteAllCookies();
+	driver.manage().window().maximize();
+			
 			
 SignUp sign=new SignUp();
 sign.signupicon();
