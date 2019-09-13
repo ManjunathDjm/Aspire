@@ -54,7 +54,7 @@ public class RequestDoctorAppointment extends BaseClass {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-	    		 location.sendKeys("Mumbai",Keys.TAB);
+	    		 location.sendKeys("Bangalore",Keys.TAB);
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}

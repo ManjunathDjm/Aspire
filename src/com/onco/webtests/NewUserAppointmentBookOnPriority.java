@@ -14,6 +14,7 @@ import com.onco.pages.PatientInfo;
 import com.onco.pages.PaymentsRazorPay;
 import com.onco.pages.RequestDoctorAppointment;
 import com.onco.pages.Service;
+import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 import com.onco.util.PropertiesData;
@@ -38,6 +39,19 @@ driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
+
+SignUp sign=new SignUp();
+sign.signupicon();
+				
+Login login= new Login();
+login.login(PropertiesData.getObject("phone"));
+Thread.sleep(3000);
+login.OtpDetails(PropertiesData.getObject("otp"));
+Thread.sleep(5000);
+driver.get(deleteURL);
+Thread.sleep(3000);
+driver.close();
+			
 	
 }
 

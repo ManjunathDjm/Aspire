@@ -9,18 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Onco Staging</th></tr>
-<tr><td><a href="#t0">PatientPortal</a></td><td class="num">3</td><td class="num">0</td><td class="num attn">1</td><td class="num">187,752</td><td></td><td></td></tr>
+<tr><td><a href="#t0">PatientPortal</a></td><td class="num">2</td><td class="num attn">1</td><td class="num attn">1</td><td class="num">208,483</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserAppointmentBookOnPriority</td><td><a href="#m0">newUserAppointmentBookOnPriority</a></td><td rowspan="1">1568282093769</td><td rowspan="1">21717</td></tr><tr><th colspan="4">PatientPortal &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m1">newUserDiagnostic</a></td><td rowspan="1">1568282061102</td><td rowspan="1">24513</td></tr><tr class="passedodd"><td rowspan="1">com.onco.webtests.NewUserOpinionIndianPanel</td><td><a href="#m2">newUserOpinionIndiaPanal</a></td><td rowspan="1">1568282011697</td><td rowspan="1">27421</td></tr><tr class="passedeven"><td rowspan="1">com.onco.webtests.NewUserOpinionUSPanel</td><td><a href="#m3">newUserOpinionUSPanal</a></td><td rowspan="1">1568281956698</td><td rowspan="1">27456</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m0">delete</a></td><td rowspan="1">1568364144390</td><td rowspan="1">3859</td></tr><tr><th colspan="4">PatientPortal &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserAppointmentPayathospital</td><td><a href="#m1">newUserAppointmentPayAtHospital</a></td><td rowspan="1">1568364169639</td><td rowspan="1">80983</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m2">openBrowser</a></td><td rowspan="1">1568364148253</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">quit</a></td><td rowspan="1">1568364148265</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m4">newUserDiagnostic</a></td><td rowspan="1">1568364148260</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.onco.webtests.NewUserOpinionIndianPanel</td><td><a href="#m5">newUserOpinionIndiaPanal</a></td><td rowspan="1">1568364117598</td><td rowspan="1">26649</td></tr><tr class="passedodd"><td rowspan="1">com.onco.webtests.NewUserOpinionUSPanel</td><td><a href="#m6">newUserOpinionUSPanal</a></td><td rowspan="1">1568364066234</td><td rowspan="1">27400</td></tr></tbody>
 </table>
-<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserAppointmentBookOnPriority#newUserAppointmentBookOnPriority</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]&quot;}
-  (Session info: headless chrome=76.0.3809.132)
+<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserDiagnostictests#delete</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>http://18.136.208.196/start/delete-me</td><td>http://18.136.208.196/</td><td>Chrome</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;countryCode&apos;]&quot;}
+  (Session info: headless chrome=77.0.3865.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:484:8562:8fb3:ad6d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:141d:4159:6de1:f067%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.132, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:60416}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 3a1250c6a6b2bc9363b80cc319e856c2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:63691}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4fa63639153a8df97caa0625d346e33c
+*** Element info: {Using=name, value=countryCode}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onco.pages.Login.login(Login.java:55)
+	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:45)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.onco.webtests.NewUserAppointmentPayathospital#newUserAppointmentPayAtHospital</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]&quot;}
+  (Session info: headless chrome=77.0.3865.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:141d:4159:6de1:f067%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:63819}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bd28c52fade55c1919132f8159bc8716
 *** Element info: {Using=xpath, value=/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -36,10 +58,33 @@ Session ID: 3a1250c6a6b2bc9363b80cc319e856c2
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy15.click(Unknown Source)
 	at com.onco.pages.Login.OtpDetails(Login.java:73)
-	at com.onco.webtests.NewUserAppointmentBookOnPriority.newUserAppointmentBookOnPriority(NewUserAppointmentBookOnPriority.java:53)
+	at com.onco.webtests.NewUserAppointmentPayathospital.newUserAppointmentPayAtHospital(NewUserAppointmentPayathospital.java:67)
 ... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.onco.webtests.NewUserOpinionIndianPanel#newUserOpinionIndiaPanal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.onco.webtests.NewUserOpinionUSPanel#newUserOpinionUSPanal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.onco.webtests.NewUserDiagnostictests#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.onco.webtests.NewUserDiagnostictests#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;countryCode&apos;]&quot;}
+  (Session info: headless chrome=77.0.3865.75)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:141d:4159:6de1:f067%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:63691}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4fa63639153a8df97caa0625d346e33c
+*** Element info: {Using=name, value=countryCode}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.onco.pages.Login.login(Login.java:55)
+	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:45)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.onco.webtests.NewUserOpinionIndianPanel#newUserOpinionIndiaPanal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.onco.webtests.NewUserOpinionUSPanel#newUserOpinionUSPanal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

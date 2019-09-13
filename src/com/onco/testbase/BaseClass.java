@@ -44,7 +44,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("window-size=1980,1080");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless");
+            	//options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
@@ -60,31 +60,6 @@ public class BaseClass {
         }
 	
     }
-	
-	//@BeforeClass
-	//@Parameters({"deleteURL","url","browser"})
-	//public void delete(String deleteURL,String url,String browser) throws Exception {
-		
-		//WebDriverManager.chromedriver().setup(); 
-		//driver = new ChromeDriver();
-		//driver.get(url);
-		//driver.manage().deleteAllCookies();
-	    //driver.manage().window().maximize();
-		
-		//SignUp sign=new SignUp();
-		//sign.signupicon();
-			
-		//Login login= new Login();
-		//login.login(PropertiesData.getObject("phone"));
-		//Thread.sleep(3000);
-		//login.OtpDetails(PropertiesData.getObject("otp"));
-		//Thread.sleep(5000);
-		//driver.get(deleteURL);
-		//Thread.sleep(3000);
-		//driver.close();
-		
-		
-	//}
 	
 	   @AfterMethod
 	   public static void quit(ITestResult result) throws IOException {    
