@@ -33,6 +33,7 @@ options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
 options.setExperimentalOption("useAutomationExtension", false);
+options.addArguments("--always-authorize-plugins");
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
