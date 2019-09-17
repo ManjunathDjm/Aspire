@@ -27,9 +27,7 @@
         <plugins>
             <!-- Following plugin executes the testng tests -->
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.14.1</version>
                 <configuration>
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
@@ -54,12 +52,6 @@
     <dependencies>
         <!-- Dependency libraries to include for compilation -->
       <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.0.0</version>
-    <scope>test</scope>
-</dependency>
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
@@ -91,6 +83,12 @@
     <version>4.3</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.8.8</version>
+    <scope></scope>
+</dependency>
 <dependency>
     <groupId>commons-logging</groupId>
     <artifactId>commons-logging</artifactId>
