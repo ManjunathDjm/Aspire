@@ -10,14 +10,14 @@
   </listeners>
   <test thread-count="5" name="PatientPortal(failed)">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital">
+      <class name="com.onco.webtests.NewUserDiagnostictests">
         <methods>
+          <include name="delete"/>
           <include name="openBrowser"/>
           <include name="quit"/>
-          <include name="delete"/>
-          <include name="newUserAppointmentPayAtHospital"/>
+          <include name="newUserDiagnostic"/>
         </methods>
-      </class> <!-- com.onco.webtests.NewUserAppointmentPayathospital -->
+      </class> <!-- com.onco.webtests.NewUserDiagnostictests -->
     </classes>
   </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->

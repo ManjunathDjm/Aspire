@@ -43,7 +43,6 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.setPageLoadStrategy(PageLoadStrategy.NONE);
             	options.addArguments("window-size=1980,1080");
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless");

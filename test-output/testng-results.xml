@@ -1,67 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-18T05:48:38Z" name="Onco Staging" finished-at="2019-09-18T05:50:21Z" duration-ms="103374">
+  <suite started-at="2019-09-18T10:10:29Z" name="Onco Staging" finished-at="2019-09-18T10:10:31Z" duration-ms="1969">
     <groups>
     </groups>
-    <test started-at="2019-09-18T05:48:38Z" name="PatientPortal" finished-at="2019-09-18T05:50:21Z" duration-ms="103374">
-      <class name="com.onco.webtests.NewUserOpinionUSPanel">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanel@75f32542]" started-at="2019-09-18T05:48:38Z" name="delete" finished-at="2019-09-18T05:48:57Z" duration-ms="19733" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://18.136.208.196/start/delete-me]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanel@75f32542]" started-at="2019-09-18T05:48:57Z" name="openBrowser" finished-at="2019-09-18T05:49:00Z" duration-ms="2985" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="newUserOpinionUSPanal()[pri:1, instance:com.onco.webtests.NewUserOpinionUSPanel@75f32542]" started-at="2019-09-18T05:49:00Z" name="newUserOpinionUSPanal" finished-at="2019-09-18T05:49:28Z" duration-ms="27198" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newUserOpinionUSPanal -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanel@75f32542]" started-at="2019-09-18T05:49:28Z" name="quit" finished-at="2019-09-18T05:49:28Z" duration-ms="118" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=newUserOpinionUSPanal status=SUCCESS method=NewUserOpinionUSPanel.newUserOpinionUSPanal()[pri:1, instance:com.onco.webtests.NewUserOpinionUSPanel@75f32542] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- com.onco.webtests.NewUserOpinionUSPanel -->
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserAppointmentPayathospital@7692d9cc]" started-at="2019-09-18T05:50:18Z" name="delete" finished-at="2019-09-18T05:50:21Z" duration-ms="3447" status="FAIL">
+    <test started-at="2019-09-18T10:10:29Z" name="PatientPortal" finished-at="2019-09-18T10:10:31Z" duration-ms="1969">
+      <class name="com.onco.webtests.NewUserDiagnostictests">
+        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@1d082e88]" started-at="2019-09-18T10:10:29Z" name="delete" finished-at="2019-09-18T10:10:31Z" duration-ms="1909" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -81,26 +27,26 @@
           </params>
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='countryCode']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img"}
   (Session info: headless chrome=77.0.3865.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c05:48d:e4e7:e521%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:50202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4e81ce126cad9c83ab7037e3d60e15f
-*** Element info: {Using=name, value=countryCode}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76b7aa037715170c6e63cc95d76bce7c
+*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='countryCode']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img"}
   (Session info: headless chrome=77.0.3865.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c05:48d:e4e7:e521%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:50202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4e81ce126cad9c83ab7037e3d60e15f
-*** Element info: {Using=name, value=countryCode}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76b7aa037715170c6e63cc95d76bce7c
+*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -113,11 +59,14 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-at org.openqa.selenium.By$ByName.findElement(By.java:284)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.onco.pages.Login.login(Login.java:55)
-at com.onco.webtests.NewUserAppointmentPayathospital.delete(NewUserAppointmentPayathospital.java:46)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at com.onco.pages.SignUp.signupicon(SignUp.java:68)
+at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -150,33 +99,33 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserAppointmentPayathospital@7692d9cc]" started-at="2019-09-18T05:50:21Z" name="openBrowser" finished-at="2019-09-18T05:50:21Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@1d082e88]" started-at="2019-09-18T10:10:31Z" name="openBrowser" finished-at="2019-09-18T10:10:31Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="newUserAppointmentPayAtHospital()[pri:4, instance:com.onco.webtests.NewUserAppointmentPayathospital@7692d9cc]" started-at="2019-09-18T05:50:21Z" name="newUserAppointmentPayAtHospital" finished-at="2019-09-18T05:50:21Z" duration-ms="0" status="SKIP">
+        <test-method signature="newUserDiagnostic()[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@1d082e88]" started-at="2019-09-18T10:10:31Z" name="newUserDiagnostic" finished-at="2019-09-18T10:10:31Z" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"*[name='countryCode']"}
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img"}
   (Session info: headless chrome=77.0.3865.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c05:48d:e4e7:e521%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:50202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4e81ce126cad9c83ab7037e3d60e15f
-*** Element info: {Using=name, value=countryCode}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76b7aa037715170c6e63cc95d76bce7c
+*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"*[name='countryCode']"}
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img"}
   (Session info: headless chrome=77.0.3865.75)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c05:48d:e4e7:e521%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:50202}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4e81ce126cad9c83ab7037e3d60e15f
-*** Element info: {Using=name, value=countryCode}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 76b7aa037715170c6e63cc95d76bce7c
+*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -189,11 +138,14 @@ at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.ja
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
-at org.openqa.selenium.By$ByName.findElement(By.java:284)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at com.onco.pages.Login.login(Login.java:55)
-at com.onco.webtests.NewUserAppointmentPayathospital.delete(NewUserAppointmentPayathospital.java:46)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at com.onco.pages.SignUp.signupicon(SignUp.java:68)
+at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:44)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -225,66 +177,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newUserAppointmentPayAtHospital -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserAppointmentPayathospital@7692d9cc]" started-at="2019-09-18T05:50:21Z" name="quit" finished-at="2019-09-18T05:50:21Z" duration-ms="0" status="SKIP">
+        </test-method> <!-- newUserDiagnostic -->
+        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@1d082e88]" started-at="2019-09-18T10:10:31Z" name="quit" finished-at="2019-09-18T10:10:31Z" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.onco.webtests.NewUserAppointmentPayathospital -->
-      <class name="com.onco.webtests.NewUserOpinionIndianPanel">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@7f1302d6]" started-at="2019-09-18T05:49:28Z" name="delete" finished-at="2019-09-18T05:49:46Z" duration-ms="18161" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://18.136.208.196/start/delete-me]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@7f1302d6]" started-at="2019-09-18T05:49:46Z" name="openBrowser" finished-at="2019-09-18T05:49:50Z" duration-ms="3849" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="newUserOpinionIndiaPanal()[pri:2, instance:com.onco.webtests.NewUserOpinionIndianPanel@7f1302d6]" started-at="2019-09-18T05:49:50Z" name="newUserOpinionIndiaPanal" finished-at="2019-09-18T05:50:17Z" duration-ms="27715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@7f1302d6]" started-at="2019-09-18T05:50:17Z" name="quit" finished-at="2019-09-18T05:50:18Z" duration-ms="122" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=newUserOpinionIndiaPanal status=SUCCESS method=NewUserOpinionIndianPanel.newUserOpinionIndiaPanal()[pri:2, instance:com.onco.webtests.NewUserOpinionIndianPanel@7f1302d6] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- com.onco.webtests.NewUserOpinionIndianPanel -->
+      </class> <!-- com.onco.webtests.NewUserDiagnostictests -->
     </test> <!-- PatientPortal -->
   </suite> <!-- Onco Staging -->
 </testng-results>
