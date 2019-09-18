@@ -12,7 +12,7 @@
     <parameter name="deleteURL" value="http://18.136.208.196/start/delete-me"/>
   <test thread-count="6" name="PatientPortal">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+      <class name="com.onco.webtests.NewUserDiagnostictests"/>  
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

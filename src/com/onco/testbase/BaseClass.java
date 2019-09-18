@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -42,11 +43,11 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
+            	options.setPageLoadStrategy(PageLoadStrategy.NONE);
             	options.addArguments("window-size=1980,1080");
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
-            	options.addArguments("--always-authorize-plugins");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
