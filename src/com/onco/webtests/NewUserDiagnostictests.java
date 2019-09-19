@@ -1,6 +1,5 @@
 package com.onco.webtests;
 
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -30,7 +29,6 @@ public class NewUserDiagnostictests extends BaseClass {
 public void delete(String deleteURL,String url,String browser) throws Exception {
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.setPageLoadStrategy(PageLoadStrategy.NONE);
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
