@@ -46,6 +46,8 @@ public class BaseClass {
             	options.addArguments("window-size=1980,1080");
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless");
+            	options.addArguments("--disable-dev-shm-usage");
+            	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
