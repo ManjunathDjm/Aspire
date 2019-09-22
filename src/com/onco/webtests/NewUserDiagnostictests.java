@@ -29,9 +29,9 @@ public class NewUserDiagnostictests extends BaseClass {
 public void delete(String deleteURL,String url,String browser) throws Exception {
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1280,800");
+//options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
