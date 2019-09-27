@@ -70,13 +70,7 @@ public class Login extends BaseClass {
 			logger.debug("entering otpDetails(String)");
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
-			try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-    	    otp.click();  
+			otp.click();  
     		otp.sendKeys(Otp);
     		proceedButton.click();
 		if (logger.isDebugEnabled()) {

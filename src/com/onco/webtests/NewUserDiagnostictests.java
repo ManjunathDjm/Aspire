@@ -45,10 +45,13 @@ sign.signupicon();
 				
 Login login= new Login();
 login.login(phone);
-Thread.sleep(3000);
+
+Thread.sleep(30000);
 login.OtpDetails(otp);
+
 Thread.sleep(5000);
 driver.get(deleteURL);
+
 Thread.sleep(3000);
 driver.close();
 			
