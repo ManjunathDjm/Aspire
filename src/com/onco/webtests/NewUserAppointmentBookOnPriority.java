@@ -46,7 +46,7 @@ sign.signupicon();
 Login login= new Login();
 login.login(PropertiesData.getObject("phone"));
 Thread.sleep(3000);
-login.OtpDetails(PropertiesData.getObject("otp"));
+login.otpDetails(PropertiesData.getObject("otp"));
 Thread.sleep(5000);
 driver.get(deleteURL);
 Thread.sleep(3000);
@@ -64,7 +64,7 @@ home.patientquery();
 home.submit();
 
 Login login= new Login();
-login.OtpDetails(PropertiesData.getObject("otp"));
+login.otpDetails(PropertiesData.getObject("otp"));
 
 PatientInfo info=new PatientInfo();
 info.patientInfo(PropertiesData.getObject("patientname"));

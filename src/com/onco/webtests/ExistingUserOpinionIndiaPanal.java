@@ -27,7 +27,7 @@ home.submit();
 Thread.sleep(3000);
 Login login= new Login();
 login.login(PropertiesData.getObject("phone"));
-login.OtpDetails(PropertiesData.getObject("otp"));
+login.otpDetails(PropertiesData.getObject("otp"));
     
 Dashboard dashboard =new Dashboard();
 dashboard.dashboard();

@@ -47,7 +47,7 @@ Login login= new Login();
 login.login(phone);
 
 Thread.sleep(30000);
-login.OtpDetails(otp);
+login.otpDetails(otp);
 
 Thread.sleep(5000);
 driver.get(deleteURL);
@@ -67,7 +67,7 @@ home.patientquery();
 home.submit();
 	
 Login login= new Login();
-login.OtpDetails(otp);
+login.otpDetails(otp);
 	
 PatientInfo info=new PatientInfo();
 info.patientInfo(patientname);

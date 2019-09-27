@@ -64,7 +64,7 @@ public class Login extends BaseClass {
     	
     }
      	
-    public void OtpDetails(String Otp) {
+    public void otpDetails(String Otp) {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering otpDetails(String)");
