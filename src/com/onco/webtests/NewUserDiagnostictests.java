@@ -25,16 +25,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class NewUserDiagnostictests extends BaseClass {
 	
 @BeforeClass
-@Parameters({"deleteURL","url","browser"})
-public void delete(String deleteURL,String url,String browser) throws Exception {
+@Parameters({"deleteURL","url","browser","phone","otp"})
+public void delete(String deleteURL,String url,String browser, String phone, String otp) throws Exception {
+
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-//options.addArguments("window-size=1280,800");
+options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
+options.addArguments("--enable-precise-memory-info");
 options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
+options.addArguments("--remote-debugging-port=9222");
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
@@ -44,9 +47,9 @@ SignUp sign=new SignUp();
 sign.signupicon();
 				
 Login login= new Login();
-login.login(PropertiesData.getObject("phone"));
+login.login(phone);
 Thread.sleep(3000);
-login.OtpDetails(PropertiesData.getObject("otp"));
+login.OtpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);
 Thread.sleep(3000);
@@ -54,20 +57,20 @@ driver.close();
 			
 			
 }	
-	
+@Parameters({"name","email","phone","otp","patientname"})
 @Test(priority = 3)
-public void newUserDiagnostic() throws Exception {
+public void newUserDiagnostic(String name, String email, String phone,String otp, String patientname) throws Exception {
 	
 Homepage home= new Homepage();
-home.formfill(PropertiesData.getObject("name") ,PropertiesData.getObject("email"),PropertiesData.getObject("phone"));
+home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 	
 Login login= new Login();
-login.OtpDetails(PropertiesData.getObject("otp"));
+login.OtpDetails(otp);
 	
 PatientInfo info=new PatientInfo();
-info.patientInfo(PropertiesData.getObject("patientname"));
+info.patientInfo(patientname);
 	
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();

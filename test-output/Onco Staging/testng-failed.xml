@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Onco Staging]" guice-stage="DEVELOPMENT">
+  <parameter name="phone" value="9036890379"/>
   <parameter name="browser" value="Chrome"/>
+  <parameter name="name" value="test_manjunath"/>
   <parameter name="deleteURL" value="http://18.136.208.196/start/delete-me"/>
   <parameter name="env" value="staging"/>
   <parameter name="url" value="http://18.136.208.196/"/>
+  <parameter name="email" value="manjunath.11j@gmail.com"/>
   <listeners>
     <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
   </listeners>

@@ -42,12 +42,13 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("window-size=1980,1080");
+            	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
+            	options.addArguments("--remote-debugging-port=9222");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();

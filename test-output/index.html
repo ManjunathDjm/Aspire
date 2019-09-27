@@ -128,31 +128,10 @@
                   <a name="newUserDiagnostic">
                   </a> <!-- newUserDiagnostic -->
                   <span class="method-name">newUserDiagnostic</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img&quot;}
-  (Session info: headless chrome=77.0.3865.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c05:48d:e4e7:e521%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 76b7aa037715170c6e63cc95d76bce7c
-*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at com.onco.pages.SignUp.signupicon(SignUp.java:68)
-	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:44)
-... Removed 31 stack frames
+                  <div class="stack-trace">org.testng.TestNGException: 
+Parameter &apos;otp&apos; is required by BeforeClass on method delete but has not been marked @Optional or defined
+in /Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml
+... Removed 23 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -168,10 +147,13 @@ Session ID: 76b7aa037715170c6e63cc95d76bce7c
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Onco Staging&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;parameter name=&quot;phone&quot; value=&quot;9036890379&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
+  &lt;parameter name=&quot;name&quot; value=&quot;test_manjunath&quot;/&gt;
   &lt;parameter name=&quot;deleteURL&quot; value=&quot;http://18.136.208.196/start/delete-me&quot;/&gt;
   &lt;parameter name=&quot;env&quot; value=&quot;staging&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;http://18.136.208.196/&quot;/&gt;
+  &lt;parameter name=&quot;email&quot; value=&quot;manjunath.11j@gmail.com&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.onco.extinctreport.ExtinctTestNG&quot;/&gt;
   &lt;/listeners&gt;
@@ -257,12 +239,6 @@ return data;
                 <span class="method-name">newUserDiagnostic</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">delete(http://18.136.208.196/start/delete-me, http://18.136.208.196/, Chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

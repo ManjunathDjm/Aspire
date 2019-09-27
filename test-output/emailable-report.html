@@ -9,61 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Onco Staging</th></tr>
-<tr><td><a href="#t0">PatientPortal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">1,969</td><td></td><td></td></tr>
+<tr><td><a href="#t0">PatientPortal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">72</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m0">delete</a></td><td rowspan="1">1568801429634</td><td rowspan="1">1909</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m1">openBrowser</a></td><td rowspan="1">1568801431566</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">quit</a></td><td rowspan="1">1568801431574</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m3">newUserDiagnostic</a></td><td rowspan="1">1568801431570</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m0">delete</a></td><td rowspan="1">1569521082468</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m1">openBrowser</a></td><td rowspan="1">1569521082496</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">quit</a></td><td rowspan="1">1569521082508</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m3">newUserDiagnostic</a></td><td rowspan="1">1569521082499</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserDiagnostictests#delete</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>http://18.136.208.196/start/delete-me</td><td>http://18.136.208.196/</td><td>Chrome</td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img&quot;}
-  (Session info: headless chrome=77.0.3865.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c05:48d:e4e7:e521%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 76b7aa037715170c6e63cc95d76bce7c
-*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at com.onco.pages.SignUp.signupicon(SignUp.java:68)
-	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:44)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserDiagnostictests#delete</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;otp&apos; is required by BeforeClass on method delete but has not been marked @Optional or defined
+in /Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.onco.webtests.NewUserDiagnostictests#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.onco.webtests.NewUserDiagnostictests#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img&quot;}
-  (Session info: headless chrome=77.0.3865.75)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c05:48d:e4e7:e521%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.75, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:53751}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 76b7aa037715170c6e63cc95d76bce7c
-*** Element info: {Using=xpath, value=/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at com.onco.pages.SignUp.signupicon(SignUp.java:68)
-	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:44)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Parameter &apos;otp&apos; is required by BeforeClass on method delete but has not been marked @Optional or defined
+in /Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml
+... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
