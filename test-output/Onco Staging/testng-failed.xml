@@ -8,7 +8,7 @@
   <parameter name="deleteURL" value="http://18.136.208.196/start/delete-me"/>
   <parameter name="otp" value="5813"/>
   <parameter name="env" value="staging"/>
-  <parameter name="url" value="http://18.136.208.196/"/>
+  <parameter name="url" value="http://18.136.208.196/start"/>
   <parameter name="email" value="manjunath.11j@gmail.com"/>
   <listeners>
     <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
