@@ -9,19 +9,109 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Onco Staging</th></tr>
-<tr><td><a href="#t0">PatientPortal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">72</td><td></td><td></td></tr>
+<tr><td><a href="#t0">PatientPortal</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">62,705</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m0">delete</a></td><td rowspan="1">1569521082468</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m1">openBrowser</a></td><td rowspan="1">1569521082496</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">quit</a></td><td rowspan="1">1569521082508</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m3">newUserDiagnostic</a></td><td rowspan="1">1569521082499</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Onco Staging</th></tr></tbody><tbody id="t0"><tr><th colspan="4">PatientPortal &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m0">delete</a></td><td rowspan="1">1569574018395</td><td rowspan="1">62616</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m1">openBrowser</a></td><td rowspan="1">1569574081056</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m2">quit</a></td><td rowspan="1">1569574081066</td><td rowspan="1">0</td></tr><tr><th colspan="4">PatientPortal &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">com.onco.webtests.NewUserDiagnostictests</td><td><a href="#m3">newUserDiagnostic</a></td><td rowspan="1">1569574081060</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserDiagnostictests#delete</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;otp&apos; is required by BeforeClass on method delete but has not been marked @Optional or defined
-in /Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>PatientPortal</h2><h3 id="m0">com.onco.webtests.NewUserDiagnostictests#delete</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>http://18.136.208.196/start/delete-me</td><td>http://18.136.208.196/</td><td>Chrome</td><td>9036890379</td><td>5813</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:89b:b586:8338:5d80%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010d92af09 chromedriver + 3694345
+1   chromedriver                        0x000000010d8b7fd3 chromedriver + 3223507
+2   chromedriver                        0x000000010d65758f chromedriver + 730511
+3   chromedriver                        0x000000010d5bd2b8 chromedriver + 99000
+4   chromedriver                        0x000000010d5b922a chromedriver + 82474
+5   chromedriver                        0x000000010d5e6b71 chromedriver + 269169
+6   chromedriver                        0x000000010d5e3e83 chromedriver + 257667
+7   chromedriver                        0x000000010d5bf23d chromedriver + 107069
+8   chromedriver                        0x000000010d5c01d5 chromedriver + 111061
+9   chromedriver                        0x000000010d8e607f chromedriver + 3412095
+10  chromedriver                        0x000000010d8f2ced chromedriver + 3464429
+11  chromedriver                        0x000000010d8f2a78 chromedriver + 3463800
+12  chromedriver                        0x000000010d8c5959 chromedriver + 3279193
+13  chromedriver                        0x000000010d8f3548 chromedriver + 3466568
+14  chromedriver                        0x000000010d8da1b7 chromedriver + 3363255
+15  chromedriver                        0x000000010d911474 chromedriver + 3589236
+16  chromedriver                        0x000000010d930ce7 chromedriver + 3718375
+17  libsystem_pthread.dylib             0x00007fff7075a2eb _pthread_body + 126
+18  libsystem_pthread.dylib             0x00007fff7075d249 _pthread_start + 66
+19  libsystem_pthread.dylib             0x00007fff7075940d thread_start + 13
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:41)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.onco.webtests.NewUserDiagnostictests#openBrowser</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">com.onco.webtests.NewUserDiagnostictests#quit</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
-Parameter &apos;otp&apos; is required by BeforeClass on method delete but has not been marked @Optional or defined
-in /Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml
-... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.onco.webtests.NewUserDiagnostictests#newUserDiagnostic</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:89b:b586:8338:5d80%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 0   chromedriver                        0x000000010d92af09 chromedriver + 3694345
+1   chromedriver                        0x000000010d8b7fd3 chromedriver + 3223507
+2   chromedriver                        0x000000010d65758f chromedriver + 730511
+3   chromedriver                        0x000000010d5bd2b8 chromedriver + 99000
+4   chromedriver                        0x000000010d5b922a chromedriver + 82474
+5   chromedriver                        0x000000010d5e6b71 chromedriver + 269169
+6   chromedriver                        0x000000010d5e3e83 chromedriver + 257667
+7   chromedriver                        0x000000010d5bf23d chromedriver + 107069
+8   chromedriver                        0x000000010d5c01d5 chromedriver + 111061
+9   chromedriver                        0x000000010d8e607f chromedriver + 3412095
+10  chromedriver                        0x000000010d8f2ced chromedriver + 3464429
+11  chromedriver                        0x000000010d8f2a78 chromedriver + 3463800
+12  chromedriver                        0x000000010d8c5959 chromedriver + 3279193
+13  chromedriver                        0x000000010d8f3548 chromedriver + 3466568
+14  chromedriver                        0x000000010d8da1b7 chromedriver + 3363255
+15  chromedriver                        0x000000010d911474 chromedriver + 3589236
+16  chromedriver                        0x000000010d930ce7 chromedriver + 3718375
+17  libsystem_pthread.dylib             0x00007fff7075a2eb _pthread_body + 126
+18  libsystem_pthread.dylib             0x00007fff7075d249 _pthread_start + 66
+19  libsystem_pthread.dylib             0x00007fff7075940d thread_start + 13
+
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
+	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
+	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:41)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

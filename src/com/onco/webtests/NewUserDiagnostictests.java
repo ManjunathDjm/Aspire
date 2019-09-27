@@ -16,7 +16,6 @@ import com.onco.pages.Service;
 import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-import com.onco.util.PropertiesData;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -32,7 +31,6 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--enable-precise-memory-info");
 options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");

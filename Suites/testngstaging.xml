@@ -14,6 +14,7 @@
     <parameter name="phone" value="9036890379"/>
     <parameter name="otp" value="5813"/>
     <parameter name="patientname" value="test_onco"/>
+    
   <test thread-count="6" name="PatientPortal">
     <classes>
       <class name="com.onco.webtests.NewUserDiagnostictests"/>  
