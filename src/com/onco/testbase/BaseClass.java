@@ -33,8 +33,8 @@ public class BaseClass {
 	@BeforeMethod
 	public void openBrowser(String browser, String url) throws Exception {
        
-    	//String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
-    	//PropertyConfigurator.configure(log4jConfPath);
+    	String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
+    	PropertyConfigurator.configure(log4jConfPath);
  
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
