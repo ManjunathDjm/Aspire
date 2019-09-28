@@ -146,35 +146,11 @@
     <artifactId>selenium-server</artifactId>
     <version>3.141.59</version>
 </dependency>
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-install-plugin</artifactId>
-  <version>3.0.0-M1</version>
-  <type>maven-plugin</type>
-</dependency>
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-clean-plugin</artifactId>
-  <version>3.1.0</version>
-  <type>maven-plugin</type>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
-<dependency>
-    <groupId>org.freemarker</groupId>
-    <artifactId>freemarker</artifactId>
-    <version>2.3.14</version>
-</dependency>
 <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 <dependency>
     <groupId>com.relevantcodes</groupId>
     <artifactId>extentreports</artifactId>
     <version>2.41.2</version>
-</dependency>
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-deploy-plugin</artifactId>
-  <version>3.0.0-M1</version>
-  <type>maven-plugin</type>
 </dependency>
 </dependencies>
 </project>
