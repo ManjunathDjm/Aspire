@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import jdk.internal.org.jline.utils.Log;
 
 /**
  * Methods to launch browsers and take screenshots on test case fail
@@ -33,7 +34,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void openBrowser(String browser, String url) throws Exception {
        
-    	String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
+		String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
     	PropertyConfigurator.configure(log4jConfPath);
  
 		try {

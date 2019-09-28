@@ -154,6 +154,12 @@
         <artifactId>guava</artifactId>
         <version>25.0-jre</version>
     </dependency>
+<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.8.1</version>
+  <type>maven-plugin</type>
+</dependency>
 <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 <dependency>
     <groupId>com.relevantcodes</groupId>

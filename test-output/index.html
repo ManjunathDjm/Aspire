@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Onco_Staging" class="navigator-link">
-              <span class="suite-name border-skipped">Onco Staging</span>
+              <span class="suite-name border-failed">Onco Staging</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Onco_Staging" class="navigator-link ">
-                    <span>testngstaging.xml</span>
+                    <span>testngProd.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods skipped suite-Onco_Staging"> (hide)</a> <!-- hide-methods skipped suite-Onco_Staging -->
-                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods skipped suite-Onco_Staging"> (show)</a> <!-- show-methods skipped suite-Onco_Staging -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods failed suite-Onco_Staging"> (hide)</a> <!-- hide-methods failed suite-Onco_Staging -->
+                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods failed suite-Onco_Staging"> (show)</a> <!-- show-methods failed suite-Onco_Staging -->
                     </span>
-                    <div class="method-list-content skipped suite-Onco_Staging">
+                    <div class="method-list-content failed suite-Onco_Staging">
                       <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserDiagnostictests" class="method navigator-link" hash-for-method="newUserDiagnostic">newUserDiagnostic</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserDiagnostictests" class="method navigator-link" hash-for-method="newUserDiagnostic(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco)">newUserDiagnostic(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Onco_Staging -->
+                    </div> <!-- method-list-content failed suite-Onco_Staging -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,75 +117,48 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Onco_Staging" class="panel Onco_Staging">
-          <div class="suite-Onco_Staging-class-skipped">
+          <div class="suite-Onco_Staging-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.onco.webtests.NewUserDiagnostictests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="newUserDiagnostic">
-                  </a> <!-- newUserDiagnostic -->
+                  <a name="newUserDiagnostic(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco)">
+                  </a> <!-- newUserDiagnostic(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco) -->
                   <span class="method-name">newUserDiagnostic</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+                  <span class="parameters">(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco)</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:1cb1:5400:3ea0:dd01%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 chromedriver + 3694345
-1   chromedriver                        0x0000000102ac9fd3 chromedriver + 3223507
-2   chromedriver                        0x000000010286958f chromedriver + 730511
-3   chromedriver                        0x00000001027cf2b8 chromedriver + 99000
-4   chromedriver                        0x00000001027cb22a chromedriver + 82474
-5   chromedriver                        0x00000001027f8b71 chromedriver + 269169
-6   chromedriver                        0x00000001027f5e83 chromedriver + 257667
-7   chromedriver                        0x00000001027d123d chromedriver + 107069
-8   chromedriver                        0x00000001027d21d5 chromedriver + 111061
-9   chromedriver                        0x0000000102af807f chromedriver + 3412095
-10  chromedriver                        0x0000000102b04ced chromedriver + 3464429
-11  chromedriver                        0x0000000102b04a78 chromedriver + 3463800
-12  chromedriver                        0x0000000102ad7959 chromedriver + 3279193
-13  chromedriver                        0x0000000102b05548 chromedriver + 3466568
-14  chromedriver                        0x0000000102aec1b7 chromedriver + 3363255
-15  chromedriver                        0x0000000102b23474 chromedriver + 3589236
-16  chromedriver                        0x0000000102b42ce7 chromedriver + 3718375
-17  libsystem_pthread.dylib             0x00007fff666532eb _pthread_body + 126
-18  libsystem_pthread.dylib             0x00007fff66656249 _pthread_start + 66
-19  libsystem_pthread.dylib             0x00007fff6665240d thread_start + 13
-
-	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-	at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:c80:ea8b:7fa5:cacc%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 30dd55a888e91759bffca92721e258a5
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:189)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:176)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:165)
-	at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:39)
-... Removed 31 stack frames
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.onco.pages.Login.otpDetails(Login.java:73)
+	at com.onco.webtests.NewUserDiagnostictests.newUserDiagnostic(NewUserDiagnostictests.java:70)
+... Removed 34 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Onco_Staging-class-skipped -->
+          </div> <!-- suite-Onco_Staging-class-failed -->
         </div> <!-- panel Onco_Staging -->
         <div panel-name="test-xml-Onco_Staging" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/Users/manjunathdj/Applications/OncoWeb/Suites/testngstaging.xml</span>
+            <span class="header-content">/Users/manjunathdj/Applications/OncoWeb/Suites/testngProd.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -196,15 +169,15 @@ remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 ch
   &lt;parameter name=&quot;phone&quot; value=&quot;9036890379&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
   &lt;parameter name=&quot;name&quot; value=&quot;test_manjunath&quot;/&gt;
-  &lt;parameter name=&quot;deleteURL&quot; value=&quot;http://18.136.208.196/start/delete-me&quot;/&gt;
+  &lt;parameter name=&quot;deleteURL&quot; value=&quot;http://onco.com/start/delete-me&quot;/&gt;
   &lt;parameter name=&quot;otp&quot; value=&quot;5813&quot;/&gt;
   &lt;parameter name=&quot;env&quot; value=&quot;staging&quot;/&gt;
-  &lt;parameter name=&quot;url&quot; value=&quot;http://18.136.208.196/start&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;http://onco.com/&quot;/&gt;
   &lt;parameter name=&quot;email&quot; value=&quot;manjunath.11j@gmail.com&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.onco.extinctreport.ExtinctTestNG&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;6&quot; name=&quot;PatientPortal&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;PatientPortal&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.onco.webtests.NewUserDiagnostictests&quot;/&gt;
     &lt;/classes&gt;
@@ -250,12 +223,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'newUserDiagnostic')
 data.setCell(0, 2, 'com.onco.webtests.NewUserDiagnostictests')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 5847);
 window.suiteTableData['Onco_Staging']= { tableData: data, tableDiv: 'times-div-Onco_Staging'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Onco_Staging">
               </div> <!-- times-div-Onco_Staging -->
             </div> <!-- times-div -->
@@ -282,16 +255,24 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.onco.webtests.NewUserDiagnostictests</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">newUserDiagnostic</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">delete(http://18.136.208.196/start/delete-me, http://18.136.208.196/start, Chrome, 9036890379, 5813)</span>
+                <span class="method-name">delete(http://onco.com/start/delete-me, http://onco.com/, Chrome, 9036890379, 5813)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(Chrome, http://onco.com/)</span>
+                <span class="method-start">44766 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newUserDiagnostic(test_manjunath, manjunath.11j@gmail.com, 9036890379, 5813, test_onco)</span>
+                <span class="method-start">47567 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit([TestResult name=newUserDiagnostic status=FAILURE method=NewUserDiagnostictests.newUserDiagnostic(ja...)</span>
+                <span class="method-start">53418 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

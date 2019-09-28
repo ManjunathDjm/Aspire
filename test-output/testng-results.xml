@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="0" skipped="1">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-27T12:21:18Z" name="Onco Staging" finished-at="2019-09-27T12:22:20Z" duration-ms="62403">
+  <suite started-at="2019-09-27T15:53:02Z" name="Onco Staging" finished-at="2019-09-27T15:53:55Z" duration-ms="53552">
     <groups>
     </groups>
-    <test started-at="2019-09-27T12:21:18Z" name="PatientPortal" finished-at="2019-09-27T12:22:20Z" duration-ms="62403">
+    <test started-at="2019-09-27T15:53:02Z" name="PatientPortal" finished-at="2019-09-27T15:53:55Z" duration-ms="53552">
       <class name="com.onco.webtests.NewUserDiagnostictests">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T12:21:18Z" name="delete" finished-at="2019-09-27T12:22:20Z" duration-ms="62327" status="FAIL">
+        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:02Z" name="delete" finished-at="2019-09-27T15:53:46Z" duration-ms="44757" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://18.136.208.196/start/delete-me]]>
+                <![CDATA[http://onco.com/start/delete-me]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://18.136.208.196/start]]>
+                <![CDATA[http://onco.com/]]>
               </value>
             </param>
             <param index="2">
@@ -35,218 +35,104 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: unable to discover open pages
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:5400:3ea0:dd01%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 chromedriver + 3694345
-1   chromedriver                        0x0000000102ac9fd3 chromedriver + 3223507
-2   chromedriver                        0x000000010286958f chromedriver + 730511
-3   chromedriver                        0x00000001027cf2b8 chromedriver + 99000
-4   chromedriver                        0x00000001027cb22a chromedriver + 82474
-5   chromedriver                        0x00000001027f8b71 chromedriver + 269169
-6   chromedriver                        0x00000001027f5e83 chromedriver + 257667
-7   chromedriver                        0x00000001027d123d chromedriver + 107069
-8   chromedriver                        0x00000001027d21d5 chromedriver + 111061
-9   chromedriver                        0x0000000102af807f chromedriver + 3412095
-10  chromedriver                        0x0000000102b04ced chromedriver + 3464429
-11  chromedriver                        0x0000000102b04a78 chromedriver + 3463800
-12  chromedriver                        0x0000000102ad7959 chromedriver + 3279193
-13  chromedriver                        0x0000000102b05548 chromedriver + 3466568
-14  chromedriver                        0x0000000102aec1b7 chromedriver + 3363255
-15  chromedriver                        0x0000000102b23474 chromedriver + 3589236
-16  chromedriver                        0x0000000102b42ce7 chromedriver + 3718375
-17  libsystem_pthread.dylib             0x00007fff666532eb _pthread_body + 126
-18  libsystem_pthread.dylib             0x00007fff66656249 _pthread_start + 66
-19  libsystem_pthread.dylib             0x00007fff6665240d thread_start + 13
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:5400:3ea0:dd01%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 chromedriver + 3694345
-1   chromedriver                        0x0000000102ac9fd3 chromedriver + 3223507
-2   chromedriver                        0x000000010286958f chromedriver + 730511
-3   chromedriver                        0x00000001027cf2b8 chromedriver + 99000
-4   chromedriver                        0x00000001027cb22a chromedriver + 82474
-5   chromedriver                        0x00000001027f8b71 chromedriver + 269169
-6   chromedriver                        0x00000001027f5e83 chromedriver + 257667
-7   chromedriver                        0x00000001027d123d chromedriver + 107069
-8   chromedriver                        0x00000001027d21d5 chromedriver + 111061
-9   chromedriver                        0x0000000102af807f chromedriver + 3412095
-10  chromedriver                        0x0000000102b04ced chromedriver + 3464429
-11  chromedriver                        0x0000000102b04a78 chromedriver + 3463800
-12  chromedriver                        0x0000000102ad7959 chromedriver + 3279193
-13  chromedriver                        0x0000000102b05548 chromedriver + 3466568
-14  chromedriver                        0x0000000102aec1b7 chromedriver + 3363255
-15  chromedriver                        0x0000000102b23474 chromedriver + 3589236
-16  chromedriver                        0x0000000102b42ce7 chromedriver + 3718375
-17  libsystem_pthread.dylib             0x00007fff666532eb _pthread_body + 126
-18  libsystem_pthread.dylib             0x00007fff66656249 _pthread_start + 66
-19  libsystem_pthread.dylib             0x00007fff6665240d thread_start + 13
-
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:165)
-at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:39)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T12:22:20Z" name="openBrowser" finished-at="2019-09-27T12:22:20Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:46Z" name="openBrowser" finished-at="2019-09-27T15:53:49Z" duration-ms="2801" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[http://onco.com/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="newUserDiagnostic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T12:22:20Z" name="newUserDiagnostic" finished-at="2019-09-27T12:22:20Z" duration-ms="0" status="SKIP">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method signature="newUserDiagnostic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:49Z" name="newUserDiagnostic" finished-at="2019-09-27T15:53:55Z" duration-ms="5847" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_manjunath]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manjunath.11j@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9036890379]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[5813]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test_onco]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[unknown error: unable to discover open pages
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: headless chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:5400:3ea0:dd01%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 chromedriver + 3694345
-1   chromedriver                        0x0000000102ac9fd3 chromedriver + 3223507
-2   chromedriver                        0x000000010286958f chromedriver + 730511
-3   chromedriver                        0x00000001027cf2b8 chromedriver + 99000
-4   chromedriver                        0x00000001027cb22a chromedriver + 82474
-5   chromedriver                        0x00000001027f8b71 chromedriver + 269169
-6   chromedriver                        0x00000001027f5e83 chromedriver + 257667
-7   chromedriver                        0x00000001027d123d chromedriver + 107069
-8   chromedriver                        0x00000001027d21d5 chromedriver + 111061
-9   chromedriver                        0x0000000102af807f chromedriver + 3412095
-10  chromedriver                        0x0000000102b04ced chromedriver + 3464429
-11  chromedriver                        0x0000000102b04a78 chromedriver + 3463800
-12  chromedriver                        0x0000000102ad7959 chromedriver + 3279193
-13  chromedriver                        0x0000000102b05548 chromedriver + 3466568
-14  chromedriver                        0x0000000102aec1b7 chromedriver + 3363255
-15  chromedriver                        0x0000000102b23474 chromedriver + 3589236
-16  chromedriver                        0x0000000102b42ce7 chromedriver + 3718375
-17  libsystem_pthread.dylib             0x00007fff666532eb _pthread_body + 126
-18  libsystem_pthread.dylib             0x00007fff66656249 _pthread_start + 66
-19  libsystem_pthread.dylib             0x00007fff6665240d thread_start + 13
-]]>
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c80:ea8b:7fa5:cacc%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 30dd55a888e91759bffca92721e258a5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: unable to discover open pages
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: headless chrome=77.0.3865.90)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:5400:3ea0:dd01%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 0   chromedriver                        0x0000000102b3cf09 chromedriver + 3694345
-1   chromedriver                        0x0000000102ac9fd3 chromedriver + 3223507
-2   chromedriver                        0x000000010286958f chromedriver + 730511
-3   chromedriver                        0x00000001027cf2b8 chromedriver + 99000
-4   chromedriver                        0x00000001027cb22a chromedriver + 82474
-5   chromedriver                        0x00000001027f8b71 chromedriver + 269169
-6   chromedriver                        0x00000001027f5e83 chromedriver + 257667
-7   chromedriver                        0x00000001027d123d chromedriver + 107069
-8   chromedriver                        0x00000001027d21d5 chromedriver + 111061
-9   chromedriver                        0x0000000102af807f chromedriver + 3412095
-10  chromedriver                        0x0000000102b04ced chromedriver + 3464429
-11  chromedriver                        0x0000000102b04a78 chromedriver + 3463800
-12  chromedriver                        0x0000000102ad7959 chromedriver + 3279193
-13  chromedriver                        0x0000000102b05548 chromedriver + 3466568
-14  chromedriver                        0x0000000102aec1b7 chromedriver + 3363255
-15  chromedriver                        0x0000000102b23474 chromedriver + 3589236
-16  chromedriver                        0x0000000102b42ce7 chromedriver + 3718375
-17  libsystem_pthread.dylib             0x00007fff666532eb _pthread_body + 126
-18  libsystem_pthread.dylib             0x00007fff66656249 _pthread_start + 66
-19  libsystem_pthread.dylib             0x00007fff6665240d thread_start + 13
-
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c80:ea8b:7fa5:cacc%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 30dd55a888e91759bffca92721e258a5
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$errorHandler$0(W3CHandshakeResponse.java:62)
-at org.openqa.selenium.remote.HandshakeResponse.lambda$getResponseFunction$0(HandshakeResponse.java:30)
-at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:126)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
-at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
-at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
-at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:139)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:211)
-at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:189)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:176)
-at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:165)
-at com.onco.webtests.NewUserDiagnostictests.delete(NewUserDiagnostictests.java:39)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at com.onco.pages.Login.otpDetails(Login.java:73)
+at com.onco.webtests.NewUserDiagnostictests.newUserDiagnostic(NewUserDiagnostictests.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
 at org.testng.TestRunner.privateRun(TestRunner.java:648)
 at org.testng.TestRunner.run(TestRunner.java:505)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
@@ -264,11 +150,18 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserDiagnostic -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T12:22:20Z" name="quit" finished-at="2019-09-27T12:22:20Z" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:55Z" name="quit" finished-at="2019-09-27T15:53:55Z" duration-ms="102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=newUserDiagnostic status=FAILURE method=NewUserDiagnostictests.newUserDiagnostic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
