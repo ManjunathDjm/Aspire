@@ -41,7 +41,6 @@
                 the code -->
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                 <version>3.8.1</version>
                 <configuration>
                 <version>3.8.0</version>
                     <source>1.8</source>
