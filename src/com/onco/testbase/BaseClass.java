@@ -3,10 +3,7 @@ package com.onco.testbase;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
-import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import jdk.internal.org.jline.utils.Log;
+
 
 /**
  * Methods to launch browsers and take screenshots on test case fail
@@ -45,7 +42,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+            	//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
