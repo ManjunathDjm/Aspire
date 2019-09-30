@@ -50,16 +50,6 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public String verifyHomeTitle() {
-		
-		if (logger.isDebugEnabled()) {
-			logger.debug("entering verifyHomeTitle()");
-			logger.debug("exiting verifyHomeTitle()");
-		}
-		return driver.getTitle();
-		
-	}
-	
     public void patientInfo(String patientname) {
     	
 	        if (logger.isDebugEnabled()) {
