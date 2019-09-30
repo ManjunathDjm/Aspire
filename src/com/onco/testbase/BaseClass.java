@@ -51,7 +51,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+            	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
