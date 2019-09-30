@@ -7,6 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.onco.testbase.BaseClass;
+
+import jdk.internal.org.jline.utils.Log;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -55,6 +58,7 @@ public class Appointment extends BaseClass {
         		driver.switchTo().defaultContent();
         		cal.click();
         	    calendar_time.click();
+        	    
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}

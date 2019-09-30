@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-09-27T15:53:02Z" name="Onco Staging" finished-at="2019-09-27T15:53:55Z" duration-ms="53552">
+  <suite started-at="2019-09-29T06:49:48Z" name="Onco Staging" finished-at="2019-09-29T06:50:42Z" duration-ms="54787">
     <groups>
     </groups>
-    <test started-at="2019-09-27T15:53:02Z" name="PatientPortal" finished-at="2019-09-27T15:53:55Z" duration-ms="53552">
+    <test started-at="2019-09-29T06:49:48Z" name="PatientPortal" finished-at="2019-09-29T06:50:42Z" duration-ms="54787">
       <class name="com.onco.webtests.NewUserDiagnostictests">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:02Z" name="delete" finished-at="2019-09-27T15:53:46Z" duration-ms="44757" status="PASS">
+        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-29T06:49:48Z" name="delete" finished-at="2019-09-29T06:50:33Z" duration-ms="45028" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:46Z" name="openBrowser" finished-at="2019-09-27T15:53:49Z" duration-ms="2801" status="PASS">
+        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-29T06:50:33Z" name="openBrowser" finished-at="2019-09-29T06:50:36Z" duration-ms="3292" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="newUserDiagnostic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:49Z" name="newUserDiagnostic" finished-at="2019-09-27T15:53:55Z" duration-ms="5847" status="FAIL">
+        <test-method signature="newUserDiagnostic(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:3, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-29T06:50:36Z" name="newUserDiagnostic" finished-at="2019-09-29T06:50:42Z" duration-ms="6314" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -88,40 +88,40 @@
   (Session info: headless chrome=77.0.3865.90)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c80:ea8b:7fa5:cacc%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:c05:db27:acfe%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 30dd55a888e91759bffca92721e258a5]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:49854}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b0e28a1657e029aba5c88704a182a6c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
   (Session info: headless chrome=77.0.3865.90)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:c80:ea8b:7fa5:cacc%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
+System info: host: 'Manjunaths-MacBook-Air.local', ip: 'fe80:0:0:0:1cb1:c05:db27:acfe%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.6', java.version: '12.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:51459}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 30dd55a888e91759bffca92721e258a5
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 77.0.3865.90, chrome: {chromedriverVersion: 77.0.3865.40 (f484704e052e0..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:49854}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3b0e28a1657e029aba5c88704a182a6c
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 at java.base/java.lang.reflect.Method.invoke(Method.java:567)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at com.sun.proxy.$Proxy15.click(Unknown Source)
-at com.onco.pages.Login.otpDetails(Login.java:73)
+at com.onco.pages.Login.otpDetails(Login.java:76)
 at com.onco.webtests.NewUserDiagnostictests.newUserDiagnostic(NewUserDiagnostictests.java:70)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -154,7 +154,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserDiagnostic -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-27T15:53:55Z" name="quit" finished-at="2019-09-27T15:53:55Z" duration-ms="102" status="PASS">
+        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserDiagnostictests@79ad8b2f]" started-at="2019-09-29T06:50:42Z" name="quit" finished-at="2019-09-29T06:50:42Z" duration-ms="95" status="PASS">
           <params>
             <param index="0">
               <value>

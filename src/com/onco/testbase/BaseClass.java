@@ -1,9 +1,16 @@
 package com.onco.testbase;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+
+import org.aeonbits.owner.Config;
+import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.apache.maven.plugin.logging.Log;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,6 +20,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
+
+
+
+import bsh.This;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -25,14 +36,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	  
 	public static WebDriver driver;
-	Properties prop=new Properties();
 	
 	@Parameters({"browser","url"})
 	@BeforeMethod
 	public void openBrowser(String browser, String url) throws Exception {
        
-		String log4jConfPath = "/Users/manjunathdj/Applications/OncoWeb/src/resources/log4j.properties";
-    	PropertyConfigurator.configure(log4jConfPath);
  
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
@@ -40,16 +48,16 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("window-size=1280,800");
+            	options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+            	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
-            	driver.get(url);
             	driver.manage().deleteAllCookies();
                 driver.manage().window().maximize();
+            	driver.get(url);
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
         		
@@ -64,6 +72,7 @@ public class BaseClass {
 	   @AfterMethod
 	   public static void quit(ITestResult result) throws IOException {    
 			driver.quit();
+			
 	
 	      
 	   }
