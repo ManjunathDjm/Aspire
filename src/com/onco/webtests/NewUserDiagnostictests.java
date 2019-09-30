@@ -35,8 +35,7 @@ options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","-
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
-options.setCapability("acceptSslCerts", true);
-options.setCapability("acceptInsecureCerts", true);
+
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
