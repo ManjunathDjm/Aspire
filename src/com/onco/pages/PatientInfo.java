@@ -22,7 +22,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name = "patientName")
+	@FindBy(name ="patientName")
 	WebElement patientName;
 	
 	@FindBy(name="cancerType")
@@ -57,9 +57,18 @@ public class PatientInfo extends BaseClass{
 			logger.debug("patientname: \"" + patientname + "\"");
 		}
 			try {
-	        	patientName.sendKeys(patientname);
-	    		
-			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	        
+				patientName.sendKeys(patientname);
+			}catch (NoSuchElementException e) {
+				e.printStackTrace();
+    }
+  }
+			
+	public void dropdwons()  {
+		
+			    try {
+			    	
+		        Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			
