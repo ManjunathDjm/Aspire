@@ -67,7 +67,8 @@ Homepage home= new Homepage();
 home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
-	
+
+Thread.sleep(30000);
 Login login= new Login();
 login.otpDetails(otp);
 	
