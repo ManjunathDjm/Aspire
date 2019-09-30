@@ -54,6 +54,8 @@ public class BaseClass {
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
+            	options.setCapability("acceptSslCerts", true);
+            	options.setCapability("acceptInsecureCerts", true);
             	driver = new ChromeDriver(options);
             	driver.manage().deleteAllCookies();
                 driver.manage().window().maximize();
