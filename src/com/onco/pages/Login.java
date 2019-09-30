@@ -2,6 +2,7 @@
 package com.onco.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -52,11 +53,16 @@ public class Login extends BaseClass {
 			logger.debug("entering login(String)");
 			logger.debug("phone: \"" + phone + "\"");
 		}
+    	 
+    	try {
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
     	  phoneNumber.sendKeys(phone); 
           loginVIAOTPbutton.click();
+    	} catch (NoSuchElementException e) {
+			// TODO: handle exception
+		}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting login()");
 		}
@@ -71,14 +77,12 @@ public class Login extends BaseClass {
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			try {
-				Thread.sleep(30000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
     	    otp.click();  
     		otp.sendKeys(Otp);
     		proceedButton.click();
+			} catch (NoSuchElementException e) {
+				// TODO: handle exception
+			}
 		if (logger.isDebugEnabled()) {
 				logger.debug("exiting otpDetails()");
 			}	

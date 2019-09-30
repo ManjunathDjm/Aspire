@@ -58,7 +58,7 @@ public class Homepage extends BaseClass {
 				nameField.sendKeys(name);
 				emailField.sendKeys(email);	
 				phone.sendKeys(contact);
-			} catch (Exception e) {
+			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
