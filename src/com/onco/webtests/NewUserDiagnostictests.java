@@ -59,6 +59,7 @@ driver.close();
 			
 			
 }	
+
 @Parameters({"name","email","phone","otp","patientname"})
 @Test(priority = 3)
 public void newUserDiagnostic(String name, String email, String phone,String otp, String patientname) throws Exception {
@@ -68,7 +69,6 @@ home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 
-Thread.sleep(30000);
 Login login= new Login();
 login.otpDetails(otp);
 	
