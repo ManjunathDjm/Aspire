@@ -1,6 +1,5 @@
 package com.onco.testbase;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.aeonbits.owner.Config;
+import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.maven.plugin.logging.Log;
@@ -41,10 +41,10 @@ public class BaseClass {
 	@BeforeMethod
 	public void openBrowser(String browser, String url) throws Exception {
        
+		BasicConfigurator.configure(); 
  
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
-            	
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();

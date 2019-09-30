@@ -20,7 +20,6 @@ import org.apache.log4j.Logger;
 public class Appointment extends BaseClass {
 	
 
-
 	private static final Logger logger = Logger.getLogger(Appointment.class);
 
 	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[1]/div/div[3]/div/div[2]/div/div[2]/button")
