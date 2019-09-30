@@ -41,9 +41,8 @@ options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
-Dimension d= new Dimension(1920,1200);
-driver.manage().window().getSize();
+//
+
 			
 SignUp sign=new SignUp();
 sign.signupicon();
