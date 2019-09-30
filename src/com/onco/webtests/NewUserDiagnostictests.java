@@ -41,9 +41,7 @@ options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
-//
 
-			
 SignUp sign=new SignUp();
 sign.signupicon();
 
