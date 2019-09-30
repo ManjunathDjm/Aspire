@@ -31,9 +31,6 @@ public class Login extends BaseClass {
     @FindBy(xpath="/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")
     WebElement loginVIAOTPbutton;
     
-    //@FindBy(className="material-input otp-input-box ng-pristine ng-valid ng-star-inserted ng-touched")
-    //WebElement otp;
-  
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]")
     WebElement otp;
     
@@ -73,7 +70,13 @@ public class Login extends BaseClass {
 			logger.debug("entering otpDetails(String)");
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
-			otp.click();  
+			try {
+				Thread.sleep(30000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    	    otp.click();  
     		otp.sendKeys(Otp);
     		proceedButton.click();
 		if (logger.isDebugEnabled()) {
