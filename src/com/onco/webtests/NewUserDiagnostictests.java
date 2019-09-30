@@ -33,7 +33,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 //options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless", "--disable-gpu", "--window-size=800,600","--ignore-certificate-errors");
+options.addArguments("--headless", "--disable-gpu","--ignore-certificate-errors");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
@@ -41,6 +41,7 @@ options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
+driver.manage().window().maximize();
 
 SignUp sign=new SignUp();
 sign.signupicon();
