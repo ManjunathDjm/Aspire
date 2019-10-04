@@ -24,13 +24,13 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
+	@FindBy(name="patientName")
 	WebElement patientName;
 	
 	@FindBy(name="cancerType")
 	WebElement typeofCancer;
 	
-	@FindBy(name = "cancerStage")
+	@FindBy(name="cancerStage")
 	WebElement cancerStage;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
@@ -38,7 +38,6 @@ public class PatientInfo extends BaseClass{
 	
 	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
 	WebElement generalCondition;
-	
 	
     @FindBy(xpath="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
     WebElement fileupload;
@@ -52,16 +51,18 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void patientInfo(String patientname) {
+    public void patientInfo(String patientname) throws InterruptedException {
     	
 	        if (logger.isDebugEnabled()) {
 			logger.debug("entering PatientInfo(String)");
 			logger.debug("patientname: \"" + patientname + "\"");
 		}
-			try {
+			
+	        try {
 	        	
-				WebDriverWait wait= new WebDriverWait(driver, 60);
-				patientName.sendKeys(patientname);	
+				Thread.sleep(40000);
+	        	patientName.sendKeys(patientname);
+				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
