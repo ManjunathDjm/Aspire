@@ -51,7 +51,7 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void patientInfo(String patientname) throws InterruptedException {
+    public void patientInfo(String patientname) {
     	
 	        if (logger.isDebugEnabled()) {
 			logger.debug("entering PatientInfo(String)");
@@ -60,7 +60,7 @@ public class PatientInfo extends BaseClass{
 			
 	        try {
 	        	
-				Thread.sleep(40000);
+				patientName.click();
 	        	patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
