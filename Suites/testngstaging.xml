@@ -15,9 +15,13 @@
     <parameter name="otp" value="5813"/>
     <parameter name="patientname" value="test_onco"/>
     
-  <test thread-count="2" name="PatientPortal">
-    <classes>
-      <class name="com.onco.webtests.NewUserDiagnostictests"/>  
+  <test thread-count="6" name="PatientPortal">
+    <classes> 
+      <class name="com.onco.webtests.NewUserOpinionUSPanel"/> 
+      <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
+       <class name="com.onco.webtests.NewUserDiagnostictests"/> 
+      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
+      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

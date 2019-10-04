@@ -59,6 +59,12 @@ public class PatientInfo extends BaseClass{
 			try {
 	        	
 				patientName.sendKeys(patientname);
+			}  catch (NoSuchElementException e) {
+				e.printStackTrace();
+			}
+				
+				try {
+			
 	    		
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
@@ -81,7 +87,8 @@ public class PatientInfo extends BaseClass{
 				logger.debug("exiting PatientInfo()");
 			}
         }
-   }
+   
+    }
 
    
 

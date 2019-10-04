@@ -24,8 +24,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class NewUserAppointmentPayathospital extends BaseClass {
 	
 @BeforeClass
-@Parameters({"deleteURL","url","browser"})
-public void delete(String deleteURL,String url,String browser) throws Exception {
+@Parameters({"deleteURL","url","browser","phone","otp"})
+public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
 			
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
@@ -43,9 +43,9 @@ SignUp sign=new SignUp();
 sign.signupicon();
 				
 Login login= new Login();
-login.login(PropertiesData.getObject("phone"));
+login.login(phone);
 Thread.sleep(3000);
-login.otpDetails(PropertiesData.getObject("otp"));
+login.otpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);
 Thread.sleep(3000);
@@ -54,20 +54,21 @@ driver.close();
 			
 }		
 	
-@Test(priority = 4)
-public void newUserAppointmentPayAtHospital() throws Exception {
+@Parameters({"name","email","phone","otp","patientname"})
+
+public void newUserAppointmentPayAtHospital(String name,String email,String phone,String otp,String patientname) throws Exception {
     
 SignUp sign=new SignUp();
 sign.signupicon();
-sign.signupPage(PropertiesData.getObject("name"), PropertiesData.getObject("email"), PropertiesData.getObject("phone"));
+sign.signupPage(name,email,phone);
 sign.countryCode();
 sign.patientQuery();
 
 Login login= new Login();
-login.otpDetails(PropertiesData.getObject("otp"));
+login.otpDetails(otp);
 
 PatientInfo info=new PatientInfo();
-info.patientInfo(PropertiesData.getObject("patientname"));
+info.patientInfo(patientname);
 
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();

@@ -1,7 +1,5 @@
 package com.onco.webtests;
 
-import java.awt.Dimension;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -62,7 +60,6 @@ driver.close();
 }	
 
 @Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 3)
 public void newUserDiagnostic(String name, String email, String phone,String otp, String patientname) throws Exception {
 	
 Homepage home= new Homepage();
