@@ -9,7 +9,7 @@
     <parameter name="browser" value="Chrome"/>
     <parameter name="url"  value="http://18.136.208.196/"/>
     <parameter name="deleteURL" value="http://18.136.208.196/start/delete-me"/>
-    <parameter name="name" value="test_manjunath"/>
+    <parameter name="name" value="test_onco"/>
     <parameter name="email" value="manjunath.11j@gmail.com"/>
     <parameter name="phone" value="9036890379"/>
     <parameter name="otp" value="5813"/>
@@ -19,9 +19,6 @@
     <classes> 
       <class name="com.onco.webtests.NewUserOpinionUSPanel"/> 
       <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
-       <class name="com.onco.webtests.NewUserDiagnostictests"/> 
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
-      <class name="com.onco.webtests.NewUserAppointmentBookOnPriority"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
