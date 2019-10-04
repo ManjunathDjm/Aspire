@@ -58,16 +58,13 @@ public class PatientInfo extends BaseClass{
 		}
 			try {
 	        	
-				patientName.sendKeys(patientname);
-	    		
+				patientName.sendKeys(patientname);	
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
-			
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
-			
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
