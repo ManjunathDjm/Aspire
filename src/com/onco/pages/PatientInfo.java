@@ -1,6 +1,7 @@
 package com.onco.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,7 +61,7 @@ public class PatientInfo extends BaseClass{
 			
 	        try {
 	        	
-				patientName.click();
+	        	JavascriptExecutor js = (JavascriptExecutor)driver;
 	        	patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));

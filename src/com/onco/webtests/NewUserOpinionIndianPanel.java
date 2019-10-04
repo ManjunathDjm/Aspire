@@ -64,7 +64,7 @@ home.submit();
 	
 Login login= new Login();
 login.otpDetails(otp);
-	
+
 PatientInfo info=new PatientInfo();
 info.patientInfo(patientname);
 	
