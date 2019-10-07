@@ -60,8 +60,7 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	        try {
-	        	
-	        	JavascriptExecutor js = (JavascriptExecutor)driver;
+	        
 	        	patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));

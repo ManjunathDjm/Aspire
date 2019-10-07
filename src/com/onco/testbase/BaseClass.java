@@ -49,7 +49,6 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless", "--disable-gpu", "--window-size=1920,800","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");

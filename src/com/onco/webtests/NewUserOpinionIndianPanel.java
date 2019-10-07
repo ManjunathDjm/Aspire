@@ -43,11 +43,8 @@ sign.signupicon();
 				
 Login login= new Login();
 login.login(phone);
-Thread.sleep(3000);
 login.otpDetails(otp);
-Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(3000);
 driver.close();
 			
 			
@@ -77,14 +74,12 @@ service.opinion();
 OpinionType opinion =new OpinionType();
 opinion.indianPanelButton();
 
-Thread.sleep(3000);
 Summary summary= new Summary();
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
 
-Thread.sleep(3000);
 Dashboard dashboard= new Dashboard();
 
 
