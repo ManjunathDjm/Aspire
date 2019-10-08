@@ -29,7 +29,7 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1280,800");
+options.addArguments("--window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
 options.setExperimentalOption("useAutomationExtension", false);
