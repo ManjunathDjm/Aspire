@@ -65,7 +65,6 @@ home.submit();
 Login login= new Login();
 login.otpDetails(otp);
 
-Thread.sleep(50000);
 PatientInfo info=new PatientInfo();
 info.patientInfo(patientname);
 	
