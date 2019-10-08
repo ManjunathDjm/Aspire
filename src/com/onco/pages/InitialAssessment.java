@@ -24,7 +24,7 @@ public class InitialAssessment extends BaseClass {
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/select-service[1]/initial-assessment-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]")
     WebElement initiAlassessmentClose;
     
-    @FindBy(partialLinkText = "VIEW ASSESSME")
+    @FindBy(partialLinkText = "VIEW ASSESSMENT")
     WebElement viewAssessment;
     
     @FindBy(xpath="//div[@class='download-assessment cursor-pointer']")
