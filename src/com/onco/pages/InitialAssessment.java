@@ -41,12 +41,12 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering initialAssessmentClose()");
 	}
 	try {
-		Thread.sleep(4000);
-	} catch (InterruptedException e) {
+		   driver.switchTo().defaultContent();
+		   initiAlassessmentClose.click();
+	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
-	   driver.switchTo().defaultContent();
-	   initiAlassessmentClose.click();
+	  
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting initialAssessmentClose()");
 	}
