@@ -15,7 +15,6 @@ import com.onco.pages.Service;
 import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-import com.onco.util.PropertiesData;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -32,6 +31,7 @@ ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
+options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
