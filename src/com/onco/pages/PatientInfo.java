@@ -26,13 +26,13 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name="patientName")
-	WebElement testpatientName;
+	@FindBy(name = "patientName")
+	WebElement patientName;
 	
-	@FindBy(name="cancerType")
+	@FindBy(name = "cancerType")
 	WebElement typeofCancer;
 	
-	@FindBy(name="cancerStage")
+	@FindBy(name = "cancerStage")
 	WebElement cancerStage;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
@@ -62,7 +62,7 @@ public class PatientInfo extends BaseClass{
 			
 	        try {
 	        	
-	        	testpatientName.sendKeys(patientname);
+	        	patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
