@@ -69,11 +69,10 @@ login.otpDetails(otp);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 
-	
+Thread.sleep(30000);
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 	
-Thread.sleep(20000);
 Service service=new Service();
 service.opinion();
 

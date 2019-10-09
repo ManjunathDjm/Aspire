@@ -61,7 +61,7 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	        	
-	        	Thread.sleep(30000);
+	        	Thread.sleep(20000);
 	    	    patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));

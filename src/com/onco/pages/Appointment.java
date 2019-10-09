@@ -51,12 +51,10 @@ public class Appointment extends BaseClass {
 		}
 		try {
     	    	
-			    Assert.assertEquals(true, bookappointment.isDisplayed());
+			    
 			    bookappointment.click();
         		driver.switchTo().defaultContent();
-        		Assert.assertEquals(true, cal.isDisplayed());
         		cal.click();
-        		Assert.assertEquals(true, calendar_time.isDisplayed());
         		calendar_time.click();
         	    
 			} catch (NoSuchElementException e) {
@@ -74,7 +72,7 @@ public class Appointment extends BaseClass {
 			logger.debug("entering exploreMore()");
 		}
 			try {
-				Assert.assertEquals(true, calendar.isDisplayed());
+	
 				calendar.click();
 			} catch (NoSuchElementException e) {		
 				e.printStackTrace();

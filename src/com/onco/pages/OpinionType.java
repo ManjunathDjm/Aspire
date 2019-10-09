@@ -38,11 +38,9 @@ public class OpinionType extends BaseClass {
 		logger.debug("entering indianpanalbutton()");
 	}
 		try {
-			 Assert.assertEquals(true, indianPanelButton);
 			 indianPanelButton.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting indianpanalbutton()");
@@ -56,7 +54,6 @@ public class OpinionType extends BaseClass {
 			logger.debug("entering USPanal()");
 		}
 		try {
-			Assert.assertEquals(true, selectUsPanelButton);
 			selectUsPanelButton.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

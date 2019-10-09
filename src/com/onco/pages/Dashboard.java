@@ -46,7 +46,6 @@ public class Dashboard extends BaseClass {
 			logger.debug("entering dashboard()");
 		}
 		try {
-			Assert.assertEquals(true, continuebutton.isDisplayed());
 			continuebutton.click();
     	
 		} catch (NoSuchElementException e) {
@@ -63,7 +62,7 @@ public class Dashboard extends BaseClass {
 			logger.debug("entering logout()");
 		}
 		try {
-			Assert.assertEquals(true, logout.isDisplayed());
+			
 			logout.click();	
     		
 		} catch (NoSuchElementException e) {
