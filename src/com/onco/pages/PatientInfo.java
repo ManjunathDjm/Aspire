@@ -22,7 +22,6 @@ import org.apache.log4j.Logger;
  */
 public class PatientInfo extends BaseClass{
 
-
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
@@ -53,17 +52,30 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void patientInfo(String patientname) {
+    public void patientname(String patientname) {
     	
-	        if (logger.isDebugEnabled()) {
-			logger.debug("entering PatientInfo(String)");
+			
+	     if (logger.isDebugEnabled()) {
+			logger.debug("entering patientname(String)");
 			logger.debug("patientname: \"" + patientname + "\"");
 		}
-			
-	        try {
-	        	
+		try {
 	        	patientName.sendKeys(patientname);
+	     }catch (NoSuchElementException e) {
+				e.printStackTrace();
+	     }
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting patientname()");
+		}	
+    }
 				
+   public void typeofcancer() {
+	  
+	     if (logger.isDebugEnabled()) {
+		logger.debug("entering typeofcancer()");
+	}
+		try {
+	    	 
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
@@ -79,11 +91,13 @@ public class PatientInfo extends BaseClass{
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-			if (logger.isDebugEnabled()) {
-				logger.debug("exiting PatientInfo()");
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting typeofcancer()");
+		}
+		
 			}
         }
-   }
+   
 
    
 
