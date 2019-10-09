@@ -67,7 +67,8 @@ Login login= new Login();
 login.otpDetails(otp);
 	
 PatientInfo info=new PatientInfo();
-info.patientInfo(patientname);
+info.patientname(patientname);
+info.typeofcancer();
 	
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();

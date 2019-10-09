@@ -66,7 +66,7 @@ Login login= new Login();
 login.otpDetails(otp);
 
 PatientInfo info=new PatientInfo();
-info.patientInfo(patientname);
+info.patientname(patientname);
 
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();

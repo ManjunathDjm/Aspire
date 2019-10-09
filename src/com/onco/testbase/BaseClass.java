@@ -49,8 +49,6 @@ public class BaseClass {
             	//options.addArguments("--disable-dev-shm-usage");
             	//options.addArguments("--disable-setuid-sandbox");
             	//options.setExperimentalOption("useAutomationExtension", false);
-            	Dimension dimension = new Dimension(1382,774);
-            	driver.manage().window().getSize();
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
