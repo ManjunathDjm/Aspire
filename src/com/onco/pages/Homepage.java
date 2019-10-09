@@ -4,6 +4,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
@@ -55,9 +57,13 @@ public class Homepage extends BaseClass {
 			logger.debug("contact: \"" + contact + "\"");
 		}
 		try {
-				nameField.sendKeys(name);
+			    Assert.assertEquals(true, nameField.isDisplayed());
+			    nameField.sendKeys(name);
+			    Assert.assertEquals(true, emailField.isDisplayed());
 				emailField.sendKeys(email);	
+				Assert.assertEquals(true, phone.isDisplayed());
 				phone.sendKeys(contact);
+				
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -72,9 +78,12 @@ public class Homepage extends BaseClass {
 		   logger.debug("entering patientq()");
 	    }
 	    try {
-		   patientChoice.click();
-		   dropOption1.click();
-		   selectTerms.click();
+	    	 Assert.assertEquals(true, patientChoice.isDisplayed());
+	    	 patientChoice.click();
+	    	 Assert.assertEquals(true, dropOption1.isDisplayed());
+		     dropOption1.click();
+		     Assert.assertEquals(true, selectTerms.isDisplayed());
+		     selectTerms.click();
 	     } catch (NoSuchElementException e) {
 		    e.printStackTrace();
 	}
@@ -88,7 +97,8 @@ public class Homepage extends BaseClass {
 		logger.debug("entering Submit()");
 	  }
 	    try {
-		 submit.click();
+	    	Assert.assertEquals(true, submit.isDisplayed());
+	    	submit.click();
 	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}

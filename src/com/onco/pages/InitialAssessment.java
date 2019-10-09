@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -42,6 +43,7 @@ public class InitialAssessment extends BaseClass {
 	}
 	try {
 		   driver.switchTo().defaultContent();
+		   Assert.assertEquals(false, initiAlassessmentClose.isDisplayed());
 		   initiAlassessmentClose.click();
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
@@ -58,7 +60,9 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering viewAssessment()");
 	}
 		try {
-	        	viewAssessment.click();
+			   Assert.assertEquals(true, viewAssessment.isDisplayed());	
+			   viewAssessment.click();
+	        	
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -74,7 +78,9 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering downloadAssessment()");
 	}
 		try {
+			   Assert.assertEquals(true, downloadAssessment.isDisplayed());
 			   downloadAssessment.click();
+			   
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -50,10 +51,13 @@ public class Appointment extends BaseClass {
 		}
 		try {
     	    	
-    	    	bookappointment.click();
+			    Assert.assertEquals(true, bookappointment.isDisplayed());
+			    bookappointment.click();
         		driver.switchTo().defaultContent();
+        		Assert.assertEquals(true, cal.isDisplayed());
         		cal.click();
-        	    calendar_time.click();
+        		Assert.assertEquals(true, calendar_time.isDisplayed());
+        		calendar_time.click();
         	    
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
@@ -70,7 +74,8 @@ public class Appointment extends BaseClass {
 			logger.debug("entering exploreMore()");
 		}
 			try {
-    			calendar.click();
+				Assert.assertEquals(true, calendar.isDisplayed());
+				calendar.click();
 			} catch (NoSuchElementException e) {		
 				e.printStackTrace();
 			}

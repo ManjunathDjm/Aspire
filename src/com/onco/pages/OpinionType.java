@@ -6,6 +6,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
@@ -37,6 +38,7 @@ public class OpinionType extends BaseClass {
 		logger.debug("entering indianpanalbutton()");
 	}
 		try {
+			 Assert.assertEquals(true, indianPanelButton);
 			 indianPanelButton.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -54,6 +56,7 @@ public class OpinionType extends BaseClass {
 			logger.debug("entering USPanal()");
 		}
 		try {
+			Assert.assertEquals(true, selectUsPanelButton);
 			selectUsPanelButton.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

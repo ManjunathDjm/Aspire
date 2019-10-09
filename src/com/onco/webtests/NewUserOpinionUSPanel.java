@@ -73,6 +73,7 @@ info.patientinfo(patientname);
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 	
+Thread.sleep(20000);
 Service service=new Service();
 service.opinion();
 

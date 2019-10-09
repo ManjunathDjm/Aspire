@@ -4,6 +4,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
@@ -44,7 +46,9 @@ public class Dashboard extends BaseClass {
 			logger.debug("entering dashboard()");
 		}
 		try {
-    		continuebutton.click();
+			Assert.assertEquals(true, continuebutton.isDisplayed());
+			continuebutton.click();
+    	
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -59,7 +63,9 @@ public class Dashboard extends BaseClass {
 			logger.debug("entering logout()");
 		}
 		try {
-    		logout.click();	
+			Assert.assertEquals(true, logout.isDisplayed());
+			logout.click();	
+    		
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
@@ -53,11 +54,18 @@ public class Login extends BaseClass {
 		}
     	 
     	try {
+    	  
+    	  Assert.assertEquals(true, countryCode.isDisplayed());
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
+    	  
+    	  Assert.assertEquals(true, phoneNumber.isDisplayed());
     	  phoneNumber.sendKeys(phone); 
-          loginVIAOTPbutton.click();
+    	
+    	  Assert.assertEquals(true, phoneNumber.isDisplayed());
+    	  loginVIAOTPbutton.click();
+          
     	} catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
@@ -75,8 +83,10 @@ public class Login extends BaseClass {
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			try {
-    	    otp.click();  
-    		otp.sendKeys(Otp);
+			   Assert.assertEquals(true, otp.isDisplayed());
+			  otp.click(); 
+    		  otp.sendKeys(Otp);
+    		
     		proceedButton.click();
 			} catch (NoSuchElementException e) {
 				// TODO: handle exception
