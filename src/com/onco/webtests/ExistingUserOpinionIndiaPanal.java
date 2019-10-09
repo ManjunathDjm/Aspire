@@ -33,7 +33,7 @@ Dashboard dashboard =new Dashboard();
 dashboard.dashboard();
     
 PatientInfo info=new PatientInfo();
-info.patientname(PropertiesData.getObject("patientname"));
+info.patientinfo(PropertiesData.getObject("patientname"));
 	    
 Service service=new Service();
 service.opinion();

@@ -25,13 +25,13 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name ="patientName")
+	@FindBy(name="patientName")
 	WebElement patientName;
 	
-	@FindBy(name = "cancerType")
+	@FindBy(name ="cancerType")
 	WebElement typeofCancer;
 	
-	@FindBy(name = "cancerStage")
+	@FindBy(name ="cancerStage")
 	WebElement cancerStage;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
@@ -52,30 +52,17 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void patientname(String patientname) {
+    public void patientinfo(String patientname) {
     	
-			
-	     if (logger.isDebugEnabled()) {
-			logger.debug("entering patientname(String)");
+	        if (logger.isDebugEnabled()) {
+			logger.debug("entering PatientInfo(String)");
 			logger.debug("patientname: \"" + patientname + "\"");
 		}
-		try {
+			
+	     try {
+	        	
 	        	patientName.sendKeys(patientname);
-	     }catch (NoSuchElementException e) {
-				e.printStackTrace();
-	     }
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting patientname()");
-		}	
-    }
 				
-   public void typeofcancer() {
-	  
-	     if (logger.isDebugEnabled()) {
-		logger.debug("entering typeofcancer()");
-	}
-		try {
-	    	 
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
@@ -91,13 +78,11 @@ public class PatientInfo extends BaseClass{
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting typeofcancer()");
-		}
-		
+			if (logger.isDebugEnabled()) {
+				logger.debug("exiting PatientInfo()");
 			}
         }
-   
+   }
 
    
 
