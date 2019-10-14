@@ -58,7 +58,6 @@ public class Login extends BaseClass {
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
-    	  
     	  phoneNumber.sendKeys(phone); 
     	  loginVIAOTPbutton.click();
           
@@ -79,7 +78,7 @@ public class Login extends BaseClass {
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			try {
-			  otp.click(); 
+			    otp.click(); 
     		  otp.sendKeys(Otp);
     		  proceedButton.click();
 			} catch (NoSuchElementException e) {

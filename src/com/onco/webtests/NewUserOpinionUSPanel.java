@@ -69,7 +69,6 @@ login.otpDetails(otp);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 
-Thread.sleep(30000);
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 	
@@ -79,7 +78,7 @@ service.opinion();
 OpinionType opinion =new OpinionType();
 opinion.USPanalButton();
 
-Thread.sleep(3000);
+Thread.sleep(20000);
 Summary summary= new Summary();
 summary.summary();
 

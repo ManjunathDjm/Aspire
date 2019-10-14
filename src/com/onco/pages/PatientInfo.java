@@ -61,7 +61,6 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	        	
-	        	Thread.sleep(20000);
 	    	    patientName.sendKeys(patientname);
 				
 			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
@@ -78,10 +77,7 @@ public class PatientInfo extends BaseClass{
 		        
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			} 
 			if (logger.isDebugEnabled()) {
 				logger.debug("exiting PatientInfo()");
 			}

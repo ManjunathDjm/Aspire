@@ -4,7 +4,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
 import com.onco.pages.Appointment;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
@@ -17,7 +16,6 @@ import com.onco.pages.Service;
 import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-import com.onco.util.PropertiesData;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
