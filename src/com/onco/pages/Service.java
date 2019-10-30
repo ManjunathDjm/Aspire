@@ -6,6 +6,10 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
@@ -49,9 +53,10 @@ public class Service extends BaseClass {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-        		//String data =driver.findElement(By.xpath("/html/body/app-root/select-service/div[2]/div[2]/section/div[3]/section/div/div/div[1]")).getText();
-        		//System.out.println("Result:" + data);
+        		WebDriverWait wait = new WebDriverWait(driver, 20000);
+        		wait.until(ExpectedConditions.elementToBeClickable(appointment));
         		appointment.click();
+        		Assert.assertEquals(true, appointment.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -73,7 +78,10 @@ public class Service extends BaseClass {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-        	   opinion.click();
+			   WebDriverWait wait = new WebDriverWait(driver, 20000);
+       		   wait.until(ExpectedConditions.elementToBeClickable(opinion));
+			   opinion.click();
+        	   Assert.assertEquals(true, opinion.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -96,7 +104,10 @@ public class Service extends BaseClass {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				labtest.click();
+        		WebDriverWait wait = new WebDriverWait(driver, 20000);
+         		wait.until(ExpectedConditions.elementToBeClickable(labtest));
+        		labtest.click();
+				Assert.assertEquals(true, labtest);
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

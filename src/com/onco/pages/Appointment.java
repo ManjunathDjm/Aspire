@@ -5,9 +5,14 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
+import com.paulhammant.ngwebdriver.ByAngular;
+
+import java.sql.Driver;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -23,6 +28,7 @@ public class Appointment extends BaseClass {
 
 	private static final Logger logger = Logger.getLogger(Appointment.class);
 
+	
 	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[1]/div/div[3]/div/div[2]/div/div[2]/button")
 	WebElement bookappointment;
 	
@@ -41,6 +47,7 @@ public class Appointment extends BaseClass {
     
 	public Appointment() {
 		PageFactory.initElements(driver, this);
+		
 	}
 	
     public void appointment() {
@@ -50,15 +57,19 @@ public class Appointment extends BaseClass {
 			logger.debug("entering appointment()");
 		}
 		try {
-    	    	
-			    
+			    WebDriverWait wait= new WebDriverWait(driver, 30);
 			    bookappointment.click();
+			    Assert.assertEquals(true, bookappointment.isDisplayed());
         		driver.switchTo().defaultContent();
         		cal.click();
+        		Assert.assertEquals(true, cal.isDisplayed());
         		calendar_time.click();
+        		Assert.assertEquals(true, calendar_time.isDisplayed());
+
         	    
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
+
 			}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting appointment()");
@@ -74,6 +85,7 @@ public class Appointment extends BaseClass {
 			try {
 	
 				calendar.click();
+				Assert.assertEquals(true, calendar.isDisplayed());
 			} catch (NoSuchElementException e) {		
 				e.printStackTrace();
 			}

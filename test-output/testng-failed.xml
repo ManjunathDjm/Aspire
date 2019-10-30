@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Onco Staging]" guice-stage="DEVELOPMENT">
-  <parameter name="patientname" value="test_onco"/>
-  <parameter name="phone" value="9036890379"/>
-  <parameter name="browser" value="Chrome"/>
-  <parameter name="name" value="test_manjunath"/>
-  <parameter name="deleteURL" value="http://onco.com/start/delete-me"/>
-  <parameter name="otp" value="5813"/>
-  <parameter name="env" value="staging"/>
-  <parameter name="url" value="http://onco.com/"/>
-  <parameter name="email" value="manjunath.11j@gmail.com"/>
-  <listeners>
-    <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
-  </listeners>
-  <test thread-count="5" name="PatientPortal(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.onco.webtests.NewUserDiagnostictests">
+      <class name="com.onco.misc.Pageforfonts">
         <methods>
-          <include name="delete"/>
-          <include name="openBrowser"/>
-          <include name="quit"/>
-          <include name="newUserDiagnostic" invocation-numbers="0"/>
+          <include name="readFontProperty"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.onco.webtests.NewUserDiagnostictests -->
+      </class> <!-- com.onco.misc.Pageforfonts -->
     </classes>
-  </test> <!-- PatientPortal(failed) -->
-</suite> <!-- Failed suite [Onco Staging] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

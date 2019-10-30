@@ -1,9 +1,13 @@
 package com.onco.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
@@ -19,49 +23,55 @@ public class Homepage extends BaseClass {
 
 	
 	private static final Logger logger = Logger.getLogger(Homepage.class);
-
-	@FindBy(xpath="/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[2]/input")
+			      
+	
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]")
 	WebElement nameField;
 	
-    @FindBy(xpath="/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[4]/input")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[4]/input[1]")
     WebElement emailField;
     
     @FindBy(name = "/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[7]/select")
     WebElement countryCode;
     
-    @FindBy(name = "contact")
-    WebElement phone;
+    @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[8]/input[1]")
+    WebElement phoneFiled;
     
-    @FindBy(xpath ="/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[10]")
+    @FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/button[1]/span[1]")
     WebElement patientChoice;
     
-    @FindBy(xpath="/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[10]/div/ul/li[1]/a")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/ul[1]/li[1]/a[1]")
     WebElement dropOption1;
     
-    @FindBy(name="tAndC")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[13]/input[1]")
     WebElement selectTerms;
     
-    @FindBy(xpath="/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[15]/button")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[15]/button[1]")
     WebElement submit;
 	
  public Homepage() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void formfill(String name, String email,String contact) {
+    public void formfill (String name, String email,String phone) {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering formfill(String,String,String)");
 			logger.debug("name: \"" + name + "\"");
 			logger.debug("email: \"" + email + "\"");
-			logger.debug("contact: \"" + contact + "\"");
+			logger.debug("contact: \"" + phone + "\"");
 		}
 		try {
-			    Assert.assertEquals(true, nameField.isDisplayed());
+			    WebDriverWait wait = new WebDriverWait(driver, 20000);
+			    wait.until(ExpectedConditions.elementToBeClickable(nameField));
 			    nameField.sendKeys(name);
+			    Assert.assertEquals(true, nameField.isDisplayed());
+			    wait.until(ExpectedConditions.elementToBeClickable(emailField));
 				emailField.sendKeys(email);	
-				phone.sendKeys(contact);
-				Assert.assertEquals(true, phone.isDisplayed());
+				Assert.assertEquals(true, emailField.isDisplayed());
+				wait.until(ExpectedConditions.elementToBeClickable(phoneFiled));
+				phoneFiled.sendKeys(phone);
+				Assert.assertEquals(true, phoneFiled.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -76,9 +86,15 @@ public class Homepage extends BaseClass {
 		   logger.debug("entering patientq()");
 	    }
 	    try {
+	    	 WebDriverWait wait = new WebDriverWait(driver, 20000); 
+	    	 wait.until(ExpectedConditions.elementToBeClickable(patientChoice));
 	    	 patientChoice.click();
+	    	 Assert.assertEquals(true, patientChoice.isDisplayed());
+	    	 wait.until(ExpectedConditions.elementToBeClickable(dropOption1));
 		     dropOption1.click();
+		     wait.until(ExpectedConditions.elementToBeClickable(selectTerms));
 		     selectTerms.click();
+		     Assert.assertEquals(true, selectTerms.isDisplayed());
 	     } catch (NoSuchElementException e) {
 		    e.printStackTrace();
 	}
@@ -92,7 +108,10 @@ public class Homepage extends BaseClass {
 		logger.debug("entering Submit()");
 	  }
 	    try {
+	    	WebDriverWait wait = new WebDriverWait(driver, 20000); 
+	    	wait.until(ExpectedConditions.elementToBeClickable(patientChoice));
 	    	submit.click();
+            Assert.assertEquals(true, submit.isDisplayed());
 	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}

@@ -15,6 +15,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
+
+import com.paulhammant.ngwebdriver.ByAngular;
+import com.paulhammant.ngwebdriver.ByAngularModel;
+import com.paulhammant.ngwebdriver.NgWebDriver;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -27,6 +32,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	  
 	public static WebDriver driver;
+
 	
 	@Parameters({"browser","url"})
 	@BeforeMethod
@@ -39,21 +45,21 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	
-            	options.addArguments("window-size=1280,800");
+            	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless");
+            	//options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
-            	//options.addArguments("--no-sandbox");
-            	//options.addArguments("--headless", "--disable-gpu", "--window-size=1382,774","--ignore-certificate-errors");
-            	//options.addArguments("--disable-dev-shm-usage");
-            	//options.addArguments("--disable-setuid-sandbox");
-            	//options.setExperimentalOption("useAutomationExtension", false);
+            	options.addArguments("--no-sandbox");
+            	//options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
+            	options.addArguments("--disable-dev-shm-usage");
+            	options.addArguments("--disable-setuid-sandbox");
+            	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
-                driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
+            	driver.manage().window().maximize();
+                //driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+        		//manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
         		
       }
                  

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -48,6 +49,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
 		try {
 	        	 location.click(); 
+	        	 Assert.assertEquals(true, location.isDisplayed());
 	        	 try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -55,6 +57,7 @@ public class RequestDoctorAppointment extends BaseClass {
 					e.printStackTrace();
 				}
 	    		 location.sendKeys("Bangalore",Keys.TAB);
+	    		 Assert.assertEquals(true, location.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -73,8 +76,10 @@ public class RequestDoctorAppointment extends BaseClass {
 		try {
 	    	 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
+		     Assert.assertEquals(true, specialisationDropdownSurgicalOncologist.isDisplayed());
 		     specialisation.selectByIndex(1);
 		     specialisationDropdownSurgicalOncologist.click();
+		     Assert.assertEquals(true, specialisationDropdownSurgicalOncologist.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -91,8 +96,10 @@ public class RequestDoctorAppointment extends BaseClass {
 		try {
 	    	 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
+		     Assert.assertEquals(true, specialisationDropdownSurgicalOncologist.isDisplayed());
 		     specialisation.selectByIndex(2);
 		     specialisationDropdownSurgicalOncologist.click();
+		     Assert.assertEquals(true, specialisationDropdownSurgicalOncologist.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -108,6 +115,7 @@ public class RequestDoctorAppointment extends BaseClass {
 		}
 		try {
 	    	  find_cancer_specialist.click();
+	    	  Assert.assertEquals(true, find_cancer_specialist.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

@@ -30,7 +30,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
@@ -40,52 +40,50 @@ driver.manage().window().maximize();
 			
 SignUp sign=new SignUp();
 sign.signupicon();
-				
+
 Login login= new Login();
 login.login(phone);
-Thread.sleep(3000);
 login.otpDetails(otp);
-Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(3000);
+Thread.sleep(5000);
 driver.close();
 			
 			
 }		
 	
 @Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 2)
+@Test(priority = 4)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname) throws Exception {
 	
+driver.switchTo().defaultContent();	
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
-	
+
 Login login= new Login();
 login.otpDetails(otp);
 
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
-	
+
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 	
-Thread.sleep(20000);
 Service service=new Service();
 service.opinion();
 
 OpinionType opinion =new OpinionType();
 opinion.indianPanelButton();
 
-Thread.sleep(3000);
+Thread.sleep(10000);
 Summary summary= new Summary();
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
 
-Thread.sleep(3000);
+Thread.sleep(20000);
 Dashboard dashboard= new Dashboard();
 
 

@@ -32,7 +32,7 @@ ChromeOptions options = new ChromeOptions();
 
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
@@ -45,17 +45,16 @@ sign.signupicon();
 			
 Login login= new Login();
 login.login(phone);
-Thread.sleep(3000);
 login.otpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(3000);
+Thread.sleep(5000);
 driver.close();
 		
 		
 }	
 @Parameters({"name","email","phone","patientname","otp"})
-@Test(priority = 1)
+@Test(priority = 5)
 public void newUserOpinionUSPanal(String name, String email, String phone, String patientname, String otp) throws Exception {
 	
 Homepage home= new Homepage();
@@ -78,16 +77,15 @@ service.opinion();
 OpinionType opinion =new OpinionType();
 opinion.USPanalButton();
 
-Thread.sleep(20000);
+Thread.sleep(10000);
 Summary summary= new Summary();
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
 
-Thread.sleep(3000);
-Dashboard dashboard= new Dashboard();
-
+Thread.sleep(20000);
+Dashboard board = new Dashboard();
 
 
 

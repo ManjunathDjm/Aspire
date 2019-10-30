@@ -6,6 +6,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
@@ -38,7 +40,10 @@ public class OpinionType extends BaseClass {
 		logger.debug("entering indianpanalbutton()");
 	}
 		try {
+			 WebDriverWait wait = new WebDriverWait(driver, 20000);
+			 wait.until(ExpectedConditions.elementToBeClickable(indianPanelButton));
 			 indianPanelButton.click();
+			 Assert.assertEquals(true, indianPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 		}
@@ -54,7 +59,10 @@ public class OpinionType extends BaseClass {
 			logger.debug("entering USPanal()");
 		}
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, 20000);
+			wait.until(ExpectedConditions.elementToBeClickable(selectUsPanelButton));
 			selectUsPanelButton.click();
+			Assert.assertEquals(true, selectUsPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

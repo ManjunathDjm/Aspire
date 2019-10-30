@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <parameter name="browser" value="Chrome"/>
-  <parameter name="env" value="staging"/>
-  <parameter name="url" value="http:onco.com"/>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.onco.webtests.NewUserAppointmentPayathospital">
+      <class name="com.onco.misc.Pageforfonts">
         <methods>
-          <include name="newUserappointment"/>
-          <include name="takeScreenshotAtEndOfTest"/>
+          <include name="readFontProperty"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.onco.webtests.NewUserAppointmentPayathospital -->
+      </class> <!-- com.onco.misc.Pageforfonts -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

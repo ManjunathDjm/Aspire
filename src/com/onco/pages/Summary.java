@@ -1,11 +1,14 @@
 package com.onco.pages;
 
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 /**
@@ -25,7 +28,7 @@ public class Summary extends BaseClass {
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
     WebElement checkbox;
     
-    @FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[5]/button")
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/case-summary[1]/div[1]/div[2]/div[1]/section[1]/div[2]/div[1]/payment-summary[1]/div[1]/div[1]/div[4]/button[1]")
     WebElement payNow;
     
     
@@ -40,9 +43,11 @@ public class Summary extends BaseClass {
 			logger.debug("entering Summary()");
 		}
 			try {
-    			//String paymentbreakup= driver.findElement(By.xpath("/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[3]")).getText();
-    			//System.out.println("breakup: " + paymentbreakup);
+				
+				//WebDriverWait wait = new WebDriverWait(driver, 20000);
+				//wait.until(ExpectedConditions.elementToBeClickable(payNow));
 				payNow.click();
+				Assert.assertEquals(true, payNow.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}

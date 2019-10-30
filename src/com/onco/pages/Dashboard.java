@@ -4,6 +4,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
@@ -46,8 +48,10 @@ public class Dashboard extends BaseClass {
 			logger.debug("entering dashboard()");
 		}
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, 20000);
+			wait.until(ExpectedConditions.elementToBeClickable(continuebutton));
 			continuebutton.click();
-    	
+			Assert.assertEquals(true, continuebutton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -63,8 +67,10 @@ public class Dashboard extends BaseClass {
 		}
 		try {
 			
+			WebDriverWait wait = new WebDriverWait(driver, 20000);
+			wait.until(ExpectedConditions.elementToBeClickable(logout));
 			logout.click();	
-    		
+			Assert.assertEquals(true, logout.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

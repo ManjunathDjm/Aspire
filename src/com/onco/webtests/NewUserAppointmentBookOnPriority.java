@@ -4,6 +4,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
 import com.onco.pages.Appointment;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
@@ -31,7 +33,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
@@ -53,6 +55,7 @@ driver.close();
 	
 }
 @Parameters({"name","email","phone","otp","patientname"})
+@Test(priority = 1)
 public void newUserAppointmentBookOnPriority(String name,String email,String phone,String otp,String patientname) throws Exception {
     
 Homepage home= new Homepage();
@@ -60,6 +63,7 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
+Thread.sleep(10000);
 Login login= new Login();
 login.otpDetails(otp);
 

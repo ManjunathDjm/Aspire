@@ -1,102 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-10-04T11:10:25Z" name="Onco Staging" finished-at="2019-10-04T11:11:49Z" duration-ms="84563">
+  <suite started-at="2019-10-23T09:18:14Z" name="Onco Staging" finished-at="2019-10-23T09:18:14Z" duration-ms="9">
     <groups>
     </groups>
-    <test started-at="2019-10-04T11:10:25Z" name="PatientPortal" finished-at="2019-10-04T11:11:49Z" duration-ms="84563">
-      <class name="com.onco.webtests.NewUserOpinionIndianPanel">
-        <test-method is-config="true" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@6a01e23]" started-at="2019-10-04T11:10:25Z" name="delete" finished-at="2019-10-04T11:11:04Z" duration-ms="39798" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[http://18.136.208.196/start/delete-me]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[9036890379]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[5813]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- delete -->
-        <test-method is-config="true" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@6a01e23]" started-at="2019-10-04T11:11:04Z" name="openBrowser" finished-at="2019-10-04T11:11:09Z" duration-ms="4241" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[http://18.136.208.196/]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionIndianPanel@6a01e23]" started-at="2019-10-04T11:11:09Z" name="newUserOpinionIndiaPanal" finished-at="2019-10-04T11:11:49Z" duration-ms="40301" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[test_onco]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[manjunath.11j@gmail.com]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[9036890379]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[5813]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[test_onco]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method is-config="true" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionIndianPanel@6a01e23]" started-at="2019-10-04T11:11:49Z" name="quit" finished-at="2019-10-04T11:11:49Z" duration-ms="153" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=newUserOpinionIndiaPanal status=SUCCESS method=NewUserOpinionIndianPanel.newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionIndianPanel@6a01e23] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quit -->
-      </class> <!-- com.onco.webtests.NewUserOpinionIndianPanel -->
+    <test started-at="2019-10-23T09:18:14Z" name="PatientPortal" finished-at="2019-10-23T09:18:14Z" duration-ms="9">
     </test> <!-- PatientPortal -->
   </suite> <!-- Onco Staging -->
 </testng-results>

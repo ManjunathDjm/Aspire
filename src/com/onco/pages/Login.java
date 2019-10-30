@@ -6,10 +6,14 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
+
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -55,12 +59,19 @@ public class Login extends BaseClass {
     	 
     	try {
     	  
+          WebDriverWait wait =new WebDriverWait(driver, 20000);
+          wait.until(ExpectedConditions.elementToBeClickable(countryCode));
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
+    	  Assert.assertEquals(true, countryCode.isDisplayed());
+    	  wait.until(ExpectedConditions.elementToBeClickable(phoneNumber));
     	  phoneNumber.sendKeys(phone); 
+    	  Assert.assertEquals(true, phoneNumber.isDisplayed());
+    	  wait.until(ExpectedConditions.elementToBeClickable(loginVIAOTPbutton));
     	  loginVIAOTPbutton.click();
-          
+    	  Assert.assertEquals(true, loginVIAOTPbutton.isDisplayed());
+    	  
     	} catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
@@ -78,9 +89,16 @@ public class Login extends BaseClass {
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			try {
-			    otp.click(); 
+			  WebDriverWait wait =new WebDriverWait(driver, 20000);
+			  wait.until(ExpectedConditions.elementToBeClickable(otp));
+			  otp.click(); 
+			  Assert.assertEquals(true, otp.isDisplayed());
+			  wait.until(ExpectedConditions.elementToBeClickable(otp));
     		  otp.sendKeys(Otp);
+    		  Assert.assertEquals(true, otp.isDisplayed());
+    		  wait.until(ExpectedConditions.elementToBeClickable(proceedButton));
     		  proceedButton.click();
+    		  Assert.assertEquals(true, proceedButton.isDisplayed());
 			} catch (NoSuchElementException e) {
 				// TODO: handle exception
 			}

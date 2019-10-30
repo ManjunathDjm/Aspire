@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -61,19 +62,30 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	        	
+	    	    WebDriverWait wait = new WebDriverWait(driver, 20);
+	    	    wait.until(ExpectedConditions.elementToBeClickable(patientName));
 	    	    patientName.sendKeys(patientname);
-				
-			    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	    	    Assert.assertEquals(true, patientName.isDisplayed());
+			    
+	    	    wait.until(ExpectedConditions.elementToBeClickable(typeofCancer));
+	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
+			    Assert.assertEquals(true, typeofCancer.isDisplayed());
+			    
+			    wait.until(ExpectedConditions.elementToBeClickable(cancerStage));
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
+			    Assert.assertEquals(true, cancerStage.isDisplayed());
+			    
+			    wait.until(ExpectedConditions.elementToBeClickable(generalCondition));
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
-		    
+		        Assert.assertEquals(true, generalCondition.isDisplayed());
 		        continueButton.click();
+		        Assert.assertEquals(true, continueButton.isDisplayed());
 		        
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

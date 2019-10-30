@@ -21,7 +21,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-public class NewUserDiagnostictests extends BaseClass {
+public class NewUserDiagnostictest extends BaseClass {
 	
 @BeforeClass
 @Parameters({"deleteURL","url","browser","phone","otp"})
@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 //options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless", "--disable-gpu", "--window-size=1920,800","--ignore-certificate-errors");
+//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,800","--ignore-certificate-errors");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
@@ -60,6 +60,7 @@ driver.close();
 }	
 
 @Parameters({"name","email","phone","otp","patientname"})
+@Test(priority = 3)
 public void newUserDiagnostic(String name, String email, String phone,String otp, String patientname) throws Exception {
 	
 Homepage home= new Homepage();
@@ -67,6 +68,7 @@ home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 
+Thread.sleep(10000);
 Login login= new Login();
 login.otpDetails(otp);
 	

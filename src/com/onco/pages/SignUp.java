@@ -7,8 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
+import com.paulhammant.ngwebdriver.ByAngular;
+
 import org.apache.log4j.Logger;
 /**
  * Locators and methods for signup page
@@ -21,7 +24,8 @@ public class SignUp extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(SignUp.class);
 
-	@FindBy(xpath = "/html/body/app-root/home/header-component/header[1]/div/div[2]/div/ul/li[6]/a/img")
+	
+	@FindBy(xpath = "//li[@class='ng-tns-c1-0 ng-star-inserted']//a[1]")
 	WebElement signUpIcon;
 	
 	@FindBy(xpath="/html/body/app-root/login/div/div[2]/div[2]/a")
@@ -64,8 +68,20 @@ public SignUp() {
       
 public void signupicon() {
 	
-	
-	    signUpIcon.click();
+	    if (logger.isDebugEnabled()) {
+		logger.debug("entering signupicon()");
+	}
+		try {
+	    	 signUpIcon.click();
+	    	 Assert.assertEquals(true, signUpIcon.isDisplayed());
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting signupicon()");
+		}
+	    
 }
 	
 public void signupPage(String name,String email, String phone) {
@@ -79,9 +95,12 @@ public void signupPage(String name,String email, String phone) {
 	}
 		try {
         	  //signUpIcon.click();
-              signUplink.click();		
+              signUplink.click();
+              Assert.assertEquals(true, signUplink.isDisplayed());
               yourName.sendKeys(name);
+              Assert.assertEquals(true, yourName.isDisplayed());
               yourEmail.sendKeys(email);
+              Assert.assertEquals(true, yourEmail.isDisplayed());
               phoneNumber.sendKeys(phone);
 		     } catch (NoSuchElementException e) {
 			  e.printStackTrace();
@@ -100,6 +119,7 @@ public void countryCode()  {
         	 Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
              countrycode.selectByIndex(0);
              countryCode.click();
+             Assert.assertEquals(true, yourEmail.isDisplayed());
              countrycode.getOptions();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -120,7 +140,9 @@ public void patientQuery()  {
         	 Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
              patientquery.selectByIndex(1); 
              patientQuery.click();
+             Assert.assertEquals(true, patientQuery.isDisplayed());
              startNowButton.click();
+             Assert.assertEquals(true, startNowButton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

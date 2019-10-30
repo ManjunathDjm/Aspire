@@ -9,6 +9,9 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
@@ -46,33 +49,42 @@ public class PaymentsRazorPay extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void netbanking() {
+    public void netbanking() throws InterruptedException {
   
          
 		   if (logger.isDebugEnabled()) {
 			logger.debug("entering razorpay()");
 		}
 		try {
+			WebDriverWait wait = new WebDriverWait(driver, 20000);
 			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
+			wait.until(ExpectedConditions.elementToBeClickable(netBanking));
 		    netBanking.click();
+		    wait.until(ExpectedConditions.elementToBeClickable(sbiNetbanking));
 		    sbiNetbanking.click();
-		    payNow.click();
+		    wait.until(ExpectedConditions.elementToBeClickable(payNow));
+		    payNow.click(); 
 		    //Switch to child window and click on success button 
 		    Set <String> windowhandles=driver.getWindowHandles();
 		    for(String windowHandle:windowhandles){
 		    	driver.getWindowHandle();
 				driver.switchTo().window(windowHandle);
     }
-		     successButton.click();
-	    		 
+
+		    wait.until(ExpectedConditions.elementToBeClickable(successButton)); 
+		    successButton.click();
+		     
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
 		if (logger.isDebugEnabled()) {
 			logger.debug("exiting razorpay()");	
+			
+			}
      }
+ 
     }
-   }
+
 			 
 		
 			
