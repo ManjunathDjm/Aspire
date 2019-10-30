@@ -48,7 +48,6 @@ login.login(phone);
 login.otpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(5000);
 driver.close();
 		
 		
