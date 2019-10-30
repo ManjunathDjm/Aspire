@@ -46,8 +46,9 @@ sign.signupicon();
 Login login= new Login();
 login.login(phone);
 login.otpDetails(otp);
-Thread.sleep(5000);
+Thread.sleep(10000);
 driver.get(deleteURL);
+Thread.sleep(10000);
 driver.close();
 		
 		
