@@ -29,9 +29,9 @@ public void delete(String deleteURL,String url,String browser, String phone, Str
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-//options.addArguments("window-size=1280,800");
+options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-//options.addArguments("--headless", "--disable-gpu", "--window-size=1920,800","--ignore-certificate-errors");
+options.addArguments("--headless");
 options.addArguments("--disable-dev-shm-usage");
 options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
