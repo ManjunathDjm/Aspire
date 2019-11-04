@@ -30,7 +30,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-//options.addArguments("--headless");
+options.addArguments("--headless", "--disable-gpu", "--window-size=1920,800","--ignore-certificate-errors");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
@@ -44,8 +44,9 @@ sign.signupicon();
 Login login= new Login();
 login.login(phone);
 login.otpDetails(otp);
+Thread.sleep(10000);
 driver.get(deleteURL);
-Thread.sleep(5000);
+Thread.sleep(10000);
 driver.close();
 			
 			

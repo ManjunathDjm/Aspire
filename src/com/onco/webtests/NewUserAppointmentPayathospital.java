@@ -43,11 +43,10 @@ sign.signupicon();
 				
 Login login= new Login();
 login.login(phone);
-Thread.sleep(3000);
 login.otpDetails(otp);
-Thread.sleep(5000);
+Thread.sleep(20000);
 driver.get(deleteURL);
-Thread.sleep(3000);
+Thread.sleep(20000);
 driver.close();
 			
 			
@@ -63,7 +62,6 @@ sign.signupPage(name,email,phone);
 sign.countryCode();
 sign.patientQuery();
 
-Thread.sleep(10000);
 Login login= new Login();
 login.otpDetails(otp);
 

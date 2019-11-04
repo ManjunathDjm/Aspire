@@ -39,21 +39,17 @@ options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
+driver.manage().window().maximize();
 
 SignUp sign=new SignUp();
 sign.signupicon();
-
-				
+			
 Login login= new Login();
 login.login(phone);
-
-Thread.sleep(30000);
 login.otpDetails(otp);
-
-Thread.sleep(5000);
+Thread.sleep(10000);
 driver.get(deleteURL);
-
-Thread.sleep(3000);
+Thread.sleep(10000);
 driver.close();
 			
 			
@@ -86,10 +82,11 @@ labtest.location();
 labtest.labtest();
 labtest.continueButton();
 
+Thread.sleep(20000);
 Summary summary= new Summary();
 summary.summary();
 
-Thread.sleep(3000);
+Thread.sleep(20000);
 Dashboard dashboard= new Dashboard();
 
 

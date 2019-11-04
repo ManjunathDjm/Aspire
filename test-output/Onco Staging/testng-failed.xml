@@ -15,22 +15,14 @@
   </listeners>
   <test thread-count="5" name="PatientPortal(failed)">
     <classes>
-      <class name="com.onco.webtests.NewUserOpinionUSPanel">
+      <class name="com.onco.webtests.NewUserDiagnostictest">
         <methods>
           <include name="openBrowser"/>
-          <include name="delete"/>
-          <include name="quit"/>
-          <include name="newUserOpinionUSPanal"/>
-        </methods>
-      </class> <!-- com.onco.webtests.NewUserOpinionUSPanel -->
-      <class name="com.onco.webtests.NewUserOpinionIndianPanel">
-        <methods>
-          <include name="openBrowser"/>
+          <include name="newUserDiagnostic"/>
           <include name="quit"/>
           <include name="delete"/>
-          <include name="newUserOpinionIndiaPanal" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.onco.webtests.NewUserOpinionIndianPanel -->
+      </class> <!-- com.onco.webtests.NewUserDiagnostictest -->
     </classes>
   </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->

@@ -47,7 +47,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	//options.addArguments("--headless");
+            	options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");

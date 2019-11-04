@@ -81,7 +81,7 @@ public class Service extends BaseClass {
 			   WebDriverWait wait = new WebDriverWait(driver, 20000);
        		   wait.until(ExpectedConditions.elementToBeClickable(opinion));
 			   opinion.click();
-        	   Assert.assertEquals(true, opinion.isDisplayed());
+        	   //Assert.assertEquals(true, opinion.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -107,7 +107,7 @@ public class Service extends BaseClass {
         		WebDriverWait wait = new WebDriverWait(driver, 20000);
          		wait.until(ExpectedConditions.elementToBeClickable(labtest));
         		labtest.click();
-				Assert.assertEquals(true, labtest);
+				Assert.assertEquals(true, labtest.isDisplayed());
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
