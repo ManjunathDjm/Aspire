@@ -28,26 +28,33 @@ public class Summary extends BaseClass {
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
     WebElement checkbox;
     
-    @FindBy(xpath="/html[1]/body[1]/app-root[1]/case-summary[1]/div[1]/div[2]/div[1]/section[1]/div[2]/div[1]/payment-summary[1]/div[1]/div[1]/div[4]/button[1]")
-    WebElement payNow;
+    @FindBy(xpath="//button[@class='case-data-btn continue-btn col-md-12 continue-btn-active']")
+    WebElement payathospital;
+    
+    @FindBy(xpath="//button[@class='case-data-btn continue-btn pay-now-btn continue-btn-active']")
+    WebElement paynow;
     
     
 	public Summary() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void summary() {
+	public void summary() {
     	
     		
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering Summary()");
 		}
 			try {
-				
-				//WebDriverWait wait = new WebDriverWait(driver, 20000);
-				//wait.until(ExpectedConditions.elementToBeClickable(payNow));
-				payNow.click();
-				Assert.assertEquals(true, payNow.isDisplayed());
+				if(payathospital.isDisplayed())
+				{
+				   payathospital.click();
+				   Assert.assertEquals(true, payathospital.isDisplayed());
+				}
+				else { 
+					paynow.click();
+					Assert.assertEquals(true, paynow.isDisplayed());
+				}
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}

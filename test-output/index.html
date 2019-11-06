@@ -102,7 +102,7 @@
                     <div class="method-list-content skipped suite-Onco_Staging">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserDiagnostictest" class="method navigator-link" hash-for-method="newUserDiagnostic">newUserDiagnostic</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserOpinionUSPanel" class="method navigator-link" hash-for-method="newUserOpinionUSPanal">newUserOpinionUSPanal</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Onco_Staging -->
@@ -120,45 +120,34 @@
           <div class="suite-Onco_Staging-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">com.onco.webtests.NewUserDiagnostictest</span>
+              <span class="class-name">com.onco.webtests.NewUserOpinionUSPanel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="newUserDiagnostic">
-                  </a> <!-- newUserDiagnostic -->
-                  <span class="method-name">newUserDiagnostic</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=78.0.3904.70)
+                  <a name="newUserOpinionUSPanal">
+                  </a> <!-- newUserOpinionUSPanal -->
+                  <span class="method-name">newUserOpinionUSPanal</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=78.0.3904.87)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:14e5:8b1:8d60:76aa%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
+System info: host: &apos;Manjunaths-MacBook-Air.local&apos;, ip: &apos;fe80:0:0:0:1891:271b:1094:e8e%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.14.6&apos;, java.version: &apos;12.0.1&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.70, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:49277}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 2805df3b57deec1547bddf4b32629b23
-*** Element info: {Using=xpath, value=/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.87, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: /var/folders/9d/41vrbrhs6cn...}, goog:chromeOptions: {debuggerAddress: localhost:55014}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3620190b1620d66e049a19b90f68ace9
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
-	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:670)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:666)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at com.onco.pages.Login.otpDetails(Login.java:93)
-	at com.onco.webtests.NewUserDiagnostictest.delete(NewUserDiagnostictest.java:49)
-... Removed 31 stack frames
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at com.onco.pages.Login.login(Login.java:64)
+	at com.onco.webtests.NewUserOpinionUSPanel.delete(NewUserOpinionUSPanel.java:46)
+... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -188,7 +177,7 @@ Session ID: 2805df3b57deec1547bddf4b32629b23
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;6&quot; name=&quot;PatientPortal&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.onco.webtests.NewUserDiagnostictest&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserOpinionUSPanel&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- PatientPortal --&gt;
 &lt;/suite&gt; &lt;!-- Onco Staging --&gt;
@@ -230,8 +219,8 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'newUserDiagnostic')
-data.setCell(0, 2, 'com.onco.webtests.NewUserDiagnostictest')
+data.setCell(0, 1, 'newUserOpinionUSPanal')
+data.setCell(0, 2, 'com.onco.webtests.NewUserOpinionUSPanel')
 data.setCell(0, 3, 0);
 window.suiteTableData['Onco_Staging']= { tableData: data, tableDiv: 'times-div-Onco_Staging'}
 return data;
@@ -263,9 +252,9 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.onco.webtests.NewUserDiagnostictest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.onco.webtests.NewUserOpinionUSPanel</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">newUserDiagnostic</span>
+                <span class="method-name">newUserOpinionUSPanal</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class before">

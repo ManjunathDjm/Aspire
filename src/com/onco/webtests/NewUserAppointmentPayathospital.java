@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.onco.pages.Appointment;
 import com.onco.pages.Dashboard;
+import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
 import com.onco.pages.RequestDoctorAppointment;
 import com.onco.pages.Login;
@@ -43,25 +44,26 @@ sign.signupicon();
 				
 Login login= new Login();
 login.login(phone);
+Thread.sleep(5000);
 login.otpDetails(otp);
-Thread.sleep(20000);
+Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(20000);
+Thread.sleep(5000);
 driver.close();
 			
 			
 }		
 	
 @Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 2)
-public void newUserAppointmentPayAtHospital(String name,String email,String phone,String otp,String patientname) throws Exception {
+@Test
+public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname) throws Exception {
     
-SignUp sign=new SignUp();
-sign.signupicon();
-sign.signupPage(name,email,phone);
-sign.countryCode();
-sign.patientQuery();
+Homepage home= new Homepage();
+home.formfill(name,email,phone) ;
+home.patientquery();
+home.submit();
 
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
@@ -74,11 +76,13 @@ assessment.initialAssessmentClose();
 Service service=new Service();
 service.appointment();
 
+Thread.sleep(5000);
 RequestDoctorAppointment appointment=new RequestDoctorAppointment();
 appointment.appointment();
 appointment.surgicalOncologist();
 appointment.button();
 
+Thread.sleep(10000);
 Appointment app= new Appointment();
 app.appointment();
 

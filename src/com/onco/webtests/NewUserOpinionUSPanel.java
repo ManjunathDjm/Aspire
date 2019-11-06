@@ -32,7 +32,7 @@ ChromeOptions options = new ChromeOptions();
 
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
@@ -42,9 +42,9 @@ driver.manage().window().maximize();
 		
 SignUp sign=new SignUp();
 sign.signupicon();
-			
 Login login= new Login();
 login.login(phone);
+Thread.sleep(5000);
 login.otpDetails(otp);
 Thread.sleep(10000);
 driver.get(deleteURL);
@@ -62,9 +62,11 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 	
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 	
+Thread.sleep(5000);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 

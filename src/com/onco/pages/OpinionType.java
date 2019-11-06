@@ -40,8 +40,6 @@ public class OpinionType extends BaseClass {
 		logger.debug("entering indianpanalbutton()");
 	}
 		try {
-			 WebDriverWait wait = new WebDriverWait(driver, 20000);
-			 wait.until(ExpectedConditions.elementToBeClickable(indianPanelButton));
 			 indianPanelButton.click();
 			 Assert.assertEquals(true, indianPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {
@@ -59,8 +57,6 @@ public class OpinionType extends BaseClass {
 			logger.debug("entering USPanal()");
 		}
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 20000);
-			wait.until(ExpectedConditions.elementToBeClickable(selectUsPanelButton));
 			selectUsPanelButton.click();
 			Assert.assertEquals(true, selectUsPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {

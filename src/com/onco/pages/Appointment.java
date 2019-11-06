@@ -5,6 +5,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -29,7 +30,7 @@ public class Appointment extends BaseClass {
 	private static final Logger logger = Logger.getLogger(Appointment.class);
 
 	
-	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[1]/div/div[3]/div/div[2]/div/div[2]/button")
+	@FindBy(xpath = "//div[@class='col-md-8 col-xs-12 results-list']//div[1]//div[1]//div[3]//div[1]//div[2]//div[1]//div[2]//button[1]")
 	WebElement bookappointment;
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/book-appointment[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
@@ -57,7 +58,7 @@ public class Appointment extends BaseClass {
 			logger.debug("entering appointment()");
 		}
 		try {
-			    WebDriverWait wait= new WebDriverWait(driver, 30);
+   
 			    bookappointment.click();
 			    Assert.assertEquals(true, bookappointment.isDisplayed());
         		driver.switchTo().defaultContent();

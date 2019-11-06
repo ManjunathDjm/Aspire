@@ -45,9 +45,7 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering initialAssessmentClose()");
 	}
 	try {
-		   WebDriverWait wait =new WebDriverWait(driver, 20000);
 		   driver.switchTo().defaultContent();
-		   wait.until(ExpectedConditions.elementToBeClickable(initiAlassessmentClose));
 		   initiAlassessmentClose.click();
 		   Assert.assertEquals(true, initiAlassessmentClose.isDisplayed());
 	} catch (NoSuchElementException e) {
@@ -65,8 +63,6 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering viewAssessment()");
 	}
 		try {
-			   WebDriverWait wait =new WebDriverWait(driver, 20000);
-			   wait.until(ExpectedConditions.elementToBeClickable(initiAlassessmentClose));
 			   viewAssessment.click();
 			   Assert.assertEquals(true, viewAssessment.isDisplayed());
 			} catch (NoSuchElementException e) {
@@ -84,8 +80,6 @@ public class InitialAssessment extends BaseClass {
 		logger.debug("entering downloadAssessment()");
 	}
 		try {
-			   WebDriverWait wait =new WebDriverWait(driver,20000);
-			   wait.until(ExpectedConditions.elementToBeClickable(downloadAssessment));
 			   downloadAssessment.click();
 			   Assert.assertEquals(true, downloadAssessment.isDisplayed());
 		} catch (NoSuchElementException e) {

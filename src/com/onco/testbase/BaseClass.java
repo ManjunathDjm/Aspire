@@ -47,7 +47,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless");
+            	//options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
             	options.addArguments("--no-sandbox");
             	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
@@ -58,8 +58,8 @@ public class BaseClass {
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
-                //driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		//manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
+                driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
         		
       }
                  

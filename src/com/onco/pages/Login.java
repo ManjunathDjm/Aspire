@@ -59,16 +59,12 @@ public class Login extends BaseClass {
     	 
     	try {
     	  
-          WebDriverWait wait =new WebDriverWait(driver, 20000);
-          wait.until(ExpectedConditions.elementToBeClickable(countryCode));
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
     	  Assert.assertEquals(true, countryCode.isDisplayed());
-    	  wait.until(ExpectedConditions.elementToBeClickable(phoneNumber));
     	  phoneNumber.sendKeys(phone); 
     	  Assert.assertEquals(true, phoneNumber.isDisplayed());
-    	  wait.until(ExpectedConditions.elementToBeClickable(loginVIAOTPbutton));
     	  loginVIAOTPbutton.click();
     	  Assert.assertEquals(true, loginVIAOTPbutton.isDisplayed());
     	  
@@ -89,14 +85,11 @@ public class Login extends BaseClass {
 			logger.debug("Otp: \"" + Otp + "\"");
 		}
 			try {
-			  WebDriverWait wait =new WebDriverWait(driver, 20000);
-			  wait.until(ExpectedConditions.elementToBeClickable(otp));
+			  
 			  otp.click(); 
 			  Assert.assertEquals(true, otp.isDisplayed());
-			  wait.until(ExpectedConditions.elementToBeClickable(otp));
     		  otp.sendKeys(Otp);
     		  Assert.assertEquals(true, otp.isDisplayed());
-    		  wait.until(ExpectedConditions.elementToBeClickable(proceedButton));
     		  proceedButton.click();
     		  Assert.assertEquals(true, proceedButton.isDisplayed());
 			} catch (NoSuchElementException e) {

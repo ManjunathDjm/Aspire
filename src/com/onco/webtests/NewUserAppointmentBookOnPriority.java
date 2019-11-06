@@ -63,7 +63,7 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(10000);
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
@@ -76,6 +76,7 @@ assessment.initialAssessmentClose();
 Service service=new Service();
 service.appointment();
 
+Thread.sleep(5000);
 RequestDoctorAppointment appointment=new RequestDoctorAppointment();
 appointment.appointment();
 appointment.radiationOncologist();
@@ -84,6 +85,7 @@ appointment.button();
 Appointment app= new Appointment();
 app.appointment();
 
+Thread.sleep(10000);
 Summary summary= new Summary();
 summary.summary();
 

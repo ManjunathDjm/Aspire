@@ -36,20 +36,42 @@ public class Dashboard extends BaseClass {
     
     @FindBy(xpath="1")
     WebElement deleteuser;
+    
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-dashboard-component[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[5]/div[3]/div[2]/div[1]/div[1]/div[1]/pricing[1]/div[1]/div[1]/div[3]/a[1]")
+    WebElement selectindiapanal;
+    
+    @FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-dashboard-component[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[5]/div[3]/div[2]/div[1]/div[2]/div[2]/button[1]")
+    WebElement proceedbutton;
    
 	
 	public Dashboard() {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void dashboard() {
+  public void selectindiapanal() {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering dashboard()");
 		}
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 20000);
-			wait.until(ExpectedConditions.elementToBeClickable(continuebutton));
+			selectindiapanal.click();
+			proceedbutton.click();
+			Assert.assertEquals(true, selectindiapanal.isDisplayed());
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+		if (logger.isDebugEnabled()) {
+			logger.debug("exiting dashboard()");
+		}
+    } 	
+	
+	
+	public void dashboard() {
+    	
+    	if (logger.isDebugEnabled()) {
+			logger.debug("entering dashboard()");
+		}
+		try {
 			continuebutton.click();
 			Assert.assertEquals(true, continuebutton.isDisplayed());
 		} catch (NoSuchElementException e) {
@@ -67,8 +89,6 @@ public class Dashboard extends BaseClass {
 		}
 		try {
 			
-			WebDriverWait wait = new WebDriverWait(driver, 20000);
-			wait.until(ExpectedConditions.elementToBeClickable(logout));
 			logout.click();	
 			Assert.assertEquals(true, logout.isDisplayed());
 		} catch (NoSuchElementException e) {

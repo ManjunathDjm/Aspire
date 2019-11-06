@@ -56,13 +56,10 @@ public class PaymentsRazorPay extends BaseClass {
 			logger.debug("entering razorpay()");
 		}
 		try {
-			WebDriverWait wait = new WebDriverWait(driver, 20000);
+			
 			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
-			wait.until(ExpectedConditions.elementToBeClickable(netBanking));
 		    netBanking.click();
-		    wait.until(ExpectedConditions.elementToBeClickable(sbiNetbanking));
 		    sbiNetbanking.click();
-		    wait.until(ExpectedConditions.elementToBeClickable(payNow));
 		    payNow.click(); 
 		    //Switch to child window and click on success button 
 		    Set <String> windowhandles=driver.getWindowHandles();
@@ -71,7 +68,6 @@ public class PaymentsRazorPay extends BaseClass {
 				driver.switchTo().window(windowHandle);
     }
 
-		    wait.until(ExpectedConditions.elementToBeClickable(successButton)); 
 		    successButton.click();
 		     
 			} catch (NoSuchElementException e) {

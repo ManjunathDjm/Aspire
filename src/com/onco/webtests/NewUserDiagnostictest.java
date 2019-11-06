@@ -33,7 +33,6 @@ options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless");
 options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--disable-setuid-sandbox");
 options.setExperimentalOption("useAutomationExtension", false);
 
 driver = new ChromeDriver(options);
@@ -46,10 +45,11 @@ sign.signupicon();
 			
 Login login= new Login();
 login.login(phone);
+Thread.sleep(5000);
 login.otpDetails(otp);
-Thread.sleep(10000);
+Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(10000);
+Thread.sleep(5000);
 driver.close();
 			
 			
@@ -64,7 +64,7 @@ home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 
-Thread.sleep(10000);
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 	

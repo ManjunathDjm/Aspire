@@ -53,8 +53,6 @@ public class Service extends BaseClass {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-        		WebDriverWait wait = new WebDriverWait(driver, 20000);
-        		wait.until(ExpectedConditions.elementToBeClickable(appointment));
         		appointment.click();
         		Assert.assertEquals(true, appointment.isDisplayed());
 			} catch (NoSuchElementException e) {
@@ -78,10 +76,8 @@ public class Service extends BaseClass {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			   WebDriverWait wait = new WebDriverWait(driver, 20000);
-       		   wait.until(ExpectedConditions.elementToBeClickable(opinion));
 			   opinion.click();
-        	   //Assert.assertEquals(true, opinion.isDisplayed());
+        	   Assert.assertEquals(true, opinion.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -104,8 +100,6 @@ public class Service extends BaseClass {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-        		WebDriverWait wait = new WebDriverWait(driver, 20000);
-         		wait.until(ExpectedConditions.elementToBeClickable(labtest));
         		labtest.click();
 				Assert.assertEquals(true, labtest.isDisplayed());
 			} catch (NoSuchElementException e) {

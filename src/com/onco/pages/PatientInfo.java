@@ -62,24 +62,19 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	        	
-	    	    WebDriverWait wait = new WebDriverWait(driver, 20);
-	    	    wait.until(ExpectedConditions.elementToBeClickable(patientName));
 	    	    patientName.sendKeys(patientname);
 	    	    Assert.assertEquals(true, patientName.isDisplayed());
 			    
-	    	    wait.until(ExpectedConditions.elementToBeClickable(typeofCancer));
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    Assert.assertEquals(true, typeofCancer.isDisplayed());
 			    
-			    wait.until(ExpectedConditions.elementToBeClickable(cancerStage));
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
 			    Assert.assertEquals(true, cancerStage.isDisplayed());
 			    
-			    wait.until(ExpectedConditions.elementToBeClickable(generalCondition));
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();

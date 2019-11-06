@@ -17,6 +17,9 @@
     
   <test thread-count="6" name="PatientPortal">
     <classes>  
+       <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal"/>
+       <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
+       <class name="com.onco.webtests.NewUserDiagnostictest"/>
        <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
     </classes>
   </test> <!-- Test -->

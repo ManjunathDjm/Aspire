@@ -62,14 +62,10 @@ public class Homepage extends BaseClass {
 			logger.debug("contact: \"" + phone + "\"");
 		}
 		try {
-			    WebDriverWait wait = new WebDriverWait(driver, 20000);
-			    wait.until(ExpectedConditions.elementToBeClickable(nameField));
 			    nameField.sendKeys(name);
 			    Assert.assertEquals(true, nameField.isDisplayed());
-			    wait.until(ExpectedConditions.elementToBeClickable(emailField));
 				emailField.sendKeys(email);	
 				Assert.assertEquals(true, emailField.isDisplayed());
-				wait.until(ExpectedConditions.elementToBeClickable(phoneFiled));
 				phoneFiled.sendKeys(phone);
 				Assert.assertEquals(true, phoneFiled.isDisplayed());
 			} catch (NoSuchElementException e) {
@@ -86,13 +82,9 @@ public class Homepage extends BaseClass {
 		   logger.debug("entering patientq()");
 	    }
 	    try {
-	    	 WebDriverWait wait = new WebDriverWait(driver, 20000); 
-	    	 wait.until(ExpectedConditions.elementToBeClickable(patientChoice));
 	    	 patientChoice.click();
 	    	 Assert.assertEquals(true, patientChoice.isDisplayed());
-	    	 wait.until(ExpectedConditions.elementToBeClickable(dropOption1));
 		     dropOption1.click();
-		     wait.until(ExpectedConditions.elementToBeClickable(selectTerms));
 		     selectTerms.click();
 		     Assert.assertEquals(true, selectTerms.isDisplayed());
 	     } catch (NoSuchElementException e) {
@@ -108,8 +100,6 @@ public class Homepage extends BaseClass {
 		logger.debug("entering Submit()");
 	  }
 	    try {
-	    	WebDriverWait wait = new WebDriverWait(driver, 20000); 
-	    	wait.until(ExpectedConditions.elementToBeClickable(patientChoice));
 	    	submit.click();
             Assert.assertEquals(true, submit.isDisplayed());
 	     } catch (NoSuchElementException e) {
