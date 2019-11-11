@@ -13,14 +13,12 @@
     <parameter name="email" value="manjunath.11j@gmail.com"/>
     <parameter name="phone" value="9036890379"/>
     <parameter name="otp" value="5813"/>
+    <parameter name="UScoupon" value="INTLMA19"/>
+     <parameter name="INDcoupon" value="INDMA19"/>
     <parameter name="patientname" value="test_onco"/>
-    
-  <test thread-count="6" name="PatientPortal">
+  <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.ExistingUserOpinionIndiaPanal"/>
        <class name="com.onco.webtests.NewUserOpinionIndianPanel"/>
-       <class name="com.onco.webtests.NewUserDiagnostictest"/>
-       <class name="com.onco.webtests.NewUserAppointmentPayathospital"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

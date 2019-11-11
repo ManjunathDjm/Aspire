@@ -41,7 +41,6 @@ public class OpinionType extends BaseClass {
 	}
 		try {
 			 indianPanelButton.click();
-			 Assert.assertEquals(true, indianPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 		}
@@ -58,7 +57,6 @@ public class OpinionType extends BaseClass {
 		}
 		try {
 			selectUsPanelButton.click();
-			Assert.assertEquals(true, selectUsPanelButton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

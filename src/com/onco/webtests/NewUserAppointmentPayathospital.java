@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
@@ -55,7 +55,7 @@ driver.close();
 }		
 	
 @Parameters({"name","email","phone","otp","patientname"})
-@Test
+@Test(priority = 5)
 public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname) throws Exception {
     
 Homepage home= new Homepage();
@@ -70,6 +70,7 @@ login.otpDetails(otp);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 
+Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 
@@ -91,7 +92,6 @@ summary.summary();
 
 Thread.sleep(3000);
 Dashboard dashboard= new Dashboard();
-
 
 }
 }

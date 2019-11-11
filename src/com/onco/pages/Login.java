@@ -62,11 +62,8 @@ public class Login extends BaseClass {
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
-    	  Assert.assertEquals(true, countryCode.isDisplayed());
     	  phoneNumber.sendKeys(phone); 
-    	  Assert.assertEquals(true, phoneNumber.isDisplayed());
     	  loginVIAOTPbutton.click();
-    	  Assert.assertEquals(true, loginVIAOTPbutton.isDisplayed());
     	  
     	} catch (NoSuchElementException e) {
 			// TODO: handle exception
@@ -87,11 +84,8 @@ public class Login extends BaseClass {
 			try {
 			  
 			  otp.click(); 
-			  Assert.assertEquals(true, otp.isDisplayed());
     		  otp.sendKeys(Otp);
-    		  Assert.assertEquals(true, otp.isDisplayed());
     		  proceedButton.click();
-    		  Assert.assertEquals(true, proceedButton.isDisplayed());
 			} catch (NoSuchElementException e) {
 				// TODO: handle exception
 			}

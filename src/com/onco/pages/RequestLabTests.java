@@ -57,7 +57,6 @@ public class RequestLabTests extends BaseClass {
 		}
 	        	 location.click(); 
 	    		 location.sendKeys("Mumbai",Keys.TAB);
-	    		 Assert.assertEquals(true, location.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
        }
@@ -77,7 +76,6 @@ public class RequestLabTests extends BaseClass {
 	    	 testtype.click();
 	    	 test.selectByIndex(1);
 	    	 testtype.click();
-	    	 Assert.assertEquals(true, testtype.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -93,7 +91,6 @@ public class RequestLabTests extends BaseClass {
 	}
 	try {
 		   continueButton.click();
-		   Assert.assertEquals(true, continueButton.isDisplayed());
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
@@ -108,9 +105,7 @@ public class RequestLabTests extends BaseClass {
 		logger.debug("entering RequestCallback()");
 	}
     	requestCallback.click();
-    	Assert.assertEquals(true, requestCallback);
 	    Requestcallclose.click();
-	    Assert.assertEquals(true, Requestcallclose);
 	if (logger.isDebugEnabled()) {
 		logger.debug("exiting RequestCallback()");
 	}

@@ -60,12 +60,9 @@ public class Appointment extends BaseClass {
 		try {
    
 			    bookappointment.click();
-			    Assert.assertEquals(true, bookappointment.isDisplayed());
         		driver.switchTo().defaultContent();
         		cal.click();
-        		Assert.assertEquals(true, cal.isDisplayed());
         		calendar_time.click();
-        		Assert.assertEquals(true, calendar_time.isDisplayed());
 
         	    
 			} catch (NoSuchElementException e) {
@@ -86,7 +83,6 @@ public class Appointment extends BaseClass {
 			try {
 	
 				calendar.click();
-				Assert.assertEquals(true, calendar.isDisplayed());
 			} catch (NoSuchElementException e) {		
 				e.printStackTrace();
 			}

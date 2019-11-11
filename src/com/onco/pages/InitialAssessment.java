@@ -47,7 +47,6 @@ public class InitialAssessment extends BaseClass {
 	try {
 		   driver.switchTo().defaultContent();
 		   initiAlassessmentClose.click();
-		   Assert.assertEquals(true, initiAlassessmentClose.isDisplayed());
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
@@ -64,7 +63,6 @@ public class InitialAssessment extends BaseClass {
 	}
 		try {
 			   viewAssessment.click();
-			   Assert.assertEquals(true, viewAssessment.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -81,7 +79,6 @@ public class InitialAssessment extends BaseClass {
 	}
 		try {
 			   downloadAssessment.click();
-			   Assert.assertEquals(true, downloadAssessment.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

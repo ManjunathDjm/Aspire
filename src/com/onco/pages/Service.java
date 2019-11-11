@@ -54,7 +54,6 @@ public class Service extends BaseClass {
 					e.printStackTrace();
 				}
         		appointment.click();
-        		Assert.assertEquals(true, appointment.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -77,7 +76,6 @@ public class Service extends BaseClass {
 				e.printStackTrace();
 			}
 			   opinion.click();
-        	   Assert.assertEquals(true, opinion.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -101,7 +99,6 @@ public class Service extends BaseClass {
 					e.printStackTrace();
 				}
         		labtest.click();
-				Assert.assertEquals(true, labtest.isDisplayed());
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

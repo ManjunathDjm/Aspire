@@ -25,8 +25,19 @@ public class Summary extends BaseClass {
 	@FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div[1]/input")
 	WebElement couponCode;
 	
+	@FindBy(xpath="//i[@class='fa fa-times']")
+	WebElement deletecoupon;
+	
+	@FindBy(xpath="//input[@placeholder='Enter coupon code']")
+	WebElement couponcodefield;
+	
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
     WebElement checkbox;
+    
+    @FindBy(xpath="//button[@class='coupon-btn']")
+    WebElement couponapply;;
+    
+  
     
     @FindBy(xpath="//button[@class='case-data-btn continue-btn col-md-12 continue-btn-active']")
     WebElement payathospital;
@@ -34,11 +45,34 @@ public class Summary extends BaseClass {
     @FindBy(xpath="//button[@class='case-data-btn continue-btn pay-now-btn continue-btn-active']")
     WebElement paynow;
     
+    //@FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
+    //WebElement deletecoupon;
     
 	public Summary() {
 		PageFactory.initElements(driver, this);
 	}
     
+	
+	public void couponcode(String coupon) {
+    	
+		
+    	if (logger.isDebugEnabled()) {
+			logger.debug("couponcode Summary()");
+		}
+			try {
+				
+				   deletecoupon.click();
+				   couponcodefield.sendKeys(coupon);
+				   couponapply.click();
+			} catch (NoSuchElementException e) {
+				e.printStackTrace();
+			}
+		if (logger.isDebugEnabled()) {
+				logger.debug("couponcode Summary()");
+			}
+  
+	}
+	
 	public void summary() {
     	
     		
@@ -46,14 +80,19 @@ public class Summary extends BaseClass {
 			logger.debug("entering Summary()");
 		}
 			try {
-				if(payathospital.isDisplayed())
+				if(payathospital.isEnabled())
 				{
-				   payathospital.click();
-				   Assert.assertEquals(true, payathospital.isDisplayed());
+				    try {
+						Thread.sleep(20000);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					payathospital.click();
 				}
 				else { 
+					
 					paynow.click();
-					Assert.assertEquals(true, paynow.isDisplayed());
 				}
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

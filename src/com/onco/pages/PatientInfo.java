@@ -63,24 +63,20 @@ public class PatientInfo extends BaseClass{
 	     try {
 	        	
 	    	    patientName.sendKeys(patientname);
-	    	    Assert.assertEquals(true, patientName.isDisplayed());
 			    
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
-			    Assert.assertEquals(true, typeofCancer.isDisplayed());
 			    
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
-			    Assert.assertEquals(true, cancerStage.isDisplayed());
 			    
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
-		        Assert.assertEquals(true, generalCondition.isDisplayed());
+		  
 		        continueButton.click();
-		        Assert.assertEquals(true, continueButton.isDisplayed());
 		        
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

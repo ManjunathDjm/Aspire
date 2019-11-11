@@ -73,7 +73,6 @@ public void signupicon() {
 	}
 		try {
 	    	 signUpIcon.click();
-	    	 Assert.assertEquals(true, signUpIcon.isDisplayed());
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -97,11 +96,8 @@ public void signuppage(String name,String email, String phone) {
 		try {
         
 			  signUplink.click();
-              Assert.assertEquals(true, signUplink.isDisplayed());
               yourName.sendKeys(name);
-              Assert.assertEquals(true, yourName.isDisplayed());
               yourEmail.sendKeys(email);
-              Assert.assertEquals(true, yourEmail.isDisplayed());
               phoneNumber.sendKeys(phone);
 		     } catch (NoSuchElementException e) {
 			  e.printStackTrace();

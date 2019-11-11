@@ -48,20 +48,20 @@ public class Dashboard extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-  public void selectindiapanal() {
+  public void selectindiapanalbutton() {
     	
     	if (logger.isDebugEnabled()) {
-			logger.debug("entering dashboard()");
+			logger.debug("selectindiapanal dashboard()");
 		}
 		try {
+			
 			selectindiapanal.click();
 			proceedbutton.click();
-			Assert.assertEquals(true, selectindiapanal.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 		if (logger.isDebugEnabled()) {
-			logger.debug("exiting dashboard()");
+			logger.debug("selectindiapanal dashboard()");
 		}
     } 	
 	
@@ -73,7 +73,6 @@ public class Dashboard extends BaseClass {
 		}
 		try {
 			continuebutton.click();
-			Assert.assertEquals(true, continuebutton.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -90,7 +89,6 @@ public class Dashboard extends BaseClass {
 		try {
 			
 			logout.click();	
-			Assert.assertEquals(true, logout.isDisplayed());
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

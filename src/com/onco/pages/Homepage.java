@@ -63,11 +63,8 @@ public class Homepage extends BaseClass {
 		}
 		try {
 			    nameField.sendKeys(name);
-			    Assert.assertEquals(true, nameField.isDisplayed());
 				emailField.sendKeys(email);	
-				Assert.assertEquals(true, emailField.isDisplayed());
 				phoneFiled.sendKeys(phone);
-				Assert.assertEquals(true, phoneFiled.isDisplayed());
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -83,10 +80,8 @@ public class Homepage extends BaseClass {
 	    }
 	    try {
 	    	 patientChoice.click();
-	    	 Assert.assertEquals(true, patientChoice.isDisplayed());
 		     dropOption1.click();
 		     selectTerms.click();
-		     Assert.assertEquals(true, selectTerms.isDisplayed());
 	     } catch (NoSuchElementException e) {
 		    e.printStackTrace();
 	}
@@ -101,7 +96,6 @@ public class Homepage extends BaseClass {
 	  }
 	    try {
 	    	submit.click();
-            Assert.assertEquals(true, submit.isDisplayed());
 	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}

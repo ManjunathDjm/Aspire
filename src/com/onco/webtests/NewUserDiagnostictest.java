@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--disable-dev-shm-usage");
 options.setExperimentalOption("useAutomationExtension", false);
 
@@ -56,7 +56,7 @@ driver.close();
 }	
 
 @Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 3)
+@Test(priority = 4)
 public void newUserDiagnostic(String name, String email, String phone,String otp, String patientname) throws Exception {
 	
 Homepage home= new Homepage();
@@ -71,6 +71,7 @@ login.otpDetails(otp);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 
+Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment();
 assessment.initialAssessmentClose();
 	

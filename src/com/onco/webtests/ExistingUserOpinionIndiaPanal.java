@@ -1,5 +1,6 @@
 package com.onco.webtests;
 
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -17,9 +18,16 @@ import com.onco.testbase.BaseClass;
 public class ExistingUserOpinionIndiaPanal extends BaseClass {
 	
 @Parameters({"name","email","phone","patientname","otp"})	
-@Test(priority = 6)
+@Test(priority = 7)
 public void ExistinguserOpinionIndiaOanal(String name, String email,String phone,String patientname,String otp) throws Exception {
 		
+ChromeOptions options = new ChromeOptions();
+options.addArguments("window-size=1280,800");
+options.addArguments("--no-sandbox");
+//options.addArguments("--headless");
+options.addArguments("--start-maximized");
+options.setExperimentalOption("useAutomationExtension", false);
+	
 Homepage home= new Homepage();
 home.formfill(name,email,phone);
 home.patientquery();
@@ -30,15 +38,16 @@ Login login= new Login();
 login.login(phone);
 login.otpDetails(otp);
     
+Thread.sleep(10000);
 Dashboard dashboard =new Dashboard();
-dashboard.selectindiapanal();
+dashboard.selectindiapanalbutton();
     
 Summary summary= new Summary();
 
-    
 Thread.sleep(5000);
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
+
         
 }
 	

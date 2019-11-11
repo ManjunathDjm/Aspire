@@ -1,6 +1,5 @@
 package com.onco.testbase;
 
-import java.awt.Dimension;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -15,10 +14,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
-
-import com.paulhammant.ngwebdriver.ByAngular;
-import com.paulhammant.ngwebdriver.ByAngularModel;
-import com.paulhammant.ngwebdriver.NgWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -47,10 +42,9 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	//options.addArguments("--headless");
             	options.setExperimentalOption("useAutomationExtension", false);
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
+            	//options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
