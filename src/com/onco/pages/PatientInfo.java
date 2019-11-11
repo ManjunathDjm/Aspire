@@ -62,7 +62,8 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	        	
-	    	    WebDriverWait wait = new WebDriverWait(driver, 20);
+	    	    WebElement dynamicElement = (new WebDriverWait(driver, 10))
+	    			  .until(ExpectedConditions.presenceOfElementLocated(By.id("patientName")));
 	    	    patientName.sendKeys(patientname);
 			    
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
