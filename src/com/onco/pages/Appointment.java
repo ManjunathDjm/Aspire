@@ -1,6 +1,7 @@
 package com.onco.pages;
 
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,7 @@ import com.onco.testbase.BaseClass;
 import com.paulhammant.ngwebdriver.ByAngular;
 
 import java.sql.Driver;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
@@ -37,7 +39,7 @@ public class Appointment extends BaseClass {
 	WebElement cal;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[8]/div/div")
-	WebElement calendar_day;
+	WebElement calendarday;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/div[4]/div/div/div/div/div[2]/div[1]/button")
 	WebElement calendar;
@@ -75,6 +77,28 @@ public class Appointment extends BaseClass {
     	  
     }
   
+    public void calendar() {
+    	
+    	 driver.findElement(By.className("modal-content")).click();
+    	 List<WebElement> allDates=driver.findElements(By.xpath("//div[@class='book-appt-datetime-modal modal fade in']//div[@class='container-fluid']"));
+ 		
+ 		for(WebElement ele:allDates)
+ 		{
+ 			
+ 			String date=ele.getText();
+ 			
+ 			if(date.equalsIgnoreCase("28"))
+ 			{
+ 				ele.click();
+ 				break;
+ 			}
+ 			
+ 		}
+ 		
+ 		
+ 	}
+  
+    		
     public void exploreMore() {
     	
     		if (logger.isDebugEnabled()) {

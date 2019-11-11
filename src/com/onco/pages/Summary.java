@@ -53,7 +53,7 @@ public class Summary extends BaseClass {
 	}
     
 	
-	public void couponcode(String coupon) {
+	public void couponcode(String UScoupon) {
     	
 		
     	if (logger.isDebugEnabled()) {
@@ -62,7 +62,7 @@ public class Summary extends BaseClass {
 			try {
 				
 				   deletecoupon.click();
-				   couponcodefield.sendKeys(coupon);
+				   couponcodefield.sendKeys(UScoupon);
 				   couponapply.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

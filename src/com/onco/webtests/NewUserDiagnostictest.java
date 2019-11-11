@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-//options.addArguments("--headless");
+options.addArguments("--headless");
 options.addArguments("--disable-dev-shm-usage");
 options.setExperimentalOption("useAutomationExtension", false);
 
