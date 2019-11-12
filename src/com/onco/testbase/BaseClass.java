@@ -40,8 +40,7 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("window-size=1280,800");
-            	options.addArguments("--headless");
+            	//options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
             	options.addArguments("--no-sandbox");

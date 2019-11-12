@@ -53,15 +53,23 @@ public class Summary extends BaseClass {
 	}
     
 	
-	public void couponcode(String UScoupon) {
+	public void deletecouponcode() {
     	
 		
     	if (logger.isDebugEnabled()) {
 			logger.debug("couponcode Summary()");
 		}
 			try {
-				
+				   
 				   deletecoupon.click();
+			} catch (NoSuchElementException e) {
+				e.printStackTrace();
+			}
+	}
+	
+	public void applycoupon(String UScoupon) {
+				  
+		try {
 				   couponcodefield.sendKeys(UScoupon);
 				   couponapply.click();
 			} catch (NoSuchElementException e) {

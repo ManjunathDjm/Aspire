@@ -19,54 +19,53 @@ import com.onco.testbase.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
+public class NewUserIndiaPanalWithoutCoupon extends BaseClass {
 	
-	
-
 @BeforeClass
 @Parameters({"deleteURL","url","browser","phone","otp"})
-public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
-		
+
+public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
+
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
-options.addArguments("--headless");
+options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
-		
+			
 SignUp sign=new SignUp();
 sign.signupicon();
 Login login= new Login();
 login.login(phone);
+
 Thread.sleep(5000);
 login.otpDetails(otp);
-Thread.sleep(10000);
+Thread.sleep(5000);
 driver.get(deleteURL);
-Thread.sleep(10000);
+Thread.sleep(5000);
 driver.close();
-		
-		
-}	
-@Parameters({"name","email","phone","patientname","otp","UScoupon"})
-@Test(priority = 1)
-public void newUserOpinionUSPanal(String name, String email, String phone, String patientname, String otp,String UScoupon) throws Exception {
+			
+			
+}		
+	
+@Parameters({"name","email","phone","otp","patientname","INDcoupon"})
+@Test(priority = 2)
+public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
-	
+
 Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
-	
-Thread.sleep(5000);
+
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
 
@@ -78,19 +77,19 @@ Service service=new Service();
 service.opinion();
 
 OpinionType opinion =new OpinionType();
-opinion.USPanalButton();
+opinion.indianPanelButton();
 
 Thread.sleep(10000);
 Summary summary= new Summary();
 summary.deletecouponcode();
-summary.applycoupon(UScoupon);
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
 pay.netbanking();
 
 Thread.sleep(20000);
-Dashboard board = new Dashboard();
+Dashboard dashboard= new Dashboard();
+
 
 
 }

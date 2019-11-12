@@ -31,6 +31,9 @@ public class InitialAssessment extends BaseClass {
     @FindBy(partialLinkText = "VIEW ASSESSMENT")
     WebElement viewAssessment;
     
+    @FindBy(xpath="//div[@class='orange-rounded-inner-btn float-right']")
+    WebElement exploremoreoptions;
+    
     @FindBy(xpath="//div[@class='download-assessment cursor-pointer']")
     WebElement downloadAssessment;
      
@@ -47,6 +50,7 @@ public class InitialAssessment extends BaseClass {
 	try {
 		   driver.switchTo().defaultContent();
 		   initiAlassessmentClose.click();
+		   
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
@@ -63,6 +67,7 @@ public class InitialAssessment extends BaseClass {
 	}
 		try {
 			   viewAssessment.click();
+			   exploremoreoptions.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}

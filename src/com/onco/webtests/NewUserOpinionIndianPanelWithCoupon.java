@@ -81,7 +81,8 @@ opinion.indianPanelButton();
 
 Thread.sleep(10000);
 Summary summary= new Summary();
-summary.couponcode(INDcoupon);
+summary.deletecouponcode();
+summary.applycoupon(INDcoupon);
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();

@@ -19,7 +19,7 @@ import com.onco.testbase.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
+public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseClass {
 	
 	
 
@@ -72,7 +72,7 @@ info.patientinfo(patientname);
 
 Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment();
-assessment.initialAssessmentClose();
+assessment.ViewAssessment();
 	
 Service service=new Service();
 service.opinion();
@@ -83,7 +83,6 @@ opinion.USPanalButton();
 Thread.sleep(10000);
 Summary summary= new Summary();
 summary.deletecouponcode();
-summary.applycoupon(UScoupon);
 summary.summary();
 
 PaymentsRazorPay pay= new PaymentsRazorPay();
