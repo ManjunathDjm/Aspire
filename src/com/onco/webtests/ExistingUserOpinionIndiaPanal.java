@@ -7,10 +7,7 @@ import org.testng.annotations.Test;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.Login;
-import com.onco.pages.OpinionType;
-import com.onco.pages.PatientInfo;
 import com.onco.pages.PaymentsRazorPay;
-import com.onco.pages.Service;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 

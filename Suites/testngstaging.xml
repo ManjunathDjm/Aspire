@@ -18,7 +18,7 @@
     <parameter name="patientname" value="test_onco"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCoupon"/>
+       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
