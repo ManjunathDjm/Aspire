@@ -43,7 +43,7 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             
-            	//WebDriverManager.chromedriver().setup(); 
+            	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
