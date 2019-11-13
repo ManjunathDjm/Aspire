@@ -63,6 +63,7 @@ public class PatientInfo extends BaseClass{
 	     try {
 	    	    try {
 					Thread.sleep(20000);
+					logger.info(patientName.isDisplayed());
 					patientName.sendKeys(patientname);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
