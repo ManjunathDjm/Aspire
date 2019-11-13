@@ -61,8 +61,8 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	   
-	    	    WebDriverWait patient = new WebDriverWait(driver,100);
+	    	    WebElement elem = driver.findElement(By.xpath("//input[@placeholder='Enter patient name (optional)']"));
+	    	   ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();", elem);
 	    	    patientName.sendKeys(patientname);
 		
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
