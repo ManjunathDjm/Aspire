@@ -40,20 +40,15 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("window-size=1280,800");
+            	options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.setExperimentalOption("useAutomationExtension", false);
-            	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1200,800","--ignore-certificate-errors");
-            	options.addArguments("--disable-dev-shm-usage");
-            	options.addArguments("--disable-setuid-sandbox");
-            	options.addArguments("start-maximized");
-            	options.addArguments("disable-infobars");
+            	options.addArguments("--headless");
+            	options.addArguments("--start-maximized");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
-            	//driver.manage().window().maximize();
+            	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
         		
