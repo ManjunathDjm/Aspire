@@ -5,10 +5,14 @@ import java.util.concurrent.TimeUnit;
 
 
 import org.apache.log4j.BasicConfigurator;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -51,9 +55,10 @@ public class BaseClass {
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-        		
-      }
+        		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+                WebDriverWait wait = new WebDriverWait(driver,30);
+     
+            }
                  
         } catch (WebDriverException e) {
             System.out.println(e.getMessage());

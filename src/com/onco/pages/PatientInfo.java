@@ -8,11 +8,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
+
+import java.util.concurrent.TimeUnit;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -61,21 +66,19 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    try {
-					Thread.sleep(20000);
-					logger.info(patientName.isDisplayed());
-					patientName.sendKeys(patientname);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-	    	    //new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Enter patient name (optional)']"))).sendKeys(patientname);
-	    	    //patientName.sendKeys(patientname);
+	    	  
+	    	 WebDriverWait wait = new WebDriverWait(driver,30);
+	    			    wait.until(ExpectedConditions.elementToBeClickable(patientName));
+	    		        driver.getPageSource();
+	    	    logger.info(patientName.isDisplayed());
+				patientName.sendKeys(patientname);   
 		
-	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	    	    logger.info(typeofCancer.isDisplayed());
+				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    
+			    logger.info(cancerStage.isDisplayed());
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();

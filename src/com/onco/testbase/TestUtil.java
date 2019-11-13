@@ -6,7 +6,7 @@ import com.onco.testbase.BaseClass;
 public class TestUtil extends BaseClass{
 
 	public static long PAGE_LOAD_TIMEOUT = 2000;
-	public static long IMPLICIT_WAIT = 60;
+	public static long IMPLICIT_WAIT = 10;
 	static JavascriptExecutor js;
 
 }
