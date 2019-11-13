@@ -67,11 +67,11 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	  
-	    	 WebDriverWait wait = new WebDriverWait(driver,30);
+	    	 WebDriverWait wait = new WebDriverWait(driver,60);
 	    			    wait.until(ExpectedConditions.elementToBeClickable(patientName));
 	    		        driver.getPageSource();
 	    	    logger.info(patientName.isDisplayed());
-				patientName.sendKeys(patientname);   
+				//patientName.sendKeys(patientname);   
 		
 	    	    logger.info(typeofCancer.isDisplayed());
 				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
