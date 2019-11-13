@@ -44,7 +44,7 @@ public class BaseClass {
             	options.addArguments("--no-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
+            	options.addArguments("--headless", "--disable-gpu","--window-size=1200,800","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
             	options.setExperimentalOption("useAutomationExtension", false);
@@ -53,7 +53,7 @@ public class BaseClass {
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);   
+        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
         		
       }
                  
