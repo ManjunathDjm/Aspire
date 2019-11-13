@@ -47,6 +47,8 @@ public class BaseClass {
             	options.addArguments("--headless", "--disable-gpu","--window-size=1200,800","--ignore-certificate-errors");
             	options.addArguments("--disable-dev-shm-usage");
             	options.addArguments("--disable-setuid-sandbox");
+            	options.addArguments("start-maximized");
+            	options.addArguments("disable-infobars");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
