@@ -43,7 +43,7 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             
-            	WebDriverManager.chromedriver().setup(); 
+            	//WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("window-size=1280,800");
             	options.addArguments("--no-sandbox");
@@ -56,7 +56,7 @@ public class BaseClass {
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-                WebDriverWait wait = new WebDriverWait(driver,30);
+              
      
             }
                  
