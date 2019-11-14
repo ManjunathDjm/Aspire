@@ -67,7 +67,7 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	  
+	    	    driver.getPageSource();
 	    	    patientName.sendKeys(patientname);  
 		
 	    	    logger.info(typeofCancer.isDisplayed());
