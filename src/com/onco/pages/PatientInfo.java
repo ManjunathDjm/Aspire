@@ -67,11 +67,8 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    WebDriverWait wait = new WebDriverWait(driver, 55);
-	    	    wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
-	    	    patientName.sendKeys(patientname);
-	            logger.info(patientName.isDisplayed());
-	    	    //patientName.sendKeys(patientname);  
+	    	  
+	    	    patientName.sendKeys(patientname);  
 		
 	    	    logger.info(typeofCancer.isDisplayed());
 				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
