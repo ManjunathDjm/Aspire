@@ -32,7 +32,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="//div[@class='form-group row ng-star-inserted']//div[@class='col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6']")
+	@FindBy(name="patientName")
 	WebElement patientName;
 	
 	@FindBy(name ="cancerType")
@@ -67,7 +67,7 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    driver.getPageSource();
+	    	    
 	    	    patientName.sendKeys(patientname);  
 		
 	    	    logger.info(typeofCancer.isDisplayed());
