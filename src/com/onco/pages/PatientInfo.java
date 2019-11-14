@@ -32,7 +32,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name ="patientName")
+	@FindBy(name="patientName")
 	WebElement patientName;
 	
 	@FindBy(name ="cancerType")
@@ -67,19 +67,14 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    
-	    	    
-	    	 
-	    	    logger.info(patientName.isDisplayed());
-	    	    patientName.sendKeys(patientname); 
-	    	    
-	    	    
-	    	    logger.info(typeofCancer.isDisplayed());
+	    	    WebElement patientName = driver.findElement(By.name("patientName"));
+	    	    patientName.sendKeys(patientname);
+	    	    //patientName.sendKeys(patientname); 
+	    	   
 				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    
-			    logger.info(cancerStage.isDisplayed());
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
