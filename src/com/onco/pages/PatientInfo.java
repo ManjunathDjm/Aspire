@@ -69,24 +69,11 @@ public class PatientInfo extends BaseClass{
 	     try {
 	    	    
 	    	    
-	    	    WebDriverWait wait = new WebDriverWait(driver, 20);
-	    	    By patientName = By.name("patientName");
-
-	    	    // get the "Add Item" element
-	    	     WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(patientName));
-
-	    	    //trigger the reaload of the page
-	    	    driver.findElement(By.name("patientName")).click();
-
-	    	    // wait the element "Add Item" to become stale
-	    	     wait.until(ExpectedConditions.stalenessOf(element));
-
-	    	    // click on "Add Item" once the page is reloaded
-	    	    wait.until(ExpectedConditions.presenceOfElementLocated(patientName)).sendKeys(patientname);
 	    	 
-	    	 
-	    	    //patientName.sendKeys(patientname);  
-		
+	    	    logger.info(patientName.isDisplayed());
+	    	    patientName.sendKeys(patientname); 
+	    	    
+	    	    
 	    	    logger.info(typeofCancer.isDisplayed());
 				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
