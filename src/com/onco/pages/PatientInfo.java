@@ -67,12 +67,8 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    
-	    	    WebElement element = driver.findElement(By.xpath("//input[@placeholder='Enter patient name (optional)']"));
-	    	    Actions action = new Actions(driver);
-	    	    action.moveToElement(element).sendKeys(patientName);   
-	    	    logger.info(patientName.isDisplayed());
-				//patientName.sendKeys(patientname);   
+	    	 
+				patientName.sendKeys(patientname);   
 		
 	    	    logger.info(typeofCancer.isDisplayed());
 				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
