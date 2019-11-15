@@ -67,11 +67,13 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    WebElement patientName = driver.findElement(By.name("patientName"));
-	    	    patientName.sendKeys(patientname);
-	    	    //patientName.sendKeys(patientname); 
+	    	  
+	    	    WebDriverWait wait = new WebDriverWait(driver, 30);
+	    	    WebElement selectGender = wait.until(ExpectedConditions.elementToBeClickable(By.name("patientName")));
+	    	    selectGender.click();
+	    	    patientName.sendKeys(patientname); 
 	    	   
-				Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    

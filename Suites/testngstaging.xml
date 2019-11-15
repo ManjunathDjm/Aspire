@@ -15,7 +15,7 @@
     <parameter name="otp" value="5813"/>
     <parameter name="UScoupon" value="INTLMA19"/>
      <parameter name="INDcoupon" value="INDMA19"/>
-    <parameter name="patientname" value="test_onco"/>
+    <parameter name="patientname" value="test_test"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
        <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
