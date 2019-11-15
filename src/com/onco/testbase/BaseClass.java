@@ -49,12 +49,10 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//driver.manage().window().setPosition(new Point(0,0));
             	//driver.manage().window().setSize(new Dimension(124,768));
-            	options.addArguments("--width =1204");
-            	options.addArguments("--height =768");
             	//options.addArguments("window-size=1024,768");
             	//options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
             	//options.addArguments("--start-maximized");
-            	options.setExperimentalOption("useAutomationExtension", false);
+            	//options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
