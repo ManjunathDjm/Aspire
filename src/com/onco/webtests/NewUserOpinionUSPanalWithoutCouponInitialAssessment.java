@@ -32,6 +32,7 @@ options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
 options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
 options.addArguments("--start-maximized");
+options.addArguments("--disable-gpu");
 options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
