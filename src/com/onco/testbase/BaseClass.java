@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 
 import org.apache.log4j.BasicConfigurator;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -45,15 +46,15 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("window-size=1024,768");
+            	//options.addArguments("window-size=1024,768");
             	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
-            	options.addArguments("--headless");
-            	options.addArguments("--start-maximized");
+            	//options.addArguments("--start-maximized");
             	options.setExperimentalOption("useAutomationExtension", false);
+            	driver.manage().window().setSize(new Dimension(1024, 768));
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
-            	//driver.manage().window().maximize();
+            	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
               

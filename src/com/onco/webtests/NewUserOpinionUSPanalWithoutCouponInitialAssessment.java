@@ -57,6 +57,7 @@ driver.close();
 @Test(priority = 2)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
+Thread.sleep(10000);
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();
