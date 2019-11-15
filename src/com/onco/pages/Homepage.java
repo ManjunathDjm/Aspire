@@ -53,16 +53,16 @@ public class Homepage extends BaseClass {
 		PageFactory.initElements(driver, this);
 	}
     
-    public void formfill (String name, String email,String phone) {
+    public void formfill (String patientname, String email,String phone) {
     	
     	if (logger.isDebugEnabled()) {
 			logger.debug("entering formfill(String,String,String)");
-			logger.debug("name: \"" + name + "\"");
+			logger.debug("name: \"" + patientname + "\"");
 			logger.debug("email: \"" + email + "\"");
 			logger.debug("contact: \"" + phone + "\"");
 		}
 		try {
-			    nameField.sendKeys(name);
+			    nameField.sendKeys(patientname);
 				emailField.sendKeys(email);	
 				phoneFiled.sendKeys(phone);
 			} catch (NoSuchElementException e) {
