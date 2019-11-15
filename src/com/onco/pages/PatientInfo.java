@@ -69,7 +69,7 @@ public class PatientInfo extends BaseClass{
 	     try {
 	    	  
 	    	    WebDriverWait wait = new WebDriverWait(driver, 30);
-	    	    WebElement selectGender = wait.until(ExpectedConditions.elementToBeClickable(By.name("patientName")));
+	    	    WebElement selectGender = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
 	    	    selectGender.click();
 	    	    patientName.sendKeys(patientname); 
 	    	   
