@@ -49,6 +49,7 @@ public class BaseClass {
             	options.addArguments("--no-sandbox");
             	//options.addArguments("--headless");
             	options.addArguments("--start-maximized");
+            	options.setCapability("pageLoadStrategy", "none");
             	options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
