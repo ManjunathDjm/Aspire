@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -46,11 +47,14 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
+            	//driver.manage().window().setPosition(new Point(0,0));
+            	//driver.manage().window().setSize(new Dimension(2560,1140));
+            	options.addArguments("--width =2560");
+            	options.addArguments("--height =1440");
             	//options.addArguments("window-size=1024,768");
             	//options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
             	//options.addArguments("--start-maximized");
             	options.setExperimentalOption("useAutomationExtension", false);
-            	driver.manage().window().setSize(new Dimension(1024, 768));
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
