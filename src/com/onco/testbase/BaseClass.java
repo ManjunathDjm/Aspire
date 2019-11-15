@@ -45,7 +45,7 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("window-size=1024,768");
+            	//options.addArguments("window-size=1024,768");
             	options.addArguments("--no-sandbox");
             	//options.addArguments("--headless");
             	options.addArguments("--start-maximized");
