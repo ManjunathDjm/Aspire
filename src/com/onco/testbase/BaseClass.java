@@ -47,13 +47,13 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.setCapability(ChromeOptions.CAPABILITY, options);
-            	options.addArguments("--window-size=1280,800");
             	options.addArguments("--no-sandbox");
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
+            	options.setHeadless(true);
+            	options.addArguments("--window-size=1400,2100");
+            	//options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
             	options.addArguments("--disable-gpu");
-            	options.addArguments("--start-maximized");
-            	options.setExperimentalOption("useAutomationExtension", false);
+            	//options.addArguments("--start-maximized");
+            	//options.setExperimentalOption("useAutomationExtension", false);
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
