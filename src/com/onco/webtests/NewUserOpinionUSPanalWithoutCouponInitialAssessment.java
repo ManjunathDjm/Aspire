@@ -28,12 +28,12 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--window-size=1280,800");
-options.addArguments("--no-sandbox");
-options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
-options.addArguments("--start-maximized");
-options.addArguments("--disable-gpu");
-options.setExperimentalOption("useAutomationExtension", false);
+//options.addArguments("--window-size=1280,800");
+//options.addArguments("--no-sandbox");
+options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors");
+//options.addArguments("--start-maximized");
+//options.addArguments("--disable-gpu");
+//options.setExperimentalOption("useAutomationExtension", false);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
