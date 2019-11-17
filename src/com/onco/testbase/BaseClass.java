@@ -47,13 +47,9 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("--no-sandbox");
-            	//options.setHeadless(true);
-            	//options.addArguments("--window-size=1400,2100");
             	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
-            	//options.addArguments("--disable-gpu");
-            	//options.addArguments("--start-maximized");
-            	//options.setExperimentalOption("useAutomationExtension", false);
+            	options.addArguments("--no-sandbox");
+            	options.addArguments("--whitelisted-ips");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
