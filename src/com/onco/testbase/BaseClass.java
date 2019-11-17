@@ -47,9 +47,10 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1382,774","--ignore-certificate-errors");
-            	options.addArguments("--no-sandbox");
-            	options.addArguments("--whitelisted-ips");
+            	options.addArguments("headless");
+            	options.addArguments("window-size=1200,600");
+            	options.addArguments("ignore-certificate-errors");
+            	options.addArguments("no-sandbox");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
