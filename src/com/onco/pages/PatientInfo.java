@@ -35,7 +35,6 @@ public class PatientInfo extends BaseClass{
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
 	@FindBy(name="patientName")
-	@CacheLookup
 	WebElement patientName;
 	
 	@FindBy(name ="cancerType")
@@ -72,8 +71,8 @@ public class PatientInfo extends BaseClass{
 	     try {
 	    	  
 	   
-	    	
-	    	
+	    	    patientName.click();
+	    	    patientName.clear();   
 	    	    patientName.sendKeys(patientname); 
     
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
