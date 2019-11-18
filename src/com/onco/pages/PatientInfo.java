@@ -72,9 +72,9 @@ public class PatientInfo extends BaseClass{
 	   
 	    	
 	    	
-	    	    patientName.sendKeys(patientname); 
-	    	    JavascriptExecutor myExecutor = ((JavascriptExecutor) driver);
-	    	    myExecutor.executeScript("document.getElementsByName('patientName')[0].value='test_manjunath'");
+	    	    //patientName.sendKeys(patientname); 
+	    	    WebElement element = driver.findElement(By.name("patientName"));
+	    	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	    	    //driver.quit();
 
 	    	   
