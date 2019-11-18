@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
@@ -68,9 +69,10 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	  
-	    	    WebElement patient = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
-	    	    patient.sendKeys(patientname);
-	    	    //patientName.sendKeys(patientname); 
+	   
+	    	 ExpectedCondition<Boolean> jsLoad = driver -> ((JavascriptExecutor) this.driver)
+	                 .executeScript("return document.readyState").toString().equals("complete");
+	    	    patientName.sendKeys(patientname); 
 	    	   
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
