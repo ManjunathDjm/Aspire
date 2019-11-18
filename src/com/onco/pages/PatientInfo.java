@@ -6,6 +6,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -34,6 +35,7 @@ public class PatientInfo extends BaseClass{
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
 	@FindBy(name="patientName")
+	@CacheLookup
 	WebElement patientName;
 	
 	@FindBy(name ="cancerType")
@@ -72,12 +74,8 @@ public class PatientInfo extends BaseClass{
 	   
 	    	
 	    	
-	    	    //patientName.sendKeys(patientname); 
-	    	    WebElement element = driver.findElement(By.name("patientName"));
-	    	    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-	    	    //driver.quit();
-
-	    	   
+	    	    patientName.sendKeys(patientname); 
+    
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
