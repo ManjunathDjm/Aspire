@@ -68,7 +68,7 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	  
-	    	    WebElement myDynamicElement = (new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
+	    	    WebElement myDynamicElement = (new WebDriverWait(driver, 40)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
 	    	    myDynamicElement.sendKeys(patientname);
 	    	    //patientName.sendKeys(patientname); 
 	    	   
