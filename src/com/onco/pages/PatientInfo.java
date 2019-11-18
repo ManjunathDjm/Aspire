@@ -70,9 +70,13 @@ public class PatientInfo extends BaseClass{
 	     try {
 	    	  
 	   
-	    	 ExpectedCondition<Boolean> jsLoad = driver -> ((JavascriptExecutor) this.driver)
-	                 .executeScript("return document.readyState").toString().equals("complete");
-	    	    patientName.sendKeys(patientname); 
+	    	
+	    	
+	    	    //patientName.sendKeys(patientname); 
+	    	    JavascriptExecutor myExecutor = ((JavascriptExecutor) driver);
+	    	    myExecutor.executeScript("document.getElementsByName('patientName')[0].value='test_manjunath'");
+	    	    //driver.quit();
+
 	    	   
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
