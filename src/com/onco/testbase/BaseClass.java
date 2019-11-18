@@ -47,10 +47,9 @@ public class BaseClass {
             
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	options.addArguments("headless");
-            	options.addArguments("window-size=1200,600");
-            	options.addArguments("ignore-certificate-errors");
-            	options.addArguments("no-sandbox");
+            	//options.addArguments("headless", "disable-gpu","window-size=1024,768","ignore-certificate-errors");
+            	//options.addArguments("headless");
+            	//options.addArguments("window-size=1200,600");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
