@@ -14,8 +14,11 @@
     <parameter name="phone" value="9036890379"/>
     <parameter name="otp" value="5813"/>
     <parameter name="UScoupon" value="INTLMA19"/>
-     <parameter name="INDcoupon" value="INDMA19"/>
+    <parameter name="INDcoupon" value="INDMA19"/>
     <parameter name="patientname" value="test_test"/>
+    <parameter name="discountURL" value="http://18.136.208.196/start/discount"/>
+    <parameter name="hospitalname" value="test hospital"/>
+    <parameter name="cityName" value="bangalore"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
        <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
