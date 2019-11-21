@@ -71,8 +71,12 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	  
+	    	    WebElement myelement = driver.findElement(By.name("patientName"));
+	    	    JavascriptExecutor jse2 = (JavascriptExecutor)driver;
+	    	    jse2.executeScript("arguments[0].scrollIntoView()", myelement); 
+	    	 
 	    	    WebDriverWait wait = new WebDriverWait(driver,30);
-	    	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")));
+	    	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.name("patientName")));
 	    	    patientName.sendKeys(patientname); 
     
 	    	    
