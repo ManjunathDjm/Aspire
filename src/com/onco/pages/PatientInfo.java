@@ -71,8 +71,6 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	 
-	    	    WebDriverWait wait = new WebDriverWait(driver,30);
-	    	    WebElement patientName = wait.until(ExpectedConditions.elementToBeClickable(By.name("patientName]")));
 	    	    patientName.sendKeys(patientname); 
     
 	    	    
