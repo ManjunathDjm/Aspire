@@ -36,7 +36,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	  
 	public static WebDriver driver;
-	public static NgWebDriver ngDriver;
 
 	
 	@Parameters({"browser","url"})
@@ -59,8 +58,6 @@ public class BaseClass {
             	//Resize the current window to the given dimension
             	//driver.manage().window().setSize(d); 
             	driver.get(url);
-            	ngDriver = new NgWebDriver((JavascriptExecutor) driver);
-        		ngDriver.waitForAngularRequestsToFinish();
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);

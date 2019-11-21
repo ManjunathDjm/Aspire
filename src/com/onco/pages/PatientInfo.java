@@ -70,10 +70,9 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    ngDriver = new NgWebDriver((JavascriptExecutor) driver);
-	 		    ngDriver.waitForAngularRequestsToFinish();
+	    	  
 	    	    WebDriverWait wait = new WebDriverWait(driver,30);
-	    	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
+	    	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")));
 	    	    patientName.sendKeys(patientname); 
     
 	    	    
