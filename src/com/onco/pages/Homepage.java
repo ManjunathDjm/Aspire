@@ -20,7 +20,7 @@ public class Homepage extends BaseClass {
 	private static final Logger logger = Logger.getLogger(Homepage.class);
 			      
 	
-	@FindBy(name="name")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]")
 	WebElement nameField;
 	
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[4]/input[1]")
