@@ -6,6 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +22,8 @@ import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
 
+import com.paulhammant.ngwebdriver.NgWebDriver;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -33,6 +36,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	  
 	public static WebDriver driver;
+	public static NgWebDriver ngDriver;
 
 	
 	@Parameters({"browser","url"})
@@ -49,12 +53,14 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("disable-gpu","ignore-certificate-errors");
             	//options.addArguments("headless");
-            	options.addArguments("window-size=1200,600,16");
+            	options.addArguments("window-size=1200,600,24");
             	driver = new ChromeDriver(options);
             	//Dimension d = new Dimension(1382,744); 
             	//Resize the current window to the given dimension
             	//driver.manage().window().setSize(d); 
             	driver.get(url);
+            	ngDriver = new NgWebDriver((JavascriptExecutor) driver);
+        		ngDriver.waitForAngularRequestsToFinish();
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);

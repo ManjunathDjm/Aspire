@@ -18,6 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
+import com.paulhammant.ngwebdriver.NgWebDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -69,7 +70,8 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	  
+	    	    ngDriver = new NgWebDriver((JavascriptExecutor) driver);
+	 		    ngDriver.waitForAngularRequestsToFinish();
 	    	    WebDriverWait wait = new WebDriverWait(driver,30);
 	    	    WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Enter patient name (optional)']")));
 	    	    patientName.sendKeys(patientname); 
