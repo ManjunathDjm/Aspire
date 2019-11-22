@@ -54,8 +54,7 @@ public class BaseClass {
             	options.addArguments("--headless");
             	//options.addArguments("window-size=1200,600");
             	driver = new ChromeDriver(options);
-            	Dimension d = new Dimension(1382,744); 
-            	driver.manage().window().setSize(d); 
+            	driver.manage().window().setSize(new Dimension(1600,700));
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
