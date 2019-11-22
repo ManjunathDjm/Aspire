@@ -71,6 +71,7 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	 
+	    	    String pageSource = driver.getPageSource();   
 	    	    patientName.sendKeys(patientname); 
     
 	    	    

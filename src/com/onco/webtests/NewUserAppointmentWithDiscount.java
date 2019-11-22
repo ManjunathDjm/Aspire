@@ -69,32 +69,7 @@ Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
-PatientInfo info=new PatientInfo();
-info.patientinfo(patientname);
-
-Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment();
-assessment.initialAssessmentClose();
-
-Service service=new Service();
-service.appointment();
-
-Thread.sleep(5000);
-RequestDoctorAppointment appointment=new RequestDoctorAppointment();
-appointment.appointment();
-appointment.surgicalOncologist();
-appointment.button();
-
 Thread.sleep(10000);
-Appointment app= new Appointment();
-app.appointment();
-
-Summary summary= new Summary();
-summary.summary();
-
-Thread.sleep(3000);
-Dashboard dashboard= new Dashboard();
-
 driver.get(discountURL);
 
 Thread.sleep(5000);

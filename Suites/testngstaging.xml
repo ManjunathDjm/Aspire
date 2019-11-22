@@ -18,10 +18,10 @@
     <parameter name="patientname" value="test_test"/>
     <parameter name="discountURL" value="http://18.136.208.196/start/discount"/>
     <parameter name="hospitalname" value="test hospital"/>
-    <parameter name="cityName" value="bangalore"/>
+    <parameter name="cityname" value="bangalore"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
+       <class name="com.onco.webtests.NewUserAppointmentWithDiscount"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
