@@ -51,10 +51,11 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("disable-gpu","ignore-certificate-errors");
-            	options.addArguments("--headless");
+            	//options.addArguments("--headless");
             	//options.addArguments("window-size=1200,600");
             	driver = new ChromeDriver(options);
-            	driver.manage().window().setSize(new Dimension(1600,700));
+            	//driver.manage().window().setSize(new Dimension(1600,700));
+            	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors");
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
