@@ -21,7 +21,7 @@
     <parameter name="cityname" value="bangalore"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserAppointmentWithDiscount"/>
+       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

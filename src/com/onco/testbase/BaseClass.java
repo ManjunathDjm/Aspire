@@ -51,7 +51,7 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("disable-gpu","ignore-certificate-errors");
-            	//options.addArguments("--headless");
+            	options.addArguments("--headless");
             	//options.addArguments("window-size=1200,600");
             	driver = new ChromeDriver(options);
             	Dimension d = new Dimension(1382,744); 
