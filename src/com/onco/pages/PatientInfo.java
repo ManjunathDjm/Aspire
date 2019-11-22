@@ -70,7 +70,7 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	    
+	    	      
 	    	    patientName.sendKeys(patientname); 
     
 	    	    
