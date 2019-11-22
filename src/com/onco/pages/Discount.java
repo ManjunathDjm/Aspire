@@ -58,12 +58,8 @@ public class Discount extends BaseClass {
     	
     	  hospitalname.sendKeys(hospitalName);
     	  cityname.sendKeys(cityName);
-    	  uploadfile.click();
-    	  uploadfile.sendKeys("Users⁩/manjunathdj⁩/⁨Downloads⁩/test.pdf");
+    	 
     	  
-    	  
-    	  
-         
     	    
     	
     	  
