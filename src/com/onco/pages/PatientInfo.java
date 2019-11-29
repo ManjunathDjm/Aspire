@@ -18,7 +18,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
-import com.paulhammant.ngwebdriver.NgWebDriver;
 
 import java.util.concurrent.TimeUnit;
 

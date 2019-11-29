@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
-import com.paulhammant.ngwebdriver.ByAngular;
 
 import java.sql.Driver;
 import java.util.List;
