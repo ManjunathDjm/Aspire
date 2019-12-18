@@ -38,9 +38,9 @@ public class BaseClass {
 	public static WebDriver driver;
 
 	
-	@Parameters({"browser","url"})
-	@BeforeMethod
-	public void openBrowser(String browser, String url) throws Exception {
+	  @Parameters({"browser","url"})
+	  @BeforeMethod
+	  public void openBrowser(String browser, String url) throws Exception {
        
 		BasicConfigurator.configure(); 
  
@@ -71,9 +71,9 @@ public class BaseClass {
 	
     }
 	
-	   @AfterMethod
-	   public static void quit(ITestResult result) throws IOException {    
-			driver.quit();
+	       @AfterMethod
+	       public static void quit(ITestResult result) throws IOException {    
+	       driver.quit();
 			
 	
 	      
