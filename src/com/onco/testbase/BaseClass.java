@@ -51,6 +51,7 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("--headless");
+            	options.addArguments("--no-proxy-server");
             	//driver.manage().window().setSize(new Dimension(1600,700));
             	//options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors","--no-proxy-server");
             	//options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");

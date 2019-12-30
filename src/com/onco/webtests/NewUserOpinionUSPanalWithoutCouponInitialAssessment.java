@@ -30,6 +30,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 //options.addArguments("--headless", "--disable-gpu","--window-size=1920,1080","--ignore-certificate-errors");
 options.addArguments("--headless");
+options.addArguments("--no-proxy-server");
 //options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");
 driver = new ChromeDriver(options);
 driver.get(url);
