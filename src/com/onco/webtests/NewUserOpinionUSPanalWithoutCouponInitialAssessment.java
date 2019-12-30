@@ -32,7 +32,7 @@ options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--i
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
+//driver.manage().window().maximize();
 			
 SignUp sign=new SignUp();
 sign.signupicon();
