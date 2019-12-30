@@ -47,7 +47,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            
+            	WebDriverManager.chromedriver().
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("disable-gpu","ignore-certificate-errors");
@@ -55,7 +55,7 @@ public class BaseClass {
             	//options.addArguments("window-size=1200,600");
             	driver = new ChromeDriver(options);
             	//driver.manage().window().setSize(new Dimension(1600,700));
-            	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors");
+            	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768,24","--ignore-certificate-errors");
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
@@ -72,7 +72,7 @@ public class BaseClass {
     }
 	
 	       @AfterMethod
-	       public static void quit(ITestResult result) throws IOException {    
+	       public static void quit(ITestResult result) throws IOExceptionu	 {    
 	       driver.quit();
 			
 	
