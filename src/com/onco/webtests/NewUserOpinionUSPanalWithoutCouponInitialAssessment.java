@@ -28,8 +28,9 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless", "--disable-gpu","--window-size=1920,1080","--ignore-certificate-errors");
-options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");
+//options.addArguments("--headless", "--disable-gpu","--window-size=1920,1080","--ignore-certificate-errors");
+options.addArguments("--headless");
+//options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().deleteAllCookies();
