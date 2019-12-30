@@ -34,7 +34,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/input[1]")
 	WebElement patientName;
 	
 	@FindBy(name ="cancerType")
@@ -72,7 +72,6 @@ public class PatientInfo extends BaseClass{
 	    	      
 	    	    patientName.sendKeys(patientname); 
     
-	    	    
 	            Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
