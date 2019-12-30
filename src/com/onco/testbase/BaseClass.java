@@ -52,6 +52,7 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions();
             	//driver.manage().window().setSize(new Dimension(1600,700));
             	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors");
+            	options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");
             	driver = new ChromeDriver(options);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
