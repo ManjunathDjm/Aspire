@@ -47,7 +47,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	WebDriverManager.chromedriver().
+            	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
             	options.addArguments("disable-gpu","ignore-certificate-errors");
