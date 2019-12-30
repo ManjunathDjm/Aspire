@@ -72,7 +72,7 @@ public class BaseClass {
     }
 	
 	       @AfterMethod
-	       public static void quit(ITestResult result) throws IOExceptionu	 {    
+	       public static void quit(ITestResult result) throws IOException {    
 	       driver.quit();
 			
 	
