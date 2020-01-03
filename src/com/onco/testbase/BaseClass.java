@@ -47,21 +47,17 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	ChromeDriverManager.getInstance(DriverManagerType.CHROME).setup();
-            	//WebDriverManager.chromedriver().setup(); 
+            	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions();
-            	//options.addArguments("--headless");
-            	//driver.manage().window().setSize(new Dimension(1600,700));
-            	//options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors","--no-proxy-server");
-            	//options.addArguments("--disable-gpu","--disable-extensions","--proxy-server='direct://'","--proxy-bypass-list=*","--start-maximized","no-sandbox");
-            	//options.addArguments("--remote-debugging-port");
-            	//driver = new ChromeDriver(options);
+            	driver = new ChromeDriver(options);
+            	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768,24","--ignore-certificate-errors");
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-     
+
+
             }
                  
         } catch (WebDriverException e) {
