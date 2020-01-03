@@ -48,9 +48,12 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup(); 
-            	ChromeOptions options = new ChromeOptions();
+            	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768,24","--ignore-certificate-errors");
             	driver = new ChromeDriver(options);
+            	Dimension d = new Dimension(1382,744); 
+            	//Resize the current window to the given dimension
+            	driver.manage().window().setSize(d);
             	driver.get(url);
             	driver.manage().deleteAllCookies();
             	driver.manage().window().maximize();
