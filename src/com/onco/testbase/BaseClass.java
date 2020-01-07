@@ -50,6 +50,8 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--headless", "--disable-gpu","--window-size=1024,768,24","--ignore-certificate-errors");
+            	options.setCapability("acceptSslCerts", true);
+            	options.setCapability("acceptInsecureCerts", true);
             	driver = new ChromeDriver(options);
             	driver.manage().window().setSize(new Dimension(1044,784));
             	driver.get(url);
