@@ -8,7 +8,7 @@
     <parameter name="env" value="staging"/>
     <parameter name="browser" value="Chrome"/>
     <parameter name="url"  value="https://befestage.onco.com"/>
-    <parameter name="deleteURL"value="https://befestage.onco.com/start/delete-me"/>
+    <parameter name="deleteURL"  value="https://befestage.onco.com/start/delete-me"/>
     <parameter name="name" value="test_onco"/>
     <parameter name="email" value="manjunath.11j@gmail.com"/>
     <parameter name="phone" value="9036890379"/>
