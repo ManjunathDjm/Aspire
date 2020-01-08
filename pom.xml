@@ -10,6 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
     <reporting>
         <plugins>
@@ -48,11 +49,6 @@
     <dependencies>
 <!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
 <dependency>
-    <groupId>com.paulhammant</groupId>
-    <artifactId>ngwebdriver</artifactId>
-    <version>1.0</version>
-</dependency>
-<dependency>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-clean-plugin</artifactId>
   <version>3.1.0</version>
@@ -62,7 +58,7 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>3.141.59</version>
+    <version>3.4.0</version>
 </dependency><!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 
 <dependency>
