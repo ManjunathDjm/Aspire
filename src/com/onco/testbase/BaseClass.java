@@ -53,7 +53,7 @@ public class BaseClass {
             	options.setCapability("acceptSslCerts", true);
             	options.setCapability("acceptInsecureCerts", true);
             	driver = new ChromeDriver(options);
-            	driver.manage().window().setSize(new Dimension(1044,784));
+            	driver.manage().window().maximize();
             	driver.get(url);
             	driver.manage().deleteAllCookies();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
