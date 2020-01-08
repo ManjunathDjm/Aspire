@@ -29,7 +29,7 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless", "--disable-gpu","--window-size=1024,768","--ignore-certificate-errors");
+options.addArguments("--headless", "--disable-gpu","--remote-debugging-port=54000");
 options.setCapability("acceptSslCerts", true);
 options.setCapability("acceptInsecureCerts", true);
 driver = new ChromeDriver(options);
