@@ -64,10 +64,10 @@ Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
-Thread.sleep(5000);
-PatientInfo info=new PatientInfo();
-info.patientinfo(patientname);
-Thread.sleep(5000);
+//Thread.sleep(5000);
+//PatientInfo info=new PatientInfo();
+//info.patientinfo(patientname);
+//Thread.sleep(5000);
 
 InitialAssessment assessment= new InitialAssessment();
 assessment.ViewAssessment();
