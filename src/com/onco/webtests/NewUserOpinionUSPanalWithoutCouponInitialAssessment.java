@@ -29,7 +29,7 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-//options.addArguments("--headless", "--disable-gpu");
+options.addArguments("--headless", "--disable-gpu");
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
@@ -67,8 +67,8 @@ login.otpDetails(otp);
 Thread.sleep(5000);
 PatientInfo info=new PatientInfo();
 info.patientinfo(patientname);
-
 Thread.sleep(5000);
+
 InitialAssessment assessment= new InitialAssessment();
 assessment.ViewAssessment();
 	

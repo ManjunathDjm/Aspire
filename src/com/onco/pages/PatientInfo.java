@@ -70,6 +70,7 @@ public class PatientInfo extends BaseClass{
 			
 	     try {
 	    	      
+	    	    driver.switchTo().defaultContent();
 	    	    patientName.sendKeys(patientname); 
     
 	    	    

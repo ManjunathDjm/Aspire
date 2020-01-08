@@ -49,7 +49,7 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions(); 
-            	//options.addArguments("--headless", "--disable-gpu");
+            	options.addArguments("--headless", "--disable-gpu");
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.get(url);
