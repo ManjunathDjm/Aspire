@@ -33,7 +33,7 @@ options.addArguments("--headless", "--disable-gpu","--remote-debugging-port=5400
 options.setCapability("acceptSslCerts", true);
 options.setCapability("acceptInsecureCerts", true);
 driver = new ChromeDriver(options);
-driver.manage().window().setSize(new Dimension(1044,784));
+driver.manage().window().maximize();
 driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
