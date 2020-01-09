@@ -29,7 +29,8 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+options.addArguments("headless");
+options.addArguments("window-size=1400,800");
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
