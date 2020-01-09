@@ -21,6 +21,7 @@ import com.onco.testbase.BaseClass;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.math3.random.Well44497b;
 import org.apache.log4j.Logger;
 
 /**
@@ -35,7 +36,7 @@ public class PatientInfo extends BaseClass{
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
 	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
-	WebElement patientName;
+	WebElement Patientname;
 	
 	@FindBy(name ="cancerType")
 	WebElement typeofCancer;
@@ -69,11 +70,9 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	      
-	    	    driver.switchTo().defaultContent();
-	    	    patientName.sendKeys(patientname); 
+	    	     
+	    	    Patientname.sendKeys(patientname); 
     
-	    	    
 	            Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
