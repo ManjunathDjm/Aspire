@@ -70,8 +70,8 @@ public class PatientInfo extends BaseClass{
 		}
 			
 	     try {
-	    	     
-	    	    Patientname.sendKeys(patientname); 
+	    	 FluentWait<WebDriver> fluentWait = new FluentWait<>(driver);
+	    	 Patientname.sendKeys(patientname); 
     
 	            Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
