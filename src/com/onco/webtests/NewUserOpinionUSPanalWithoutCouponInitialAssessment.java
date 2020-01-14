@@ -1,5 +1,5 @@
 package com.onco.webtests;
-import org.openqa.selenium.Dimension;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -29,8 +29,14 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("headless");
-options.addArguments("window-size=1400,800");
+options.addArguments("enable-automation");
+options.addArguments("--headless");
+options.addArguments("--window-size=1920,1080");
+options.addArguments("--no-sandbox");
+options.addArguments("--disable-extensions");
+options.addArguments("--dns-prefetch-disable");
+options.addArguments("--disable-gpu");
+options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
