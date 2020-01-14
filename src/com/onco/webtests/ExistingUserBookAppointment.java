@@ -34,7 +34,8 @@ Dashboard dashboard =new Dashboard();
 dashboard.dashboard();
 
 PatientInfo info=new PatientInfo();
-info.patientinfo(patientname);
+info.patientname(patientname);
+info.patientinfo();
      
 Service service=new Service();
 service.appointment();
