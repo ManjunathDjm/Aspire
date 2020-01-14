@@ -66,7 +66,8 @@ public class PatientInfo extends BaseClass{
     public void patientname(String pname) {
     	
     	try {
-    		Patientname.click();
+    		WebDriverWait wait = new WebDriverWait(driver, 4000);
+    		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//input[@placeholder='Enter patient name (optional)']"))));
     		Patientname.sendKeys(pname);
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
