@@ -19,6 +19,7 @@ import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.math3.random.Well44497b;
@@ -62,16 +63,27 @@ public class PatientInfo extends BaseClass{
 		PageFactory.initElements(driver, this);
 	}
 	
-    public void patientinfo(String patientname) {
+    public void patientname(String pname) {
+    	
+    	try {
+    		Patientname.sendKeys(pname);
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    }
+	
+	public void patientinfo() {
     	
 	        if (logger.isDebugEnabled()) {
 			logger.debug("entering PatientInfo(String)");
-			logger.debug("patientname: \"" + patientname + "\"");
+
 		}
 			
 	     try {
-	    	 FluentWait<WebDriver> fluentWait = new FluentWait<>(driver);
-	    	 Patientname.sendKeys(patientname); 
+	    	    
+	    	    //Patientname.sendKeys(patientname); 
     
 	            Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);

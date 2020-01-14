@@ -8,6 +8,7 @@ import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -49,8 +50,14 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("headless");
-            	options.addArguments("window-size=1400,800");
+            	options.addArguments("enable-automation");
+            	//options.addArguments("--headless");
+            	//options.addArguments("--window-size=1920,1080");
+            	options.addArguments("--no-sandbox");
+            	options.addArguments("--disable-extensions");
+            	options.addArguments("--dns-prefetch-disable");
+            	options.addArguments("--disable-gpu");
+            	options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.get(url);
