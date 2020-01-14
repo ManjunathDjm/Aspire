@@ -66,6 +66,7 @@ public class PatientInfo extends BaseClass{
     public void patientname(String pname) {
     	
     	try {
+    		Patientname.click();
     		Patientname.sendKeys(pname);
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
