@@ -37,7 +37,7 @@ options.addArguments("--disable-extensions");
 options.addArguments("--dns-prefetch-disable");
 options.addArguments("--disable-gpu");
 options.addArguments("--allow-insecure-localhost");
-options.setAcceptInsecureCerts(true);
+options.addArguments("--ignore-certificate-errors");
 options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
