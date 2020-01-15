@@ -30,16 +30,15 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-//options.addArguments("--headless");
-//options.addArguments("--window-size=1920,1080");
-//options.addArguments("--disable-gpu");
-//options.addArguments("--disable-extensions");
-//options.setExperimentalOption("useAutomationExtension", false);
-//options.addArguments("--proxy-server='direct://'");
-//options.addArguments("--proxy-bypass-list=*");
-//options.addArguments("--start-maximized");
+options.addArguments("--headless");
+options.addArguments("--window-size=1920,1080");
+options.addArguments("--disable-gpu");
+options.addArguments("--disable-extensions");
+options.setExperimentalOption("useAutomationExtension", false);
+options.addArguments("--proxy-server='direct://'");
+options.addArguments("--proxy-bypass-list=*");
+options.addArguments("--start-maximized");
 driver = new ChromeDriver(options);
-//driver.manage().window().setSize(new Dimension(1920, 1820));
 //driver.manage().window().maximize();
 driver.get(url);
 driver.manage().deleteAllCookies();
