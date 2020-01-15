@@ -1,3 +1,5 @@
+image: novitsh/gitlab-ci-chrome-headless
+
 stages:
   - build
   - test
