@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="6109" started-at="2020-01-15T08:41:53Z" finished-at="2020-01-15T08:41:59Z">
+  <suite name="Onco Staging" duration-ms="5939" started-at="2020-01-15T08:45:53Z" finished-at="2020-01-15T08:45:59Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="6109" started-at="2020-01-15T08:41:53Z" finished-at="2020-01-15T08:41:59Z">
+    <test name="PatientPortal" duration-ms="5939" started-at="2020-01-15T08:45:53Z" finished-at="2020-01-15T08:45:59Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="FAIL" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:53Z" finished-at="2020-01-15T14:11:53Z">
+        <test-method status="FAIL" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="0" started-at="2020-01-15T14:15:53Z" finished-at="2020-01-15T14:15:53Z">
           <params>
             <param index="0">
               <value>
@@ -42,8 +42,8 @@
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Pro.local', ip: 'fe80:0:0:0:10fa:6580:9a74:3dc5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:58365}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 14a77f560bb673fd6b742b4e011e7163]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:59659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bf403b061eb39461c9555be062cfb44]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -51,8 +51,8 @@ Session ID: 14a77f560bb673fd6b742b4e011e7163]]>
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'Manjunaths-MacBook-Pro.local', ip: 'fe80:0:0:0:10fa:6580:9a74:3dc5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:58365}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 14a77f560bb673fd6b742b4e011e7163
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:59659}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 6bf403b061eb39461c9555be062cfb44
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -103,11 +103,11 @@ Session ID: 14a77f560bb673fd6b742b4e011e7163
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="SKIP" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
+        <test-method status="SKIP" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="0" started-at="2020-01-15T14:15:59Z" finished-at="2020-01-15T14:15:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="SKIP" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="2" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
+        <test-method status="SKIP" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="1" started-at="2020-01-15T14:15:59Z" finished-at="2020-01-15T14:15:59Z">
           <params>
             <param index="0">
               <value>
@@ -143,7 +143,7 @@ Session ID: 14a77f560bb673fd6b742b4e011e7163
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method status="SKIP" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
+        <test-method status="SKIP" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="0" started-at="2020-01-15T14:15:59Z" finished-at="2020-01-15T14:15:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
