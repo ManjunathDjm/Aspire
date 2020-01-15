@@ -59,7 +59,7 @@ public class PatientInfo extends BaseClass{
     
     
     
-	public PatientInfo() {
+public PatientInfo() {
 		PageFactory.initElements(driver, this);
 	}
 	

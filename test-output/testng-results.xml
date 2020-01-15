@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="643" started-at="2020-01-15T08:34:22Z" finished-at="2020-01-15T08:34:22Z">
+  <suite name="Onco Staging" duration-ms="6109" started-at="2020-01-15T08:41:53Z" finished-at="2020-01-15T08:41:59Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="643" started-at="2020-01-15T08:34:22Z" finished-at="2020-01-15T08:34:22Z">
+    <test name="PatientPortal" duration-ms="6109" started-at="2020-01-15T08:41:53Z" finished-at="2020-01-15T08:41:59Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="FAIL" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="0" started-at="2020-01-15T14:04:22Z" finished-at="2020-01-15T14:04:22Z">
+        <test-method status="FAIL" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:53Z" finished-at="2020-01-15T14:11:53Z">
           <params>
             <param index="0">
               <value>
@@ -35,10 +35,44 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NullPointerException">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: headless chrome=79.0.3945.117)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Manjunaths-MacBook-Pro.local', ip: 'fe80:0:0:0:10fa:6580:9a74:3dc5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:58365}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 14a77f560bb673fd6b742b4e011e7163]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment.delete(NewUserOpinionUSPanalWithoutCouponInitialAssessment.java:34)
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: headless chrome=79.0.3945.117)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Manjunaths-MacBook-Pro.local', ip: 'fe80:0:0:0:10fa:6580:9a74:3dc5%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.2', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:58365}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 14a77f560bb673fd6b742b4e011e7163
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy10.click(Unknown Source)
+	at com.onco.pages.SignUp.signupicon(SignUp.java:75)
+	at com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment.delete(NewUserOpinionUSPanalWithoutCouponInitialAssessment.java:43)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -65,15 +99,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="SKIP" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="0" started-at="2020-01-15T14:04:22Z" finished-at="2020-01-15T14:04:22Z">
+        <test-method status="SKIP" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="SKIP" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="1" started-at="2020-01-15T14:04:22Z" finished-at="2020-01-15T14:04:22Z">
+        <test-method status="SKIP" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="2" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
           <params>
             <param index="0">
               <value>
@@ -109,7 +143,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method status="SKIP" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="0" started-at="2020-01-15T14:04:22Z" finished-at="2020-01-15T14:04:22Z">
+        <test-method status="SKIP" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="0" started-at="2020-01-15T14:11:59Z" finished-at="2020-01-15T14:11:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->

@@ -51,8 +51,9 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("headless");
+            	options.addArguments("--start-maximized");
             	driver = new ChromeDriver(options);
-            	driver.manage().window().setSize(new Dimension(1920, 1820));
+            	//driver.manage().window().setSize(new Dimension(1920, 1820));
             	//driver.manage().window().maximize();
             	driver.get(url);
             	driver.manage().deleteAllCookies();
