@@ -9,6 +9,5 @@ maven_build:
     - frontend
     - qa
   script:
-    - "./node_modules/.bin/testcafe 'path:`/usr/bin/google-chrome-stable` --headless --disable-gpu --remote-debugging-port=9222 --remote-debugging-address=0.0.0.0' test.js --skip-js-errors --assertion-timeout 30000"
     - echo "Build project with maven"
     - mvn clean test -DSuites/testngstaging=testngstaging.xml
