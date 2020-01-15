@@ -129,14 +129,30 @@
                   </a> <!-- newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19) -->
                   <span class="method-name">newUserOpinionIndiaPanal</span>
                   <span class="parameters">(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problems: 
-	Syntax error, insert &quot;Finally&quot; to complete BlockStatements
-	Syntax error on token &quot;catch&quot;, Identifier expected
-	Syntax error on token &quot;}&quot;, { expected after this token
-
-	at com.onco.pages.Summary.&lt;init&gt;(Summary.java:92)
-	at com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment.newUserOpinionIndiaPanal(NewUserOpinionUSPanalWithoutCouponInitialAssessment.java:92)
-... Removed 24 stack frames
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: headless chrome=79.0.3945.117)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:10fa:6580:9a74:3dc5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.2&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:62505}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 86f58542d47b81c783285f47f7ad2727
+*** Element info: {Using=xpath, value=/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at com.onco.pages.Homepage.formfill(Homepage.java:54)
+	at com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment.newUserOpinionIndiaPanal(NewUserOpinionUSPanalWithoutCouponInitialAssessment.java:68)
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -215,12 +231,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'newUserOpinionIndiaPanal')
 data.setCell(0, 2, 'com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment')
-data.setCell(0, 3, 210707);
+data.setCell(0, 3, 18);
 window.suiteTableData['Onco_Staging']= { tableData: data, tableDiv: 'times-div-Onco_Staging'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 18 ms</span>
               <div id="times-div-Onco_Staging">
               </div> <!-- times-div-Onco_Staging -->
             </div> <!-- times-div -->
@@ -253,17 +269,17 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">openBrowser(Chrome, https://backstage.onco.com)</span>
-                <span class="method-start">24721 ms</span>
+                <span class="method-start">47576 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)</span>
-                <span class="method-start">30109 ms</span>
+                <span class="method-start">56817 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">quit([TestResult name=newUserOpinionIndiaPanal status=FAILURE method=NewUserOpinionUSPanalWithoutCouponIn...)</span>
-                <span class="method-start">240825 ms</span>
+                <span class="method-start">56839 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
