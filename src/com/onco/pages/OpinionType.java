@@ -24,44 +24,34 @@ public class OpinionType extends BaseClass {
     private static final Logger logger = Logger.getLogger(OpinionType.class);
     
     @FindBy(xpath = "/html/body/app-root/select-opinion-type/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[1]/div/div[2]/div/div[2]")
-    WebElement indianPanelButton;
+    private WebElement indianPanelButton;
     
     @FindBy(xpath="/html/body/app-root/select-opinion-type/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
-    WebElement selectUsPanelButton;
+    private WebElement selectUsPanelButton;
         
     public OpinionType() {
 		PageFactory.initElements(driver, this);
 	}
     
     public void indianPanelButton() {
-		
-        
-        if (logger.isDebugEnabled()) {
-		logger.debug("entering indianpanalbutton()");
-	}
+
 		try {
-			 indianPanelButton.click();
+              logger.info(indianPanelButton.isDisplayed());
+			  indianPanelButton.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting indianpanalbutton()");
-		}
+	
 }
  
     public void USPanalButton() {
     	
-    	
-    	if (logger.isDebugEnabled()) {
-			logger.debug("entering USPanal()");
-		}
 		try {
-			selectUsPanelButton.click();
+			
+			 logger.info(selectUsPanelButton.isDisplayed());
+			 selectUsPanelButton.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting USPanal()");
 		}
     }
 }

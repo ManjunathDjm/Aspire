@@ -26,19 +26,19 @@ public class Appointment extends BaseClass {
 
 	
 	@FindBy(xpath = "//div[@class='col-md-8 col-xs-12 results-list']//div[1]//div[1]//div[3]//div[1]//div[2]//div[1]//div[2]//button[1]")
-	WebElement bookappointment;
+	private WebElement bookappointment;
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/book-appointment[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
-	WebElement cal;
+	private WebElement cal;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[8]/div/div")
-	WebElement calendarday;
+	private WebElement calendarday;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/div[4]/div/div/div/div/div[2]/div[1]/button")
-	WebElement calendar;
+	private WebElement calendar;
 	
 	@FindBy(xpath="//button[contains(text(),'12:00 PM - 3:00 PM')]")
-	WebElement calendar_time;
+	private WebElement calendar_time;
 	
     
 	public Appointment() {

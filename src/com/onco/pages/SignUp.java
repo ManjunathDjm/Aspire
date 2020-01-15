@@ -26,28 +26,28 @@ public class SignUp extends BaseClass{
 
 	
 	@FindBy(xpath = "//li[@class='ng-tns-c1-0 ng-star-inserted']//a[1]")
-	WebElement signUpIcon;
+	private WebElement signUpIcon;
 	
 	@FindBy(xpath="/html/body/app-root/login/div/div[2]/div[2]/a")
-	WebElement signUplink;
+	private WebElement signUplink;
 	
 	@FindBy(xpath = "/html/body/app-root/app-register/div[2]/div[2]/div[1]/div/form/div[1]/input")
-	WebElement yourName;
+	private WebElement yourName;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
-	WebElement yourEmail;
+	private WebElement yourEmail;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")
-	WebElement countryCode;
+	private WebElement countryCode;
 
     @FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[2]/input")
-    WebElement phoneNumber;
+    private WebElement phoneNumber;
     
     @FindBy(name="patientQueryId")
-    WebElement patientQuery;
+    private WebElement patientQuery;
     
     @FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[5]/button")
-    WebElement startNowButton;
+    private WebElement startNowButton;
     
     
 public SignUp() {
@@ -57,28 +57,18 @@ public SignUp() {
 	
       public String verifyHomeTitle() {
 		
-		if (logger.isDebugEnabled()) {
-			logger.debug("entering verifyHomeTitle()");
-			logger.debug("exiting verifyHomeTitle()");
-		}
-		return driver.getTitle();
-		
-	 }
+    	  return driver.getTitle();
+		}	
       
       
 public void signupicon() {
 	
-	    if (logger.isDebugEnabled()) {
-		logger.debug("entering signupicon()");
-	}
 		try {
-	    	 signUpIcon.click();
+	    	logger.info(signUpIcon.isDisplayed());
+			signUpIcon.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting signupicon()");
 		}
 	    
 }
@@ -86,33 +76,30 @@ public void signupicon() {
 
 public void signuppage(String name,String email, String phone) {
     	
-          
-        if (logger.isDebugEnabled()) {
-		logger.debug("entering SignupPage(String,String,String)");
-		logger.debug("name: \"" + name + "\"");
-		logger.debug("email: \"" + email + "\"");
-		logger.debug("phone: \"" + phone + "\"");
-	}
 		try {
-        
+         
+			  logger.info(signUplink.isDisplayed());
 			  signUplink.click();
+			  
+			  logger.info(yourName.isDisplayed());
               yourName.sendKeys(name);
+              
+              logger.info(yourEmail.isDisplayed());
               yourEmail.sendKeys(email);
+              
+              logger.info(phoneNumber.isDisplayed());
               phoneNumber.sendKeys(phone);
-		     } catch (NoSuchElementException e) {
+              
+		   } catch (NoSuchElementException e) {
 			  e.printStackTrace();
-		     }
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting SignupPage()");
-		}  
+		   }
    }
 		  	      
 public void countryCode()  {
-      
-         if (logger.isDebugEnabled()) {
-		logger.debug("entering CountryCode()");
-	}
+  
 		try {
+			
+             logger.info(countryCode.isDisplayed());
         	 Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
              countrycode.selectByIndex(0);
              countryCode.click();
@@ -121,31 +108,25 @@ public void countryCode()  {
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting CountryCode()");
-		} 
       
    }
      	
 public void patientQuery()  {
     	
-         if (logger.isDebugEnabled()) {
-		logger.debug("entering PatientQuery()");
-	}
 		try {
              
-        	 Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
+			 logger.info(patientQuery.isDisplayed());
+			 Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
              patientquery.selectByIndex(1); 
              patientQuery.click();
-             //Assert.assertEquals(true, patientQuery.isDisplayed());
+             
+             logger.info(startNowButton.isDisplayed());
              startNowButton.click();
-             //Assert.assertEquals(true, startNowButton.isDisplayed());
+         
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting PatientQuery()");
-		}
+		
      }
 }
 

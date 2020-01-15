@@ -25,19 +25,19 @@ public class RequestLabTests extends BaseClass {
 	private static final Logger logger = Logger.getLogger(RequestLabTests.class);
 
 	@FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
-	WebElement location;
+	private WebElement location;
 	
 	@FindBy(xpath="//div[@class='custom-select right']//select[@placeholder='Select test type']")
-    WebElement testtype;
+	private WebElement testtype;
 	
 	@FindBy(xpath="//div[@class='orange-rounded-inner-btn small']")
-	WebElement continueButton;
+	private WebElement continueButton;
 	
 	@FindBy(xpath="/html/body/app-root/req-lab-test/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div[2]/div")
-	WebElement requestCallback;
+	private WebElement requestCallback;
 	
 	@FindBy(xpath="//button[@class='callback-request-modal-close']")
-	WebElement Requestcallclose;
+	private WebElement Requestcallclose;
 	
 
 	public RequestLabTests() {

@@ -30,16 +30,16 @@ public class Discount extends BaseClass {
 			      
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/app-cashback[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[3]/button[1]")
-	WebElement claimdiscountbutton;
+	private WebElement claimdiscountbutton;
 	
 	@FindBy(name="hospitalName")
-	WebElement hospitalname;
+	private WebElement hospitalname;
 	
 	@FindBy(name="city")
-	WebElement cityname;
+	private WebElement cityname;
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/app-cashback[1]/init-cashback-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]")
-	WebElement uploadfile;
+	private WebElement uploadfile;
   
  public Discount() {
 		PageFactory.initElements(driver, this);

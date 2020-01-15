@@ -25,16 +25,16 @@ public class Service extends BaseClass {
 	private static final Logger logger = Logger.getLogger(Service.class);
 
 	@FindBy(xpath="//div[@class='row']//div[1]//div[1]//div[2]")
-	WebElement appointment;
+	private WebElement appointment;
 	
     @FindBy(xpath="//body//div[@class='bg-color-mob']//div//div[2]//div[1]//div[2]")
-    WebElement opinion;
+    private WebElement opinion;
     
     @FindBy(xpath="//div[@class='container']//div[3]//div[1]//div[2]")
-    WebElement labtest;
+    private WebElement labtest;
     
     @FindBy(xpath="//div[@class='row']//button[@class='close']")
-    WebElement initialAssessmentClose;
+    private WebElement initialAssessmentClose;
     
    
 	public Service() {
@@ -42,32 +42,24 @@ public class Service extends BaseClass {
 	}
     
     public void appointment()   {
-    
-        	
-        	if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
-		}
+ 
 			try {
+				
         		try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+        		logger.info(appointment.isDisplayed());
         		appointment.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-			if (logger.isDebugEnabled()) {
-				logger.debug("exiting appointment()");
-			}
-    	  
+  
     }
      
    public void opinion() {
-           
-           if (logger.isDebugEnabled()) {
-		logger.debug("entering opinion()");
-	}
+   
 		try {
 			   try {
 				Thread.sleep(3000);
@@ -75,22 +67,16 @@ public class Service extends BaseClass {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			   logger.info(opinion.isDisplayed());
 			   opinion.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting opinion()");
-		}
    }
       
    public void labtest() { 
 	   
-        
-        	if (logger.isDebugEnabled()) {
-		logger.debug("entering labtest()");
-	}
 			try {
         		try {
 					Thread.sleep(2000);
@@ -98,16 +84,15 @@ public class Service extends BaseClass {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+        		logger.info(labtest.isDisplayed());
         		labtest.click();
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			if (logger.isDebugEnabled()) {
-				logger.debug("exiting labtest()");
-			}
         }
    }
+   
+}
   	   
 
      

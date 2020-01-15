@@ -29,69 +29,63 @@ public class Login extends BaseClass {
 	private static final Logger logger = Logger.getLogger(Login.class);
 
 	@FindBy(name="countryCode")
-	WebElement countryCode;
+	private WebElement countryCode;
 	
     @FindBy(name="contact")
-    WebElement phoneNumber;
+    private WebElement phoneNumber;
     
     @FindBy(xpath="/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")
-    WebElement loginVIAOTPbutton;
+    private WebElement loginVIAOTPbutton;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]")
-    WebElement otp;
+    private WebElement otp;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[3]/button")
-    WebElement proceedButton;
+    private WebElement proceedButton;
     
     @FindBy(xpath="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
-    WebElement delete;
+    private WebElement delete;
     
 	public Login() {
 		PageFactory.initElements(driver, this);
 	}
     
     public void login(String phone) {
-    	  	
-    	if (logger.isDebugEnabled()) {
-			logger.debug("entering login(String)");
-			logger.debug("phone: \"" + phone + "\"");
-		}
     	 
     	try {
     	   
-          Select countrycode = new Select(driver.findElement(By.name("countryCode")));
+          logger.info(countryCode.isDisplayed());
+    	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
-    	  countryCode.click();
+    	  countryCode.click();  
+    	  
+    	  logger.info(phoneNumber.isDisplayed());
     	  phoneNumber.sendKeys(phone); 
+    	  
+    	  logger.info(loginVIAOTPbutton.isDisplayed());
     	  loginVIAOTPbutton.click();
     	  
     	} catch (NoSuchElementException e) {
 			// TODO: handle exception
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting login()");
-		}
-    
+    	}
     	
     }
      	
     public void otpDetails(String Otp) {
     	
-    	if (logger.isDebugEnabled()) {
-			logger.debug("entering otpDetails(String)");
-			logger.debug("Otp: \"" + Otp + "\"");
-		}
 			try {
 			  
+			  logger.info(otp.isDisplayed());
 			  otp.click(); 
     		  otp.sendKeys(Otp);
+    		  
+    		  logger.info(proceedButton.isDisplayed());
     		  proceedButton.click();
+    		  
 			} catch (NoSuchElementException e) {
 				// TODO: handle exception
 			}
-		if (logger.isDebugEnabled()) {
-				logger.debug("exiting otpDetails()");
-			}	
+	
     	}
     
 	}

@@ -25,17 +25,17 @@ public class RequestDoctorAppointment extends BaseClass {
 	private static final Logger logger = Logger.getLogger(RequestDoctorAppointment.class);
 
 	@FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
-	WebElement location;
+	private WebElement location;
 	
     @FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")
-    WebElement specialisationDropdownSurgicalOncologist;
+    private WebElement specialisationDropdownSurgicalOncologist;
    
      
     @FindBy(xpath="//input[@placeholder='Any specific requirements']")
-    WebElement specific_test;
+    private WebElement specific_test;
     
     @FindBy(xpath="/html/body/app-root/req-doc-appointment/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div[1]/div[3]/div")
-    WebElement find_cancer_specialist;
+    private WebElement find_cancer_specialist;
     
 
 	public RequestDoctorAppointment() {

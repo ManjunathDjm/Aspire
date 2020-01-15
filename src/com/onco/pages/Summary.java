@@ -23,27 +23,25 @@ public class Summary extends BaseClass {
 	private static final Logger logger = Logger.getLogger(Summary.class);
 
 	@FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div[1]/input")
-	WebElement couponCode;
+	private WebElement couponCode;
 	
 	@FindBy(xpath="//i[@class='fa fa-times']")
-	WebElement deletecoupon;
+	private WebElement deletecoupon;
 	
 	@FindBy(xpath="//input[@placeholder='Enter coupon code']")
-	WebElement couponcodefield;
+	private WebElement couponcodefield;
 	
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
-    WebElement checkbox;
+    private WebElement checkbox;
     
     @FindBy(xpath="//button[@class='coupon-btn']")
-    WebElement couponapply;;
-    
-  
+    private WebElement couponapply;;
     
     @FindBy(xpath="//button[@class='case-data-btn continue-btn col-md-12 continue-btn-active']")
-    WebElement payathospital;
+    private WebElement payathospital;
     
     @FindBy(xpath="//button[@class='case-data-btn continue-btn pay-now-btn continue-btn-active']")
-    WebElement paynow;
+    private WebElement paynow;
     
     //@FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
     //WebElement deletecoupon;

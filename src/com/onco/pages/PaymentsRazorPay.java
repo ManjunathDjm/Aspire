@@ -27,22 +27,22 @@ public class PaymentsRazorPay extends BaseClass {
     private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
     
     @FindBy(xpath = "//*[@id=\"payment-options\"]/div[2]/label")
-    WebElement netBanking;
+    private WebElement netBanking;
     
     @FindBy(xpath ="//*[@id=\"modal-close\"]")
-    WebElement close;
+    private WebElement close;
     
     @FindBy(xpath="//*[@id=\"form-netbanking\"]/div[2]")
-    WebElement selectBank;
+    private WebElement selectBank;
     
     @FindBy(xpath="//button[@class='success']")
-    WebElement successButton;
+     private WebElement successButton;
     
     @FindBy(xpath="//*[@id=\"netb-banks\"]/div[1]/label")
-    WebElement sbiNetbanking;
+    private WebElement sbiNetbanking;
     
     @FindBy(id="footer")
-    WebElement payNow;
+    private WebElement payNow;
     
  
 	public PaymentsRazorPay() {

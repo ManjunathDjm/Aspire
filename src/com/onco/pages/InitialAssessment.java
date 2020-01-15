@@ -26,16 +26,16 @@ public class InitialAssessment extends BaseClass {
     private static final Logger logger = Logger.getLogger(InitialAssessment.class);
 
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/select-service[1]/initial-assessment-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]")
-    WebElement initiAlassessmentClose;
+	private WebElement initiAlassessmentClose;
     
     @FindBy(partialLinkText = "VIEW ASSESSMENT")
-    WebElement viewAssessment;
+    private WebElement viewAssessment;
     
     @FindBy(xpath="//div[@class='orange-rounded-inner-btn float-right']")
-    WebElement exploremoreoptions;
+    private WebElement exploremoreoptions;
     
     @FindBy(xpath="//div[@class='download-assessment cursor-pointer']")
-    WebElement downloadAssessment;
+    private WebElement downloadAssessment;
      
   public InitialAssessment() {
 		PageFactory.initElements(driver, this);
@@ -43,52 +43,41 @@ public class InitialAssessment extends BaseClass {
 	}
        
    public void initialAssessmentClose() {
-	   
-	   if (logger.isDebugEnabled()) {
-		logger.debug("entering initialAssessmentClose()");
-	}
+
 	try {
 		   driver.switchTo().defaultContent();
+		   logger.info(initiAlassessmentClose.isDisplayed());
 		   initiAlassessmentClose.click();
 		   
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
-	  
-	if (logger.isDebugEnabled()) {
-		logger.debug("exiting initialAssessmentClose()");
-	}
+	
   }
    
    public void ViewAssessment() {
-	   
-	    if (logger.isDebugEnabled()) {
-		logger.debug("entering viewAssessment()");
-	}
-		try {
+	
+		try {  
+			   logger.info(viewAssessment.isDisplayed());
 			   viewAssessment.click();
+			   
+			   logger.info(exploremoreoptions.isDisplayed());
 			   exploremoreoptions.click();
+			   
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting viewAssessment()");
-		}
    }
 	 
    public void downloadAssessment() {
-	   
 	 
-		if (logger.isDebugEnabled()) {
-		logger.debug("entering downloadAssessment()");
-	}
 		try {
-			   downloadAssessment.click();
+			   
+			logger.info(downloadAssessment.isDisplayed());
+			downloadAssessment.click();
+			
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting downloadAssessment()");
 		}
 	  }
    }
