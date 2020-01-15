@@ -50,18 +50,10 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("enable-automation");
-            	options.addArguments("--headless");
-            	options.addArguments("--window-size=1920,1080");
-            	options.addArguments("--no-sandbox");
-            	options.addArguments("--disable-extensions");
-            	options.addArguments("--dns-prefetch-disable");
-            	options.addArguments("--disable-gpu");
-            	options.addArguments("--allow-insecure-localhost");
-            	options.addArguments("--ignore-certificate-errors");
-            	options.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            	options.addArguments("headless");
             	driver = new ChromeDriver(options);
-            	driver.manage().window().maximize();
+            	driver.manage().window().setSize(new Dimension(1920, 1820));
+            	//driver.manage().window().maximize();
             	driver.get(url);
             	driver.manage().deleteAllCookies();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
