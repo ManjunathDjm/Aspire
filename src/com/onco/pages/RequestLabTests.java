@@ -46,69 +46,50 @@ public class RequestLabTests extends BaseClass {
     
     public void location() {
   
-    	 
-		if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
-		}
-		try {    try {
-			Thread.sleep(3000);
+		try {    
+			
+			try {
+			
+				Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	        	 location.click(); 
+	        	 logger.info(location.isDisplayed());
+			     location.click(); 
 	    		 location.sendKeys("Mumbai",Keys.TAB);
+	    		 
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
        }
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");
-		}	  
      }
 		
     public void labtest() {
-    	
-    	
-	     if (logger.isDebugEnabled()) {
-			logger.debug("entering labtest()");
-		}
+    
 		try {
-	    	 Select test = new Select(driver.findElement(By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
+	    	 logger.info(testtype.isDisplayed());
+			 Select test = new Select(driver.findElement(By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
 	    	 testtype.click();
 	    	 test.selectByIndex(1);
 	    	 testtype.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting labtest()");
-		}
    }
 		
    public void continueButton() {
-	   
-	   if (logger.isDebugEnabled()) {
-		logger.debug("entering continueButton()");
-	}
+	
 	try {
+		   logger.info(continueButton.isDisplayed());
 		   continueButton.click();
+		   
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
-	if (logger.isDebugEnabled()) {
-		logger.debug("exiting continueButton()");
-	}
-	   
-   }
+   }   
+
    public void requestCallback() {
-	   
-	  if (logger.isDebugEnabled()) {
-		logger.debug("entering RequestCallback()");
-	}
+	
     	requestCallback.click();
-	    Requestcallclose.click();
-	if (logger.isDebugEnabled()) {
-		logger.debug("exiting RequestCallback()");
-	}
 	   
    }
    

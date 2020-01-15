@@ -51,15 +51,16 @@ public class PaymentsRazorPay extends BaseClass {
     
     public void netbanking() throws InterruptedException {
   
-         
-		   if (logger.isDebugEnabled()) {
-			logger.debug("entering razorpay()");
-		}
 		try {
 			
 			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
+			logger.info(netBanking.isDisplayed());
 		    netBanking.click();
+		    
+		    logger.info(sbiNetbanking.isDisplayed());
 		    sbiNetbanking.click();
+		    
+		    logger.info(payNow.isDisplayed());
 		    payNow.click(); 
 		    //Switch to child window and click on success button 
 		    Set <String> windowhandles=driver.getWindowHandles();
@@ -67,15 +68,12 @@ public class PaymentsRazorPay extends BaseClass {
 		    	driver.getWindowHandle();
 				driver.switchTo().window(windowHandle);
     }
-
+            logger.info(successButton.isDisplayed());
 		    successButton.click();
 		     
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
-			}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting razorpay()");	
-			
+	
 			}
      }
  

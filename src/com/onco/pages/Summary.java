@@ -52,13 +52,9 @@ public class Summary extends BaseClass {
     
 	
 	public void deletecouponcode() {
-    	
-		
-    	if (logger.isDebugEnabled()) {
-			logger.debug("couponcode Summary()");
-		}
+ 
 			try {
-				   
+				   logger.info(deletecoupon.isDisplayed());
 				   deletecoupon.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
@@ -68,23 +64,17 @@ public class Summary extends BaseClass {
 	public void applycoupon(String UScoupon) {
 				  
 		try {
-				   couponcodefield.sendKeys(UScoupon);
+				   logger.info(couponCode.isDisplayed());
+			       couponcodefield.sendKeys(UScoupon);
 				   couponapply.click();
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-		if (logger.isDebugEnabled()) {
-				logger.debug("couponcode Summary()");
+
 			}
-  
-	}
 	
 	public void summary() {
     	
-    		
-    	if (logger.isDebugEnabled()) {
-			logger.debug("entering Summary()");
-		}
 			try {
 				if(payathospital.isEnabled())
 				{
@@ -94,23 +84,21 @@ public class Summary extends BaseClass {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					payathospital.click();
+					logger.info(payathospital.isDisplayed());
+				    payathospital.click();
 				}
 				else { 
-					
+					logger.info(paynow.isDisplayed());
 					paynow.click();
 				}
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
-			}
-		if (logger.isDebugEnabled()) {
-				logger.debug("exiting Summary()");
-			}
   
     	}
     
     }
     
+}
 
     
     

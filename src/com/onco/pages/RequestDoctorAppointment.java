@@ -43,12 +43,10 @@ public class RequestDoctorAppointment extends BaseClass {
 	}
     
     public void appointment()   {
-         
-		   if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
-		}
+      
 		try {
-	        	 location.click(); 
+	        	 logger.info(location.isDisplayed());
+			     location.click(); 
 	        	 try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -59,20 +57,14 @@ public class RequestDoctorAppointment extends BaseClass {
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");
-		}
-		  
+
     }
     
     public void surgicalOncologist() {
     	
-    	
-	     if (logger.isDebugEnabled()) {
-			logger.debug("entering surgicalOncologist()");
-		}
 		try {
-	    	 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
+	    	 logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
+			 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
 		     specialisation.selectByIndex(1);
 		     specialisationDropdownSurgicalOncologist.click();
@@ -80,43 +72,32 @@ public class RequestDoctorAppointment extends BaseClass {
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting surgicalOncologist()");
-		}
     }
 		
     public void radiationOncologist() {
 
-	     if (logger.isDebugEnabled()) {
-			logger.debug("entering radiationOncologist()");
-		}
 		try {
-	    	 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
+	    	 logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
+			 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
 		     specialisation.selectByIndex(2);
 		     specialisationDropdownSurgicalOncologist.click();
 		    
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting radiationOncologist()");
-		}
+
+   }
    }
     	
    public void button()  {
 		   		   
-	      if (logger.isDebugEnabled()) {
-			logger.debug("entering Button()");
-		}
+	 
 		try {
-	    	  find_cancer_specialist.click();
+	    	 logger.info(find_cancer_specialist.isDisplayed()); 
+			 find_cancer_specialist.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
-		}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting Button()");
-		}   		   
+		} 		   
        
       }          	             
    }
