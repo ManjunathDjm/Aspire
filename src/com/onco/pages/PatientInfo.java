@@ -36,8 +36,8 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="//input[@placeholder='Enter patient name (optional)']")
-	WebElement Patientname;
+	//@FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/input[1]") 
+	//WebElement Patientname;
 	
 	@FindBy(name ="cancerType")
 	WebElement typeofCancer;
@@ -66,9 +66,12 @@ public class PatientInfo extends BaseClass{
     public void patientname(String pname) {
     	
     	try {
-    		WebDriverWait wait = new WebDriverWait(driver, 4000);
-    		wait.until(ExpectedConditions.visibilityOfElementLocated((By.xpath("//input[@placeholder='Enter patient name (optional)']"))));
-    		Patientname.sendKeys(pname);
+    		
+    		driver.findElement(By.name("patientName")).click();
+    	    driver.findElement(By.name("patientName")).clear();
+    	    driver.findElement(By.name("patientName")).sendKeys("test_manjunath");
+    		//Patientname.click();
+    		//Patientname.sendKeys(pname);
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

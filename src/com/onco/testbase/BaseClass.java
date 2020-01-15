@@ -48,7 +48,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	WebDriverManager.chromedriver().setup(); 
+            	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("enable-automation");
             	options.addArguments("--headless");
