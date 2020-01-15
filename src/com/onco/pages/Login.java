@@ -62,6 +62,7 @@ public class Login extends BaseClass {
           Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();
+    	  WebDriverWait wait = new WebDriverWait(driver,60);
     	  phoneNumber.sendKeys(phone); 
     	  loginVIAOTPbutton.click();
     	  
