@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="77363" started-at="2020-01-16T14:39:48Z" finished-at="2020-01-16T14:41:05Z">
+  <suite name="Onco Staging" duration-ms="77936" started-at="2020-01-16T16:13:42Z" finished-at="2020-01-16T16:14:59Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="77363" started-at="2020-01-16T14:39:48Z" finished-at="2020-01-16T14:41:05Z">
+    <test name="PatientPortal" duration-ms="77936" started-at="2020-01-16T16:13:42Z" finished-at="2020-01-16T16:14:59Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="22501" started-at="2020-01-16T20:09:48Z" finished-at="2020-01-16T20:10:10Z">
+        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="23950" started-at="2020-01-16T21:43:42Z" finished-at="2020-01-16T21:44:05Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="4390" started-at="2020-01-16T20:10:10Z" finished-at="2020-01-16T20:10:15Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="3536" started-at="2020-01-16T21:44:05Z" finished-at="2020-01-16T21:44:09Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="50345" started-at="2020-01-16T20:10:15Z" finished-at="2020-01-16T20:11:05Z">
+        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="50326" started-at="2020-01-16T21:44:09Z" finished-at="2020-01-16T21:44:59Z">
           <params>
             <param index="0">
               <value>
@@ -90,7 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method status="PASS" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="106" started-at="2020-01-16T20:11:05Z" finished-at="2020-01-16T20:11:05Z">
+        <test-method status="PASS" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="109" started-at="2020-01-16T21:44:59Z" finished-at="2020-01-16T21:44:59Z">
           <params>
             <param index="0">
               <value>
