@@ -45,7 +45,7 @@ public class BaseClass {
        
 		BasicConfigurator.configure(); 
  
-		try {
+		//try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup();
@@ -62,11 +62,9 @@ public class BaseClass {
 
             }
                  
-        } catch (WebDriverException e) {
-            System.out.println(e.getMessage());
+        //} catch (WebDriverException e) {
+            //System.out.println(e.getMessage());
         }
-	
-    }
 	
 	       @AfterMethod
 	       public static void quit(ITestResult result) throws IOException {    

@@ -36,7 +36,6 @@ driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
 driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
 			
 SignUp sign=new SignUp();
 sign.signupicon();
