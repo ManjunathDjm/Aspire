@@ -57,12 +57,13 @@ public class Homepage extends BaseClass {
     	
 		try {
 		     	WebDriverWait namefield = new WebDriverWait(driver,60);
-			    logger.info(nameField.isDisplayed());
-			    nameField.sendKeys(patientname);
+		     	namefield.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]"))).sendKeys(patientname);
+			    //nameField.sendKeys(patientname);
 			    
 			    WebDriverWait emailfield = new WebDriverWait(driver,60);
-			    logger.info(emailField.isDisplayed());
-				emailField.sendKeys(email);	
+			    emailfield.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[4]/input[1]"))).sendKeys(patientname);
+			    //logger.info(emailField.isDisplayed());
+				//emailField.sendKeys(email);	
 				
 				WebDriverWait ph = new WebDriverWait(driver,60);
 				logger.info(phoneFiled.isDisplayed());
