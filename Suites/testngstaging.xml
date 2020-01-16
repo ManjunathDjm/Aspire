@@ -7,8 +7,8 @@
 </listeners>
     <parameter name="env" value="staging"/>
     <parameter name="browser" value="Chrome"/>
-    <parameter name="url"  value="https://onco.com"/>
-    <parameter name="deleteURL"  value="https://onco.com/start/delete-me"/>
+    <parameter name="url"  value="https://backstage.onco.com"/>
+    <parameter name="deleteURL"  value="https://backstage.onco.com/start/delete-me"/>
     <parameter name="name" value="test_onco"/>
     <parameter name="email" value="manjunath.11j@gmail.com"/>
     <parameter name="phone" value="9036890379"/>

@@ -78,12 +78,10 @@ public class Login extends BaseClass {
     	
 			try {
 			  
-			  WebDriverWait wait = new WebDriverWait(driver,60);
 			  logger.info(otp.isDisplayed());
 			  otp.click(); 
     		  otp.sendKeys(Otp);
     		  
-    		  WebDriverWait proceed = new WebDriverWait(driver,60);
     		  logger.info(proceedButton.isDisplayed());
     		  proceedButton.click();
     		  
