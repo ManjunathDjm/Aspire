@@ -52,18 +52,13 @@ public class BaseClass {
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--headless");
             	options.addArguments("--window-size=1920,1080");
-            	options.addArguments("--ignore-certificate-errors");
-            	options.addArguments("--disable-gpu");
-            	options.addArguments("--disable-extensions");
-            	options.setExperimentalOption("useAutomationExtension", false);
-            	options.addArguments("--start-maximized");
             	driver = new ChromeDriver(options);
-            	//driver.manage().window().maximize();
+            	driver.manage().window().maximize();
             	driver.get(url);
             	driver.manage().deleteAllCookies();
-                driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-
+                //driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+        		//driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+            	WebDriverWait wait = new WebDriverWait(driver,60);
 
             }
                  

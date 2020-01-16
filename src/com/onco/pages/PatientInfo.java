@@ -67,9 +67,10 @@ public PatientInfo() {
     	
     	try {
     		
+    		WebDriverWait patienrname = new WebDriverWait(driver,60);
     		logger.info(Patientname.isDisplayed());
-    		//driver.getPageSource();
     		Patientname.sendKeys(pname);
+    		
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -81,21 +82,27 @@ public void patientinfo() {
     	
 			
 	     try {
-	            logger.info(typeofCancer.isDisplayed());
+	            
+	    	    WebDriverWait cancertype = new WebDriverWait(driver,60);
+	    	    logger.info(typeofCancer.isDisplayed());
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    
+			    WebDriverWait cancerstage = new WebDriverWait(driver,60);
 			    logger.info(cancerStage.isDisplayed());
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
 			    
+			    WebDriverWait generalcondition = new WebDriverWait(driver,60);
 			    logger.info(generalCondition.isDisplayed());
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
 		  
+		        
+		        WebDriverWait continuebutton = new WebDriverWait(driver,60);
 		        logger.info(continueButton.isDisplayed());
 		        continueButton.click();
 		        

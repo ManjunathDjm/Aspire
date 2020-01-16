@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="165078" started-at="2020-01-15T16:47:59Z" finished-at="2020-01-15T16:50:44Z">
+  <suite name="Onco Staging" duration-ms="78865" started-at="2020-01-16T11:59:19Z" finished-at="2020-01-16T12:00:38Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="165078" started-at="2020-01-15T16:47:59Z" finished-at="2020-01-15T16:50:44Z">
+    <test name="PatientPortal" duration-ms="78865" started-at="2020-01-16T11:59:19Z" finished-at="2020-01-16T12:00:38Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="27983" started-at="2020-01-15T22:17:59Z" finished-at="2020-01-15T22:18:27Z">
+        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="delete" is-config="true" duration-ms="23364" started-at="2020-01-16T17:29:19Z" finished-at="2020-01-16T17:29:43Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="3464" started-at="2020-01-15T22:18:27Z" finished-at="2020-01-15T22:18:31Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="openBrowser" is-config="true" duration-ms="4634" started-at="2020-01-16T17:29:43Z" finished-at="2020-01-16T17:29:47Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="133503" started-at="2020-01-15T22:18:31Z" finished-at="2020-01-15T22:20:44Z">
+        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="newUserOpinionIndiaPanal" duration-ms="50742" started-at="2020-01-16T17:29:47Z" finished-at="2020-01-16T17:30:38Z">
           <params>
             <param index="0">
               <value>
@@ -90,7 +90,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method status="PASS" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="115" started-at="2020-01-15T22:20:44Z" finished-at="2020-01-15T22:20:44Z">
+        <test-method status="PASS" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6df97b55]" name="quit" is-config="true" duration-ms="101" started-at="2020-01-16T17:30:38Z" finished-at="2020-01-16T17:30:38Z">
           <params>
             <param index="0">
               <value>

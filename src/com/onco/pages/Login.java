@@ -54,14 +54,17 @@ public class Login extends BaseClass {
     	 
     	try {
     	   
-          logger.info(countryCode.isDisplayed());
+    	  WebDriverWait country = new WebDriverWait(driver,60);
+    	  logger.info(countryCode.isDisplayed());
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
     	  
+    	  WebDriverWait ph = new WebDriverWait(driver,60);
     	  logger.info(phoneNumber.isDisplayed());
     	  phoneNumber.sendKeys(phone); 
     	  
+    	  WebDriverWait otp = new WebDriverWait(driver,60);
     	  logger.info(loginVIAOTPbutton.isDisplayed());
     	  loginVIAOTPbutton.click();
     	  
@@ -75,10 +78,12 @@ public class Login extends BaseClass {
     	
 			try {
 			  
+			  WebDriverWait wait = new WebDriverWait(driver,60);
 			  logger.info(otp.isDisplayed());
 			  otp.click(); 
     		  otp.sendKeys(Otp);
     		  
+    		  WebDriverWait proceed = new WebDriverWait(driver,60);
     		  logger.info(proceedButton.isDisplayed());
     		  proceedButton.click();
     		  
