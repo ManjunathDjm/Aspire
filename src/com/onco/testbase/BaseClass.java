@@ -40,7 +40,9 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
+            	WebDriverManager.chromedriver().setup(); 
             	ChromeOptions options = new ChromeOptions(); 
+            	options.setHeadless(true);
             	options.addArguments("--headless");
             	options.addArguments("--no-sandbox");
             	options.addArguments("window-size=1920,1080");
