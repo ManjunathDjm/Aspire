@@ -44,7 +44,7 @@ public class BaseClass {
             	options.addArguments("window-size=1920,1080");
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
-            	driver.get(url);
+            	driver.navigate().to(url);
             	//driver.manage().deleteAllCookies();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
