@@ -38,7 +38,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	WebDriverManager.chromedriver().setup();
+            	//WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--headless");
             	options.addArguments("window-size=1920,1080");
