@@ -69,7 +69,8 @@ public PatientInfo() {
     	try {
     		
     		
-    		
+    		FluentWait fw = new FluentWait(driver);
+    		fw.withTimeout(30, TimeUnit.SECONDS);
     		logger.info(patientname.isDisplayed());
     		patientname.sendKeys(pname);
     		

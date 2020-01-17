@@ -26,13 +26,17 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
 
-WebDriverManager.chromedriver().setup(); 
+WebDriverManager.chromedriver().version("79.0.3945.16").setup();
 ChromeOptions options = new ChromeOptions();
-options.setHeadless(true);
+options.addArguments("--window-size=1920,1080");
 options.addArguments("--headless");
-options.addArguments("--no-sandbox");
-options.addArguments("window-size=1920,1080");
-options.addArguments("--ignore-default-chrome-flags");
+options.addArguments("start-maximized"); 
+options.addArguments("enable-automation"); 
+options.addArguments("--no-sandbox"); 
+options.addArguments("--disable-infobars");
+options.addArguments("--disable-dev-shm-usage");
+options.addArguments("--disable-browser-side-navigation"); 
+options.addArguments("--disable-gpu"); 
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
@@ -62,15 +66,15 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(30000);
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
-Thread.sleep(30000);
+Thread.sleep(5000);
 PatientInfo info=new PatientInfo();
 info.patientname(patientname);
 info.patientinfo();
-Thread.sleep(30000);
+Thread.sleep(5000);
 
 InitialAssessment assessment= new InitialAssessment();
 assessment.ViewAssessment();

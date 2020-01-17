@@ -27,7 +27,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class BaseClass {
 	  
-	private static ChromeDriverService service;
 	public static WebDriver driver;
 
 	
@@ -40,13 +39,17 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	WebDriverManager.chromedriver().setup(); 
+            	WebDriverManager.chromedriver().version("79.0.3945.16").setup();
             	ChromeOptions options = new ChromeOptions(); 
-            	options.setHeadless(true);
+            	options.addArguments("--window-size=1920,1080");
             	options.addArguments("--headless");
-            	options.addArguments("--no-sandbox");
-            	options.addArguments("window-size=1920,1080");
-            	options.addArguments("--ignore-default-chrome-flags");
+            	options.addArguments("start-maximized"); 
+            	options.addArguments("enable-automation"); 
+            	options.addArguments("--no-sandbox"); 
+            	options.addArguments("--disable-infobars");
+            	options.addArguments("--disable-dev-shm-usage");
+            	options.addArguments("--disable-browser-side-navigation"); 
+            	options.addArguments("--disable-gpu"); 
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.navigate().to(url);
