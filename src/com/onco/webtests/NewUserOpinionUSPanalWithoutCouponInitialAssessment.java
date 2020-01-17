@@ -1,6 +1,4 @@
 package com.onco.webtests;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -30,8 +28,8 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup(); 
 ChromeOptions options = new ChromeOptions();
-options.addArguments("headless");
-options.addArguments("window-size=1920,1080");
+//options.addArguments("headless");
+//options.addArguments("window-size=1920,1080");
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
@@ -45,9 +43,9 @@ login.login(phone);
 Thread.sleep(5000);
 login.otpDetails(otp);
 Thread.sleep(5000);
-driver.get(deleteURL);
+driver.navigate().to(deleteURL);
 Thread.sleep(5000);
-driver.close();
+driver.quit();
 			
 			
 }		
@@ -56,13 +54,12 @@ driver.close();
 @Test(priority = 2)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
-Thread.sleep(5000);
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(20000);
+Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 

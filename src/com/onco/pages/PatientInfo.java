@@ -37,8 +37,8 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
-	private WebElement patientname;
+	//@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
+	//private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
 	private WebElement typeofCancer;
@@ -69,7 +69,7 @@ public PatientInfo() {
     	try {
     		
     		WebDriverWait ptname = new WebDriverWait(driver,30);
-    		logger.info(patientname.isDisplayed());
+    		//logger.info(patientname.isDisplayed());
     		ptname.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("patientName")))).sendKeys(pname);
     		
     		//logger.info(patientname.isDisplayed());

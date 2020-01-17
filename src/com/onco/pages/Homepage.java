@@ -93,11 +93,9 @@ public class Homepage extends BaseClass {
  public void submit() {
 	
 	    try {
-	    	WebDriverWait submitbutton = new WebDriverWait(driver,30);
-    		logger.info(submit.isDisplayed());
-    		submitbutton.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[15]/button[1]")))).click();
-	    	 //logger.info(submit.isDisplayed());
-	    	 //submit.click();
+	    	
+	    	 logger.info(submit.isDisplayed());
+	    	 submit.click();
 	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}

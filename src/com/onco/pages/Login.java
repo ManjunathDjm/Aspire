@@ -54,17 +54,14 @@ public class Login extends BaseClass {
     	 
     	try {
     	   
-    	  WebDriverWait country = new WebDriverWait(driver,60);
     	  logger.info(countryCode.isDisplayed());
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
     	  
-    	  WebDriverWait ph = new WebDriverWait(driver,60);
     	  logger.info(phoneNumber.isDisplayed());
     	  phoneNumber.sendKeys(phone); 
     	  
-    	  WebDriverWait otp = new WebDriverWait(driver,60);
     	  logger.info(loginVIAOTPbutton.isDisplayed());
     	  loginVIAOTPbutton.click();
     	  
