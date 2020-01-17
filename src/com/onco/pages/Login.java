@@ -75,14 +75,15 @@ public class Login extends BaseClass {
     	
 			try {
 			  
-			  logger.info(otp.isDisplayed());
-			  otp.click(); 
-    		  otp.sendKeys(Otp);
+			   Thread.sleep(50000);
+			   logger.info(otp.isDisplayed());
+			   otp.click(); 
+    		   otp.sendKeys(Otp);
     		  
-    		  logger.info(proceedButton.isDisplayed());
-    		  proceedButton.click();
+    		   logger.info(proceedButton.isDisplayed());
+    		   proceedButton.click();
     		  
-			} catch (NoSuchElementException e) {
+			} catch (NoSuchElementException | InterruptedException e) {
 				// TODO: handle exception
 			}
 	
