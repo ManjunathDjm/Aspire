@@ -62,15 +62,15 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(5000);
+Thread.sleep(30000);
 Login login= new Login();
 login.otpDetails(otp);
 
-Thread.sleep(5000);
+Thread.sleep(30000);
 PatientInfo info=new PatientInfo();
 info.patientname(patientname);
 info.patientinfo();
-Thread.sleep(5000);
+Thread.sleep(30000);
 
 InitialAssessment assessment= new InitialAssessment();
 assessment.ViewAssessment();
