@@ -19,6 +19,7 @@ import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
+import java.lang.ref.Reference;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -67,9 +68,12 @@ public PatientInfo() {
     	
     	try {
     		
-    		WebDriverWait patienrname = new WebDriverWait(driver,60);
+    		WebDriverWait ptname = new WebDriverWait(driver,30);
     		logger.info(patientname.isDisplayed());
-    		patientname.sendKeys(pname);
+    		ptname.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.name("patientName")))).sendKeys(pname);
+    		
+    		//logger.info(patientname.isDisplayed());
+    		//patientname.sendKeys(pname);
     		
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
