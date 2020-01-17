@@ -44,6 +44,7 @@ public class BaseClass {
             	options.addArguments("--headless");
             	options.addArguments("--no-sandbox");
             	options.addArguments("window-size=1920,1080");
+            	options.addArguments("--disable-setuid-sandbox");
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.navigate().to(url);
