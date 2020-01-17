@@ -31,7 +31,7 @@ ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
 options.addArguments("--no-sandbox");
 options.addArguments("window-size=1920,1080");
-options.addArguments("--disable-setuid-sandbox");
+options.addArguments("--ignore-default-chrome-flags");
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
