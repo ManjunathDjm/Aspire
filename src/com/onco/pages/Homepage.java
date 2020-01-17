@@ -94,9 +94,10 @@ public class Homepage extends BaseClass {
 	
 	    try {
 	    	
-	    	 logger.info(submit.isDisplayed());
+	    	 Thread.sleep(50000); 
+	    	logger.info(submit.isDisplayed());
 	    	 submit.click();
-	     } catch (NoSuchElementException e) {
+	     } catch (NoSuchElementException | InterruptedException e) {
 	    	e.printStackTrace(); 
 	}
  }
