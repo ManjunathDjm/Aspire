@@ -83,7 +83,7 @@ public class Homepage extends BaseClass {
 	    	 logger.info(dropOption1.isDisplayed());
 		     dropOption1.click();
 		     
-		     logger.info(selectTerms.isSelected());
+		     logger.info(selectTerms.isDisplayed());
 		     selectTerms.click();
 	     } catch (NoSuchElementException e) {
 		    e.printStackTrace();
@@ -93,11 +93,10 @@ public class Homepage extends BaseClass {
  public void submit() {
 	
 	    try {
-	    	
-	    	 Thread.sleep(50000); 
-	    	logger.info(submit.isDisplayed());
+	    	 
+	    	 logger.info(submit.isDisplayed());
 	    	 submit.click();
-	     } catch (NoSuchElementException | InterruptedException e) {
+	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}
  }

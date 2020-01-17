@@ -75,7 +75,6 @@ public class Login extends BaseClass {
     	
 			try {
 			  
-			   Thread.sleep(50000);
 			   logger.info(otp.isDisplayed());
 			   otp.click(); 
     		   otp.sendKeys(Otp);
@@ -83,7 +82,7 @@ public class Login extends BaseClass {
     		   logger.info(proceedButton.isDisplayed());
     		   proceedButton.click();
     		  
-			} catch (NoSuchElementException | InterruptedException e) {
+			} catch (NoSuchElementException  e) {
 				// TODO: handle exception
 			}
 	
