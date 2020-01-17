@@ -5,26 +5,16 @@ import java.util.concurrent.TimeUnit;
 
 
 import org.apache.log4j.BasicConfigurator;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
-
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import io.github.bonigarcia.wdm.DriverManagerType;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -45,13 +35,13 @@ public class BaseClass {
        
 		BasicConfigurator.configure(); 
  
-		//try {
+		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--headless");
-            	options.addArguments("--window-size=1920,1080");
+            	//options.addArguments("--window-size=1920,1080");
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.get(url);
@@ -62,10 +52,10 @@ public class BaseClass {
 
             }
                  
-        //} catch (WebDriverException e) {
-            //System.out.println(e.getMessage());
+        } catch (WebDriverException e) {
+            
         }
-	
+	  }
 	       @AfterMethod
 	       public static void quit(ITestResult result) throws IOException {    
 	       driver.close();
