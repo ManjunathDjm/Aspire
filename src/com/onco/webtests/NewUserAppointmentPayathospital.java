@@ -27,7 +27,7 @@ public class NewUserAppointmentPayathospital extends BaseClass {
 @Parameters({"deleteURL","url","browser","phone","otp"})
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
 			
-WebDriverManager.chromedriver().setup(); 
+WebDriverManager.chromedriver().getDownloadedVersion();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("window-size=1280,800");
 options.addArguments("--no-sandbox");
