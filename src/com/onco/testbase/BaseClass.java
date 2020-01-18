@@ -39,7 +39,7 @@ public class BaseClass {
 		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
-            	WebDriverManager.chromedriver().version("79.0.3945.16").setup();
+            	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--window-size=1920,1080");
             	options.addArguments("--headless");

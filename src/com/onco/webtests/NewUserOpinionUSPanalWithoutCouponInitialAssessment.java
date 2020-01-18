@@ -26,7 +26,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
 
-WebDriverManager.chromedriver().version("79.0.3945.16").setup();
+WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--window-size=1920,1080");
 options.addArguments("--headless");
