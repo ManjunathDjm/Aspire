@@ -1,6 +1,8 @@
 package com.onco.testbase;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 
@@ -40,6 +42,7 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup();
+            	Map<String, Object> chromeOptions = new HashMap<String, Object>();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--window-size=1920,1080");
             	options.addArguments("--headless");
