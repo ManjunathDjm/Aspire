@@ -3,6 +3,7 @@ package com.onco.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -68,10 +69,10 @@ public PatientInfo() {
     	
     	try {
     		
-    		
     		patientname.sendKeys(pname);
+    		return;
     		
-		} catch (NoSuchElementException e) {
+		} catch (NoSuchElementException | StaleElementReferenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
