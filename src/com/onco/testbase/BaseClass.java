@@ -42,11 +42,10 @@ public class BaseClass {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup();
-            	Map<String, Object> chromeOptions = new HashMap<String, Object>();
             	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("--window-size=1920,1080");
             	options.addArguments("--headless");
-            	options.addArguments("--remote-debugging-port=9222");
+            	options.addArguments("--window-size=1920,1080");
+            	//options.addArguments("--remote-debugging-port=9222");
             	//options.addArguments("start-maximized"); 
             	//options.addArguments("enable-automation"); 
             	//options.addArguments("--no-sandbox"); 

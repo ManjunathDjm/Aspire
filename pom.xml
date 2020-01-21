@@ -62,12 +62,6 @@
 </dependency>
 <!-- https://mvnrepository.com/artifact/software.reinvent/headless-chrome -->
 <dependency>
-    <groupId>software.reinvent</groupId>
-    <artifactId>headless-chrome</artifactId>
-    <version>0.3.6</version>
-</dependency>
-
-<dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium</artifactId>
     <version>2.0rc2</version>

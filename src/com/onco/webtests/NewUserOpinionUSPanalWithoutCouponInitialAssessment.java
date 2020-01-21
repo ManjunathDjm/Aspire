@@ -28,9 +28,9 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--window-size=1920,1080");
 options.addArguments("--headless");
-options.addArguments("--remote-debugging-port=9222");
+options.addArguments("--window-size=1920,1080");
+//options.addArguments("--remote-debugging-port=9222");
 //options.addArguments("start-maximized"); 
 //options.addArguments("enable-automation"); 
 //options.addArguments("--no-sandbox"); 
@@ -53,7 +53,7 @@ login.otpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);
 Thread.sleep(5000);
-driver.close();
+driver.quit();
 			
 			
 }		
@@ -62,6 +62,11 @@ driver.close();
 @Test(priority = 2)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
+
+WebDriverManager.chromedriver().setup();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("--headless");	
+
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();

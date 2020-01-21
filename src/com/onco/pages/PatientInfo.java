@@ -38,7 +38,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
+	@FindBy(css="patient-info.ng-star-inserted:nth-child(2) div.ng-star-inserted div.background div.container div.row div.col-xs-12.col-sm-12.col-md-8.col-lg-8.col-xl-8 div.patient-info div.patient-info-details div.form-group.row.ng-star-inserted:nth-child(1) div.col-xs-12.col-sm-12.col-md-6.col-lg-6.col-xl-6:nth-child(2) > input.form-control.ng-pristine.ng-valid.ng-touched")
 	private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
@@ -69,6 +69,7 @@ public PatientInfo() {
     	
     	try {
     		
+    		//driver.findElement(By.name("patientName")).sendKeys(pname);
     		patientname.sendKeys(pname);
     		return;
     		
