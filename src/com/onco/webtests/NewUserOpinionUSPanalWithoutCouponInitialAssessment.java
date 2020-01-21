@@ -30,13 +30,14 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--window-size=1920,1080");
 options.addArguments("--headless");
-options.addArguments("start-maximized"); 
-options.addArguments("enable-automation"); 
-options.addArguments("--no-sandbox"); 
-options.addArguments("--disable-infobars");
-options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--disable-browser-side-navigation"); 
-options.addArguments("--disable-gpu"); 
+options.addArguments("--remote-debugging-port=9222");
+//options.addArguments("start-maximized"); 
+//options.addArguments("enable-automation"); 
+//options.addArguments("--no-sandbox"); 
+//options.addArguments("--disable-infobars");
+//options.addArguments("--disable-dev-shm-usage");
+//options.addArguments("--disable-browser-side-navigation"); 
+//options.addArguments("--disable-gpu"); 
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
@@ -50,9 +51,9 @@ login.login(phone);
 Thread.sleep(5000);
 login.otpDetails(otp);
 Thread.sleep(5000);
-driver.navigate().to(deleteURL);
+driver.get(deleteURL);
 Thread.sleep(5000);
-driver.quit();
+driver.close();
 			
 			
 }		
@@ -95,7 +96,6 @@ pay.netbanking();
 
 Thread.sleep(20000);
 Dashboard dashboard= new Dashboard();
-
 
 
 }

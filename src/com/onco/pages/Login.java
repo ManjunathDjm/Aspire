@@ -38,7 +38,7 @@ public class Login extends BaseClass {
     private WebElement loginVIAOTPbutton;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]")
-    private WebElement otp;
+    private WebElement Otp;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[3]/button")
     private WebElement proceedButton;
@@ -71,13 +71,13 @@ public class Login extends BaseClass {
     	
     }
      	
-    public void otpDetails(String Otp) {
+    public void otpDetails(String otp) {
     	
 			try {
 			  
-			   logger.info(otp.isDisplayed());
-			   otp.click(); 
-    		   otp.sendKeys(Otp);
+			   logger.info(Otp.isDisplayed());
+			   Otp.click(); 
+    		   Otp.sendKeys(otp);
     		  
     		   logger.info(proceedButton.isDisplayed());
     		   proceedButton.click();
