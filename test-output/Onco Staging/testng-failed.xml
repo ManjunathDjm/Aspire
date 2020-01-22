@@ -6,7 +6,7 @@
   <parameter name="otp" value="5813"/>
   <parameter name="env" value="staging"/>
   <parameter name="INDcoupon" value="INDMA19"/>
-  <parameter name="url" value="https://onco.com"/>
+  <parameter name="url" value="https://onco.com/"/>
   <parameter name="UScoupon" value="INTLMA19"/>
   <parameter name="patientname" value="test_test"/>
   <parameter name="phone" value="9036890379"/>
@@ -23,4 +23,16 @@
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
     </classes>
   </test> <!-- PatientPortal -->
+  <test name="PatientPortal(failed)">
+    <classes>
+      <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
+        <methods>
+          <include name="newUserOpinionIndiaPanal" invocation-numbers="0"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
+          <include name="delete"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
+    </classes>
+  </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->

@@ -1,7 +1,6 @@
 package com.onco.webtests;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -29,9 +28,8 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless");
-options.addArguments("PageLoadStrategy= none");
-options.addArguments("--window-size=1920,1080");
+//options.addArguments("--headless");
+//options.addArguments("--window-size=1920,1080");
 options.addArguments("start-maximized"); 
 options.addArguments("enable-automation"); 
 options.addArguments("--no-sandbox"); 

@@ -64,7 +64,8 @@ public SignUp() {
 public void signupicon() {
 	
 		try {
-	    	logger.info(signUpIcon.isDisplayed());
+	    	
+			logger.info(signUpIcon.isDisplayed());
 			signUpIcon.click();
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
