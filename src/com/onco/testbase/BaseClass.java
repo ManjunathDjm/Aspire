@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -44,6 +44,8 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
+            	DesiredCapabilities capabilities = new DesiredCapabilities();
+            	capabilities.setCapability("UNHANDLED_PROMPT_BEHAVIOUR", "accept");
             	options.addArguments("--headless");
             	options.addArguments("--window-size=1920,1080");
             	//options.addArguments("--remote-debugging-port=9222");

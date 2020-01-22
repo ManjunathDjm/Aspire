@@ -1,6 +1,7 @@
 package com.onco.webtests;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -30,6 +31,8 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
 options.addArguments("--window-size=1920,1080");
+DesiredCapabilities capabilities = new DesiredCapabilities();
+capabilities.setCapability("UNHANDLED_PROMPT_BEHAVIOUR", "accept");
 //options.addArguments("--remote-debugging-port=9222");
 options.addArguments("start-maximized"); 
 options.addArguments("enable-automation"); 
