@@ -28,9 +28,6 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
 
 WebDriverManager.chromedriver().setup();
-DesiredCapabilities dcap = new DesiredCapabilities();
-dcap.setCapability("pageLoadStrategy", "none");
-
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
 options.addArguments("PageLoadStrategy= none");

@@ -45,7 +45,6 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("PageLoadStrategy=none");
             	options.addArguments("--headless");
             	options.addArguments("--window-size=1920,1080");
             	options.addArguments("start-maximized"); 
