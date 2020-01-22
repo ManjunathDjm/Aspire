@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
 import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,11 +45,9 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
-            	DesiredCapabilities capabilities = new DesiredCapabilities();
-            	capabilities.setCapability("UNHANDLED_PROMPT_BEHAVIOUR", "accept");
+            	options.addArguments("PageLoadStrategy=none");
             	options.addArguments("--headless");
             	options.addArguments("--window-size=1920,1080");
-            	//options.addArguments("--remote-debugging-port=9222");
             	options.addArguments("start-maximized"); 
             	options.addArguments("enable-automation"); 
             	options.addArguments("--no-sandbox"); 

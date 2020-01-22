@@ -28,12 +28,13 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
 
 WebDriverManager.chromedriver().setup();
+DesiredCapabilities dcap = new DesiredCapabilities();
+dcap.setCapability("pageLoadStrategy", "none");
+
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
+options.addArguments("PageLoadStrategy= none");
 options.addArguments("--window-size=1920,1080");
-DesiredCapabilities capabilities = new DesiredCapabilities();
-capabilities.setCapability("UNHANDLED_PROMPT_BEHAVIOUR", "accept");
-//options.addArguments("--remote-debugging-port=9222");
 options.addArguments("start-maximized"); 
 options.addArguments("enable-automation"); 
 options.addArguments("--no-sandbox"); 
