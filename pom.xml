@@ -40,8 +40,8 @@
             <!-- Compiler plugin configures the java version to be used for compiling the code --> 
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
                 <version>3.8.0</version>
+                <configuration>
                 </configuration>
             </plugin>
         </plugins>
