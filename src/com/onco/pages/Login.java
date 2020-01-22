@@ -37,7 +37,7 @@ public class Login extends BaseClass {
     @FindBy(xpath="/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")
     private WebElement loginVIAOTPbutton;
     
-    @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]")
+    @FindBy(xpath="//body//input[1]")
     private WebElement Otp;
     
     @FindBy(xpath="/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[3]/button")
