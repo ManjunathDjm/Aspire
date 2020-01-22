@@ -69,8 +69,10 @@ public PatientInfo() {
     	
     	try {
     		
-    		new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.name("patientName")));
-    		driver.findElement(By.name("patientName")).sendKeys(pname);
+    		WebElement name =new WebDriverWait(driver, 20).until(ExpectedConditions.presenceOfElementLocated(By.name("patientName")));
+    		name.clear();
+    		name.sendKeys(pname);
+    		//driver.findElement(By.name("patientName")).sendKeys(pname);
     		//patientname.sendKeys(pname);
     		return;
     		
