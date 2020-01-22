@@ -31,7 +31,7 @@ public class Login extends BaseClass {
 	@FindBy(name="countryCode")
 	private WebElement countryCode;
 	
-    @FindBy(name="contact")
+    @FindBy(xpath="/html/body/app-root/login/div[2]/div[2]/div[1]/div/form/div[2]/div[1]/div[2]/input")
     private WebElement phoneNumber;
     
     @FindBy(xpath="/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")

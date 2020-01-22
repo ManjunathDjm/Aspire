@@ -55,19 +55,13 @@ Thread.sleep(5000);
 driver.get(deleteURL);
 Thread.sleep(5000);
 driver.quit();
-			
-			
+					
 }		
 	
 @Parameters({"name","email","phone","otp","patientname","INDcoupon"})
 @Test(priority = 2)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
-
-WebDriverManager.chromedriver().setup();
-ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless");	
-
 Homepage home= new Homepage();
 home.formfill(name ,email,phone);
 home.patientquery();
