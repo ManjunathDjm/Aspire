@@ -77,6 +77,7 @@ public class Login extends BaseClass {
 			  
 			   logger.info(Otp.isDisplayed());
 			   Otp.click(); 
+			   Otp.clear();
     		   Otp.sendKeys(otp);
     		  
     		   logger.info(proceedButton.isDisplayed());
