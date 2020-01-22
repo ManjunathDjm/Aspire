@@ -38,7 +38,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="//input[@placeholder='Enter patient name (optional)']")
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/input[1]")
 	private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
@@ -70,7 +70,6 @@ public PatientInfo() {
     	try {
     		
     		patientname.sendKeys(pname);
-    		return;
     		
 		} catch (NoSuchElementException | StaleElementReferenceException e) {
 			// TODO Auto-generated catch block
