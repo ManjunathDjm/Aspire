@@ -9,4 +9,4 @@ maven_build:
     - qa
   script:
     - echo "Build project with maven"
-          - mvn clean test -DSuites/testngstaging=testngstaging.xml
+    - mvn clean test -DSuites/testngstaging=testngstaging.xml
