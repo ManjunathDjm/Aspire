@@ -7,6 +7,9 @@ maven_build:
     - automation
     - frontend
     - qa
+'Chrome Headless':
+  image: registry.gitlab.com/gmaslowski-blog/headless-docker/images/standalone-chrome:latest
+  <<: *test_job
   script:
     - echo "Build project with maven"
           - xvfb-run --server-args="-screen 0 1920x1080"
