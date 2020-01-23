@@ -9,5 +9,4 @@ maven_build:
     - qa
   script:
     - echo "Build project with maven"
-          - xvfb-run --server-args="-screen 0 1920x1080"
           - mvn clean test -DSuites/testngstaging=testngstaging.xml
