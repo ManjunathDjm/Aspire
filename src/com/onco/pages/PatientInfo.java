@@ -38,7 +38,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name="patientName")
+	@FindBy(xpath="//input[@name='patientName']")
 	private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
@@ -84,7 +84,7 @@ public void patientinfo() {
 	     try {
 	            
 	    	    logger.info(typeofCancer.isDisplayed());
-	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	    	    Select TypeofCancer = new Select(driver.findElement(By.xpath("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    
