@@ -48,7 +48,7 @@ public class BaseClass {
                 options.addArguments("--headless");
             	options.addArguments("--window-size=1920,1080");
             	options.addArguments("start-maximized"); 
-            	options.addArguments("enable-automation"); 
+            	//options.addArguments("enable-automation"); 
             	options.addArguments("--no-sandbox"); 
             	//options.addArguments("--disable-infobars");
             	//options.addArguments("--disable-dev-shm-usage");
