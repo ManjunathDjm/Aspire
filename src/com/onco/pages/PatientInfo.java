@@ -84,17 +84,17 @@ public void patientinfo() {
 	     try {
 	            
 	    	    logger.info(typeofCancer.isDisplayed());
-	    	    Select TypeofCancer = new Select(driver.findElement(By.xpath("cancerType")));
+	    	    Select TypeofCancer = new Select(driver.findElement(By.xpath("//select[@name='cancerType']")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    
 			    logger.info(cancerStage.isDisplayed());
-			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
+			    Select Cancerstage = new Select(driver.findElement(By.xpath("//select[@name='cancerStage']")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
 			    
 			    logger.info(generalCondition.isDisplayed());
-			    Select Condition = new Select(driver.findElement(By.name("condition")));
+			    Select Condition = new Select(driver.findElement(By.xpath("//select[@name='condition']")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
 		  
