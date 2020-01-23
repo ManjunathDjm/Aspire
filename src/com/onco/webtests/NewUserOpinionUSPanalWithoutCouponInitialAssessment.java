@@ -69,7 +69,7 @@ Thread.sleep(5000);
 Login login= new Login();
 login.otpDetails(otp);
 
-Thread.sleep(5000);
+Thread.sleep(300000);
 PatientInfo info=new PatientInfo();
 info.patientname(patientname);
 info.patientinfo();
