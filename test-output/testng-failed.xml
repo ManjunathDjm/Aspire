@@ -8,7 +8,7 @@
   <parameter name="INDcoupon" value="INDMA19"/>
   <parameter name="url" value="https://onco.com/"/>
   <parameter name="UScoupon" value="INTLMA19"/>
-  <parameter name="patientname" value="test_test"/>
+  <parameter name="patientname" value="testtest"/>
   <parameter name="phone" value="9036890379"/>
   <parameter name="browser" value="Chrome"/>
   <parameter name="name" value="test_onco"/>
@@ -27,7 +27,9 @@
     <classes>
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
         <methods>
-          <include name="newUserOpinionIndiaPanal"/>
+          <include name="newUserOpinionIndiaPanal" invocation-numbers="0"/>
+          <include name="openBrowser"/>
+          <include name="quit"/>
           <include name="delete"/>
         </methods>
       </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Onco_Staging">
-              <span class="suite-name border-skipped">Onco Staging</span>
+              <span class="suite-name border-failed">Onco Staging</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods skipped suite-Onco_Staging"> (hide)</a> <!-- hide-methods skipped suite-Onco_Staging -->
-                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods skipped suite-Onco_Staging"> (show)</a> <!-- show-methods skipped suite-Onco_Staging -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods failed suite-Onco_Staging"> (hide)</a> <!-- hide-methods failed suite-Onco_Staging -->
+                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods failed suite-Onco_Staging"> (show)</a> <!-- show-methods failed suite-Onco_Staging -->
                     </span>
-                    <div class="method-list-content skipped suite-Onco_Staging">
+                    <div class="method-list-content failed suite-Onco_Staging">
                       <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment" hash-for-method="newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)">newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment" hash-for-method="newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19)">newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-Onco_Staging -->
+                    </div> <!-- method-list-content failed suite-Onco_Staging -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,22 +117,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Onco_Staging" class="panel Onco_Staging">
-          <div class="suite-Onco_Staging-class-skipped">
+          <div class="suite-Onco_Staging-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)">
-                  </a> <!-- newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19) -->
+                  <a name="newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19)">
+                  </a> <!-- newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19) -->
                   <span class="method-name">newUserOpinionIndiaPanal</span>
-                  <span class="parameters">(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)</span>
+                  <span class="parameters">(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19)</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.onco.pages.PatientInfo.patientinfo(PatientInfo.java:67)
+	at com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment.newUserOpinionIndiaPanal(NewUserOpinionUSPanalWithoutCouponInitialAssessment.java:72)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Onco_Staging-class-skipped -->
+          </div> <!-- suite-Onco_Staging-class-failed -->
         </div> <!-- panel Onco_Staging -->
         <div panel-name="test-xml-Onco_Staging" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -150,7 +155,7 @@
   &lt;parameter name=&quot;INDcoupon&quot; value=&quot;INDMA19&quot;/&gt;
   &lt;parameter name=&quot;url&quot; value=&quot;https://onco.com/&quot;/&gt;
   &lt;parameter name=&quot;UScoupon&quot; value=&quot;INTLMA19&quot;/&gt;
-  &lt;parameter name=&quot;patientname&quot; value=&quot;test_test&quot;/&gt;
+  &lt;parameter name=&quot;patientname&quot; value=&quot;testtest&quot;/&gt;
   &lt;parameter name=&quot;phone&quot; value=&quot;9036890379&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
   &lt;parameter name=&quot;name&quot; value=&quot;test_onco&quot;/&gt;
@@ -169,7 +174,9 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;newUserOpinionIndiaPanal&quot;/&gt;
+          &lt;include name=&quot;newUserOpinionIndiaPanal&quot; invocation-numbers=&quot;0&quot;/&gt;
+          &lt;include name=&quot;openBrowser&quot;/&gt;
+          &lt;include name=&quot;quit&quot;/&gt;
           &lt;include name=&quot;delete&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment --&gt;
@@ -219,12 +226,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'newUserOpinionIndiaPanal')
 data.setCell(0, 2, 'com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment')
-data.setCell(0, 3, 1);
+data.setCell(0, 3, 11381);
 window.suiteTableData['Onco_Staging']= { tableData: data, tableDiv: 'times-div-Onco_Staging'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 ms</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Onco_Staging">
               </div> <!-- times-div-Onco_Staging -->
             </div> <!-- times-div -->
@@ -252,15 +259,23 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">delete(https://onco.com/start/delete-me, https://onco.com/, Chrome, 9036890379, 5813)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(Chrome, https://onco.com/)</span>
+                <span class="method-start">26358 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, test_test, INDMA19)</span>
-                <span class="method-start">28 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">newUserOpinionIndiaPanal(test_onco, manjunath.11j@gmail.com, 9036890379, 5813, testtest, INDMA19)</span>
+                <span class="method-start">29715 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">quit([TestResult name=newUserOpinionIndiaPanal status=FAILURE method=NewUserOpinionUSPanalWithoutCouponIn...)</span>
+                <span class="method-start">41100 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

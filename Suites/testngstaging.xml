@@ -15,7 +15,7 @@
     <parameter name="otp" value="5813"/>
     <parameter name="UScoupon" value="INTLMA19"/>
     <parameter name="INDcoupon" value="INDMA19"/>
-    <parameter name="patientname" value="test_test"/>
+    <parameter name="patientname" value="testtest"/>
     <parameter name="discountURL" value="http://18.136.208.196/start/discount"/>
     <parameter name="hospitalname" value="test hospital"/>
     <parameter name="cityname" value="bangalore"/>
