@@ -38,7 +38,7 @@ public class PatientInfo extends BaseClass{
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
 	@FindBy(xpath="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[1]/div[2]/input")
-	private WebElement patientName;
+	private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
 	private WebElement typeofCancer;
@@ -59,13 +59,30 @@ public class PatientInfo extends BaseClass{
     private WebElement continueButton;
     
     
-public void patientinfo(String patientname) {
+    
+public PatientInfo() {
+		PageFactory.initElements(driver, this);
+	}
+	
+    public void patientname(String pname) {
+    	
+    	try {
+    		
+    		
+    		logger.info(patientname.isDisplayed());
+    		patientname.sendKeys(pname);
+    		
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
+    }
+	
+public void patientinfo() {
     	
 			
 	     try {
-	    	 
-	    		logger.info(patientName.isDisplayed());
-	    		patientName.sendKeys(patientname);
 	            
 	    	    logger.info(typeofCancer.isDisplayed());
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
