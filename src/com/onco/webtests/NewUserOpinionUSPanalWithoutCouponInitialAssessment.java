@@ -29,14 +29,12 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
+options.addArguments("--enable-javascript");
 options.addArguments("--window-size=1920,1080");
 options.addArguments("start-maximized"); 
-//options.addArguments("enable-automation"); 
+options.addArguments("enable-automation"); 
 options.addArguments("--no-sandbox"); 
-options.addArguments("--disable-infobars");
-//options.addArguments("--disable-dev-shm-usage");
-//options.addArguments("--disable-browser-side-navigation"); 
-//options.addArguments("--disable-gpu"); 
+options.addArguments("--disable-gpu"); 
 driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
@@ -71,10 +69,9 @@ login.otpDetails(otp);
 
 Thread.sleep(5000);
 PatientInfo info=new PatientInfo();
-info.patientname(patientname);
-info.patientinfo();
-Thread.sleep(5000);
+info.patientinfo(patientname);
 
+Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment();
 assessment.ViewAssessment();
 	

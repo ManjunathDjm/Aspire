@@ -46,6 +46,7 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
                 options.addArguments("--headless");
+                options.addArguments("--enable-javascript");
             	options.addArguments("--window-size=1920,1080");
             	options.addArguments("start-maximized"); 
             	//options.addArguments("enable-automation"); 
@@ -72,10 +73,12 @@ public class BaseClass {
 	       public static void quit(ITestResult result) throws IOException {    
 	       driver.quit();
 			
-	
+	   
 	      
 	   }
-	      
+	
+	       
+	       
 }
 
 

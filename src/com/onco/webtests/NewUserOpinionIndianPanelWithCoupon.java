@@ -67,8 +67,7 @@ Login login= new Login();
 login.otpDetails(otp);
 
 PatientInfo info=new PatientInfo();
-info.patientname(patientname);
-info.patientinfo();
+info.patientinfo(patientname);
 
 Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment();
