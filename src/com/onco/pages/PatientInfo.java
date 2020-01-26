@@ -37,7 +37,7 @@ public class PatientInfo extends BaseClass{
 	
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="//input[@name='patientName']")
+	@FindBy(xpath="//input[@name='patientName'][@type='text']")
 	private WebElement patientname;
 	
 	@FindBy(name ="cancerType")
