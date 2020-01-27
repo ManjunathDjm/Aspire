@@ -4,58 +4,73 @@
     <artifactId>oncoWeb</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
+    
     <name>oncoWeb</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        </properties>
-    <build>
-         <plugins>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+    <reporting>
+        <plugins>
             <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-compiler-plugin</artifactId>
-              <version>3.8.1</version>
-          <configuration>
-              <source>1.8</source>
-              <target>1.8</target>
-          </configuration>
-     </plugin>
-      <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0-M3</version>
-          <configuration>
-            <sutieXmlFiles>
-              <suiteXmlFile>Suites/testngstaging.xml</suiteXmlFile>
-            </sutieXmlFiles>
-          </configuration >
-       </plugin>
-      </plugins>
-     </build>
-<dependencies> 
-  <dependency>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-clean-plugin</artifactId>
-      <version>3.1.0</version>
-      <type>maven-plugin</type>
-  </dependency>
-<!-- https://mvnrepository.com/artifact/software.reinvent/headless-chrome -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.18.1</version>
+            </plugin>
+        </plugins>
+    </reporting>
+    <build>
+        <!-- Source directory configuration -->
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <!-- Following plugin executes the testng tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <configuration>
+                    <!-- Suite testng xml file to consider for test execution -->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>Suites/testngstaging.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+            <!-- Compiler plugin configures the java version to be used for compiling the code --> 
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                <version>3.8.0</version>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+<!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
 <dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium</artifactId>
-    <version>2.0rc2</version>
-    <type>pom</type>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-clean-plugin</artifactId>
+  <version>3.1.0</version>
+  <type>maven-plugin</type>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-support</artifactId>
+    <version>3.141.59</version>
+</dependency>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-chrome-driver</artifactId>
-    <version>3.141.59</version>
+    <version>3.14.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
 <dependency>
@@ -75,6 +90,7 @@
     <artifactId>commons-collections4</artifactId>
     <version>4.3</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
 <dependency>
     <groupId>commons-logging</groupId>
@@ -93,6 +109,7 @@
     <artifactId>poi-examples</artifactId>
     <version>4.1.0</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-scratchpad -->
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -116,18 +133,17 @@
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.7.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 <dependency>
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
-    <version>3.7.1</version>
+    <version>3.1.1</version>
 </dependency>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-server</artifactId>
     <version>3.141.59</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server-standalone -->
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
 <dependency>
     <groupId>com.relevantcodes</groupId>
     <artifactId>extentreports</artifactId>
