@@ -14,31 +14,31 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
+              <version>3.8.1</version>
           <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+              <source>1.8</source>
+              <target>1.8</target>
+          </configuration>
      </plugin>
       <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.18.1</version>
+          <version>3.0.0-M3</version>
           <configuration>
             <sutieXmlFiles>
-              <suiteXmlFile>Suite/testngstaging.xml</suiteXmlFile>
+              <suiteXmlFile>Suites/testngstaging.xml</suiteXmlFile>
             </sutieXmlFiles>
           </configuration >
        </plugin>
-       </plugins>
-       </build>
-    <dependencies> 
-<!-- https://mvnrepository.com/artifact/com.paulhammant/ngwebdriver -->
-<dependency>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-clean-plugin</artifactId>
-  <version>3.1.0</version>
-  <type>maven-plugin</type>
-</dependency>
+      </plugins>
+     </build>
+<dependencies> 
+  <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-clean-plugin</artifactId>
+      <version>3.1.0</version>
+      <type>maven-plugin</type>
+  </dependency>
 <!-- https://mvnrepository.com/artifact/software.reinvent/headless-chrome -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
