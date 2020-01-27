@@ -1,15 +1,13 @@
 package com.onco.pages;
 
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -67,14 +65,14 @@ public class Homepage extends BaseClass {
     	
 		try {
 		
-		     	logger.info(nameField.isDisplayed());
 			    nameField.sendKeys(patientname);
+			    logger.info("Name field entered");
 			    
-			    logger.info(emailField.isDisplayed());
 				emailField.sendKeys(email);	
+				logger.info("Email field entered");
 			
-				logger.info(phoneFiled.isDisplayed());
 				phoneFiled.sendKeys(phone);
+				logger.info("Phone field entered");
 				
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
@@ -87,14 +85,15 @@ public class Homepage extends BaseClass {
 	    try {
 	    	 
 	   
-	    	 logger.info(patientChoice.isDisplayed());
 	    	 patientChoice.click();
+	    	 logger.info("Patient choice clicked");
 	    	 
-	    	 logger.info(dropOption1.isDisplayed());
 		     dropOption1.click();
+		     logger.info("Dropodown choice clicked");
 		     
-		     logger.info(selectTerms.isDisplayed());
 		     selectTerms.click();
+		     logger.info("T&C clicked");
+		     
 	     } catch (NoSuchElementException e) {
 		    e.printStackTrace();
 	}
@@ -104,8 +103,8 @@ public class Homepage extends BaseClass {
 	
 	    try {
 	    	 
-	    	 logger.info(submit.isDisplayed());
 	    	 submit.click();
+	    	 logger.info("submit button clicked");
 	     } catch (NoSuchElementException e) {
 	    	e.printStackTrace(); 
 	}

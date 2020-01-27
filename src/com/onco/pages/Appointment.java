@@ -1,4 +1,3 @@
-
 package com.onco.pages;
 
 
@@ -9,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.onco.testbase.BaseClass;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -63,9 +61,12 @@ public class Appointment {
 		try {
    
 			    bookappointment.click();
+			    logger.info("Book appointment clicked");
         		ldriver.switchTo().defaultContent();
         		cal.click();
+        		logger.info("calendar is clicked");
         		calendar_time.click();
+        		logger.info("calendar date clicked");
 
         	    
 			} catch (NoSuchElementException e) {

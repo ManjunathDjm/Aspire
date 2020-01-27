@@ -4,14 +4,10 @@ package com.onco.pages;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
-import org.testng.Assert;
+
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
@@ -53,8 +49,8 @@ public class InitialAssessment extends BaseClass {
 
 	try {
 		   driver.switchTo().defaultContent();
-		   logger.info(initiAlassessmentClose.isDisplayed());
 		   initiAlassessmentClose.click();
+		   logger.info("Initial Assessment Window closed");
 		   
 	} catch (NoSuchElementException e) {
 		e.printStackTrace();
@@ -65,11 +61,11 @@ public class InitialAssessment extends BaseClass {
    public void ViewAssessment() {
 	
 		try {  
-			   logger.info(viewAssessment.isDisplayed());
 			   viewAssessment.click();
+			   logger.info("View Assessment clicked");
 			   
-			   logger.info(exploremoreoptions.isDisplayed());
 			   exploremoreoptions.click();
+			   logger.info("Explore More Option clicked");
 			   
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
@@ -80,8 +76,8 @@ public class InitialAssessment extends BaseClass {
 	 
 		try {
 			   
-			logger.info(downloadAssessment.isDisplayed());
 			downloadAssessment.click();
+			logger.info("Download Assessment clicked");
 			
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

@@ -8,10 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
 import com.onco.testbase.BaseClass;
 
 /**
@@ -41,8 +37,9 @@ public class OpinionType extends BaseClass {
     public void indianPanelButton() {
 
 		try {
-              logger.info(indianPanelButton.isDisplayed());
+             
 			  indianPanelButton.click();
+			  logger.info("India Panal button clicked");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 		}
@@ -53,8 +50,9 @@ public class OpinionType extends BaseClass {
     	
 		try {
 			
-			 logger.info(selectUsPanelButton.isDisplayed());
+			
 			 selectUsPanelButton.click();
+			 logger.info("UD Panal button clicked");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

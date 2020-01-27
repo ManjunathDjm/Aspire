@@ -58,8 +58,8 @@ public class Service extends BaseClass {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-        		logger.info(appointment.isDisplayed());
         		appointment.click();
+        		logger.info("Appointment clicked");
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
@@ -75,8 +75,9 @@ public class Service extends BaseClass {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			   logger.info(opinion.isDisplayed());
+			  
 			   opinion.click();
+			   logger.info("Opinion clicked");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -92,8 +93,8 @@ public class Service extends BaseClass {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-        		logger.info(labtest.isDisplayed());
         		labtest.click();
+        		logger.info("labtest clicked");
 			} catch (NoSuchElementException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

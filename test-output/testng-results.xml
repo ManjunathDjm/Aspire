@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="128918" started-at="2020-01-24T14:41:06Z" finished-at="2020-01-24T14:43:14Z">
+  <suite name="Onco Staging" duration-ms="130208" started-at="2020-01-27T10:49:36Z" finished-at="2020-01-27T10:51:46Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="128918" started-at="2020-01-24T14:41:06Z" finished-at="2020-01-24T14:43:14Z">
+    <test name="PatientPortal" duration-ms="130208" started-at="2020-01-27T10:49:36Z" finished-at="2020-01-27T10:51:46Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@b97c004]" name="delete" is-config="true" duration-ms="22296" started-at="2020-01-24T20:11:06Z" finished-at="2020-01-24T20:11:28Z">
+        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6276ae34]" name="delete" is-config="true" duration-ms="23026" started-at="2020-01-27T16:19:36Z" finished-at="2020-01-27T16:19:59Z">
           <params>
             <param index="0">
               <value>
@@ -38,7 +38,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@b97c004]" name="openBrowser" is-config="true" duration-ms="3452" started-at="2020-01-24T20:11:28Z" finished-at="2020-01-24T20:11:31Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6276ae34]" name="openBrowser" is-config="true" duration-ms="4477" started-at="2020-01-27T16:19:59Z" finished-at="2020-01-27T16:20:03Z">
           <params>
             <param index="0">
               <value>
@@ -54,7 +54,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@b97c004]" name="newUserOpinionIndiaPanal" duration-ms="102971" started-at="2020-01-24T20:11:31Z" finished-at="2020-01-24T20:13:14Z">
+        <test-method status="PASS" signature="newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6276ae34]" name="newUserOpinionIndiaPanal" duration-ms="102574" started-at="2020-01-27T16:20:03Z" finished-at="2020-01-27T16:21:46Z">
           <params>
             <param index="0">
               <value>
@@ -90,17 +90,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newUserOpinionIndiaPanal -->
-        <test-method status="PASS" signature="quit(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@b97c004]" name="quit" is-config="true" duration-ms="186" started-at="2020-01-24T20:13:14Z" finished-at="2020-01-24T20:13:14Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6276ae34]" name="tearDown" is-config="true" duration-ms="113" started-at="2020-01-27T16:21:46Z" finished-at="2020-01-27T16:21:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=newUserOpinionIndiaPanal status=SUCCESS method=NewUserOpinionUSPanalWithoutCouponInitialAssessment.newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@b97c004] output={null}]]]>
+                <![CDATA[[TestResult name=newUserOpinionIndiaPanal status=SUCCESS method=NewUserOpinionUSPanalWithoutCouponInitialAssessment.newUserOpinionIndiaPanal(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@6276ae34] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- quit -->
+        </test-method> <!-- tearDown -->
       </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
     </test> <!-- PatientPortal -->
   </suite> <!-- Onco Staging -->

@@ -9,20 +9,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
-
 import java.lang.ref.Reference;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.math3.random.Well44497b;
 import org.apache.log4j.Logger;
 
@@ -76,9 +68,8 @@ public PatientInfo(WebDriver rdriver) {
     	
     	try {
     		
-    		
-    		logger.info(patientname.isDisplayed());
     		patientname.sendKeys(pname);
+    		logger.info("Patientname Entered");
     		
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -92,23 +83,25 @@ public void patientinfo() {
 			
 	     try {
 	            
-	    	    logger.info(typeofCancer.isDisplayed());
+	    	    
 	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
+			    logger.info("CancerType Selected");
 			    
-			    logger.info(cancerStage.isDisplayed());
 			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
+			    logger.info("CancerStage Selected");
 			    
-			    logger.info(generalCondition.isDisplayed());
 			    Select Condition = new Select(driver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
+		        logger.info("GeneralCondition Selected");
 		  
 		        logger.info(continueButton.isDisplayed());
 		        continueButton.click();
+		        logger.info("ContinueButton Clicked");
 		        
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();

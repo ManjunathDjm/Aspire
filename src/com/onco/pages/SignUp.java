@@ -9,7 +9,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 
@@ -75,8 +74,8 @@ public void signupicon() {
 	
 		try {
 	    	
-			logger.info(signUpIcon.isDisplayed());
 			signUpIcon.click();
+			logger.info("Signup icon clicked");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -89,17 +88,18 @@ public void signuppage(String name,String email, String phone) {
     	
 		try {
          
-			  logger.info(signUplink.isDisplayed());
 			  signUplink.click();
+			  logger.info("signUP link clicked");
 			  
-			  logger.info(yourName.isDisplayed());
               yourName.sendKeys(name);
+              logger.info("your name is entered ");
               
               logger.info(yourEmail.isDisplayed());
               yourEmail.sendKeys(email);
+              logger.info("Email is entered ");
               
-              logger.info(phoneNumber.isDisplayed());
               phoneNumber.sendKeys(phone);
+              logger.info("Phone number is entered");
               
 		   } catch (NoSuchElementException e) {
 			  e.printStackTrace();
@@ -110,12 +110,11 @@ public void countryCode()  {
   
 		try {
 			
-             logger.info(countryCode.isDisplayed());
         	 Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
              countrycode.selectByIndex(0);
              countryCode.click();
-             //Assert.assertEquals(true, yourEmail.isDisplayed());
-             countrycode.getOptions();
+             logger.info("Country code selected");
+       
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -126,13 +125,12 @@ public void patientQuery()  {
     	
 		try {
              
-			 logger.info(patientQuery.isDisplayed());
 			 Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
              patientquery.selectByIndex(1); 
              patientQuery.click();
-             
-             logger.info(startNowButton.isDisplayed());
+             logger.info("Country code selected");
              startNowButton.click();
+             logger.info("Start now button clicked");
          
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

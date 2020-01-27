@@ -8,15 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
 import com.onco.testbase.BaseClass;
-
-import java.util.List;
-
 import org.apache.log4j.Logger;
 
 /**
@@ -64,16 +57,16 @@ public class Login extends BaseClass {
     	 
     	try {
     	   
-    	  logger.info(countryCode.isDisplayed());
     	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
-    	  
-    	  logger.info(phoneNumber.isDisplayed());
+    	  logger.info("Country code selected");
+    	 
     	  phoneNumber.sendKeys(phone); 
+    	  logger.info("Phone number entered");
     	  
-    	  logger.info(loginVIAOTPbutton.isDisplayed());
     	  loginVIAOTPbutton.click();
+    	  logger.info("Login via OTP clicked");
     	  
     	} catch (NoSuchElementException e) {
 			// TODO: handle exception
@@ -85,12 +78,13 @@ public class Login extends BaseClass {
     	
 			try {
 			  
-			   logger.info(Otp.isDisplayed());
 			   Otp.click(); 
+			   logger.info("OTP clicked");
     		   Otp.sendKeys(otp);
+    		   logger.info("Entered OTP");
     		  
-    		   logger.info(proceedButton.isDisplayed());
     		   proceedButton.click();
+    		   logger.info("Proceed Button clicked");
     		  
 			} catch (NoSuchElementException  e) {
 				// TODO: handle exception
