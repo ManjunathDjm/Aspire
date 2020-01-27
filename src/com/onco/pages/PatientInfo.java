@@ -24,7 +24,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class PatientInfo extends BaseClass{
+public class PatientInfo {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
@@ -61,7 +61,7 @@ public class PatientInfo extends BaseClass{
     
 public PatientInfo(WebDriver rdriver) {
 	    ldriver=rdriver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(rdriver, this);
 	}
 	
     public void patientname(String pname) {
@@ -84,17 +84,17 @@ public void patientinfo() {
 	     try {
 	            
 	    	    
-	    	    Select TypeofCancer = new Select(driver.findElement(By.name("cancerType")));
+	    	    Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
 			    logger.info("CancerType Selected");
 			    
-			    Select Cancerstage = new Select(driver.findElement(By.name("cancerStage")));
+			    Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 			    Cancerstage.selectByIndex(1);
 			    cancerStage.click();
 			    logger.info("CancerStage Selected");
 			    
-			    Select Condition = new Select(driver.findElement(By.name("condition")));
+			    Select Condition = new Select(ldriver.findElement(By.name("condition")));
 			    Condition.selectByIndex(1);
 		        generalCondition.click();
 		        logger.info("GeneralCondition Selected");

@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class InitialAssessment extends BaseClass {
+public class InitialAssessment {
 
 	WebDriver ldriver;
     private static final Logger logger = Logger.getLogger(InitialAssessment.class);
@@ -41,14 +41,14 @@ public class InitialAssessment extends BaseClass {
      
   public InitialAssessment(WebDriver rdriver) {
 	    ldriver=rdriver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(ldriver, this);
 	
 	}
        
    public void initialAssessmentClose() {
 
 	try {
-		   driver.switchTo().defaultContent();
+		   ldriver.switchTo().defaultContent();
 		   initiAlassessmentClose.click();
 		   logger.info("Initial Assessment Window closed");
 		   

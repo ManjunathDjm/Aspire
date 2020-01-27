@@ -16,7 +16,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class Service extends BaseClass {
+public class Service {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Service.class);

@@ -17,7 +17,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class Dashboard extends BaseClass {
+public class Dashboard  {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Dashboard.class);

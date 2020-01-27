@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class RequestDoctorAppointment extends BaseClass {
+public class RequestDoctorAppointment {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestDoctorAppointment.class);
@@ -70,7 +70,7 @@ public class RequestDoctorAppointment extends BaseClass {
     	
 		try {
 	    	 logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
-			 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
+			 Select specialisation = new Select(ldriver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
 		     specialisation.selectByIndex(1);
 		     specialisationDropdownSurgicalOncologist.click();
@@ -84,7 +84,7 @@ public class RequestDoctorAppointment extends BaseClass {
 
 		try {
 	    	 logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
-			 Select specialisation = new Select(driver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
+			 Select specialisation = new Select(ldriver.findElement(By.xpath("//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 		     specialisationDropdownSurgicalOncologist.click();
 		     specialisation.selectByIndex(2);
 		     specialisationDropdownSurgicalOncologist.click();

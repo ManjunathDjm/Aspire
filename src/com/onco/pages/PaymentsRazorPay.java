@@ -20,7 +20,7 @@ import com.onco.testbase.BaseClass;
  * @author manjunathdj
  *
  */
-public class PaymentsRazorPay extends BaseClass {
+public class PaymentsRazorPay {
 
 	WebDriver ldriver;
     private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
@@ -58,7 +58,7 @@ public class PaymentsRazorPay extends BaseClass {
   
 		try {
 			
-			driver.switchTo().frame(driver.findElement(By.className("razorpay-checkout-frame")));
+			ldriver.switchTo().frame(ldriver.findElement(By.className("razorpay-checkout-frame")));
 			logger.info(netBanking.isDisplayed());
 		    netBanking.click();
 		    
@@ -68,10 +68,10 @@ public class PaymentsRazorPay extends BaseClass {
 		    logger.info(payNow.isDisplayed());
 		    payNow.click(); 
 		    //Switch to child window and click on success button 
-		    Set <String> windowhandles=driver.getWindowHandles();
+		    Set <String> windowhandles=ldriver.getWindowHandles();
 		    for(String windowHandle:windowhandles){
-		    	driver.getWindowHandle();
-				driver.switchTo().window(windowHandle);
+		    	ldriver.getWindowHandle();
+				ldriver.switchTo().window(windowHandle);
     }
             logger.info(successButton.isDisplayed());
 		    successButton.click();

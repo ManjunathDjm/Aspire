@@ -16,7 +16,7 @@ import com.onco.testbase.BaseClass;
  * @author manjunathdj
  *
  */
-public class OpinionType extends BaseClass {
+public class OpinionType {
 
 	WebDriver ldriver;
     private static final Logger logger = Logger.getLogger(OpinionType.class);
@@ -52,7 +52,7 @@ public class OpinionType extends BaseClass {
 			
 			
 			 selectUsPanelButton.click();
-			 logger.info("UD Panal button clicked");
+			 logger.info("US Panal button clicked");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

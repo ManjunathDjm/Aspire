@@ -15,7 +15,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class Discount extends BaseClass {
+public class Discount {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Discount.class);

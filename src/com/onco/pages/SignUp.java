@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class SignUp extends BaseClass{
+public class SignUp {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(SignUp.class);
@@ -66,7 +66,7 @@ public SignUp(WebDriver rdriver) {
 	
       public String verifyHomeTitle() {
 		
-    	  return driver.getTitle();
+    	  return ldriver.getTitle();
 		}	
       
       
@@ -110,7 +110,7 @@ public void countryCode()  {
   
 		try {
 			
-        	 Select countrycode = new Select(driver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
+        	 Select countrycode = new Select(ldriver.findElement(By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
              countrycode.selectByIndex(0);
              countryCode.click();
              logger.info("Country code selected");
@@ -125,7 +125,7 @@ public void patientQuery()  {
     	
 		try {
              
-			 Select patientquery = new Select(driver.findElement(By.name("patientQueryId")));
+			 Select patientquery = new Select(ldriver.findElement(By.name("patientQueryId")));
              patientquery.selectByIndex(1); 
              patientQuery.click();
              logger.info("Country code selected");

@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class Homepage extends BaseClass {
+public class Homepage {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Homepage.class);
@@ -58,7 +58,7 @@ public class Homepage extends BaseClass {
 	
  public Homepage(WebDriver rdriver) {
 	    ldriver=rdriver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(ldriver, this);
 	}
     
  public void formfill (String patientname, String email,String phone) {

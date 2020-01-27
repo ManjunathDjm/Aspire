@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class RequestLabTests extends BaseClass {
+public class RequestLabTests  {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestLabTests.class);
@@ -61,9 +61,10 @@ public class RequestLabTests extends BaseClass {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	        	 logger.info(location.isDisplayed());
 			     location.click(); 
+			     logger.info("location clicked");
 	    		 location.sendKeys("Mumbai",Keys.TAB);
+	    		 logger.info("location entered");
 	    		 
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
@@ -73,11 +74,12 @@ public class RequestLabTests extends BaseClass {
     public void labtest() {
     
 		try {
-	    	 logger.info(testtype.isDisplayed());
-			 Select test = new Select(driver.findElement(By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
+	    	 
+			 Select test = new Select(ldriver.findElement(By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
 	    	 testtype.click();
 	    	 test.selectByIndex(1);
 	    	 testtype.click();
+	    	 logger.info("Seelcted test type");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

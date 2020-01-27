@@ -18,7 +18,7 @@ import org.apache.log4j.Logger;
  * @author manjunathdj
  *
  */
-public class Login extends BaseClass {
+public class Login  {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Login.class);
@@ -57,7 +57,7 @@ public class Login extends BaseClass {
     	 
     	try {
     	   
-    	  Select countrycode = new Select(driver.findElement(By.name("countryCode")));
+    	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
     	  logger.info("Country code selected");
