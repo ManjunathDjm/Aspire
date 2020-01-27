@@ -39,10 +39,10 @@ driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
 			
 			
-SignUp sign=new SignUp();
+SignUp sign=new SignUp(driver);
 sign.signupicon();
 				
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 Thread.sleep(5000);
 login.otpDetails(otp);
@@ -58,41 +58,41 @@ driver.close();
 @Test(priority = 5)
 public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname) throws Exception {
     
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 
 Thread.sleep(5000);
-Login login= new Login();
+Login login= new Login(driver);
 login.otpDetails(otp);
 
-PatientInfo info=new PatientInfo();
+PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.patientinfo();
 
 Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment();
+InitialAssessment assessment= new InitialAssessment(driver);
 assessment.initialAssessmentClose();
 
-Service service=new Service();
+Service service=new Service(driver);
 service.appointment();
 
 Thread.sleep(5000);
-RequestDoctorAppointment appointment=new RequestDoctorAppointment();
+RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
 appointment.appointment();
 appointment.surgicalOncologist();
 appointment.button();
 
 Thread.sleep(10000);
-Appointment app= new Appointment();
+Appointment app= new Appointment(driver);
 app.appointment();
 
-Summary summary= new Summary();
+Summary summary= new Summary(driver);
 summary.summary();
 
 Thread.sleep(3000);
-Dashboard dashboard= new Dashboard();
+Dashboard dashboard= new Dashboard(driver);
 
 }
 }

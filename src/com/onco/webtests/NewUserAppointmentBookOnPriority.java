@@ -40,10 +40,10 @@ driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
 
-SignUp sign=new SignUp();
+SignUp sign=new SignUp(driver);
 sign.signupicon();
 				
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 Thread.sleep(3000);
 login.otpDetails(otp);
@@ -58,44 +58,44 @@ driver.close();
 @Test(priority = 6)
 public void newUserAppointmentBookOnPriority(String name,String email,String phone,String otp,String patientname) throws Exception {
     
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
 Thread.sleep(5000);
-Login login= new Login();
+Login login= new Login(driver);
 login.otpDetails(otp);
 
-PatientInfo info=new PatientInfo();
+PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.patientinfo();
 
 Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment();
+InitialAssessment assessment= new InitialAssessment(driver);
 assessment.initialAssessmentClose();
 
-Service service=new Service();
+Service service=new Service(driver);
 service.appointment();
 
 Thread.sleep(5000);
-RequestDoctorAppointment appointment=new RequestDoctorAppointment();
+RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
 appointment.appointment();
 appointment.radiationOncologist();
 appointment.button();
 
-Appointment app= new Appointment();
+Appointment app= new Appointment(driver);
 app.appointment();
 
 Thread.sleep(10000);
-Summary summary= new Summary();
+Summary summary= new Summary(driver);
 summary.summary();
 
-PaymentsRazorPay pay= new PaymentsRazorPay();
+PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
 Thread.sleep(3000);
-Dashboard dashboard= new Dashboard();
+Dashboard dashboard= new Dashboard(driver);
 
 
 }

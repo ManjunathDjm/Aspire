@@ -6,7 +6,9 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,30 +25,36 @@ import com.onco.testbase.BaseClass;
  */
 public class PaymentsRazorPay extends BaseClass {
 
-    
+	WebDriver ldriver;
     private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
     
     @FindBy(xpath = "//*[@id=\"payment-options\"]/div[2]/label")
-    private WebElement netBanking;
+    @CacheLookup
+    WebElement netBanking;
     
     @FindBy(xpath ="//*[@id=\"modal-close\"]")
-    private WebElement close;
+    @CacheLookup
+    WebElement close;
     
     @FindBy(xpath="//*[@id=\"form-netbanking\"]/div[2]")
-    private WebElement selectBank;
+    @CacheLookup
+    WebElement selectBank;
     
     @FindBy(xpath="//button[@class='success']")
-     private WebElement successButton;
+    @CacheLookup
+    WebElement successButton;
     
     @FindBy(xpath="//*[@id=\"netb-banks\"]/div[1]/label")
-    private WebElement sbiNetbanking;
+    @CacheLookup
+    WebElement sbiNetbanking;
     
     @FindBy(id="footer")
     private WebElement payNow;
     
  
-	public PaymentsRazorPay() {
-		PageFactory.initElements(driver, this);
+	public PaymentsRazorPay(WebDriver rdriver) {
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 	}
     
     public void netbanking() throws InterruptedException {

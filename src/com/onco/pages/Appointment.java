@@ -1,9 +1,12 @@
+
 package com.onco.pages;
 
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
@@ -19,61 +22,62 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class Appointment extends BaseClass {
+public class Appointment {
 	
 
+	WebDriver ldriver;
+	
 	private static final Logger logger = Logger.getLogger(Appointment.class);
 
 	
 	@FindBy(xpath = "//div[@class='col-md-8 col-xs-12 results-list']//div[1]//div[1]//div[3]//div[1]//div[2]//div[1]//div[2]//button[1]")
-	private WebElement bookappointment;
+	@CacheLookup
+	WebElement bookappointment;
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/book-appointment[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
-	private WebElement cal;
+	@CacheLookup
+	WebElement cal;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[8]/div/div")
-	private WebElement calendarday;
+	@CacheLookup
+	WebElement calendarday;
 	
 	@FindBy(xpath="/html/body/app-root/book-appointment/div[4]/div/div/div/div/div[2]/div[1]/button")
-	private WebElement calendar;
+	@CacheLookup
+	WebElement calendar;
 	
 	@FindBy(xpath="//button[contains(text(),'12:00 PM - 3:00 PM')]")
-	private WebElement calendar_time;
+	@CacheLookup
+	WebElement calendar_time;
 	
     
-	public Appointment() {
-		PageFactory.initElements(driver, this);
+	public Appointment(WebDriver rdriver) {
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 		
 	}
 	
     public void appointment() {
     	
-    	    
-    	 if (logger.isDebugEnabled()) {
-			logger.debug("entering appointment()");
-		}
+   
 		try {
    
 			    bookappointment.click();
-        		driver.switchTo().defaultContent();
+        		ldriver.switchTo().defaultContent();
         		cal.click();
         		calendar_time.click();
 
         	    
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
-
 			}
-		if (logger.isDebugEnabled()) {
-			logger.debug("exiting appointment()");
-		}
     	  
     }
   
     public void calendar() {
     	
-    	 driver.findElement(By.className("modal-content")).click();
-    	 List<WebElement> allDates=driver.findElements(By.xpath("//div[@class='book-appt-datetime-modal modal fade in']//div[@class='container-fluid']"));
+    	 ldriver.findElement(By.className("modal-content")).click();
+    	 List<WebElement> allDates=ldriver.findElements(By.xpath("//div[@class='book-appt-datetime-modal modal fade in']//div[@class='container-fluid']"));
  		
  		for(WebElement ele:allDates)
  		{
@@ -94,18 +98,13 @@ public class Appointment extends BaseClass {
     		
     public void exploreMore() {
     	
-    		if (logger.isDebugEnabled()) {
-			logger.debug("entering exploreMore()");
-		}
 			try {
 	
 				calendar.click();
 			} catch (NoSuchElementException e) {		
 				e.printStackTrace();
 			}
-			if (logger.isDebugEnabled()) {
-				logger.debug("exiting exploreMore()");
-			}
+	
     	
     	}
     }   	    

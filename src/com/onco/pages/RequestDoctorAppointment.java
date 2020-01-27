@@ -4,7 +4,9 @@ package com.onco.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -21,25 +23,30 @@ import org.apache.log4j.Logger;
  */
 public class RequestDoctorAppointment extends BaseClass {
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestDoctorAppointment.class);
 
 	@FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
-	private WebElement location;
+	@CacheLookup
+	WebElement location;
 	
     @FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")
-    private WebElement specialisationDropdownSurgicalOncologist;
+    @CacheLookup
+    WebElement specialisationDropdownSurgicalOncologist;
    
      
     @FindBy(xpath="//input[@placeholder='Any specific requirements']")
-    private WebElement specific_test;
+    @CacheLookup
+    WebElement specific_test;
     
     @FindBy(xpath="/html/body/app-root/req-doc-appointment/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div[1]/div[3]/div")
-    private WebElement find_cancer_specialist;
+    @CacheLookup
+    WebElement find_cancer_specialist;
     
 
-	public RequestDoctorAppointment() {
-		PageFactory.initElements(driver, this);
+	public RequestDoctorAppointment(WebDriver rdriver) {
+        ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 	}
     
     public void appointment()   {

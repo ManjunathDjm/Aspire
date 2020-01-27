@@ -25,24 +25,24 @@ options.addArguments("--no-sandbox");
 options.addArguments("--start-maximized");
 options.setExperimentalOption("useAutomationExtension", false);
 	
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name,email,phone);
 home.patientquery();
 home.submit();
 	
 Thread.sleep(3000);
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 login.otpDetails(otp);
     
 Thread.sleep(10000);
-Dashboard dashboard =new Dashboard();
+Dashboard dashboard =new Dashboard(driver);
 dashboard.selectindiapanalbutton();
     
-Summary summary= new Summary();
+Summary summary= new Summary(driver);
 
 Thread.sleep(5000);
-PaymentsRazorPay pay= new PaymentsRazorPay();
+PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
         

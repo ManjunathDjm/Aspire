@@ -2,6 +2,7 @@ package com.onco.webtests;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.onco.pages.Dashboard;
@@ -28,7 +29,7 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--enable-javascript");
 options.addArguments("--window-size=1024,768,24");
 options.addArguments("start-maximized"); 
@@ -43,9 +44,9 @@ driver.manage().window().maximize();
 driver.get(url);
 driver.manage().deleteAllCookies();
 			
-SignUp sign=new SignUp();
+SignUp sign=new SignUp(driver);
 sign.signupicon();
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 
 Thread.sleep(5000);
@@ -61,59 +62,40 @@ driver.quit();
 @Test(priority = 2)
 public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
-Thread.sleep(5000);
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name ,email,phone);
-Thread.sleep(5000);
 home.patientquery();
-Thread.sleep(5000);
 home.submit();
-Thread.sleep(5000);
 
 Thread.sleep(5000);
-Login login= new Login();
-Thread.sleep(5000);
+Login login= new Login(driver);
 login.otpDetails(otp);
 
 Thread.sleep(5000);
-PatientInfo info=new PatientInfo();
-Thread.sleep(5000);
+PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
-Thread.sleep(5000);
 info.patientinfo();
-Thread.sleep(5000);
 
 Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment();
-Thread.sleep(5000);
+InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
-Thread.sleep(5000);
 	
-Service service=new Service();
-Thread.sleep(5000);
+Service service=new Service(driver);
 service.opinion();
-Thread.sleep(5000);
 
-OpinionType opinion =new OpinionType();
-Thread.sleep(5000);
+OpinionType opinion =new OpinionType(driver);
 opinion.USPanalButton();
-Thread.sleep(5000);
 
 Thread.sleep(10000);
-Summary summary= new Summary();
-Thread.sleep(5000);
+Summary summary= new Summary(driver);
 summary.deletecouponcode();
-Thread.sleep(5000);
 summary.summary();
 
-PaymentsRazorPay pay= new PaymentsRazorPay();
-Thread.sleep(5000);
+PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
-Thread.sleep(5000);
 
 Thread.sleep(20000);
-Dashboard dashboard= new Dashboard();
-Thread.sleep(5000);
+Dashboard dashboard= new Dashboard(driver);
 
 
 }

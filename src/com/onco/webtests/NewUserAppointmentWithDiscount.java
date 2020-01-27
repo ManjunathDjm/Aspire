@@ -40,10 +40,10 @@ driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
 			
 			
-SignUp sign=new SignUp();
+SignUp sign=new SignUp(driver);
 sign.signupicon();
 				
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 Thread.sleep(5000);
 login.otpDetails(otp);
@@ -60,20 +60,20 @@ driver.close();
 public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname,String discountURL, String hospitalname,String cityname) throws Exception {
 		   
     
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name,email,phone) ;
 home.patientquery();
 home.submit();
 
 Thread.sleep(5000);
-Login login= new Login();
+Login login= new Login(driver);
 login.otpDetails(otp);
 
 Thread.sleep(10000);
 driver.get(discountURL);
 
 Thread.sleep(5000);
-Discount discount = new Discount();
+Discount discount = new Discount(driver);
 discount.claimdiscountbutton();
 discount.userdetailsform(hospitalname, cityname);
 Thread.sleep(5000);

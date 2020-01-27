@@ -2,7 +2,9 @@ package com.onco.pages;
 
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,35 +21,43 @@ import org.apache.log4j.Logger;
  */
 public class Summary extends BaseClass {
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Summary.class);
 
 	@FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div[1]/input")
-	private WebElement couponCode;
+	@CacheLookup
+	WebElement couponCode;
 	
 	@FindBy(xpath="//i[@class='fa fa-times']")
-	private WebElement deletecoupon;
+	@CacheLookup
+	WebElement deletecoupon;
 	
 	@FindBy(xpath="//input[@placeholder='Enter coupon code']")
-	private WebElement couponcodefield;
+	@CacheLookup
+	WebElement couponcodefield;
 	
     @FindBy(xpath="/html/body/app-root/case-summary/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[4]/label/span")
-    private WebElement checkbox;
+    @CacheLookup
+    WebElement checkbox;
     
     @FindBy(xpath="//button[@class='coupon-btn']")
-    private WebElement couponapply;;
+    @CacheLookup
+    WebElement couponapply;;
     
     @FindBy(xpath="//button[@class='case-data-btn continue-btn col-md-12 continue-btn-active']")
-    private WebElement payathospital;
+    @CacheLookup
+    WebElement payathospital;
     
     @FindBy(xpath="//button[@class='case-data-btn continue-btn pay-now-btn continue-btn-active']")
-    private WebElement paynow;
+    @CacheLookup
+    WebElement paynow;
     
     //@FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
     //WebElement deletecoupon;
     
-	public Summary() {
-		PageFactory.initElements(driver, this);
+	public Summary(WebDriver rdriver) {
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 	}
     
 	

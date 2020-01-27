@@ -3,7 +3,9 @@ package com.onco.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,6 +14,7 @@ import org.testng.Assert;
 
 import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
+import org.apache.regexp.REDebugCompiler;
 
 /**
  * Locators and methods for Service page
@@ -21,24 +24,29 @@ import org.apache.log4j.Logger;
  */
 public class Service extends BaseClass {
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Service.class);
 
 	@FindBy(xpath="//div[@class='row']//div[1]//div[1]//div[2]")
-	private WebElement appointment;
+	@CacheLookup
+	WebElement appointment;
 	
     @FindBy(xpath="//body//div[@class='bg-color-mob']//div//div[2]//div[1]//div[2]")
-    private WebElement opinion;
+    @CacheLookup
+    WebElement opinion;
     
     @FindBy(xpath="//div[@class='container']//div[3]//div[1]//div[2]")
-    private WebElement labtest;
+    @CacheLookup
+    WebElement labtest;
     
     @FindBy(xpath="//div[@class='row']//button[@class='close']")
-    private WebElement initialAssessmentClose;
+    @CacheLookup
+    WebElement initialAssessmentClose;
     
    
-	public Service() {
-		PageFactory.initElements(driver, this);
+	public Service(WebDriver rdriver) {
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 	}
     
     public void appointment()   {

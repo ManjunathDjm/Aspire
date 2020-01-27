@@ -40,9 +40,9 @@ driver.get(url);
 driver.manage().deleteAllCookies();
 driver.manage().window().maximize();
 		
-SignUp sign=new SignUp();
+SignUp sign=new SignUp(driver);
 sign.signupicon();
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 Thread.sleep(5000);
 login.otpDetails(otp);
@@ -57,41 +57,41 @@ driver.close();
 @Test(priority = 1)
 public void newUserOpinionUSPanal(String name, String email, String phone, String patientname, String otp,String UScoupon) throws Exception {
 	
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 	
 Thread.sleep(5000);
-Login login= new Login();
+Login login= new Login(driver);
 login.otpDetails(otp);
 	
 Thread.sleep(5000);
-PatientInfo info=new PatientInfo();
+PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.patientinfo();
 
 Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment();
+InitialAssessment assessment= new InitialAssessment(driver);
 assessment.initialAssessmentClose();
 	
-Service service=new Service();
+Service service=new Service(driver);
 service.opinion();
 
-OpinionType opinion =new OpinionType();
+OpinionType opinion =new OpinionType(driver);
 opinion.USPanalButton();
 
 Thread.sleep(10000);
-Summary summary= new Summary();
+Summary summary= new Summary(driver);
 summary.deletecouponcode();
 summary.applycoupon(UScoupon);
 summary.summary();
 
-PaymentsRazorPay pay= new PaymentsRazorPay();
+PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
 Thread.sleep(20000);
-Dashboard board = new Dashboard();
+Dashboard board = new Dashboard(driver);
 
 
 }

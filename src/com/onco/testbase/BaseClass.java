@@ -5,8 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.commons.math3.fraction.ProperBigFractionFormat;
 import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.helpers.Loader;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.PageLoadStrategy;
@@ -17,11 +19,14 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import org.testng.annotations.Parameters;
 
+import com.mongodb.diagnostics.logging.Logger;
 import com.paulhammant.ngwebdriver.NgWebDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -35,8 +40,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
  */
 public class BaseClass {
 	  
-	public static WebDriver driver;
-    
+	 
+	  public static WebDriver driver;
+	  public static org.apache.log4j.Logger Logger;   
 	
 	  @Parameters({"browser","url"})
 	  @BeforeMethod
@@ -44,7 +50,6 @@ public class BaseClass {
        
 		BasicConfigurator.configure(); 
  
-		try {
             if (browser.equalsIgnoreCase("chrome")) {
             	
             	WebDriverManager.chromedriver().setup();
@@ -62,19 +67,19 @@ public class BaseClass {
             	driver = new ChromeDriver(options);
             	driver.manage().window().maximize();
             	driver.navigate().to(url);
-            	//driver.manage().deleteAllCookies();
+            	
+            	driver.manage().deleteAllCookies();
                 driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
         		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+        		
+        		
             	
 
             }
-                 
-        } catch (WebDriverException e) {
             
         }
-	  }
 	       @AfterMethod
-	       public static void quit(ITestResult result) throws IOException {    
+	       public static void tearDown(ITestResult result) throws IOException {    
 	       driver.quit();
 			
 	   

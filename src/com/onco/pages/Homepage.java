@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,35 +22,44 @@ import org.apache.log4j.Logger;
  */
 public class Homepage extends BaseClass {
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Homepage.class);
 			      
 	
 	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]")
-	private WebElement nameField;
+	@CacheLookup
+	WebElement nameField;
 	
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[4]/input[1]")
-    private WebElement emailField;
+    @CacheLookup
+    WebElement emailField;
     
     @FindBy(name = "/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[7]/select")
-    private WebElement countryCode;
+    @CacheLookup
+    WebElement countryCode;
     
     @FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[8]/input[1]")
-    private WebElement phoneFiled;
+    @CacheLookup
+    WebElement phoneFiled;
     
     @FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/button[1]/span[1]")
-    private WebElement patientChoice;
+    @CacheLookup
+    WebElement patientChoice;
     
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/ul[1]/li[1]/a[1]")
-    private WebElement dropOption1;
+    @CacheLookup
+    WebElement dropOption1;
     
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[13]/input[1]")
-    private WebElement selectTerms;
+    @CacheLookup
+    WebElement selectTerms;
     
     @FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[15]/button[1]")
-    private WebElement submit;
+    @CacheLookup
+    WebElement submit;
 	
- public Homepage() {
+ public Homepage(WebDriver rdriver) {
+	    ldriver=rdriver;
 		PageFactory.initElements(driver, this);
 	}
     

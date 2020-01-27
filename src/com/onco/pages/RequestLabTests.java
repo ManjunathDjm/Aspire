@@ -4,7 +4,9 @@ package com.onco.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -21,27 +23,33 @@ import org.apache.log4j.Logger;
  */
 public class RequestLabTests extends BaseClass {
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestLabTests.class);
 
 	@FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
-	private WebElement location;
+	@CacheLookup
+	WebElement location;
 	
 	@FindBy(xpath="//div[@class='custom-select right']//select[@placeholder='Select test type']")
-	private WebElement testtype;
+	@CacheLookup
+	WebElement testtype;
 	
 	@FindBy(xpath="//div[@class='orange-rounded-inner-btn small']")
-	private WebElement continueButton;
+	@CacheLookup
+	WebElement continueButton;
 	
 	@FindBy(xpath="/html/body/app-root/req-lab-test/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div[2]/div")
-	private WebElement requestCallback;
+	@CacheLookup
+	WebElement requestCallback;
 	
 	@FindBy(xpath="//button[@class='callback-request-modal-close']")
-	private WebElement Requestcallclose;
+	@CacheLookup
+	WebElement Requestcallclose;
 	
 
-	public RequestLabTests() {
-		PageFactory.initElements(driver, this);
+	public RequestLabTests(WebDriver rdriver) {
+		ldriver=rdriver;
+		PageFactory.initElements(rdriver, this);
 	}
     
     public void location() {

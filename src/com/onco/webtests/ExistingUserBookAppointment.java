@@ -20,38 +20,38 @@ public class ExistingUserBookAppointment extends BaseClass {
 @Test
 public void existingUserBookAppointment(String name,String email,String phone,String patientname,String otp) throws Exception {
 		
-Homepage home= new Homepage();
+Homepage home= new Homepage(driver);
 home.formfill(name,email,phone);
 home.patientquery();
 home.submit();
 	
 Thread.sleep(3000);
-Login login= new Login();
+Login login= new Login(driver);
 login.login(phone);
 login.otpDetails(otp);
     
-Dashboard dashboard =new Dashboard();
+Dashboard dashboard =new Dashboard(driver);
 dashboard.dashboard();
 
-PatientInfo info=new PatientInfo();
+PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.patientinfo();
 
-Service service=new Service();
+Service service=new Service(driver);
 service.appointment();
      
-RequestDoctorAppointment appointment=new RequestDoctorAppointment();
+RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
 appointment.appointment();
 appointment.radiationOncologist();
 appointment.button();
      
-Appointment app= new Appointment();
+Appointment app= new Appointment(driver);
 app.appointment();
      
-Summary summary= new Summary();
+Summary summary= new Summary(driver);
 summary.summary();
      
-PaymentsRazorPay pay= new PaymentsRazorPay();
+PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
     

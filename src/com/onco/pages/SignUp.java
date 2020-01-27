@@ -3,7 +3,9 @@ package com.onco.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -21,38 +23,46 @@ import org.apache.log4j.Logger;
  */
 public class SignUp extends BaseClass{
 
-	
+	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(SignUp.class);
 
 	
 	@FindBy(xpath = "//li[@class='ng-tns-c1-0 ng-star-inserted']//a[1]")
-	private WebElement signUpIcon;
+	@CacheLookup
+	WebElement signUpIcon;
 	
 	@FindBy(xpath="/html/body/app-root/login/div/div[2]/div[2]/a")
-	private WebElement signUplink;
+	@CacheLookup
+	WebElement signUplink;
 	
 	@FindBy(xpath = "/html/body/app-root/app-register/div[2]/div[2]/div[1]/div/form/div[1]/input")
-	private WebElement yourName;
+	@CacheLookup
+	WebElement yourName;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
-	private WebElement yourEmail;
+	@CacheLookup
+	WebElement yourEmail;
 	
 	@FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")
-	private WebElement countryCode;
+	@CacheLookup
+	WebElement countryCode;
 
     @FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[2]/input")
-    private WebElement phoneNumber;
+    @CacheLookup
+    WebElement phoneNumber;
     
     @FindBy(name="patientQueryId")
-    private WebElement patientQuery;
+    @CacheLookup
+    WebElement patientQuery;
     
     @FindBy(xpath="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[5]/button")
-    private WebElement startNowButton;
+    @CacheLookup
+    WebElement startNowButton;
     
     
-public SignUp() {
-		
-	PageFactory.initElements(driver, this);
+public SignUp(WebDriver rdriver) {
+	ldriver=rdriver;
+	PageFactory.initElements(rdriver, this);
     	}
 	
       public String verifyHomeTitle() {
