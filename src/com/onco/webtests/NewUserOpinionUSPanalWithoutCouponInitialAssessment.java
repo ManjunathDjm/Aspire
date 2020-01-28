@@ -1,8 +1,9 @@
 package com.onco.webtests;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.onco.pages.Dashboard;
@@ -29,7 +30,7 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless");
+//options.addArguments("--headless");
 options.addArguments("--enable-javascript");
 options.addArguments("--window-size=1024,768,24");
 options.addArguments("start-maximized"); 
@@ -43,6 +44,8 @@ driver = new ChromeDriver(options);
 driver.manage().window().maximize();
 driver.get(url);
 driver.manage().deleteAllCookies();
+driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
 SignUp sign=new SignUp(driver);
 sign.signupicon();
@@ -60,7 +63,7 @@ driver.quit();
 	
 @Parameters({"name","email","phone","otp","patientname","INDcoupon"})
 @Test(priority = 2)
-public void newUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
+public void TC_01_NewUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
 	
 Homepage home= new Homepage(driver);
 home.formfill(name ,email,phone);

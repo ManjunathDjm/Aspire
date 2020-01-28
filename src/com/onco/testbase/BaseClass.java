@@ -43,7 +43,7 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
-                options.addArguments("--headless");
+                //options.addArguments("--headless");
                 options.addArguments("--enable-javascript");
             	options.addArguments("--window-size=1024,768,24");
             	options.addArguments("start-maximized"); 
@@ -58,8 +58,8 @@ public class BaseClass {
             	driver.navigate().to(url);
             	
             	driver.manage().deleteAllCookies();
-                driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+            	driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+                driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         		
         		
             	
