@@ -4,13 +4,13 @@ stages:
 maven_build:
   stage: test
   tags:
-    - automation
-    - frontend
-    - qa
+  - automation
+  - frontend
+  - qa
 before_script:
-    - apt-get update 
-    - export DISPLAY=:1
-    - sleep 3
+  - apt-get update 
+  - export DISPLAY=:1
+  - sleep 3
 script:
-    - echo "Build project with maven"
-    - mvn clean test -DSuites/testngStaging=testngStaging.xml
+  - echo "Build project with maven"
+  - mvn clean test -DSuites/testngStaging=testngStaging.xml
