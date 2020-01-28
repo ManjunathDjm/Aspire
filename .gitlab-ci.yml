@@ -4,9 +4,9 @@ stages:
 maven_build:
   stage: test
   tags:
-  - automation
-  - frontend
-  - qa
-script:
-  - echo "Build project with maven"
-  - mvn clean test -DSuites/testngStaging=testngStaging.xml
+    - automation
+    - frontend
+    - qa
+  script:
+    - echo "Build project with maven"
+    - mvn clean test -DSuites/testngStaging=testngStaging.xml
