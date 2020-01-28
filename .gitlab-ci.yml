@@ -8,9 +8,9 @@ maven_build:
     - frontend
     - qa
 before_script:
-     - apt-get update 
-     - export DISPLAY=:1
-     - sleep 3
+    - apt-get update 
+    - export DISPLAY=:1
+    - sleep 3
 script:
     - echo "Build project with maven"
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
