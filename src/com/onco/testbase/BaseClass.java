@@ -43,7 +43,7 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
-                //options.addArguments("--headless");
+                options.addArguments("--headless");
                 options.addArguments("--enable-javascript");
             	options.addArguments("--window-size=1024,768,24");
             	options.addArguments("start-maximized"); 
