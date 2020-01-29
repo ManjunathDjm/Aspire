@@ -9,4 +9,5 @@ maven_build:
     - qa
   script:
     - echo "Build project with maven"
+    - dnf install -y xorg-x11-server-Xvfb
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
