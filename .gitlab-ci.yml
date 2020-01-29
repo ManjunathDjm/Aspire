@@ -9,5 +9,6 @@ maven_build:
     - qa
   script:
     - echo "Build project with maven"
-    - apt install -y xorg-x11-server-Xvfb
+    - sudo apt-get update -y
+    - sudo apt-get install -y xvfb
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
