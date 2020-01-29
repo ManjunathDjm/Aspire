@@ -9,6 +9,5 @@ maven_build:
     - qa
   script:
     - echo "Build project with maven"
-    - sudo apt-get update -y
-    - sudo apt-get install -y xvfb
+    - xvfb-run --auto-servernum --server-args='-screen 0, 1600x900x24' yarn cover
     - mvn clean test -DSuites/testngStaging=testngStaging.xml
