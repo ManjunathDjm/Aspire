@@ -1,11 +1,15 @@
 package com.onco.webtests;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
@@ -17,7 +21,6 @@ import com.onco.pages.Service;
 import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -27,23 +30,16 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 @Parameters({"deleteURL","url","browser","phone","otp"})
 
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
-
+	
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--headless");
-options.addArguments("--enable-javascript");
 options.addArguments("--window-size=1024,768,24");
-options.addArguments("start-maximized"); 
-options.addArguments("enable-automation"); 
-options.addArguments("--no-sandbox"); 
-options.addArguments("--disable-infobars");
-options.addArguments("--disable-dev-shm-usage");
-options.addArguments("--disable-browser-side-navigation"); 
-options.addArguments("--disable-gpu"); 
+//options.addArguments("enable-automation"); 
+//options.addArguments("--no-sandbox"); 
 driver = new ChromeDriver(options);
-driver.manage().window().maximize();
+//driver.manage().window().maximize();
 driver.get(url);
-driver.manage().deleteAllCookies();
 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			

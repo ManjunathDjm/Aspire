@@ -29,7 +29,7 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[1]/div[2]/input[1]")
+	@FindBy(xpath="//input[contains(@name,'patientName')]")
 	@CacheLookup
 	private WebElement patientname;
 	

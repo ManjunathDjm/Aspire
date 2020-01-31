@@ -23,7 +23,7 @@ public class TestBrokenLinks {
 		
 		driver.manage().window().maximize();
 		
-		driver.get("http://18.136.208.196/");
+		driver.get("https://backstage.onco.com/");
 		
 		List<WebElement> links=driver.findElements(By.tagName("a"));
 		
