@@ -33,10 +33,10 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 	
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--headless");
-options.addArguments("--window-size=1024,768,24");
-//options.addArguments("enable-automation"); 
-//options.addArguments("--no-sandbox"); 
+options.addArguments("headless");
+options.addArguments("window-size=1440,900");
+options.addArguments("enable-automation"); 
+options.addArguments("--no-sandbox"); 
 driver = new ChromeDriver(options);
 //driver.manage().window().maximize();
 driver.get(url);
@@ -66,7 +66,7 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(100000);
+Thread.sleep(5000);
 Login login= new Login(driver);
 login.otpDetails(otp);
 

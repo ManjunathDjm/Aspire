@@ -23,4 +23,14 @@
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
     </classes>
   </test> <!-- PatientPortal -->
+  <test name="PatientPortal(failed)">
+    <classes>
+      <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
+        <methods>
+          <include name="TC_01_NewUserOpinionIndiaPanal"/>
+          <include name="delete"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
+    </classes>
+  </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->
