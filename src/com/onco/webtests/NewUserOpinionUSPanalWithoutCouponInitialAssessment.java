@@ -36,7 +36,7 @@ ChromeOptions options = new ChromeOptions();
 options.addArguments("headless");
 options.addArguments("window-size=1920,1080");
 options.addArguments("enable-automation"); 
-options.addArguments("--no-sandbox"); 
+options.addArguments("no-sandbox"); 
 driver = new ChromeDriver(options);
 //driver.manage().window().maximize();
 driver.get(url);
