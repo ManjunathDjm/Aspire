@@ -33,10 +33,11 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 	
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
+options.addArguments("--no-sandbox"); 
+options.addArguments("--window-size=1920,1080");
 options.addArguments("headless");
-options.addArguments("window-size=1920,1080");
-options.addArguments("enable-automation"); 
-options.addArguments("no-sandbox"); 
+options.addArguments("--disable-gpu"); 
+options.addArguments("enable-javascript");
 driver = new ChromeDriver(options);
 //driver.manage().window().maximize();
 driver.get(url);
@@ -45,6 +46,7 @@ driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
 SignUp sign=new SignUp(driver);
 sign.signupicon();
+
 Login login= new Login(driver);
 login.login(phone);
 
@@ -58,8 +60,8 @@ driver.quit();
 }		
 	
 @Parameters({"name","email","phone","otp","patientname","INDcoupon"})
-@Test(priority = 2)
-public void TC_01_NewUserOpinionIndiaPanal(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws Exception {
+@Test(priority = 1)
+public void TC_01_HomePage(String name, String email, String phone,String otp,String patientname,String INDcoupon) throws InterruptedException {
 	
 Homepage home= new Homepage(driver);
 home.formfill(name ,email,phone);
@@ -70,22 +72,19 @@ Thread.sleep(5000);
 Login login= new Login(driver);
 login.otpDetails(otp);
 
-Thread.sleep(5000);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.patientinfo();
 
-Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
-	
+
 Service service=new Service(driver);
 service.opinion();
 
 OpinionType opinion =new OpinionType(driver);
 opinion.USPanalButton();
 
-Thread.sleep(10000);
 Summary summary= new Summary(driver);
 summary.deletecouponcode();
 summary.summary();
@@ -93,9 +92,7 @@ summary.summary();
 PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
-Thread.sleep(20000);
 Dashboard dashboard= new Dashboard(driver);
-
 
 }
 	

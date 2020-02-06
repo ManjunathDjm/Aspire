@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 
 /**
@@ -21,7 +23,7 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath="//input[contains(@name,'patientName')]")
+	@FindBy(name="patientName")
 	@CacheLookup
 	private WebElement patientname;
 	
@@ -60,7 +62,9 @@ public PatientInfo(WebDriver rdriver) {
     	
     	try {
     		
-    		patientname.sendKeys(pname);
+    		WebDriverWait wait = new WebDriverWait(ldriver, 60);
+    		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("patientName"))).sendKeys(pname);
+    		 //patientname.sendKeys(pname);
     		logger.info("Patientname Entered");
     		
 		} catch (NoSuchElementException e) {

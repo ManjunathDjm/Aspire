@@ -46,12 +46,11 @@ public class BaseClass {
             	
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
+            	options.addArguments("--no-sandbox"); 
+            	options.addArguments("--window-size=1920,1080");
             	options.addArguments("headless");
-            	options.addArguments("window-size=1920,1080");
+            	options.addArguments("--disable-gpu"); 
                 options.addArguments("enable-javascript");
-            	options.addArguments("window-size=1024,768,24");
-            	options.addArguments("no-sandbox"); 
-            	options.addArguments("disable-gpu"); 
             	driver = new ChromeDriver(options);
             	driver.navigate().to(url);
             	
