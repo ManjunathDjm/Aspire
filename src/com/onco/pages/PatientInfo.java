@@ -99,14 +99,14 @@ public void cancertype() {
 	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 	  			    TypeofCancer.selectByIndex(1);
 	  			    typeofCancer.click();
-	  			    logger.info("CancerType Selected");
 	  			    break;
 	    		  }
     			  catch(Exception e){
     			
     			  }
     			}
-	    		    
+	    		
+	    	   logger.info("CancerStage Selected");
 	  				
 	    		} catch (NoSuchElementException e) {
 	    				// TODO Auto-generated catch block
@@ -124,17 +124,17 @@ public void cancerstage() {
 	  					
 	  				try { 
 	  					
-	  					 Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
+	  					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 				    Cancerstage.selectByIndex(1);
 	 				    cancerStage.click();
-	 				    logger.info("CancerStage Selected");
 	 				    break;
 	  				 }
 	    			  catch(Exception e){
 	    			
 	    			  }
 	    			}
-	  					
+	  				
+	  				 logger.info("CancerStage Selected");
 	  				} catch (NoSuchElementException e) {
 						// TODO: handle exception
 					}
@@ -152,14 +152,13 @@ public void condition() {
 				    Select Condition = new Select(ldriver.findElement(By.name("condition")));
 				    Condition.selectByIndex(1);
 			        generalCondition.click();
-			        logger.info("GeneralCondition Selected");
 			        break;
 			}	
 				catch (Exception e) {
 				// TODO: handle exception
 			}
 		} 
-			
+		logger.info("GeneralCondition Selected");
 			
 		} catch (NoSuchElementException e) {
 		// TODO: handle exception
@@ -175,13 +174,13 @@ public void continuebutton() throws NoSuchElementException {
 			  
 			        logger.info(continueButton.isDisplayed());
 			        continueButton.click();
-			        logger.info("ContinueButton Clicked");
 			        break;
 				}	
 				catch (Exception e) {
 				// TODO: handle exception
 			} 
 	    }
+		  logger.info("ContinueButton Clicked");
 	 } catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
