@@ -1,15 +1,11 @@
 package com.onco.webtests;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.onco.pages.Dashboard;
 import com.onco.pages.Homepage;
 import com.onco.pages.InitialAssessment;
@@ -39,7 +35,6 @@ options.addArguments("headless");
 options.addArguments("--disable-gpu"); 
 options.addArguments("enable-javascript");
 driver = new ChromeDriver(options);
-//driver.manage().window().maximize();
 driver.get(url);
 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

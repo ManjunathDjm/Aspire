@@ -2,6 +2,7 @@ package com.onco.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -10,6 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.sql.Driver;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -61,13 +65,21 @@ public PatientInfo(WebDriver rdriver) {
     public void patientname(String pname) {
     	
     	try {
+  
+    		for(int i=0; i<=2;i++){
+    			  try{
+    			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
+    			     break;
+    			  }
+    			  catch(Exception e){
+    			
+    			  }
+    			}
     		
-    		WebDriverWait wait = new WebDriverWait(ldriver, 60);
-    		wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("patientName"))).sendKeys(pname);
-    		 //patientname.sendKeys(pname);
-    		logger.info("Patientname Entered");
+    		//patientname.sendKeys(pname);
+    	    logger.info("Patientname Entered");
     		
-		} catch (NoSuchElementException e) {
+		} catch (StaleElementReferenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
