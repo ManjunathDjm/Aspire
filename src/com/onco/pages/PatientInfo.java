@@ -68,7 +68,7 @@ public void patientname(String pname) {
   
     		for(int i=0; i<=2;i++){
     			  try{
-    			     ldriver.findElement(By.name("patientNamee")).sendKeys(pname);
+    			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
     			     break;
     			  }
     			  catch(Exception e){
