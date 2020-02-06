@@ -35,7 +35,10 @@ dashboard.dashboard();
 
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
-info.patientinfo();
+info.cancertype();
+info.cancerstage();
+info.continuebutton();
+
 
 Service service=new Service(driver);
 service.appointment();

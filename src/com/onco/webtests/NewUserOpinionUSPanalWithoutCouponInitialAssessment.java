@@ -69,7 +69,9 @@ login.otpDetails(otp);
 
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
-info.patientinfo();
+info.cancertype();
+info.cancerstage();
+info.continuebutton();
 
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();

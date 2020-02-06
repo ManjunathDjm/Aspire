@@ -62,7 +62,7 @@ public PatientInfo(WebDriver rdriver) {
 		PageFactory.initElements(rdriver, this);
 	}
 	
-    public void patientname(String pname) {
+public void patientname(String pname) {
     	
     	try {
   
@@ -79,43 +79,119 @@ public PatientInfo(WebDriver rdriver) {
     		//patientname.sendKeys(pname);
     	    logger.info("Patientname Entered");
     		
-		} catch (StaleElementReferenceException e) {
+		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     	
     }
+
 	
-public void patientinfo() {
+public void cancertype() {
     	
 			
 	     try {
 	            
-	    	    ldriver.navigate().refresh();
-	    	    Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
-			    TypeofCancer.selectByIndex(1);
-			    typeofCancer.click();
-			    logger.info("CancerType Selected");
-			    
-			    Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
-			    Cancerstage.selectByIndex(1);
-			    cancerStage.click();
-			    logger.info("CancerStage Selected");
-			    
-			    Select Condition = new Select(ldriver.findElement(By.name("condition")));
-			    Condition.selectByIndex(1);
-		        generalCondition.click();
-		        logger.info("GeneralCondition Selected");
-		  
-		        logger.info(continueButton.isDisplayed());
-		        continueButton.click();
-		        logger.info("ContinueButton Clicked");
-		        
-			} catch (NoSuchElementException e) {
-				e.printStackTrace();
-			} 
+	    	  for(int i=0; i<=2; i++) {
+	    		  
+	    		  try {
+	    			  
+	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
+	  			    TypeofCancer.selectByIndex(1);
+	  			    typeofCancer.click();
+	  			    logger.info("CancerType Selected");
+	  			    break;
+	    		  }
+    			  catch(Exception e){
+    			
+    			  }
+    			}
+	    		    
+	  				
+	    		} catch (NoSuchElementException e) {
+	    				// TODO Auto-generated catch block
+	    				e.printStackTrace();
+	    			}
+	    	    	
+	    	    }   
+	  			    
+	  			    
+public void cancerstage() {
+	
+	  			try {
+	  				
+	  				for(int i=0; i<=2; i++) {
+	  					
+	  				try { 
+	  					
+	  					 Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
+	 				    Cancerstage.selectByIndex(1);
+	 				    cancerStage.click();
+	 				    logger.info("CancerStage Selected");
+	 				    break;
+	  				 }
+	    			  catch(Exception e){
+	    			
+	    			  }
+	    			}
+	  					
+	  				} catch (NoSuchElementException e) {
+						// TODO: handle exception
+					}
+	  		} 
+				    
+					 
+public void condition() {
+	
+	try {
 			
+			for(int i=0; i<=2; i++) {
+				
+			try { 
+				    
+				    Select Condition = new Select(ldriver.findElement(By.name("condition")));
+				    Condition.selectByIndex(1);
+			        generalCondition.click();
+			        logger.info("GeneralCondition Selected");
+			        break;
+			}	
+				catch (Exception e) {
+				// TODO: handle exception
 			}
-        
-   }
+		} 
+			
+			
+		} catch (NoSuchElementException e) {
+		// TODO: handle exception
+	}
+} 
+public void continuebutton() throws NoSuchElementException {
+	
+	 try {
+		 
+		 for(int i=0; i<=2; i++) {
+				
+				try { 
+			  
+			        logger.info(continueButton.isDisplayed());
+			        continueButton.click();
+			        logger.info("ContinueButton Clicked");
+			        break;
+				}	
+				catch (Exception e) {
+				// TODO: handle exception
+			} 
+	    }
+	 } catch (NoSuchElementException e) {
+			// TODO: handle exception
+		}
+	} 
+	 
+	 }
+
+	
+
+
+	    		  
+	    		  
 
