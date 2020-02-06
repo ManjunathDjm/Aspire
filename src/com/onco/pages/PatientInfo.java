@@ -91,7 +91,7 @@ public void patientinfo() {
 			
 	     try {
 	            
-	    	    
+	    	    ldriver.navigate().refresh();
 	    	    Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 			    TypeofCancer.selectByIndex(1);
 			    typeofCancer.click();
