@@ -63,17 +63,19 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(10000);
+Thread.sleep(5000);
 Login login= new Login(driver);
 login.otpDetails(otp);
 
-Thread.sleep(10000);
+Thread.sleep(5000);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.cancertype();
 info.cancerstage();
 info.continuebutton();
 
+
+Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
 
@@ -83,6 +85,7 @@ service.opinion();
 OpinionType opinion =new OpinionType(driver);
 opinion.USPanalButton();
 
+Thread.sleep(10000);
 Summary summary= new Summary(driver);
 summary.deletecouponcode();
 summary.summary();
@@ -90,6 +93,7 @@ summary.summary();
 PaymentsRazorPay pay= new PaymentsRazorPay(driver);
 pay.netbanking();
 
+Thread.sleep(10000);
 Dashboard dashboard= new Dashboard(driver);
 
 }
