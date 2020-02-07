@@ -57,10 +57,8 @@ public PatientInfo(WebDriver rdriver) {
 	}
 	
 public void patientname(String pname) {
-    	
-    	try {
-  
-    		for(int i=0; i<=2;i++){
+ 
+for(int i=0; i<=1;i++){
     			  try{
     			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
     			     logger.info("Patientname Entered");
@@ -73,50 +71,36 @@ public void patientname(String pname) {
     		
     		//patientname.sendKeys(pname);
     	    //logger.info("Patientname Entered");
-    		
-		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
     	
     }
 
 	
-public void cancertype() {
-    	
-			
-	     try {
+public void cancertype() {		
 	            
-	    	  for(int i=0; i<=2; i++) {
+for(int i=0; i<=2; i++) {
 	    		  
-	    		  try {
+	    try {
 	    			  
 	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 	  			    TypeofCancer.selectByIndex(1);
 	  			    typeofCancer.click();
-	  			   logger.info("CancerStage type");
-	  			    break;
+	  			    logger.info("CancerStage type");
+	  			     break;
 	    		  }
     			  catch(Exception e){
     			
     			  }
     			}
-	  				
-	    		} catch (NoSuchElementException e) {
-	    				// TODO Auto-generated catch block
-	    				e.printStackTrace();
-	    			}
-	    	    	
-	    	    }   
+
+	    }   
 	  			    
 	  			    
 public void cancerstage() {
 	
-	  			try {
 	  				
-	  				for(int i=0; i<=2; i++) {
+for(int i=0; i<=2; i++) {
 	  					
-	  				try { 
+	  	try { 
 	  					
 	  					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 				    Cancerstage.selectByIndex(1);
@@ -128,18 +112,12 @@ public void cancerstage() {
 	    			
 	    			  }
 	    			}
-	  				
-	  				} catch (NoSuchElementException e) {
-						// TODO: handle exception
-					}
-	  		} 
-				    
+}
 					 
 public void condition() {
 	
-	try {
 			
-			for(int i=0; i<=2; i++) {
+for(int i=0; i<=2; i++) {
 				
 			try { 
 				    
@@ -153,16 +131,11 @@ public void condition() {
 				// TODO: handle exception
 			}
 		} 
-			
-		} catch (NoSuchElementException e) {
-		// TODO: handle exception
-	}
+		
 } 
 public void continuebutton() throws NoSuchElementException {
 	
-	 try {
-		 
-		 for(int i=0; i<=2; i++) {
+for(int i=0; i<=2; i++) {
 				
 				try { 
 			  
@@ -175,12 +148,9 @@ public void continuebutton() throws NoSuchElementException {
 				// TODO: handle exception
 			} 
 	    }
-	 } catch (NoSuchElementException e) {
-			// TODO: handle exception
-		}
-	} 
+   }
 	 
-	 }
+}
 
 	
 

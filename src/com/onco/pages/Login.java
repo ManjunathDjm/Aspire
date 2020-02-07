@@ -49,13 +49,15 @@ public class Login  {
     @CacheLookup
     private WebElement delete;
     
-	public Login(WebDriver rdriver) {
+public Login(WebDriver rdriver) {
 		ldriver =rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
     
-    public void login(String phone) {
+public void login(String phone) {
     	 
+   for(int i=0; i<=2;i++){
+    	
     	try {
     	   
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
@@ -73,22 +75,24 @@ public class Login  {
 			// TODO: handle exception
     	}
     	
-    }
+   }
+}
      	
-    public void otpDetails(String otp) {
+public void otpDetails(String otp) {
     	
-    	for(int i=0; i<=2;i++){
-    		  try{
+ for(int i=0; i<=2;i++){
+    		  
+	 try{
     			    
-    			    Otp.click(); 
-    	    	    logger.info("OTP clicked");
+    			   Otp.click(); 
+    	    	   logger.info("OTP clicked");
     	    	    
-    	    	    Otp.sendKeys(otp);
-    	    	    logger.info("Entered OTP");
+    	    	   Otp.sendKeys(otp);
+    	    	   logger.info("Entered OTP");
     	    	    
-    	    	    proceedButton.click();
-    	    	    logger.info("Proceed Button clicked");
-    		        break;
+    	    	   proceedButton.click();
+    	    	   logger.info("Proceed Button clicked");
+    		       break;
     		  }
     		  catch(NoSuchElementException e){
     		   
