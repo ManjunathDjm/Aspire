@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -55,10 +58,8 @@ public Login(WebDriver rdriver) {
 	}
     
 public void login(String phone) {
-    	 
-   for(int i=0; i<=0;i++){
-    	
-    	try {
+    	 	
+	try {
     	   
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
@@ -71,40 +72,29 @@ public void login(String phone) {
     	  loginVIAOTPbutton.click();
     	  logger.info("Login via OTP clicked");
     	  
-    	} catch (NoSuchElementException e) {
-			// TODO: handle exception
-    	}
-    	
-   }
+    	} catch (NoSuchElementException| ElementNotFoundException e) {
+    		e.printStackTrace();
+    	}  	
 }
      	
 public void otpDetails(String otp) {
     	
- for(int i=0; i<=0;i++){
     		  
-	 try{
+ try{
     			    
-    			   Otp.click(); 
-    	    	   logger.info("OTP clicked");
+    	 Otp.click(); 
+    	 logger.info("OTP clicked");
     	    	    
-    	    	   Otp.sendKeys(otp);
-    	    	   logger.info("Entered OTP");
+    	 Otp.sendKeys(otp);
+    	 logger.info("Entered OTP");
     	    	    
-    	    	   proceedButton.click();
-    	    	   logger.info("Proceed Button clicked");
-    		       break;
-    		  }
-    		  catch(NoSuchElementException e){
+    	 proceedButton.click();
+    	 logger.info("Proceed Button clicked");
+    	 
+         } catch(NoSuchElementException|ElementNotFoundException e){
+        	 e.printStackTrace();
     		   
     		  }
-    	}	
-    	
-    	
-    	
-    	
-    	
-  
-    	
     }
 }
 

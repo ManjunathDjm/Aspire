@@ -1,16 +1,13 @@
 package com.onco.pages;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
 
-import com.onco.testbase.BaseClass;
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import org.apache.log4j.Logger;
 
 /**
@@ -40,90 +37,64 @@ public class InitialAssessment {
     @CacheLookup
     private WebElement downloadAssessment;
      
-  public InitialAssessment(WebDriver rdriver) {
+public InitialAssessment(WebDriver rdriver) {
 	    ldriver=rdriver;
 		PageFactory.initElements(ldriver, this);
 	
 	}
        
-   public void initialAssessmentClose() {
-
-	
-	   try {
-			
-			for(int i=0; i<=2; i++) {
+public void initialAssessmentClose() {
+		
 				
-			try { 
+  try { 
 				    
 				 ldriver.switchTo().defaultContent();
 				 initiAlassessmentClose.click();
-				 break;
+				 logger.info("Initial Assessment Window closed");
+				 
 			}	
-				catch (Exception e) {
+				catch (NoSuchElementException | ElementNotFoundException e) {
 				// TODO: handle exception
 			}
-		} 
-			logger.info("Initial Assessment Window closed");
-			
-		} catch (NoSuchElementException e) {
-		// TODO: handle exception
-	}
-} 
+		} 			
 	   
 
    
 public void ViewAssessment() {
 		
-
- try {
-			
-			for(int i=0; i<=2; i++) {
 				
-			try { 
+	try { 
 				    
 				viewAssessment.click();
 				logger.info("View Assessment clicked");
 				   
 				exploremoreoptions.click();
 				logger.info("Explore More Option clicked");
-				 break;
+				
 			}	
-				catch (Exception e) {
+				catch (NoSuchElementException | ElementNotFoundException e) {
 				// TODO: handle exception
 			}
-		} 
-		
-			
-		} catch (NoSuchElementException e) {
-		// TODO: handle exception
 	}
-} 
 
 	 
 public void downloadAssessment() {
-	 
-		
-	   try {
-			
-				for(int i=0; i<=2; i++) {
-					
-				try { 
+	 							
+	try { 
 					    
 					downloadAssessment.click();
 					logger.info("Download Assessment clicked");
-					break;
+					
 				}	
-					catch (Exception e) {
+					catch (NoSuchElementException | ElementNotFoundException e) {
 					// TODO: handle exception
 				}
-			} 
-				  logger.info("Download Assessment clicked");
-				
-			} catch (NoSuchElementException e) {
-			// TODO: handle exception
-		}	  
-	  }
+	} 
+				  
+	
    }
+
+
    
  
 	  

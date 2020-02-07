@@ -8,6 +8,9 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -46,7 +49,6 @@ public class PatientInfo {
     private WebElement fileupload;
     
     @FindBy(xpath="//html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
-    @CacheLookup
     private WebElement continueButton;
     
     
@@ -58,99 +60,76 @@ public PatientInfo(WebDriver rdriver) {
 	
 public void patientname(String pname) {
  
-for(int i=0; i<=0;i++){
-    			  try{
-    			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
-    			     logger.info("Patientname Entered");
-    			     break;
-    			  }
-    			  catch(Exception e){
+    	
+ try{ 
+		         patientname.sendKeys(pname);
+	             logger.info("Patientname Entered");
     			
     			  }
+	             catch(NoSuchElementException e){
     			}
-    		
-    		//patientname.sendKeys(pname);
-    	    //logger.info("Patientname Entered");
-    	
     }
 
 	
 public void cancertype() {		
 	            
-for(int i=0; i<=0; i++) {
 	    		  
-	    try {
-	    			  
+   try {  
 	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 	  			    TypeofCancer.selectByIndex(1);
 	  			    typeofCancer.click();
 	  			    logger.info("CancerStage type");
-	  			     break;
+	  			    
 	    		  }
-    			  catch(Exception e){
-    			
+    			  catch(NoSuchElementException e){
+    				  e.printStackTrace();
     			  }
-    			}
-
-	    }   
+  }
 	  			    
 	  			    
 public void cancerstage() {
 	
-	  				
-for(int i=0; i<=0; i++) {
-	  					
-	  	try { 
+	  			
+   try { 
 	  					
 	  					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 				    Cancerstage.selectByIndex(1);
 	 				    cancerStage.click();
 	 				    logger.info("CancerStage Selected");
-	 				    break;
 	  				 }
-	    			  catch(Exception e){
-	    			
+	    			  catch(NoSuchElementException e){
+	    				  e.printStackTrace();
 	    			  }
 	    			}
-}
 					 
 public void condition() {
-	
-			
-for(int i=0; i<=0; i++) {
-				
-			try { 
+		
+  try { 
 				    
 				    Select Condition = new Select(ldriver.findElement(By.name("condition")));
 				    Condition.selectByIndex(1);
 			        generalCondition.click();
 			        logger.info("GeneralCondition Selected");
-			        break;
+			       
 			}	
-				catch (Exception e) {
-				// TODO: handle exception
+				catch (NoSuchElementException e) {
+					e.printStackTrace();
 			}
 		} 
 		
-} 
-public void continuebutton() throws NoSuchElementException {
+public void continuebutton()  {
 	
-for(int i=0; i<=0; i++) {
 				
-				try { 
-			  
-			        logger.info(continueButton.isDisplayed());
+  try { 
 			        continueButton.click();
 			        logger.info("ContinueButton Clicked");
-			        break;
+			 
 				}	
-				catch (Exception e) {
-				// TODO: handle exception
+				catch (NoSuchElementException e) {
+					e.printStackTrace();
 			} 
 	    }
    }
-	 
-}
 
 	
 

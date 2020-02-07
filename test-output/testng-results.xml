@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Onco Staging" duration-ms="21208" started-at="2020-02-07T07:10:12Z" finished-at="2020-02-07T07:10:33Z">
+  <suite name="Onco Staging" duration-ms="352266" started-at="2020-02-07T12:12:45Z" finished-at="2020-02-07T12:18:37Z">
     <groups>
     </groups>
-    <test name="PatientPortal" duration-ms="21208" started-at="2020-02-07T07:10:12Z" finished-at="2020-02-07T07:10:33Z">
+    <test name="PatientPortal" duration-ms="352266" started-at="2020-02-07T12:12:45Z" finished-at="2020-02-07T12:18:37Z">
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="delete" is-config="true" duration-ms="21192" started-at="2020-02-07T12:40:12Z" finished-at="2020-02-07T12:40:33Z">
+        <test-method status="PASS" signature="delete(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="delete" is-config="true" duration-ms="22067" started-at="2020-02-07T17:42:45Z" finished-at="2020-02-07T17:43:07Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[http://onco.com/start/delete-me]]>
+                <![CDATA[https://backstage.onco.com/start/delete-me/]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://onco.com/]]>
+                <![CDATA[https://backstage.onco.com/]]>
               </value>
             </param>
             <param index="2">
@@ -38,45 +38,69 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- delete -->
-        <test-method status="SKIP" signature="TC_01_HomePage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="TC_01_HomePage" duration-ms="0" started-at="2020-02-07T12:40:33Z" finished-at="2020-02-07T12:40:33Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'INDcoupon' is required by @Test on method TC_01_HomePage but has not been marked @Optional or defined
-in /Users/manjunathdj/Applications/OncoWeb/Suites/testngProd.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'INDcoupon' is required by @Test on method TC_01_HomePage but has not been marked @Optional or defined
-in /Users/manjunathdj/Applications/OncoWeb/Suites/testngProd.xml
-	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:451)
-	at org.testng.internal.Invoker.handleParameters(Invoker.java:1276)
-	at org.testng.internal.Invoker.createParameters(Invoker.java:991)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1081)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:782)
-	at org.testng.TestRunner.run(TestRunner.java:632)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
-	at org.testng.TestNG.run(TestNG.java:1064)
-	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="openBrowser" is-config="true" duration-ms="2967" started-at="2020-02-07T17:43:07Z" finished-at="2020-02-07T17:43:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://backstage.onco.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="TC_01_HomePage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="TC_01_HomePage" duration-ms="327060" started-at="2020-02-07T17:43:10Z" finished-at="2020-02-07T17:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test_onco]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manjunath.11j@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[9036890379]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[5813]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[testtest]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[INDMA19]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01_HomePage -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876]" name="tearDown" is-config="true" duration-ms="148" started-at="2020-02-07T17:48:37Z" finished-at="2020-02-07T17:48:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_01_HomePage status=SUCCESS method=NewUserOpinionUSPanalWithoutCouponInitialAssessment.TC_01_HomePage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment@59e84876] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
     </test> <!-- PatientPortal -->
   </suite> <!-- Onco Staging -->

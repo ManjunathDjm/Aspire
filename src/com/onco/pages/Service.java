@@ -7,7 +7,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.onco.testbase.BaseClass;
+import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import org.apache.log4j.Logger;
 
 /**
@@ -43,10 +43,10 @@ public class Service {
 		PageFactory.initElements(rdriver, this);
 	}
     
-    public void appointment()   {
- 
-			try {
-				
+public void appointment()   {
+   		
+try {
+
         		try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
@@ -57,30 +57,22 @@ public class Service {
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-  
-    }
+    	}
      
-   public void opinion() {
-   
-		try {
-			   try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			  
+ public void opinion() {
+      
+	 try {
 			   opinion.click();
 			   logger.info("Opinion clicked");
-		} catch (NoSuchElementException e) {
+		} catch (NoSuchElementException |ElementNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
    }
       
    public void labtest() { 
-	   
-			try {
+	  
+try {
         		try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {
@@ -96,6 +88,8 @@ public class Service {
    }
    
 }
+   
+
   	   
 
      
