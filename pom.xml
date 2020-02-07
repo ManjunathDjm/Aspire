@@ -34,6 +34,7 @@
                     <!-- Suite testng xml file to consider for test execution -->
                     <suiteXmlFiles>
                         <suiteXmlFile>Suites/testngstaging.xml</suiteXmlFile>
+                        <uiteXMLFiles>Suites/testngProd.xml</uiteXMLFiles>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
