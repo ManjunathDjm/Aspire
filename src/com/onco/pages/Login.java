@@ -98,6 +98,7 @@ public class Login  {
     		logger.info("OTP clicked");
     		logger.info("Entered OTP");
     		logger.info("Proceed Button clicked");
+    		
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
