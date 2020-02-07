@@ -88,8 +88,7 @@ public class Login  {
     	    	    
     	    	    proceedButton.click();
     	    	    logger.info("Proceed Button clicked");
-    	    
-    		     break;
+    		        break;
     		  }
     		  catch(NoSuchElementException e){
     		   
