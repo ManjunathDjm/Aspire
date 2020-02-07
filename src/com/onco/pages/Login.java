@@ -86,6 +86,7 @@ public class Login  {
     			  try{
     			    
     				   Otp.click(); 
+    				   logger.info(Otp.isDisplayed());
     	    		   Otp.sendKeys(otp);
     	    		   proceedButton.click();
     			     break;
