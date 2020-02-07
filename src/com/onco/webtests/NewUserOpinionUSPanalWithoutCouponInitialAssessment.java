@@ -74,7 +74,6 @@ info.cancertype();
 info.cancerstage();
 info.continuebutton();
 
-
 Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();

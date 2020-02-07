@@ -64,15 +64,14 @@ home.submit();
 	
 Thread.sleep(5000);
 Login login= new Login(driver);
-login.otpDetails(otp);
-	
+login.otpDetails(otp);	
+
 Thread.sleep(5000);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.cancertype();
 info.cancerstage();
 info.continuebutton();
-
 
 Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment(driver);

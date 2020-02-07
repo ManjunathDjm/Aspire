@@ -8,7 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 
 /**
@@ -76,7 +79,9 @@ public class Login  {
     public void otpDetails(String otp) {
     	
 			try {
-			  
+			 
+		    	WebDriverWait wait = new WebDriverWait(ldriver, 15);
+			    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//input[1]")));
 			   Otp.click(); 
 			   logger.info("OTP clicked");
     		   Otp.sendKeys(otp);
