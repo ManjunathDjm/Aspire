@@ -63,7 +63,6 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(5000);
 Login login= new Login(driver);
 login.otpDetails(otp);
 
