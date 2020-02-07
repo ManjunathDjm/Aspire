@@ -63,6 +63,7 @@ public void patientname(String pname) {
     		for(int i=0; i<=2;i++){
     			  try{
     			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
+    			     logger.info("Patientname Entered");
     			     break;
     			  }
     			  catch(Exception e){
@@ -71,7 +72,7 @@ public void patientname(String pname) {
     			}
     		
     		//patientname.sendKeys(pname);
-    	    logger.info("Patientname Entered");
+    	    //logger.info("Patientname Entered");
     		
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -93,14 +94,13 @@ public void cancertype() {
 	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 	  			    TypeofCancer.selectByIndex(1);
 	  			    typeofCancer.click();
+	  			   logger.info("CancerStage type");
 	  			    break;
 	    		  }
     			  catch(Exception e){
     			
     			  }
     			}
-	    		
-	    	   logger.info("CancerStage type");
 	  				
 	    		} catch (NoSuchElementException e) {
 	    				// TODO Auto-generated catch block
@@ -121,6 +121,7 @@ public void cancerstage() {
 	  					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 				    Cancerstage.selectByIndex(1);
 	 				    cancerStage.click();
+	 				    logger.info("CancerStage Selected");
 	 				    break;
 	  				 }
 	    			  catch(Exception e){
@@ -128,7 +129,6 @@ public void cancerstage() {
 	    			  }
 	    			}
 	  				
-	  				 logger.info("CancerStage Selected");
 	  				} catch (NoSuchElementException e) {
 						// TODO: handle exception
 					}
@@ -146,13 +146,13 @@ public void condition() {
 				    Select Condition = new Select(ldriver.findElement(By.name("condition")));
 				    Condition.selectByIndex(1);
 			        generalCondition.click();
+			        logger.info("GeneralCondition Selected");
 			        break;
 			}	
 				catch (Exception e) {
 				// TODO: handle exception
 			}
 		} 
-		logger.info("GeneralCondition Selected");
 			
 		} catch (NoSuchElementException e) {
 		// TODO: handle exception
@@ -168,13 +168,13 @@ public void continuebutton() throws NoSuchElementException {
 			  
 			        logger.info(continueButton.isDisplayed());
 			        continueButton.click();
+			        logger.info("ContinueButton Clicked");
 			        break;
 				}	
 				catch (Exception e) {
 				// TODO: handle exception
 			} 
 	    }
-		  logger.info("ContinueButton Clicked");
 	 } catch (NoSuchElementException e) {
 			// TODO: handle exception
 		}
