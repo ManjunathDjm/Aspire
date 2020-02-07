@@ -77,23 +77,30 @@ public class Login  {
      	
     public void otpDetails(String otp) {
     	
-			
+    	for(int i=0; i<=2;i++){
+    		  try{
+    			    
+    			    Otp.click(); 
+    	    	    logger.info("OTP clicked");
+    	    	    
+    	    	    Otp.sendKeys(otp);
+    	    	    logger.info("Entered OTP");
+    	    	    
+    	    	    proceedButton.click();
+    	    	    logger.info("Proceed Button clicked");
+    	    
+    		     break;
+    		  }
+    		  catch(NoSuchElementException e){
+    		   
+    		  }
+    	}	
     	
-    	try {
-    		
-    		Otp.click(); 
-    	    logger.info("OTP clicked");
-    	    
-    	    Otp.sendKeys(otp);
-    	    logger.info("Entered OTP");
-    	    
-    	    proceedButton.click();
-    	    logger.info("Proceed Button clicked");
-    
-		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	
+    	
+    	
+    	
+  
     	
     }
 }
