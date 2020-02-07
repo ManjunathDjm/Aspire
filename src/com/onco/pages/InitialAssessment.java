@@ -82,18 +82,17 @@ public void ViewAssessment() {
 			try { 
 				    
 				viewAssessment.click();
-				   logger.info("View Assessment clicked");
+				logger.info("View Assessment clicked");
 				   
-				   exploremoreoptions.click();
-				   logger.info("Explore More Option clicked");
+				exploremoreoptions.click();
+				logger.info("Explore More Option clicked");
 				 break;
 			}	
 				catch (Exception e) {
 				// TODO: handle exception
 			}
 		} 
-			logger.info("View Assessment clicked");
-			logger.info("Explore More Option clicked");
+		
 			
 		} catch (NoSuchElementException e) {
 		// TODO: handle exception
