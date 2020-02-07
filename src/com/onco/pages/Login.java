@@ -40,9 +40,8 @@ public class Login  {
     @FindBy(xpath="//body//input[1]")
     @CacheLookup
     WebElement Otp;
-    // /html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]
     
-    @FindBy(xpath="//*[@type='submit']1")
+    @FindBy(xpath="//*[@type='submit']")
     @CacheLookup
     WebElement proceedButton;
   
@@ -81,22 +80,16 @@ public class Login  {
 			
     	
     	try {
-  
-    		for(int i=0; i<=2;i++){
-    			  try{
-    			    
-    				   Otp.click(); 
-    				   logger.info("OTP clicked");
-    	    		   Otp.sendKeys(otp);
-    	    	 	   logger.info("Entered OTP");
-    	    		   proceedButton.click();
-    	    		   logger.info("Proceed Button clicked");
-    			     break;
-    			  }
-    			  catch(Exception e){
-    			
-    			  }
-    			}
+    		
+    		Otp.click(); 
+    	    logger.info("OTP clicked");
+    	    
+    	    Otp.sendKeys(otp);
+    	    logger.info("Entered OTP");
+    	    
+    	    proceedButton.click();
+    	    logger.info("Proceed Button clicked");
+    
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
