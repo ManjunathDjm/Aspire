@@ -58,7 +58,7 @@ public PatientInfo(WebDriver rdriver) {
 	
 public void patientname(String pname) {
  
-for(int i=0; i<=1;i++){
+for(int i=0; i<=0;i++){
     			  try{
     			     ldriver.findElement(By.name("patientName")).sendKeys(pname);
     			     logger.info("Patientname Entered");
@@ -77,7 +77,7 @@ for(int i=0; i<=1;i++){
 	
 public void cancertype() {		
 	            
-for(int i=0; i<=2; i++) {
+for(int i=0; i<=0; i++) {
 	    		  
 	    try {
 	    			  
@@ -98,7 +98,7 @@ for(int i=0; i<=2; i++) {
 public void cancerstage() {
 	
 	  				
-for(int i=0; i<=2; i++) {
+for(int i=0; i<=0; i++) {
 	  					
 	  	try { 
 	  					
@@ -117,7 +117,7 @@ for(int i=0; i<=2; i++) {
 public void condition() {
 	
 			
-for(int i=0; i<=2; i++) {
+for(int i=0; i<=0; i++) {
 				
 			try { 
 				    
@@ -135,7 +135,7 @@ for(int i=0; i<=2; i++) {
 } 
 public void continuebutton() throws NoSuchElementException {
 	
-for(int i=0; i<=2; i++) {
+for(int i=0; i<=0; i++) {
 				
 				try { 
 			  

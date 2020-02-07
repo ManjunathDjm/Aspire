@@ -56,7 +56,7 @@ public Login(WebDriver rdriver) {
     
 public void login(String phone) {
     	 
-   for(int i=0; i<=2;i++){
+   for(int i=0; i<=0;i++){
     	
     	try {
     	   
@@ -80,7 +80,7 @@ public void login(String phone) {
      	
 public void otpDetails(String otp) {
     	
- for(int i=0; i<=2;i++){
+ for(int i=0; i<=0;i++){
     		  
 	 try{
     			    
