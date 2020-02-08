@@ -64,24 +64,27 @@ public void login(String phone) {
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
-    	  logger.info("Country code selected");
   
     	  phoneNumber.sendKeys(phone); 
-    	  logger.info("Phone number entered");
     	  loginVIAOTPbutton.click();
-    	  logger.info("Login via OTP clicked");
     	  break;
+		}
+    	  catch(Exception e){
+  			
+		  }
+		}
 
-    	  
-    	} catch (NoSuchElementException e) {
-    		e.printStackTrace();
-    	}  	
+		logger.info("Country code selected");
+		logger.info("Phone number entered");
+		logger.info("Login via OTP clicked");
+	
+} catch (NoSuchElementException e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+
 }
 	
-} catch (Exception e) {
-	// TODO: handle exception
-}
-}
      	
 public void otpDetails(String otp) {
     	
@@ -92,24 +95,25 @@ public void otpDetails(String otp) {
 	try{
     			    
     	 Otp.click(); 	   
-    	 logger.info("OTP clicked");
     	 Otp.sendKeys(otp); 
-    	 logger.info("OTP entered");
     	 proceedButton.click();
-    	 logger.info("Proceed Button clicked");
     	 break;
-    	 
-         } catch(NoSuchElementException e){
-        	 e.printStackTrace();
-    		   
-    		  }
-    }
-	 
-} catch (Exception e) {
-	// TODO: handle exception
-}
+	}
+	  catch(Exception e){
+		
+	  }
+	}
+	
+	 logger.info("OTP clicked");
+  	 logger.info("OTP entered");
+   	 logger.info("Proceed Button clicked");
+
+   } catch (NoSuchElementException e) {
+    // TODO Auto-generated catch block
+     e.printStackTrace();
+   }
    
-}
+   }
 }
 
 
