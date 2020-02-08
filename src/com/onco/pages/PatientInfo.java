@@ -100,7 +100,7 @@ public void cancertype() {
     			  }
     			}
 	    		
-	    	   logger.info("CancerStage selected");
+	    	   logger.info("CancerStage type");
 	  				
 	    		} catch (NoSuchElementException e) {
 	    				// TODO Auto-generated catch block
@@ -158,21 +158,29 @@ public void condition() {
 			e.printStackTrace();
 	}
 } 
-public void continuebutton() throws NoSuchElementException {
+public void continuebutton()  {
 				
-	
+	try {
+		
+		for(int i=0; i<=2; i++) {
+			
 	try { 
 			  
 	    continueButton.click();
-		logger.info("continue button clicked");
-	 } catch (NoSuchElementException e) {
+	    break;
+	}
+		catch (Exception e) {
 			// TODO: handle exception
 		}
 	} 
-	 
-	 }
+		logger.info("continue button clicked");
+		
+	} catch (NoSuchElementException e) {
+		e.printStackTrace();
+}
 
-	
+}
+}
 
 
 	    		  

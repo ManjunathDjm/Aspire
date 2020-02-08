@@ -46,37 +46,56 @@ public InitialAssessment(WebDriver rdriver) {
        
 public void initialAssessmentClose() {
 					
-  try { 
-	       
+ 	
+	try {
+
+		for(int i=0; i<=2;i++){
+			  try{
 	  
          		 ldriver.switchTo().defaultContent();
 				 initiAlassessmentClose.click();
-				 logger.info("Initial Assessment Window closed");
-				 
-		
-  }
-				catch (NoSuchElementException e) {
-				// TODO: handle exception
-}		
+				 break;
+				}
+		    	  catch(Exception e){
+		  			
+				  }
+				}
+
+		     logger.info("Initial Assessment Window closed");
+			
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+	}
+
 }
 	  
    
 public void ViewAssessment() {
-		
-				
-	try { 
-				    
+	
+	try {
+
+		for(int i=0; i<=2;i++){
+			  try{
+	  	    
 		        viewAssessment.click();
-				logger.info("View Assessment clicked");
-				   
 				exploremoreoptions.click();
-				logger.info("Explore More Option clicked");
 				
-			}	
-				catch (NoSuchElementException e) {
-				// TODO: handle exception
+				}
+	    	  catch(Exception e){
+	  			
+			  }
 			}
-	}
+
+		  logger.info("View Assessment clicked");
+		  logger.info("Explore More Option clicked");
+		
+	} catch (NoSuchElementException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+}
+
+}
 
 	 
 public void downloadAssessment() {
