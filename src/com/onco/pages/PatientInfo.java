@@ -66,6 +66,7 @@ public void patientname(String pname) {
 		      for(int i=0; i<=2; i++) {
 	             patientname.sendKeys(pname);
 	             logger.info("Patientname Entered");
+	             break;
     			
     			  }
     }
@@ -79,7 +80,6 @@ public void cancertype() {
 	    		  
    try {  
 	    		
-	   
 	     for(int i=0;i<=2; i++) {
 	    	 
 	            Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
@@ -87,10 +87,12 @@ public void cancertype() {
 	  			typeofCancer.click();
 	  			logger.info("CancerStage Selected");
 	  			
+	  			
 	  			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 		    Cancerstage.selectByIndex(1);
 	 		    cancerStage.click();
 	 		    logger.info("CancerStage Selected");
+	 		    
 	 		    
 	 		    Select Condition = new Select(ldriver.findElement(By.name("condition")));
 				Condition.selectByIndex(1);
@@ -99,6 +101,8 @@ public void cancertype() {
 			      
 			    continueButton.click();
 			    logger.info("ContinueButton Clicked");
+			    break;
+			    
 	     }
 	  			    
 	           }
