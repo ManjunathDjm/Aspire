@@ -58,7 +58,9 @@ public Login(WebDriver rdriver) {
 	}
     
 public void login(String phone) {
-    	 	
+    
+	for(int i=0; i<=2;i++){
+	
 	try {
     	   
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
@@ -75,11 +77,13 @@ public void login(String phone) {
     	} catch (NoSuchElementException e) {
     		e.printStackTrace();
     	}  	
+   }
 }
      	
 public void otpDetails(String otp) {
     	
- 
+	for(int i=0; i<=2;i++){
+		
 	try{
     			    
     	 Otp.click(); 
@@ -96,7 +100,7 @@ public void otpDetails(String otp) {
     }
 }
 
-
+}
 
     	
     	
