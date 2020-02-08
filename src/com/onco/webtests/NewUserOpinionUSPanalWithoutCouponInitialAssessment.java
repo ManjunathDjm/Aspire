@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--no-sandbox"); 
 options.addArguments("--window-size=1920,1080");
-options.addArguments("headless");
+//options.addArguments("headless");
 options.addArguments("--disable-gpu"); 
 options.addArguments("enable-javascript");
 driver = new ChromeDriver(options);
@@ -46,7 +46,7 @@ Thread.sleep(10000);
 Login login= new Login(driver);
 login.login(phone);
 
-Thread.sleep(5000);
+Thread.sleep(10000);
 login.otpDetails(otp);
 Thread.sleep(5000);
 driver.get(deleteURL);

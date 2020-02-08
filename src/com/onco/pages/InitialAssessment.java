@@ -1,5 +1,6 @@
 package com.onco.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,28 +45,28 @@ public InitialAssessment(WebDriver rdriver) {
 	}
        
 public void initialAssessmentClose() {
-		
-				
+					
   try { 
-				    
+	  
 				 ldriver.switchTo().defaultContent();
 				 initiAlassessmentClose.click();
 				 logger.info("Initial Assessment Window closed");
 				 
-			}	
+		
+  }
 				catch (NoSuchElementException e) {
 				// TODO: handle exception
-			}
-		} 			
-	   
-
+}		
+}
+	  
    
 public void ViewAssessment() {
 		
 				
 	try { 
 				    
-				viewAssessment.click();
+		        Boolean isPresent = ldriver.findElements(By.partialLinkText("VIEW ASSESSMENT")).size() > 0;
+		        viewAssessment.click();
 				logger.info("View Assessment clicked");
 				   
 				exploremoreoptions.click();
