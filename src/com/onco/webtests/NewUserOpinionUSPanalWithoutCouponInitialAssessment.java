@@ -31,7 +31,7 @@ WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
 options.addArguments("--no-sandbox"); 
 options.addArguments("--window-size=1920,1080");
-options.addArguments("headless");
+//options.addArguments("headless");
 options.addArguments("--disable-gpu"); 
 options.addArguments("enable-javascript");
 driver = new ChromeDriver(options);
@@ -42,6 +42,7 @@ driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 SignUp sign=new SignUp(driver);
 sign.signupicon();
 
+Thread.sleep(5000);
 Login login= new Login(driver);
 login.login(phone);
 
@@ -63,7 +64,7 @@ home.formfill(name ,email,phone);
 home.patientquery();
 home.submit();
 
-Thread.sleep(5000);
+Thread.sleep(10000);
 Login login= new Login(driver);
 login.otpDetails(otp);
 
@@ -71,10 +72,7 @@ Thread.sleep(5000);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.cancertype();
-info.cancerstage();
-info.continuebutton();
 
-Thread.sleep(5000);
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
 

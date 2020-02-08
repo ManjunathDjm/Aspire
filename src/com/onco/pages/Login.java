@@ -65,33 +65,31 @@ public void login(String phone) {
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
     	  logger.info("Country code selected");
-    	 
+  
     	  phoneNumber.sendKeys(phone); 
     	  logger.info("Phone number entered");
     	  
     	  loginVIAOTPbutton.click();
     	  logger.info("Login via OTP clicked");
     	  
-    	} catch (NoSuchElementException| ElementNotFoundException e) {
+    	} catch (NoSuchElementException e) {
     		e.printStackTrace();
     	}  	
 }
      	
 public void otpDetails(String otp) {
     	
-    		  
- try{
+ 
+	try{
     			    
     	 Otp.click(); 
-    	 logger.info("OTP clicked");
-    	    	    
+    	 logger.info("OTP clicked"); 	    
     	 Otp.sendKeys(otp);
-    	 logger.info("Entered OTP");
-    	    	    
+    	 logger.info("Entered OTP");	    
     	 proceedButton.click();
     	 logger.info("Proceed Button clicked");
     	 
-         } catch(NoSuchElementException|ElementNotFoundException e){
+         } catch(NoSuchElementException e){
         	 e.printStackTrace();
     		   
     		  }
@@ -99,7 +97,7 @@ public void otpDetails(String otp) {
 }
 
 
-	
+
     	
     	
     	

@@ -53,7 +53,7 @@ public void initialAssessmentClose() {
 				 logger.info("Initial Assessment Window closed");
 				 
 			}	
-				catch (NoSuchElementException | ElementNotFoundException e) {
+				catch (NoSuchElementException e) {
 				// TODO: handle exception
 			}
 		} 			
@@ -72,7 +72,7 @@ public void ViewAssessment() {
 				logger.info("Explore More Option clicked");
 				
 			}	
-				catch (NoSuchElementException | ElementNotFoundException e) {
+				catch (NoSuchElementException e) {
 				// TODO: handle exception
 			}
 	}
@@ -86,7 +86,7 @@ public void downloadAssessment() {
 					logger.info("Download Assessment clicked");
 					
 				}	
-					catch (NoSuchElementException | ElementNotFoundException e) {
+					catch (NoSuchElementException e) {
 					// TODO: handle exception
 				}
 	} 

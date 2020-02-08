@@ -49,6 +49,7 @@ public class PatientInfo {
     private WebElement fileupload;
     
     @FindBy(xpath="//html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
+    @CacheLookup
     private WebElement continueButton;
     
     
@@ -75,62 +76,32 @@ public void cancertype() {
 	            
 	    		  
    try {  
-	    			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
-	  			    TypeofCancer.selectByIndex(1);
-	  			    typeofCancer.click();
-	  			    logger.info("CancerStage type");
+	    		Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
+	  			TypeofCancer.selectByIndex(1);
+	  			typeofCancer.click();
+	  			logger.info("CancerStage type");
+	  			
+	  			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
+	 		    Cancerstage.selectByIndex(1);
+	 		    cancerStage.click();
+	 		    logger.info("CancerStage Selected");
+	 		    
+	 		    Select Condition = new Select(ldriver.findElement(By.name("condition")));
+				Condition.selectByIndex(1);
+			    generalCondition.click();
+			    logger.info("GeneralCondition Selected");
+			      
+			    continueButton.click();
+			    logger.info("ContinueButton Clicked");
+	  				 
 	  			    
-	    		  }
+	           }
     			  catch(NoSuchElementException e){
     				  e.printStackTrace();
     			  }
   }
 	  			    
-	  			    
-public void cancerstage() {
-	
-	  			
-   try { 
-	  					
-	  					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
-	 				    Cancerstage.selectByIndex(1);
-	 				    cancerStage.click();
-	 				    logger.info("CancerStage Selected");
-	  				 }
-	    			  catch(NoSuchElementException e){
-	    				  e.printStackTrace();
-	    			  }
-	    			}
-					 
-public void condition() {
-		
-  try { 
-				    
-				    Select Condition = new Select(ldriver.findElement(By.name("condition")));
-				    Condition.selectByIndex(1);
-			        generalCondition.click();
-			        logger.info("GeneralCondition Selected");
-			       
-			}	
-				catch (NoSuchElementException e) {
-					e.printStackTrace();
-			}
-		} 
-		
-public void continuebutton()  {
-	
-				
-  try { 
-			        continueButton.click();
-			        logger.info("ContinueButton Clicked");
-			 
-				}	
-				catch (NoSuchElementException e) {
-					e.printStackTrace();
-			} 
-	    }
-   }
-
+}
 	
 
 
