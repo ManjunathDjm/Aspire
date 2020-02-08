@@ -62,11 +62,13 @@ public PatientInfo(WebDriver rdriver) {
 public void patientname(String pname) {
  
     	
- try{ 
-		         patientname.sendKeys(pname);
+    try{ 
+		      for(int i=0; i<=2; i++) {
+	             patientname.sendKeys(pname);
 	             logger.info("Patientname Entered");
     			
     			  }
+    }
 	             catch(NoSuchElementException e){
     			}
     }
@@ -76,10 +78,14 @@ public void cancertype() {
 	            
 	    		  
    try {  
-	    		Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
+	    		
+	   
+	     for(int i=0;i<=2; i++) {
+	    	 
+	            Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 	  			TypeofCancer.selectByIndex(1);
 	  			typeofCancer.click();
-	  			logger.info("CancerStage type");
+	  			logger.info("CancerStage Selected");
 	  			
 	  			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 	 		    Cancerstage.selectByIndex(1);
@@ -93,7 +99,7 @@ public void cancertype() {
 			      
 			    continueButton.click();
 			    logger.info("ContinueButton Clicked");
-	  				 
+	     }
 	  			    
 	           }
     			  catch(NoSuchElementException e){

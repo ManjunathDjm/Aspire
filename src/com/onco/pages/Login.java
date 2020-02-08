@@ -64,19 +64,20 @@ public void login(String phone) {
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
+    	  logger.info("Country code selected");
   
     	  phoneNumber.sendKeys(phone); 
+    	  logger.info("Phone number entered");
     	  loginVIAOTPbutton.click();
+    	  logger.info("Login via OTP clicked");
+    	  break;
 
     	  
     	} catch (NoSuchElementException e) {
     		e.printStackTrace();
     	}  	
 }
-		 logger.info("Country code selected");
-		 logger.info("Phone number entered");
-		 logger.info("Login via OTP clicked");
-		 
+	
 } catch (Exception e) {
 	// TODO: handle exception
 }
@@ -90,19 +91,19 @@ public void otpDetails(String otp) {
 		
 	try{
     			    
-    	 Otp.click(); 	    
-    	 Otp.sendKeys(otp);    
+    	 Otp.click(); 	   
+    	 logger.info("OTP clicked");
+    	 Otp.sendKeys(otp); 
+    	 logger.info("OTP clicked");
     	 proceedButton.click();
+    	 logger.info("Proceed Button clicked");
+    	 break;
     	 
          } catch(NoSuchElementException e){
         	 e.printStackTrace();
     		   
     		  }
     }
-	
-	 logger.info("OTP clicked");
-	 logger.info("Entered OTP");
-	 logger.info("Proceed Button clicked");
 	 
 } catch (Exception e) {
 	// TODO: handle exception

@@ -47,8 +47,9 @@ public InitialAssessment(WebDriver rdriver) {
 public void initialAssessmentClose() {
 					
   try { 
+	       
 	  
-				 ldriver.switchTo().defaultContent();
+         		 ldriver.switchTo().defaultContent();
 				 initiAlassessmentClose.click();
 				 logger.info("Initial Assessment Window closed");
 				 
@@ -65,7 +66,6 @@ public void ViewAssessment() {
 				
 	try { 
 				    
-		        Boolean isPresent = ldriver.findElements(By.partialLinkText("VIEW ASSESSMENT")).size() > 0;
 		        viewAssessment.click();
 				logger.info("View Assessment clicked");
 				   
