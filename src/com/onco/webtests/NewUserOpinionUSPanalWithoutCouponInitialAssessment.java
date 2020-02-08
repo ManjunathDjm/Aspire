@@ -42,7 +42,7 @@ driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 SignUp sign=new SignUp(driver);
 sign.signupicon();
 
-Thread.sleep(5000);
+Thread.sleep(10000);
 Login login= new Login(driver);
 login.login(phone);
 

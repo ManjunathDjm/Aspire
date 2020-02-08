@@ -8,12 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 
 import org.apache.log4j.Logger;
 
@@ -29,7 +24,6 @@ public class Login  {
 	private static final Logger logger = Logger.getLogger(Login.class);
 
 	@FindBy(name="countryCode")
-	@CacheLookup
 	WebElement countryCode;
 	
     @FindBy(name="contact")
@@ -58,49 +52,65 @@ public Login(WebDriver rdriver) {
 	}
     
 public void login(String phone) {
-    
-	for(int i=0; i<=2;i++){
-	
+    	 	
+
+		
 	try {
+		
+		for(int i=0; i<=2; i++) {
+		 
+		try {
     	   
     	  Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
     	  countrycode.selectByIndex(0);
     	  countryCode.click();  
-    	  logger.info("Country code selected");
   
     	  phoneNumber.sendKeys(phone); 
-    	  logger.info("Phone number entered");
-    	  
     	  loginVIAOTPbutton.click();
-    	  logger.info("Login via OTP clicked");
+
     	  
     	} catch (NoSuchElementException e) {
     		e.printStackTrace();
     	}  	
-   }
+}
+		 logger.info("Country code selected");
+		 logger.info("Phone number entered");
+		 logger.info("Login via OTP clicked");
+		 
+} catch (Exception e) {
+	// TODO: handle exception
+}
 }
      	
 public void otpDetails(String otp) {
     	
-	for(int i=0; i<=2;i++){
+   try {
+	   
+	for(int i=0;i<=2;i++) {
 		
 	try{
     			    
-    	 Otp.click(); 
-    	 logger.info("OTP clicked"); 	    
-    	 Otp.sendKeys(otp);
-    	 logger.info("Entered OTP");	    
+    	 Otp.click(); 	    
+    	 Otp.sendKeys(otp);    
     	 proceedButton.click();
-    	 logger.info("Proceed Button clicked");
     	 
          } catch(NoSuchElementException e){
         	 e.printStackTrace();
     		   
     		  }
     }
+	
+	 logger.info("OTP clicked");
+	 logger.info("Entered OTP");
+	 logger.info("Proceed Button clicked");
+	 
+} catch (Exception e) {
+	// TODO: handle exception
+}
+   
+}
 }
 
-}
 
     	
     	
