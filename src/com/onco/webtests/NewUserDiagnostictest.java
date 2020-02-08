@@ -71,6 +71,9 @@ login.otpDetails(otp);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.cancertype();
+info.cancerstage();
+info.condition();
+info.continuebutton();
 
 
 Thread.sleep(5000);

@@ -94,7 +94,7 @@ public void otpDetails(String otp) {
     	 Otp.click(); 	   
     	 logger.info("OTP clicked");
     	 Otp.sendKeys(otp); 
-    	 logger.info("OTP clicked");
+    	 logger.info("OTP entered");
     	 proceedButton.click();
     	 logger.info("Proceed Button clicked");
     	 break;

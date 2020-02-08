@@ -72,6 +72,9 @@ Thread.sleep(5000);
 PatientInfo info=new PatientInfo(driver);
 info.patientname(patientname);
 info.cancertype();
+info.cancerstage();
+info.condition();
+info.continuebutton();
 
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
