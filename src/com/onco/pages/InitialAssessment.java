@@ -80,6 +80,7 @@ public void ViewAssessment() {
 	  	    
 		        viewAssessment.click();
 				exploremoreoptions.click();
+				break;
 				
 				}
 	    	  catch(Exception e){

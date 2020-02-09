@@ -61,6 +61,10 @@ public class Homepage {
  public void formfill (String patientname, String email,String phone) {
     	
 		try {
+			
+			for(int i=0; i<=2; i++) {
+				
+			try {
 		
 			    nameField.sendKeys(patientname);
 			    logger.info("Name field entered");
@@ -70,18 +74,29 @@ public class Homepage {
 			
 				phoneFiled.sendKeys(phone);
 				logger.info("Phone field entered");
+				break;
+			}
 				
-			} catch (NoSuchElementException e) {
+			catch (Exception e) {
 				e.printStackTrace();
 			}
-
-		} 	
-  
+			}
+			
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+		}
+}
+ 
  public void patientquery() {
 
-	    try {
-	    	 
-	   
+
+		try {
+			
+			for(int i=0; i<=2; i++) {
+				
+			try {
+		
 	    	 patientChoice.click();
 	    	 logger.info("Patient choice clicked");
 	    	 
@@ -90,29 +105,42 @@ public class Homepage {
 		     
 		     selectTerms.click();
 		     logger.info("T&C clicked");
-		     
-	     } catch (NoSuchElementException e) {
-		    e.printStackTrace();
+		     break;
+			}
+				catch (Exception e) {
+					e.printStackTrace();
+		}
+				}
+				
+				} catch (NoSuchElementException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+			}
 	}
-
- }
  public void submit() {
 	
-	    try {
-	    	 
+	 try {
+			
+			for(int i=0; i<=2; i++) {
+				
+			try {
+				
 	    	 submit.click();
-	    	 logger.info("submit button clicked");
-	     } catch (NoSuchElementException e) {
-	    	e.printStackTrace(); 
+	    	 break;
+			}
+
+				catch (Exception e) {
+					e.printStackTrace();
+		}
+				}
+				
+				} catch (NoSuchElementException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+			}
 	}
+
  }
-
-}
-       
-    	
-    	    
-
-
     
 
 
