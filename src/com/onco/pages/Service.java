@@ -25,7 +25,7 @@ public class Service {
 	@CacheLookup
 	WebElement appointment;
 	
-    @FindBy(xpath="//body//div[@class='bg-color-mob']//div//div[2]//div[1]//div[2]")
+    @FindBy(xpath="//body/app-root/select-service/div/div/div/section/div/section/div/div/div[2]/div[1]")
     @CacheLookup
     WebElement opinion;
     
