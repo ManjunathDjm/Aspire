@@ -66,21 +66,27 @@ try {
 }
 
   
- public void opinion() {
+public void opinion() {
       
   try {
 	  
+	  try {
+		  
 	  for(int i=0; i<=2; i++) {
 		  
 			   opinion.click();
 			   logger.info("Opinion clicked");
 			   break;
 	  }
-		} catch (NoSuchElementException |ElementNotFoundException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-   }
+
+} catch (NoSuchElementException e) {
+	e.printStackTrace();
+}
+}
       
 public void labtest() { 
 	  
