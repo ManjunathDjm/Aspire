@@ -47,10 +47,7 @@ public class BaseClass {
             	WebDriverManager.chromedriver().setup();
             	ChromeOptions options = new ChromeOptions(); 
             	options.addArguments("--no-sandbox"); 
-            	options.addArguments("--window-size=1920,1080");
-            	options.addArguments("headless");
-            	options.addArguments("--disable-gpu"); 
-                options.addArguments("enable-javascript");
+            	options.addArguments("headless","--window-size=1920,1080");
             	driver = new ChromeDriver(options);
             	driver.navigate().to(url);
             	driver.manage().window().maximize();
