@@ -126,6 +126,7 @@ public class Homepage {
 			try {
 				
 	    	 submit.click();
+	    	 logger.info("T&C clicked");
 	    	 break;
 			}
 
