@@ -100,7 +100,7 @@ public void cancertype() {
     			  }
     			}
 	    		
-	    	   logger.info("CancerStage type");
+	    	   logger.info("CancerType selected");
 	  				
 	    		} catch (NoSuchElementException e) {
 	    				// TODO Auto-generated catch block

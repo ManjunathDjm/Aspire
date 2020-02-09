@@ -47,6 +47,9 @@ public void appointment()   {
    		
 try {
 
+	for(int i=0; i<=2; i++) {
+		
+
         		try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
@@ -54,23 +57,32 @@ try {
 				}
         		appointment.click();
         		logger.info("Appointment clicked");
+        		break;
+	}
 			} catch (NoSuchElementException e) {
 				e.printStackTrace();
 			}
-    	}
-     
+
+}
+
+  
  public void opinion() {
       
-	 try {
+  try {
+	  
+	  for(int i=0; i<=2; i++) {
+		  
 			   opinion.click();
 			   logger.info("Opinion clicked");
+			   break;
+	  }
 		} catch (NoSuchElementException |ElementNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
    }
       
-   public void labtest() { 
+public void labtest() { 
 	  
 try {
         		try {
