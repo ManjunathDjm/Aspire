@@ -29,8 +29,9 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 	
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("--no-sandbox"); 
-options.addArguments("headless","--window-size=1920,1080");
+options.setHeadless(true);
+//options.addArguments("--no-sandbox"); 
+options.addArguments("window-size=1920,1080");
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().window().maximize();
