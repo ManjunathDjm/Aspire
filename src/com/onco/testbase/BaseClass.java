@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +22,7 @@ import org.testng.annotations.Parameters;
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.mongodb.diagnostics.logging.Logger;
 
+import bsh.Capabilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -45,10 +48,12 @@ public class BaseClass {
             	
             	
             	WebDriverManager.chromedriver().setup();
-            	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("window-size=1440,900");
-            	options.setHeadless(true);
-            	//options.addArguments("--no-sandbox"); 
+            	ChromeOptions options = new ChromeOptions();
+            	DesiredCapabilities cap = DesiredCapabilities.chrome();
+            	options.addArguments("headless","disable-gpu","--test-type","--ignore-certificate-errors");
+            	options.addArguments("window-size=1200,1100");
+                cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                cap.setCapability(ChromeOptions.CAPABILITY,options);
             	driver = new ChromeDriver(options);
             	driver.navigate().to(url);
             	driver.manage().window().maximize();

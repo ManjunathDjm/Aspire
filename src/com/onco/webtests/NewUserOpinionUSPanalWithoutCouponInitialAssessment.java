@@ -3,6 +3,8 @@ package com.onco.webtests;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -29,9 +31,11 @@ public void delete(String deleteURL,String url,String browser,String phone,Strin
 	
 WebDriverManager.chromedriver().setup();
 ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1440,900");
-options.setHeadless(true);
-//options.addArguments("--no-sandbox"); 
+DesiredCapabilities cap = DesiredCapabilities.chrome();
+options.addArguments("headless","disable-gpu","--test-type","--ignore-certificate-errors");
+options.addArguments("window-size=1200,1100");
+cap.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+cap.setCapability(ChromeOptions.CAPABILITY,options);
 driver = new ChromeDriver(options);
 driver.get(url);
 driver.manage().window().maximize();
