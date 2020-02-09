@@ -53,6 +53,7 @@ public class BaseClass {
                 options.addArguments("enable-javascript");
             	driver = new ChromeDriver(options);
             	driver.navigate().to(url);
+            	driver.manage().window().maximize();
             	
             	//driver.manage().deleteAllCookies();
             	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);

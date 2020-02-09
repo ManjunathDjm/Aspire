@@ -36,6 +36,7 @@ options.addArguments("--disable-gpu");
 options.addArguments("enable-javascript");
 driver = new ChromeDriver(options);
 driver.get(url);
+driver.manage().window().maximize();
 driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			
