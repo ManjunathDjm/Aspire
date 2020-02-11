@@ -72,8 +72,9 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(60000);
+		Thread.sleep(10000);
 		PatientInfo info = new PatientInfo(driver);
+		Thread.sleep(30000);
 		info.patientname(patientname);
 		info.cancertype();
 		info.cancerstage();
