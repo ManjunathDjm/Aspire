@@ -25,7 +25,7 @@ public class Service {
 	@CacheLookup
 	WebElement appointment;
 	
-    @FindBy(xpath="//body/app-root/select-service/div/div/div/section/div/section/div/div/div[2]/div[1]")
+    @FindBy(xpath="/html/body/app-root/select-service/div/div[3]/div[2]/section/div[3]/section/div/div/div[2]/div/div[1]")
     @CacheLookup
     WebElement opinion;
     
