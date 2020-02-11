@@ -54,6 +54,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 	@Parameters({ "name", "email", "phone", "otp", "patientname", "INDcoupon" })
 	@Test(priority = 1)
+	
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 

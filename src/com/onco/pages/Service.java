@@ -6,8 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import org.apache.log4j.Logger;
 
 /**
@@ -26,7 +24,7 @@ public class Service {
 	@CacheLookup
 	WebElement appointment;
 
-	@FindBy(xpath = "//body/app-root/select-service[@class='ng-star-inserted']/div[@class='ng-star-inserted']/div[@class='bg-color-mob']/div/section/div[@class='container']/section[@class='hidden-xs hidden-sm']/div[@class='card']/div[@class='row']/div[2]")
+	@FindBy(xpath = "//div[@class='service-card-bg right_oncologist']//h2[@class='offer-text'][contains(text(),'Get Online Opinion')]")
 	@CacheLookup
 	WebElement opinion;
 
@@ -47,7 +45,7 @@ public class Service {
 
 		try {
 
-			for (int i = 0; i <= 2;) {
+			for (int i = 0; i <= 2; i++) {
 
 				try {
 					Thread.sleep(3000);
@@ -68,22 +66,22 @@ public class Service {
 
 		try {
 
-			try {
-
-				for (int i = 0; i <= 2;) {
+			for (int i = 0; i <= 2;) {
+				try {
 
 					opinion.click();
 					logger.info("Opinion clicked");
 					break;
+				} catch (Exception e) {
+
 				}
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 
 		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 
 	public void labtest() {
