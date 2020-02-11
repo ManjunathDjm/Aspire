@@ -65,17 +65,17 @@ public class Service {
 	public void opinion() {
 
 		try {
-			
+
 			for (int i = 0; i <= 2; i++) {
 				try {
 
 					opinion.click();
-					logger.info("Opinion clicked");
 					break;
 				} catch (Exception e) {
 
 				}
 			}
+			logger.info("Opinion clicked");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block

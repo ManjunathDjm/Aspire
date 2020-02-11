@@ -81,6 +81,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		Service service = new Service(driver);
 		service.opinion();
 
+		Thread.sleep(30000);
 		OpinionType opinion = new OpinionType(driver);
 		opinion.USPanalButton();
 
