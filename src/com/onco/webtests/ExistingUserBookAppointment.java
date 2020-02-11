@@ -13,50 +13,49 @@ import com.onco.pages.Service;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 
-
 public class ExistingUserBookAppointment extends BaseClass {
 
-@Parameters({"name","email","phone","patientname","otp"})	
-@Test
-public void existingUserBookAppointment(String name,String email,String phone,String patientname,String otp) throws Exception {
-		
-Homepage home= new Homepage(driver);
-home.formfill(name,email,phone);
-home.patientquery();
-home.submit();
-	
-Thread.sleep(3000);
-Login login= new Login(driver);
-login.login(phone);
-login.otpDetails(otp);
-    
-Dashboard dashboard =new Dashboard(driver);
-dashboard.dashboard();
+	@Parameters({ "name", "email", "phone", "patientname", "otp" })
+	@Test
+	public void existingUserBookAppointment(String name, String email, String phone, String patientname, String otp)
+			throws Exception {
 
-PatientInfo info=new PatientInfo(driver);
-info.patientname(patientname);
-info.cancertype();
-info.cancerstage();
-info.condition();
-info.continuebutton();
+		Homepage home = new Homepage(driver);
+		home.formfill(name, email, phone);
+		home.patientquery();
+		home.submit();
 
-Service service=new Service(driver);
-service.appointment();
-     
-RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
-appointment.appointment();
-appointment.radiationOncologist();
-appointment.button();
-     
-Appointment app= new Appointment(driver);
-app.appointment();
-     
-Summary summary= new Summary(driver);
-summary.summary();
-     
-PaymentsRazorPay pay= new PaymentsRazorPay(driver);
-pay.netbanking();
+		Thread.sleep(3000);
+		Login login = new Login(driver);
+		login.login(phone);
+		login.otpDetails(otp);
 
-    
+		Dashboard dashboard = new Dashboard(driver);
+		dashboard.dashboard();
+
+		PatientInfo info = new PatientInfo(driver);
+		info.patientname(patientname);
+		info.cancertype();
+		info.cancerstage();
+		info.condition();
+		info.continuebutton();
+
+		Service service = new Service(driver);
+		service.appointment();
+
+		RequestDoctorAppointment appointment = new RequestDoctorAppointment(driver);
+		appointment.appointment();
+		appointment.radiationOncologist();
+		appointment.button();
+
+		Appointment app = new Appointment(driver);
+		app.appointment();
+
+		Summary summary = new Summary(driver);
+		summary.summary();
+
+		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
+		pay.netbanking();
+
 	}
 }

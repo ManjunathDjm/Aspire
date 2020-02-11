@@ -22,62 +22,46 @@ import com.mongodb.diagnostics.logging.Logger;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 /**
- * Methods to launch browsers and take screenshots on test case fail
- * Base class will be used for all the test to launch browsers
+ * Methods to launch browsers and take screenshots on test case fail Base class
+ * will be used for all the test to launch browsers
+ * 
  * @author manjunathdj
  *
  */
 public class BaseClass {
-	  
-	 
-	  public static WebDriver driver;
-	  public static org.apache.log4j.Logger Logger;   
-	
-	  @Parameters({"browser","url"})
-	  @BeforeMethod
-	  public void openBrowser(String browser, String url) throws Exception {
-       
-		BasicConfigurator.configure(); 
- 
-            if (browser.equalsIgnoreCase("chrome")) {
-            	
-            	
-            	WebDriverManager.chromedriver().setup();
-            	ChromeOptions options = new ChromeOptions(); 
-            	options.addArguments("headless","start-maximized");
-            	options.addArguments("window-size=1920,1080");
-            	options.addArguments("no-sandbox"); 
-            	driver = new ChromeDriver(options);
-            	driver.get(url);
-            	
-            	//driver.manage().deleteAllCookies();
-            	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-                driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        		
-        		
-            }    	
 
-            }
-            
-	       @AfterMethod
-	       public static void tearDown(ITestResult result) throws IOException {    
-	       driver.quit();
-			
-	   
-	      
-	   }
-	
-	       
-	       
+	public static WebDriver driver;
+	public static org.apache.log4j.Logger Logger;
+
+	@Parameters({ "browser", "url" })
+	@BeforeMethod
+	public void openBrowser(String browser, String url) throws Exception {
+
+		BasicConfigurator.configure();
+
+		if (browser.equalsIgnoreCase("chrome")) {
+
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("headless", "start-maximized");
+			options.addArguments("window-size=1920,1080");
+			options.addArguments("no-sandbox");
+			driver = new ChromeDriver(options);
+			driver.get(url);
+
+			// driver.manage().deleteAllCookies();
+			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		}
+
+	}
+
+	@AfterMethod
+	public static void tearDown(ITestResult result) throws IOException {
+		driver.quit();
+
+	}
+
 }
-
-
-          
-
-        
-              
-
-
-

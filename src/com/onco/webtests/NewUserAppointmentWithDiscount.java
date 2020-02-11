@@ -21,65 +21,59 @@ import com.onco.testbase.BaseClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class NewUserAppointmentWithDiscount extends BaseClass {
-	
-@BeforeClass
-@Parameters({"deleteURL","url","browser","phone","otp"})
-public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
-			
-WebDriverManager.chromedriver().setup(); 
-ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1280,800");
-options.addArguments("--no-sandbox");
-options.addArguments("--headless");
-options.setExperimentalOption("useAutomationExtension", false);
-driver = new ChromeDriver(options);
-driver.get(url);
-driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
-			
-			
-SignUp sign=new SignUp(driver);
-sign.signupicon();
-				
-Login login= new Login(driver);
-login.login(phone);
-Thread.sleep(5000);
-login.otpDetails(otp);
-Thread.sleep(5000);
-driver.get(deleteURL);
-Thread.sleep(5000);
-driver.close();
-			
-			
-}		
-	
-@Parameters({"name","email","phone","otp","patientname","discountURL","hospitalname","cityname"})
-@Test(priority = 5)
-public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname,String discountURL, String hospitalname,String cityname) throws Exception {
-		   
-    
-Homepage home= new Homepage(driver);
-home.formfill(name,email,phone) ;
-home.patientquery();
-home.submit();
 
-Thread.sleep(5000);
-Login login= new Login(driver);
-login.otpDetails(otp);
+	@BeforeClass
+	@Parameters({ "deleteURL", "url", "browser", "phone", "otp" })
+	public void delete(String deleteURL, String url, String browser, String phone, String otp) throws Exception {
 
-Thread.sleep(10000);
-driver.get(discountURL);
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("window-size=1280,800");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.setExperimentalOption("useAutomationExtension", false);
+		driver = new ChromeDriver(options);
+		driver.get(url);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 
-Thread.sleep(5000);
-Discount discount = new Discount(driver);
-discount.claimdiscountbutton();
-discount.userdetailsform(hospitalname, cityname);
-Thread.sleep(5000);
+		SignUp sign = new SignUp(driver);
+		sign.signupicon();
 
+		Login login = new Login(driver);
+		login.login(phone);
+		Thread.sleep(5000);
+		login.otpDetails(otp);
+		Thread.sleep(5000);
+		driver.get(deleteURL);
+		Thread.sleep(5000);
+		driver.close();
 
+	}
+
+	@Parameters({ "name", "email", "phone", "otp", "patientname", "discountURL", "hospitalname", "cityname" })
+	@Test(priority = 5)
+	public void newUserAppointmentPayAtHospital(String name, String email, String phone, String otp, String patientname,
+			String discountURL, String hospitalname, String cityname) throws Exception {
+
+		Homepage home = new Homepage(driver);
+		home.formfill(name, email, phone);
+		home.patientquery();
+		home.submit();
+
+		Thread.sleep(5000);
+		Login login = new Login(driver);
+		login.otpDetails(otp);
+
+		Thread.sleep(10000);
+		driver.get(discountURL);
+
+		Thread.sleep(5000);
+		Discount discount = new Discount(driver);
+		discount.claimdiscountbutton();
+		discount.userdetailsform(hospitalname, cityname);
+		Thread.sleep(5000);
+
+	}
 }
-}
-
-

@@ -11,8 +11,9 @@ import com.gargoylesoftware.htmlunit.ElementNotFoundException;
 import org.apache.log4j.Logger;
 
 /**
- * Locators and methods for Service page
- * We will call these locator and methods to create test cases webtests package
+ * Locators and methods for Service page We will call these locator and methods
+ * to create test cases webtests package
+ * 
  * @author manjunathdj
  *
  */
@@ -21,102 +22,85 @@ public class Service {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Service.class);
 
-	@FindBy(xpath="//div[@class='row']//div[1]//div[1]//div[2]")
+	@FindBy(xpath = "//div[@class='row']//div[1]//div[1]//div[2]")
 	@CacheLookup
 	WebElement appointment;
-	
-    @FindBy(xpath="//body/app-root/select-service[@class='ng-star-inserted']/div[@class='ng-star-inserted']/div[@class='bg-color-mob']/div/section/div[@class='container']/section[@class='hidden-xs hidden-sm']/div[@class='card']/div[@class='row']/div[2]")
-    @CacheLookup
-    WebElement opinion;
-    
-    @FindBy(xpath="//div[@class='container']//div[3]//div[1]//div[2]")
-    @CacheLookup
-    WebElement labtest;
-    
-    @FindBy(xpath="//div[@class='row']//button[@class='close']")
-    @CacheLookup
-    WebElement initialAssessmentClose;
-    
-   
+
+	@FindBy(xpath = "//body/app-root/select-service[@class='ng-star-inserted']/div[@class='ng-star-inserted']/div[@class='bg-color-mob']/div/section/div[@class='container']/section[@class='hidden-xs hidden-sm']/div[@class='card']/div[@class='row']/div[2]")
+	@CacheLookup
+	WebElement opinion;
+
+	@FindBy(xpath = "//div[@class='container']//div[3]//div[1]//div[2]")
+	@CacheLookup
+	WebElement labtest;
+
+	@FindBy(xpath = "//div[@class='row']//button[@class='close']")
+	@CacheLookup
+	WebElement initialAssessmentClose;
+
 	public Service(WebDriver rdriver) {
-		ldriver=rdriver;
+		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-    
-public void appointment()   {
-   		
-try {
 
-	for(int i=0; i<=2;) {
-		
+	public void appointment() {
 
-        		try {
+		try {
+
+			for (int i = 0; i <= 2;) {
+
+				try {
 					Thread.sleep(3000);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-        		appointment.click();
-        		logger.info("Appointment clicked");
-        		break;
-	}
-			} catch (NoSuchElementException e) {
-				e.printStackTrace();
+				appointment.click();
+				logger.info("Appointment clicked");
+				break;
 			}
-
-}
-
-  
-public void opinion() {
-      
-  try {
-	  
-	  try {
-		  
-	  for(int i=0; i<=2;) {
-		  
-			   opinion.click();
-			   logger.info("Opinion clicked");
-			   break;
-	  }
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 
-} catch (NoSuchElementException e) {
-	e.printStackTrace();
-}
-}
-      
-public void labtest() { 
-	  
-try {
-        		try {
-					Thread.sleep(2000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+	}
+
+	public void opinion() {
+
+		try {
+
+			try {
+
+				for (int i = 0; i <= 2;) {
+
+					opinion.click();
+					logger.info("Opinion clicked");
+					break;
 				}
-        		labtest.click();
-        		logger.info("labtest clicked");
-			} catch (NoSuchElementException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-        }
-   }
-   
+			}
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void labtest() {
+
+		try {
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			labtest.click();
+			logger.info("labtest clicked");
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 }
-   
-
-  	   
-
-     
-    	
-    	
-  
-    
-
-    
-   
-
-  

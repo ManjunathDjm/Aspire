@@ -21,106 +21,84 @@ import com.onco.testbase.BaseClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class NewUserAppointmentBookOnPriority extends BaseClass {
 
-	
-@BeforeClass
-@Parameters({"deleteURL","url","browser","phone","otp"})
-public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
-				
-WebDriverManager.chromedriver().setup(); 
-ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1280,800");
-options.addArguments("--no-sandbox");
-options.addArguments("--headless");
-options.setExperimentalOption("useAutomationExtension", false);
-driver = new ChromeDriver(options);
-driver.get(url);
-driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
+	@BeforeClass
+	@Parameters({ "deleteURL", "url", "browser", "phone", "otp" })
+	public void delete(String deleteURL, String url, String browser, String phone, String otp) throws Exception {
 
-SignUp sign=new SignUp(driver);
-sign.signupicon();
-				
-Login login= new Login(driver);
-login.login(phone);
-Thread.sleep(3000);
-login.otpDetails(otp);
-Thread.sleep(5000);
-driver.get(deleteURL);
-Thread.sleep(3000);
-driver.close();
-			
-	
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("window-size=1280,800");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.setExperimentalOption("useAutomationExtension", false);
+		driver = new ChromeDriver(options);
+		driver.get(url);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+
+		SignUp sign = new SignUp(driver);
+		sign.signupicon();
+
+		Login login = new Login(driver);
+		login.login(phone);
+		Thread.sleep(3000);
+		login.otpDetails(otp);
+		Thread.sleep(5000);
+		driver.get(deleteURL);
+		Thread.sleep(3000);
+		driver.close();
+
+	}
+
+	@Parameters({ "name", "email", "phone", "otp", "patientname" })
+	@Test(priority = 6)
+	public void newUserAppointmentBookOnPriority(String name, String email, String phone, String otp,
+			String patientname) throws Exception {
+
+		Homepage home = new Homepage(driver);
+		home.formfill(name, email, phone);
+		home.patientquery();
+		home.submit();
+
+		Thread.sleep(5000);
+		Login login = new Login(driver);
+		login.otpDetails(otp);
+
+		PatientInfo info = new PatientInfo(driver);
+		info.patientname(patientname);
+		info.cancertype();
+		info.cancerstage();
+		info.condition();
+		info.continuebutton();
+
+		Thread.sleep(5000);
+		InitialAssessment assessment = new InitialAssessment(driver);
+		assessment.initialAssessmentClose();
+
+		Service service = new Service(driver);
+		service.appointment();
+
+		Thread.sleep(5000);
+		RequestDoctorAppointment appointment = new RequestDoctorAppointment(driver);
+		appointment.appointment();
+		appointment.radiationOncologist();
+		appointment.button();
+
+		Appointment app = new Appointment(driver);
+		app.appointment();
+
+		Thread.sleep(10000);
+		Summary summary = new Summary(driver);
+		summary.summary();
+
+		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
+		pay.netbanking();
+
+		Thread.sleep(3000);
+		Dashboard dashboard = new Dashboard(driver);
+
+	}
+
 }
-@Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 6)
-public void newUserAppointmentBookOnPriority(String name,String email,String phone,String otp,String patientname) throws Exception {
-    
-Homepage home= new Homepage(driver);
-home.formfill(name ,email,phone);
-home.patientquery();
-home.submit();
-
-Thread.sleep(5000);
-Login login= new Login(driver);
-login.otpDetails(otp);
-
-PatientInfo info=new PatientInfo(driver);
-info.patientname(patientname);
-info.cancertype();
-info.cancerstage();
-info.condition();
-info.continuebutton();
-
-Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment(driver);
-assessment.initialAssessmentClose();
-
-Service service=new Service(driver);
-service.appointment();
-
-Thread.sleep(5000);
-RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
-appointment.appointment();
-appointment.radiationOncologist();
-appointment.button();
-
-Appointment app= new Appointment(driver);
-app.appointment();
-
-Thread.sleep(10000);
-Summary summary= new Summary(driver);
-summary.summary();
-
-PaymentsRazorPay pay= new PaymentsRazorPay(driver);
-pay.netbanking();
-
-Thread.sleep(3000);
-Dashboard dashboard= new Dashboard(driver);
-
-
-}
-
-}
-
-
-
-
-
-    
-
-
-
-
-
-
-    
-
-
-
-
-
-
-

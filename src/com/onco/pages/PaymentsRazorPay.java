@@ -1,6 +1,5 @@
 package com.onco.pages;
 
-
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -15,96 +14,71 @@ import org.openqa.selenium.support.PageFactory;
 import com.onco.testbase.BaseClass;
 
 /**
- * Locators and methods for Payments page
- * We will call these locator and methods to create test cases webtests package
+ * Locators and methods for Payments page We will call these locator and methods
+ * to create test cases webtests package
+ * 
  * @author manjunathdj
  *
  */
 public class PaymentsRazorPay {
 
 	WebDriver ldriver;
-    private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
-    
-    @FindBy(xpath = "//*[@id=\"payment-options\"]/div[2]/label")
-    @CacheLookup
-    WebElement netBanking;
-    
-    @FindBy(xpath ="//*[@id=\"modal-close\"]")
-    @CacheLookup
-    WebElement close;
-    
-    @FindBy(xpath="//*[@id=\"form-netbanking\"]/div[2]")
-    @CacheLookup
-    WebElement selectBank;
-    
-    @FindBy(xpath="//button[@class='success']")
-    @CacheLookup
-    WebElement successButton;
-    
-    @FindBy(xpath="//*[@id=\"netb-banks\"]/div[1]/label")
-    @CacheLookup
-    WebElement sbiNetbanking;
-    
-    @FindBy(id="footer")
-    private WebElement payNow;
-    
- 
+	private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
+
+	@FindBy(xpath = "//*[@id=\"payment-options\"]/div[2]/label")
+	@CacheLookup
+	WebElement netBanking;
+
+	@FindBy(xpath = "//*[@id=\"modal-close\"]")
+	@CacheLookup
+	WebElement close;
+
+	@FindBy(xpath = "//*[@id=\"form-netbanking\"]/div[2]")
+	@CacheLookup
+	WebElement selectBank;
+
+	@FindBy(xpath = "//button[@class='success']")
+	@CacheLookup
+	WebElement successButton;
+
+	@FindBy(xpath = "//*[@id=\"netb-banks\"]/div[1]/label")
+	@CacheLookup
+	WebElement sbiNetbanking;
+
+	@FindBy(id = "footer")
+	private WebElement payNow;
+
 	public PaymentsRazorPay(WebDriver rdriver) {
-		ldriver=rdriver;
+		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-    
-    public void netbanking() throws InterruptedException {
-  
+
+	public void netbanking() throws InterruptedException {
+
 		try {
-			
+
 			ldriver.switchTo().frame(ldriver.findElement(By.className("razorpay-checkout-frame")));
 			logger.info(netBanking.isDisplayed());
-		    netBanking.click();
-		    
-		    logger.info(sbiNetbanking.isDisplayed());
-		    sbiNetbanking.click();
-		    
-		    logger.info(payNow.isDisplayed());
-		    payNow.click(); 
-		    //Switch to child window and click on success button 
-		    Set <String> windowhandles=ldriver.getWindowHandles();
-		    for(String windowHandle:windowhandles){
-		    	ldriver.getWindowHandle();
+			netBanking.click();
+
+			logger.info(sbiNetbanking.isDisplayed());
+			sbiNetbanking.click();
+
+			logger.info(payNow.isDisplayed());
+			payNow.click();
+			// Switch to child window and click on success button
+			Set<String> windowhandles = ldriver.getWindowHandles();
+			for (String windowHandle : windowhandles) {
+				ldriver.getWindowHandle();
 				ldriver.switchTo().window(windowHandle);
-    }
-            logger.info(successButton.isDisplayed());
-		    successButton.click();
-		     
-			} catch (NoSuchElementException e) {
-				e.printStackTrace();
-	
 			}
-     }
- 
-    }
+			logger.info(successButton.isDisplayed());
+			successButton.click();
 
-			 
-		
-			
-			
-		
-    	
-    	
-       
-          
-     
- 
-    
- 
-    	
-    
-    
-    
-    
-    
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
 
-    
+		}
+	}
 
-
-  
+}

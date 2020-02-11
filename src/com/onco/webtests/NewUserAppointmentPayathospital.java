@@ -20,84 +20,80 @@ import com.onco.testbase.BaseClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-
 public class NewUserAppointmentPayathospital extends BaseClass {
-	
-@BeforeClass
-@Parameters({"deleteURL","url","browser","phone","otp"})
-public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {
-			
-WebDriverManager.chromedriver().getDownloadedVersion();
-ChromeOptions options = new ChromeOptions();
-options.addArguments("window-size=1280,800");
-options.addArguments("--no-sandbox");
-options.addArguments("--headless");
-options.setExperimentalOption("useAutomationExtension", false);
-driver = new ChromeDriver(options);
-driver.get(url);
-driver.manage().deleteAllCookies();
-driver.manage().window().maximize();
-			
-			
-SignUp sign=new SignUp(driver);
-sign.signupicon();
-				
-Login login= new Login(driver);
-login.login(phone);
-Thread.sleep(5000);
-login.otpDetails(otp);
-Thread.sleep(5000);
-driver.get(deleteURL);
-Thread.sleep(5000);
-driver.close();
-			
-			
-}		
-	
-@Parameters({"name","email","phone","otp","patientname"})
-@Test(priority = 5)
-public void newUserAppointmentPayAtHospital(String name, String email, String phone,String otp, String patientname) throws Exception {
-    
-Homepage home= new Homepage(driver);
-home.formfill(name,email,phone) ;
-home.patientquery();
-home.submit();
 
-Thread.sleep(5000);
-Login login= new Login(driver);
-login.otpDetails(otp);
+	@BeforeClass
+	@Parameters({ "deleteURL", "url", "browser", "phone", "otp" })
+	public void delete(String deleteURL, String url, String browser, String phone, String otp) throws Exception {
 
-PatientInfo info=new PatientInfo(driver);
-info.patientname(patientname);
-info.cancertype();
-info.cancerstage();
-info.condition();
-info.continuebutton();
+		WebDriverManager.chromedriver().getDownloadedVersion();
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("window-size=1280,800");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.setExperimentalOption("useAutomationExtension", false);
+		driver = new ChromeDriver(options);
+		driver.get(url);
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 
-Thread.sleep(5000);
-InitialAssessment assessment= new InitialAssessment(driver);
-assessment.initialAssessmentClose();
+		SignUp sign = new SignUp(driver);
+		sign.signupicon();
 
-Service service=new Service(driver);
-service.appointment();
+		Login login = new Login(driver);
+		login.login(phone);
+		Thread.sleep(5000);
+		login.otpDetails(otp);
+		Thread.sleep(5000);
+		driver.get(deleteURL);
+		Thread.sleep(5000);
+		driver.close();
 
-Thread.sleep(5000);
-RequestDoctorAppointment appointment=new RequestDoctorAppointment(driver);
-appointment.appointment();
-appointment.surgicalOncologist();
-appointment.button();
+	}
 
-Thread.sleep(10000);
-Appointment app= new Appointment(driver);
-app.appointment();
+	@Parameters({ "name", "email", "phone", "otp", "patientname" })
+	@Test(priority = 5)
+	public void newUserAppointmentPayAtHospital(String name, String email, String phone, String otp, String patientname)
+			throws Exception {
 
-Summary summary= new Summary(driver);
-summary.summary();
+		Homepage home = new Homepage(driver);
+		home.formfill(name, email, phone);
+		home.patientquery();
+		home.submit();
 
-Thread.sleep(3000);
-Dashboard dashboard= new Dashboard(driver);
+		Thread.sleep(5000);
+		Login login = new Login(driver);
+		login.otpDetails(otp);
 
+		PatientInfo info = new PatientInfo(driver);
+		info.patientname(patientname);
+		info.cancertype();
+		info.cancerstage();
+		info.condition();
+		info.continuebutton();
+
+		Thread.sleep(5000);
+		InitialAssessment assessment = new InitialAssessment(driver);
+		assessment.initialAssessmentClose();
+
+		Service service = new Service(driver);
+		service.appointment();
+
+		Thread.sleep(5000);
+		RequestDoctorAppointment appointment = new RequestDoctorAppointment(driver);
+		appointment.appointment();
+		appointment.surgicalOncologist();
+		appointment.button();
+
+		Thread.sleep(10000);
+		Appointment app = new Appointment(driver);
+		app.appointment();
+
+		Summary summary = new Summary(driver);
+		summary.summary();
+
+		Thread.sleep(3000);
+		Dashboard dashboard = new Dashboard(driver);
+
+	}
 }
-}
-
-

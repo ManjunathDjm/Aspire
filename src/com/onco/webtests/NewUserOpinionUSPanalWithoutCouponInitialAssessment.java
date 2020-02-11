@@ -28,8 +28,8 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 public void delete(String deleteURL,String url,String browser,String phone,String otp) throws Exception {		
 	
 WebDriverManager.chromedriver().setup();
-ChromeOptions options = new ChromeOptions();
-options.addArguments("headless","start-maximized");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("headless","start-maximized");
 options.addArguments("window-size=1920,1080");
 options.addArguments("no-sandbox"); ; 
 driver = new ChromeDriver(options);

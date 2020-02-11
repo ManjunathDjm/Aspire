@@ -1,6 +1,5 @@
 package com.onco.pages;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
@@ -15,94 +14,92 @@ import com.onco.testbase.BaseClass;
 import org.apache.log4j.Logger;
 
 /**
- * Locators and methods for labtest page
- * We will call these locator and methods to create test cases webtests package
+ * Locators and methods for labtest page We will call these locator and methods
+ * to create test cases webtests package
+ * 
  * @author manjunathdj
  *
  */
-public class RequestLabTests  {
+public class RequestLabTests {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestLabTests.class);
 
-	@FindBy(xpath="//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
+	@FindBy(xpath = "//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
 	@CacheLookup
 	WebElement location;
-	
-	@FindBy(xpath="//div[@class='custom-select right']//select[@placeholder='Select test type']")
+
+	@FindBy(xpath = "//div[@class='custom-select right']//select[@placeholder='Select test type']")
 	@CacheLookup
 	WebElement testtype;
-	
-	@FindBy(xpath="//div[@class='orange-rounded-inner-btn small']")
+
+	@FindBy(xpath = "//div[@class='orange-rounded-inner-btn small']")
 	@CacheLookup
 	WebElement continueButton;
-	
-	@FindBy(xpath="/html/body/app-root/req-lab-test/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div[2]/div")
+
+	@FindBy(xpath = "/html/body/app-root/req-lab-test/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div[2]/div")
 	@CacheLookup
 	WebElement requestCallback;
-	
-	@FindBy(xpath="//button[@class='callback-request-modal-close']")
+
+	@FindBy(xpath = "//button[@class='callback-request-modal-close']")
 	@CacheLookup
 	WebElement Requestcallclose;
-	
 
 	public RequestLabTests(WebDriver rdriver) {
-		ldriver=rdriver;
+		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
-    
-    public void location() {
-  
-		try {    
-			
-			try {
-			
-				Thread.sleep(3000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-			     location.click(); 
-			     logger.info("location clicked");
-	    		 location.sendKeys("Mumbai",Keys.TAB);
-	    		 logger.info("location entered");
-	    		 
-			} catch (NoSuchElementException e) {
-				e.printStackTrace();
-       }
-     }
-		
-    public void labtest() {
-    
+
+	public void location() {
+
 		try {
-	    	 
-			 Select test = new Select(ldriver.findElement(By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
-	    	 testtype.click();
-	    	 test.selectByIndex(1);
-	    	 testtype.click();
-	    	 logger.info("Seelcted test type");
+
+			try {
+
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			location.click();
+			logger.info("location clicked");
+			location.sendKeys("Mumbai", Keys.TAB);
+			logger.info("location entered");
+
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-   }
-		
-   public void continueButton() {
-	
-	try {
-		   logger.info(continueButton.isDisplayed());
-		   continueButton.click();
-		   
-	} catch (NoSuchElementException e) {
-		e.printStackTrace();
 	}
-   }   
 
-   public void requestCallback() {
-	
-    	requestCallback.click();
-	   
-   }
-   
+	public void labtest() {
+
+		try {
+
+			Select test = new Select(ldriver.findElement(
+					By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
+			testtype.click();
+			test.selectByIndex(1);
+			testtype.click();
+			logger.info("Seelcted test type");
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void continueButton() {
+
+		try {
+			logger.info(continueButton.isDisplayed());
+			continueButton.click();
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void requestCallback() {
+
+		requestCallback.click();
+
+	}
+
 }
-    
-
-    
