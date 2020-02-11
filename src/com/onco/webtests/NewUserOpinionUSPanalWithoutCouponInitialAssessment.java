@@ -77,7 +77,6 @@ info.continuebutton();
 InitialAssessment assessment= new InitialAssessment(driver);
 assessment.ViewAssessment();
 
-Thread.sleep(5000);
 Service service=new Service(driver);
 service.opinion();
 

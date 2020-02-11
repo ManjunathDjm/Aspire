@@ -25,7 +25,7 @@ public class Service {
 	@CacheLookup
 	WebElement appointment;
 	
-    @FindBy(xpath="/html/body/app-root/select-service/div/div[3]/div[2]/section/div[3]/section/div/div/div[2]/div/div[1]")
+    @FindBy(xpath="//body/app-root/select-service[@class='ng-star-inserted']/div[@class='ng-star-inserted']/div[@class='bg-color-mob']/div/section/div[@class='container']/section[@class='hidden-xs hidden-sm']/div[@class='card']/div[@class='row']/div[2]")
     @CacheLookup
     WebElement opinion;
     
@@ -47,7 +47,7 @@ public void appointment()   {
    		
 try {
 
-	for(int i=0; i<=2; i++) {
+	for(int i=0; i<=2;) {
 		
 
         		try {
@@ -72,7 +72,7 @@ public void opinion() {
 	  
 	  try {
 		  
-	  for(int i=0; i<=2; i++) {
+	  for(int i=0; i<=2;) {
 		  
 			   opinion.click();
 			   logger.info("Opinion clicked");
