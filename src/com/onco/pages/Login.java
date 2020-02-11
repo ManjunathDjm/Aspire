@@ -56,24 +56,14 @@ public class Login {
 
 		try {
 
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
-					countrycode.selectByIndex(0);
-					countryCode.click();
-
-					phoneNumber.sendKeys(phone);
-					loginVIAOTPbutton.click();
-					break;
-				} catch (Exception e) {
-
-				}
-			}
-
+			Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
+			countrycode.selectByIndex(0);
+			countryCode.click();
 			logger.info("Country code selected");
+
+			phoneNumber.sendKeys(phone);
 			logger.info("Phone number entered");
+			loginVIAOTPbutton.click();
 			logger.info("Login via OTP clicked");
 
 		} catch (NoSuchElementException e) {
@@ -87,21 +77,11 @@ public class Login {
 
 		try {
 
-			for (int i = 0; i <= 1; i++) {
-
-				try {
-
-					Otp.click();
-					Otp.sendKeys(otp);
-					proceedButton.click();
-					break;
-				} catch (Exception e) {
-
-				}
-			}
-
+			Otp.click();
 			logger.info("OTP clicked");
+			Otp.sendKeys(otp);
 			logger.info("OTP entered");
+			proceedButton.click();
 			logger.info("Proceed Button clicked");
 
 		} catch (NoSuchElementException e) {
