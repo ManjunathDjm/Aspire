@@ -58,18 +58,11 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-
-			for (int i = 0; i <= 2; i++) {
-				try {
-					ldriver.findElement(By.name("patientName")).sendKeys(pname);
-					break;
-				} catch (Exception e) {
-
-				}
-			}
+			ldriver.findElement(By.name("patientName")).sendKeys(pname);
+			logger.info("Patientname Entered");
 
 			// patientname.sendKeys(pname);
-			logger.info("Patientname Entered");
+			// logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -82,19 +75,9 @@ public class PatientInfo {
 
 		try {
 
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
-					TypeofCancer.selectByIndex(1);
-					typeofCancer.click();
-					break;
-				} catch (Exception e) {
-
-				}
-			}
-
+			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
+			TypeofCancer.selectByIndex(1);
+			typeofCancer.click();
 			logger.info("CancerType selected");
 
 		} catch (NoSuchElementException e) {
@@ -107,20 +90,9 @@ public class PatientInfo {
 	public void cancerstage() {
 
 		try {
-
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
-					Cancerstage.selectByIndex(1);
-					cancerStage.click();
-					break;
-				} catch (Exception e) {
-
-				}
-			}
-
+			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
+			Cancerstage.selectByIndex(1);
+			cancerStage.click();
 			logger.info("CancerStage Selected");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -131,18 +103,9 @@ public class PatientInfo {
 
 		try {
 
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					Select Condition = new Select(ldriver.findElement(By.name("condition")));
-					Condition.selectByIndex(1);
-					generalCondition.click();
-					break;
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-			}
+			Select Condition = new Select(ldriver.findElement(By.name("condition")));
+			Condition.selectByIndex(1);
+			generalCondition.click();
 			logger.info("GeneralCondition Selected");
 
 		} catch (NoSuchElementException e) {
@@ -153,17 +116,7 @@ public class PatientInfo {
 	public void continuebutton() {
 
 		try {
-
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					continueButton.click();
-					break;
-				} catch (Exception e) {
-			
-				}
-			}
+			continueButton.click();
 			logger.info("continue button clicked");
 
 		} catch (NoSuchElementException e) {

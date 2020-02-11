@@ -1,6 +1,8 @@
 package com.onco.webtests;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -28,6 +30,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
+		options.setPageLoadStrategy(PageLoadStrategy.NONE);
 		options.addArguments("headless", "start-maximized");
 		options.addArguments("window-size=1920,1080");
 		options.addArguments("no-sandbox");
@@ -36,19 +39,19 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		Login login = new Login(driver);
 		login.login(phone);
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		login.otpDetails(otp);
 		Thread.sleep(5000);
 		driver.get(deleteURL);
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		driver.quit();
 
 	}
@@ -59,6 +62,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 
+		Thread.sleep(30000);
 		Homepage home = new Homepage(driver);
 		home.formfill(name, email, phone);
 		home.patientquery();
@@ -76,9 +80,11 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		info.condition();
 		info.continuebutton();
 
+		Thread.sleep(30000);
 		InitialAssessment assessment = new InitialAssessment(driver);
 		assessment.ViewAssessment();
 
+		Thread.sleep(30000);
 		Service service = new Service(driver);
 		service.opinion();
 
@@ -91,6 +97,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		summary.deletecouponcode();
 		summary.summary();
 
+		Thread.sleep(30000);
 		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
 		pay.netbanking();
 

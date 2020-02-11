@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.BasicConfigurator;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -44,9 +45,10 @@ public class BaseClass {
 
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
+			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			options.addArguments("headless", "start-maximized");
 			options.addArguments("window-size=1920,1080");
-			options.addArguments("no-sandbox");
+			options.addArguments("--no-sandbox");
 			driver = new ChromeDriver(options);
 			driver.get(url);
 
