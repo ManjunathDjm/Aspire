@@ -65,8 +65,8 @@ public class Service {
 	public void opinion() {
 
 		try {
-
-			for (int i = 0; i <= 2;) {
+			
+			for (int i = 0; i <= 2; i++) {
 				try {
 
 					opinion.click();

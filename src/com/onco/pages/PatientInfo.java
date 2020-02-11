@@ -161,7 +161,7 @@ public class PatientInfo {
 					continueButton.click();
 					break;
 				} catch (Exception e) {
-					// TODO: handle exception
+			
 				}
 			}
 			logger.info("continue button clicked");
