@@ -36,18 +36,19 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+		Thread.sleep(30000);
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
 
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		Login login = new Login(driver);
 		login.login(phone);
 
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		login.otpDetails(otp);
 		Thread.sleep(5000);
 		driver.get(deleteURL);
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		driver.quit();
 
 	}
@@ -63,11 +64,11 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		PatientInfo info = new PatientInfo(driver);
 		info.patientname(patientname);
 		info.cancertype();
