@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.log4j.Logger;
 
 /**
@@ -85,9 +86,12 @@ public class Login {
 			
 			//Otp.click();
 			logger.info("OTP clicked");
-			Otp.sendKeys(otp);
+			
+			wait.until(ExpectedConditions.visibilityOf(Otp)).sendKeys(otp);
+			//Otp.sendKeys(otp);
 			logger.info("OTP entered");
-			proceedButton.click();
+			wait.until(ExpectedConditions.visibilityOf(proceedButton)).click();
+			//proceedButton.click();
 			logger.info("Proceed Button clicked");
 
 		} catch (NoSuchElementException e) {

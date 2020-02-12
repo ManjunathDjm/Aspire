@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.log4j.Logger;
 
 /**
@@ -61,25 +64,19 @@ public class Homepage {
 
 		try {
 
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					nameField.sendKeys(patientname);
+					WebDriverWait wait = new WebDriverWait(ldriver, 30);
+					wait.until(ExpectedConditions.visibilityOf(nameField)).sendKeys(patientname);
 					logger.info("Name field entered");
 
-					emailField.sendKeys(email);
+					// nameField.sendKeys(patientname);
+					// logger.info("Name field entered");
+
+					wait.until(ExpectedConditions.visibilityOf(emailField)).sendKeys(email);
+					// emailField.sendKeys(email);
 					logger.info("Email field entered");
 
-					phoneFiled.sendKeys(phone);
-					logger.info("Phone field entered");
-					break;
-				}
-
-				catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+					wait.until(ExpectedConditions.visibilityOf(phoneFiled)).sendKeys(phone);
+					//phoneFiled.sendKeys(phone);
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -91,23 +88,19 @@ public class Homepage {
 
 		try {
 
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					patientChoice.click();
+	
+					
+					WebDriverWait wait = new WebDriverWait(ldriver, 30);
+					wait.until(ExpectedConditions.visibilityOf(patientChoice)).click();
+					//patientChoice.click();
 					logger.info("Patient choice clicked");
 
-					dropOption1.click();
+					wait.until(ExpectedConditions.visibilityOf(dropOption1)).click();
+					//dropOption1.click();
 					logger.info("Dropodown choice clicked");
 
-					selectTerms.click();
-					logger.info("T&C clicked");
-					break;
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+					wait.until(ExpectedConditions.visibilityOf(selectTerms)).click();
+					//selectTerms.click();
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -118,20 +111,11 @@ public class Homepage {
 	public void submit() {
 
 		try {
-
-			for (int i = 0; i <= 2; i++) {
-
-				try {
-
-					submit.click();
+			        WebDriverWait wait = new WebDriverWait(ldriver, 30);
+			        wait.until(ExpectedConditions.visibilityOf(submit)).click();
+			        //submit.click();
 					logger.info("Submit clicked");
-					break;
-				}
-
-				catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
+				
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
