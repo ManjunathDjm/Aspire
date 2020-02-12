@@ -37,8 +37,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
-		//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
@@ -69,7 +68,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
