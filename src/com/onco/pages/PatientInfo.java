@@ -60,14 +60,11 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			
-			WebDriverWait wait = new WebDriverWait(ldriver,30);
-			wait.until(ExpectedConditions.visibilityOf(patientname)).sendKeys(pname);
-			
-			//ldriver.findElement(By.name("patientName")).sendKeys(pname);
+
+			ldriver.findElement(By.name("patientName")).sendKeys(pname);
 			logger.info("Patientname Entered");
 
-			//patientname.sendKeys(pname);
+			// patientname.sendKeys(pname);
 			// logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
@@ -83,7 +80,7 @@ public class PatientInfo {
 
 			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 			TypeofCancer.selectByIndex(1);
-			typeofCancer.click();
+			// typeofCancer.click();
 			logger.info("CancerType selected");
 
 		} catch (NoSuchElementException e) {
@@ -96,9 +93,10 @@ public class PatientInfo {
 	public void cancerstage() {
 
 		try {
+
 			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 			Cancerstage.selectByIndex(1);
-			cancerStage.click();
+			// cancerStage.click();
 			logger.info("CancerStage Selected");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -111,7 +109,7 @@ public class PatientInfo {
 
 			Select Condition = new Select(ldriver.findElement(By.name("condition")));
 			Condition.selectByIndex(1);
-			generalCondition.click();
+			// generalCondition.click();
 			logger.info("GeneralCondition Selected");
 
 		} catch (NoSuchElementException e) {
@@ -122,6 +120,7 @@ public class PatientInfo {
 	public void continuebutton() {
 
 		try {
+
 			continueButton.click();
 			logger.info("continue button clicked");
 

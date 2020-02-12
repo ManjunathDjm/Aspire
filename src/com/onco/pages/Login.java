@@ -5,14 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.log4j.Logger;
 
 /**
@@ -61,9 +57,8 @@ public class Login {
 
 			Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
 			countrycode.selectByIndex(0);
-			countryCode.click();
+			// countryCode.click();
 			logger.info("Country code selected");
-
 			phoneNumber.sendKeys(phone);
 			logger.info("Phone number entered");
 			loginVIAOTPbutton.click();
@@ -80,18 +75,11 @@ public class Login {
 
 		try {
 
-			
-			WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			wait.until(ExpectedConditions.visibilityOf(Otp)).click();
-			
-			//Otp.click();
+			Otp.click();
 			logger.info("OTP clicked");
-			
-			wait.until(ExpectedConditions.visibilityOf(Otp)).sendKeys(otp);
-			//Otp.sendKeys(otp);
+			Otp.sendKeys(otp);
 			logger.info("OTP entered");
-			wait.until(ExpectedConditions.visibilityOf(proceedButton)).click();
-			//proceedButton.click();
+			proceedButton.click();
 			logger.info("Proceed Button clicked");
 
 		} catch (NoSuchElementException e) {

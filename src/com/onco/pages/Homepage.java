@@ -64,19 +64,14 @@ public class Homepage {
 
 		try {
 
-					WebDriverWait wait = new WebDriverWait(ldriver, 30);
-					wait.until(ExpectedConditions.visibilityOf(nameField)).sendKeys(patientname);
-					logger.info("Name field entered");
+			nameField.sendKeys(patientname);
+			logger.info("Name field entered");
 
-					// nameField.sendKeys(patientname);
-					// logger.info("Name field entered");
+			emailField.sendKeys(email);
+			logger.info("Email field entered");
 
-					wait.until(ExpectedConditions.visibilityOf(emailField)).sendKeys(email);
-					// emailField.sendKeys(email);
-					logger.info("Email field entered");
-
-					wait.until(ExpectedConditions.visibilityOf(phoneFiled)).sendKeys(phone);
-					//phoneFiled.sendKeys(phone);
+			phoneFiled.sendKeys(phone);
+			logger.info("Phone entered");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -88,19 +83,14 @@ public class Homepage {
 
 		try {
 
-	
-					
-					WebDriverWait wait = new WebDriverWait(ldriver, 30);
-					wait.until(ExpectedConditions.visibilityOf(patientChoice)).click();
-					//patientChoice.click();
-					logger.info("Patient choice clicked");
+			patientChoice.click();
+			logger.info("Patient choice clicked");
 
-					wait.until(ExpectedConditions.visibilityOf(dropOption1)).click();
-					//dropOption1.click();
-					logger.info("Dropodown choice clicked");
+			dropOption1.click();
+			logger.info("Dropodown choice clicked");
 
-					wait.until(ExpectedConditions.visibilityOf(selectTerms)).click();
-					//selectTerms.click();
+			selectTerms.click();
+			logger.info("T&C selected");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -111,11 +101,9 @@ public class Homepage {
 	public void submit() {
 
 		try {
-			        WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			        wait.until(ExpectedConditions.visibilityOf(submit)).click();
-			        //submit.click();
-					logger.info("Submit clicked");
-				
+
+			submit.click();
+			logger.info("Submit clicked");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
