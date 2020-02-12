@@ -39,6 +39,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
+	    Thread.sleep(5000);
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
 
