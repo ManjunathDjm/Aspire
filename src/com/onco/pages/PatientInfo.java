@@ -7,7 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 
 /**
@@ -58,10 +60,14 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			ldriver.findElement(By.name("patientName")).sendKeys(pname);
+			
+			WebDriverWait wait = new WebDriverWait(ldriver,30);
+			wait.until(ExpectedConditions.visibilityOf(patientname)).sendKeys(pname);
+			
+			//ldriver.findElement(By.name("patientName")).sendKeys(pname);
 			logger.info("Patientname Entered");
 
-			// patientname.sendKeys(pname);
+			//patientname.sendKeys(pname);
 			// logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {

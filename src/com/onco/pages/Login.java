@@ -80,7 +80,7 @@ public class Login {
 		try {
 
 			
-			WebDriverWait wait = new WebDriverWait(ldriver,30);
+			WebDriverWait wait = new WebDriverWait(ldriver, 30);
 			wait.until(ExpectedConditions.visibilityOf(Otp)).click();
 			
 			//Otp.click();
