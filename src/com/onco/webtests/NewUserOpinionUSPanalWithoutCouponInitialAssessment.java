@@ -31,15 +31,14 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
-		options.addArguments("headless", "start-maximized");
+		options.addArguments("headless","start-maximized");
 		options.addArguments("window-size=1920,1080");
 		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
-		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
 
@@ -58,11 +57,11 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 	@Parameters({ "name", "email", "phone", "otp", "patientname", "INDcoupon" })
 	@Test(priority = 1)
-	
+
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 
-		Thread.sleep(30000);
+		Thread.sleep(60000);
 		Homepage home = new Homepage(driver);
 		home.formfill(name, email, phone);
 		home.patientquery();
@@ -72,33 +71,30 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(10000);
+		Thread.sleep(60000);
 		PatientInfo info = new PatientInfo(driver);
-		Thread.sleep(30000);
 		info.patientname(patientname);
 		info.cancertype();
 		info.cancerstage();
 		info.condition();
 		info.continuebutton();
-
-		Thread.sleep(30000);
+		
+		Thread.sleep(60000);
 		InitialAssessment assessment = new InitialAssessment(driver);
 		assessment.ViewAssessment();
 
-		Thread.sleep(30000);
+		Thread.sleep(60000);
 		Service service = new Service(driver);
 		service.opinion();
 
-		Thread.sleep(30000);
+		Thread.sleep(60000);
 		OpinionType opinion = new OpinionType(driver);
 		opinion.USPanalButton();
 
-		Thread.sleep(10000);
 		Summary summary = new Summary(driver);
 		summary.deletecouponcode();
 		summary.summary();
 
-		Thread.sleep(30000);
 		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
 		pay.netbanking();
 
