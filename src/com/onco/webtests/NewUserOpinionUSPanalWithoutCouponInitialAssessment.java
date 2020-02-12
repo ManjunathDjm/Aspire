@@ -63,17 +63,17 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		Homepage home = new Homepage(driver);
 		home.formfill(name, email, phone);
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		PatientInfo info = new PatientInfo(driver);
 		info.patientname(patientname);
 		info.cancertype();
@@ -91,16 +91,15 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		OpinionType opinion = new OpinionType(driver);
 		opinion.USPanalButton();
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Summary summary = new Summary(driver);
 		summary.deletecouponcode();
 		summary.summary();
 
-		Thread.sleep(10000);
 		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
 		pay.netbanking();
 
-		Thread.sleep(10000);
+		Thread.sleep(20000);
 		Dashboard dashboard = new Dashboard(driver);
 
 	}
