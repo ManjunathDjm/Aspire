@@ -34,7 +34,7 @@ public class Login {
 	@CacheLookup
 	WebElement loginVIAOTPbutton;
 
-	@FindBy(xpath = "/html/body/app-root/app-confirm-otp/div/div[2]/div/div/form/div[1]/otpinput/input[1]")
+	@FindBy(xpath = "//body//input[1]")
 	@CacheLookup
 	WebElement Otp;
 
