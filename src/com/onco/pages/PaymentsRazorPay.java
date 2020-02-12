@@ -11,8 +11,6 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.onco.testbase.BaseClass;
-
 /**
  * Locators and methods for Payments page We will call these locator and methods
  * to create test cases webtests package
@@ -25,7 +23,7 @@ public class PaymentsRazorPay {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PaymentsRazorPay.class);
 
-	@FindBy(xpath = "//*[@id=\"payment-options\"]/div[2]/label")
+	@FindBy(xpath = "//*[@id=\"form-common\"]/div/div[1]/div[3]/div/div/div[2]/div/button[2]/div")
 	@CacheLookup
 	WebElement netBanking;
 
@@ -58,22 +56,22 @@ public class PaymentsRazorPay {
 		try {
 
 			ldriver.switchTo().frame(ldriver.findElement(By.className("razorpay-checkout-frame")));
-			logger.info(netBanking.isDisplayed());
 			netBanking.click();
+			logger.info("Clicked on netbanking");
 
-			logger.info(sbiNetbanking.isDisplayed());
 			sbiNetbanking.click();
+			logger.info("Clicked on SBI");
 
-			logger.info(payNow.isDisplayed());
 			payNow.click();
+			logger.info("Clicked on pay now");
 			// Switch to child window and click on success button
 			Set<String> windowhandles = ldriver.getWindowHandles();
 			for (String windowHandle : windowhandles) {
 				ldriver.getWindowHandle();
 				ldriver.switchTo().window(windowHandle);
 			}
-			logger.info(successButton.isDisplayed());
 			successButton.click();
+			logger.info("Clicked on success button");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

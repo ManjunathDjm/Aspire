@@ -74,7 +74,7 @@ public class Appointment {
 		ldriver.findElement(By.className("modal-content")).click();
 		List<WebElement> allDates = ldriver.findElements(
 				By.xpath("//div[@class='book-appt-datetime-modal modal fade in']//div[@class='container-fluid']"));
-
+		
 		for (WebElement ele : allDates) {
 
 			String date = ele.getText();

@@ -61,8 +61,8 @@ public class Summary {
 	public void deletecouponcode() {
 
 		try {
-			logger.info(deletecoupon.isDisplayed());
 			deletecoupon.click();
+			logger.info("Delete coupon clicked");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -71,9 +71,10 @@ public class Summary {
 	public void applycoupon(String UScoupon) {
 
 		try {
-			logger.info(couponCode.isDisplayed());
 			couponcodefield.sendKeys(UScoupon);
+			logger.info("Coupon code entered");
 			couponapply.click();
+			logger.info("Coupon colde applied");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -90,11 +91,11 @@ public class Summary {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				logger.info(payathospital.isDisplayed());
 				payathospital.click();
+				logger.info("Clicked on pay at hospital");
 			} else {
-				logger.info(paynow.isDisplayed());
 				paynow.click();
+				logger.info("Clicked on paynow");
 			}
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
