@@ -38,7 +38,7 @@ public class BaseClass {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			options.addArguments("headless", "start-maximized");
+			options.addArguments("headless","start-maximized");
 			options.addArguments("window-size=1920,1080");
 			options.addArguments("--no-sandbox");
 			driver = new ChromeDriver(options);
