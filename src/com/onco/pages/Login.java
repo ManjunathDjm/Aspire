@@ -9,8 +9,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.log4j.Logger;
 
 /**
@@ -78,8 +79,11 @@ public class Login {
 
 		try {
 
-			WebElement Otp = ldriver.findElement(By.xpath("//body//input[1]"));
-			Otp.click();
+			
+			WebDriverWait wait = new WebDriverWait(ldriver,30);
+			wait.until(ExpectedConditions.visibilityOf(Otp)).click();
+			
+			//Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);
 			logger.info("OTP entered");
