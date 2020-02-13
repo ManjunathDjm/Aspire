@@ -38,7 +38,6 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().setScriptTimeout(30,TimeUnit.SECONDS);
 
 		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
@@ -63,13 +62,13 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		Homepage home = new Homepage(driver);
 		home.formfill(name, email, phone);
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 

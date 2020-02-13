@@ -46,7 +46,6 @@ public class BaseClass {
 			driver.get(url);
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-			driver.manage().timeouts().setScriptTimeout(30,TimeUnit.SECONDS);
 
 		}
 
