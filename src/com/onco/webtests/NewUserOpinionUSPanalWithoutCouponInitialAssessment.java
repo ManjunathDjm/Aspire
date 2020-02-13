@@ -38,7 +38,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().setScriptTimeout(30,TimeUnit.SECONDS);
 
 		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
