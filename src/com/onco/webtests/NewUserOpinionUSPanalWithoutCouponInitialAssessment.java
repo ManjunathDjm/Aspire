@@ -71,11 +71,11 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		PatientInfo info = new PatientInfo(driver);
 		info.patientname(patientname);
 		info.cancertype();
