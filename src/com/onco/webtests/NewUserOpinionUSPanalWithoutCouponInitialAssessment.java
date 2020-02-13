@@ -71,7 +71,6 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 		Thread.sleep(5000);
 		Login login = new Login(driver);
-		Thread.sleep(5000);
 		login.otpDetails(otp);
 
 		Thread.sleep(5000);

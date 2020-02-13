@@ -77,6 +77,12 @@ public class Login {
 
 		try {
 
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);
