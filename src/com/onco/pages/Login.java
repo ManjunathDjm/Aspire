@@ -77,13 +77,10 @@ public class Login {
 
 		try {
 
-			try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			Otp.click();
+			WebDriverWait wait = new WebDriverWait(ldriver,30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//body//input[1]"))).click();
+			
+			//Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);
 			logger.info("OTP entered");
