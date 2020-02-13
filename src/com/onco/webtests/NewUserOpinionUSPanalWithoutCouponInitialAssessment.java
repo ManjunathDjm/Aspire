@@ -31,10 +31,10 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
-		options.addArguments("headless");
-		options.addArguments("window-size=1920,1080");
+		options.addArguments("--headless");
+		options.addArguments("--window-size=1920,1080");
 		options.addArguments("--start-maximized");
-		options.addArguments("no-sandbox");
+		options.addArguments("--no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
@@ -68,7 +68,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 

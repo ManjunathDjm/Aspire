@@ -77,17 +77,19 @@ public class Login {
 
 		try {
 
-			  
-			WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			wait.until(ExpectedConditions.visibilityOf(Otp)); 
-			wait.until(ExpectedConditions.elementToBeClickable(Otp));
-		    Otp.click();
-			logger.info("OTP clicked");
-			Otp.sendKeys(otp);
-			logger.info("OTP entered");
-			proceedButton.click();
-			logger.info("Proceed Button clicked");
+			try {
+				Otp.click();
+				logger.info("OTP clicked");
+				Otp.sendKeys(otp);
+				logger.info("OTP entered");
+				proceedButton.click();
+				logger.info("Proceed Button clicked");
 
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
