@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import com.onco.testbase.BaseClass;
 
 /**
  * Locators and methods for opinion page We will call these locator and methods
@@ -25,7 +24,7 @@ public class OpinionType {
 	@CacheLookup
 	WebElement indianPanelButton;
 
-	@FindBy(xpath = "/html/body/app-root/select-opinion-type/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div/div[2]/div/div[2]")
+	@FindBy(xpath = "//div[@class='col-md-4 col-lg-4 col-xl-4 flex-justify-center']//div//div[@class='orange-rounded-inner-btn'][contains(text(),'SELECT US PANEL')]")
 	@CacheLookup
 	WebElement selectUsPanelButton;
 

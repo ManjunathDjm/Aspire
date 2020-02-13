@@ -3,8 +3,10 @@ package com.onco.webtests;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -31,12 +33,13 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
-		options.addArguments("--headless");
-		options.addArguments("--window-size=1920,1080");
-		options.addArguments("--start-maximized");
-		options.addArguments("--no-sandbox");
+		options.addArguments("headless");
+		options.addArguments("window-size=1920,1080");
+		options.addArguments("start-maximized");
+		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		Thread.sleep(10000);
@@ -62,17 +65,17 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 	public void TC_01_HomePage(String name, String email, String phone, String otp, String patientname,
 			String INDcoupon) throws InterruptedException {
 
-		Thread.sleep(30000);
+		Thread.sleep(10000);
 		Homepage home = new Homepage(driver);
 		home.formfill(name, email, phone);
 		home.patientquery();
 		home.submit();
 
-		Thread.sleep(5000);
+		Thread.sleep(30000);
 		Login login = new Login(driver);
 		login.otpDetails(otp);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		PatientInfo info = new PatientInfo(driver);
 		info.patientname(patientname);
 		info.cancertype();
@@ -80,17 +83,17 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		info.condition();
 		info.continuebutton();
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		InitialAssessment assessment = new InitialAssessment(driver);
 		assessment.ViewAssessment();
 
 		Service service = new Service(driver);
 		service.opinion();
 
+		Thread.sleep(10000);
 		OpinionType opinion = new OpinionType(driver);
 		opinion.USPanalButton();
 
-		Thread.sleep(10000);
 		Summary summary = new Summary(driver);
 		summary.deletecouponcode();
 		summary.summary();
@@ -98,7 +101,6 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
 		pay.netbanking();
 
-		Thread.sleep(20000);
 		Dashboard dashboard = new Dashboard(driver);
 
 	}

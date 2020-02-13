@@ -8,9 +8,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -65,12 +63,10 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			
-			ldriver.findElement(By.name("patientName")).sendKeys(pname);
-			logger.info("Patientname Entered");
 
-			// patientname.sendKeys(pname);
-			// logger.info("Patientname Entered");
+			WebDriverWait wait = new WebDriverWait(ldriver, 30);
+			wait.until(ExpectedConditions.visibilityOf(patientname)).sendKeys(pname);
+			logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -85,7 +81,7 @@ public class PatientInfo {
 
 			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 			TypeofCancer.selectByIndex(1);
-			// typeofCancer.click();
+			typeofCancer.click();
 			logger.info("CancerType selected");
 
 		} catch (NoSuchElementException e) {
@@ -101,7 +97,7 @@ public class PatientInfo {
 
 			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 			Cancerstage.selectByIndex(1);
-			// cancerStage.click();
+			cancerStage.click();
 			logger.info("CancerStage Selected");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -114,7 +110,7 @@ public class PatientInfo {
 
 			Select Condition = new Select(ldriver.findElement(By.name("condition")));
 			Condition.selectByIndex(1);
-			// generalCondition.click();
+			generalCondition.click();
 			logger.info("GeneralCondition Selected");
 
 		} catch (NoSuchElementException e) {

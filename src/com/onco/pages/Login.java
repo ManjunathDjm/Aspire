@@ -25,26 +25,26 @@ public class Login {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Login.class);
 
-	@FindBy(name = "countryCode")
+	@FindBy(name ="countryCode")
 	WebElement countryCode;
 
 	@FindBy(name = "contact")
 	@CacheLookup
 	WebElement phoneNumber;
 
-	@FindBy(xpath = "/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")
+	@FindBy(xpath ="/html/body/app-root/login/div/div[2]/div[1]/div/form/div[2]/div[3]/button")
 	@CacheLookup
 	WebElement loginVIAOTPbutton;
 
-	@FindBy(xpath = "//body//input[1]")
+	@FindBy(xpath ="//body//input[1]")
 	@CacheLookup
 	WebElement Otp;
 
-	@FindBy(xpath = "//*[@type='submit']")
+	@FindBy(xpath ="//*[@type='submit']")
 	@CacheLookup
 	WebElement proceedButton;
 
-	@FindBy(xpath = "//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
+	@FindBy(xpath ="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
 	@CacheLookup
 	private WebElement delete;
 
@@ -59,7 +59,7 @@ public class Login {
 
 			Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
 			countrycode.selectByIndex(0);
-			// countryCode.click();
+			//countryCode.click();
 			logger.info("Country code selected");
 			phoneNumber.sendKeys(phone);
 			logger.info("Phone number entered");
@@ -67,7 +67,6 @@ public class Login {
 			logger.info("Login via OTP clicked");
 
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -77,21 +76,14 @@ public class Login {
 
 		try {
 
-			try {
-				Otp.click();
-				logger.info("OTP clicked");
-				Otp.sendKeys(otp);
-				logger.info("OTP entered");
-				proceedButton.click();
-				logger.info("Proceed Button clicked");
+			Otp.click();
+			logger.info("OTP clicked");
+			Otp.sendKeys(otp);
+			logger.info("OTP entered");
+			proceedButton.click();
+			logger.info("Proceed Button clicked");
 
-			} catch (NoSuchElementException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
