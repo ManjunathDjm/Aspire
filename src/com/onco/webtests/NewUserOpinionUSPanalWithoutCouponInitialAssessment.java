@@ -32,8 +32,8 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
 		options.addArguments("headless");
-		options.addArguments("--start-maximized");
 		options.addArguments("window-size=1920,1080");
+		options.addArguments("--start-maximized");
 		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
