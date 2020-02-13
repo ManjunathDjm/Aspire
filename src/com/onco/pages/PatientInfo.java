@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.log4j.Logger;
 
 /**
@@ -65,7 +66,9 @@ public class PatientInfo {
 		try {
 
 			WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			wait.until(ExpectedConditions.visibilityOf(patientname)).sendKeys(pname);
+			wait.until(ExpectedConditions.visibilityOf(patientname));
+			wait.until(ExpectedConditions.elementToBeClickable(patientname)).sendKeys(pname);
+			
 			logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {

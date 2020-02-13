@@ -39,7 +39,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
 		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 		Thread.sleep(10000);

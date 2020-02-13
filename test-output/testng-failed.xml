@@ -6,14 +6,14 @@
   <parameter name="otp" value="5813"/>
   <parameter name="env" value="staging"/>
   <parameter name="INDcoupon" value="INDMA19"/>
-  <parameter name="url" value="https://onco.com/"/>
+  <parameter name="url" value="https://backstage.onco.com/"/>
   <parameter name="UScoupon" value="INTLMA19"/>
   <parameter name="patientname" value="testtest"/>
   <parameter name="phone" value="9036890379"/>
   <parameter name="browser" value="Chrome"/>
   <parameter name="name" value="test_onco"/>
   <parameter name="hospitalname" value="test hospital"/>
-  <parameter name="deleteURL" value="https://onco.com/start/delete-me/"/>
+  <parameter name="deleteURL" value="https://backstage.onco.com/start/delete-me/"/>
   <parameter name="email" value="manjunath.11j@gmail.com"/>
   <listeners>
     <listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
@@ -23,16 +23,4 @@
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
     </classes>
   </test> <!-- PatientPortal -->
-  <test name="PatientPortal(failed)">
-    <classes>
-      <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <methods>
-          <include name="tearDown"/>
-          <include name="openBrowser"/>
-          <include name="delete"/>
-          <include name="TC_01_HomePage" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
-    </classes>
-  </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->
