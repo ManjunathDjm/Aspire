@@ -80,8 +80,10 @@ public class Login {
 
 		try {
 
-			WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			wait.until(ExpectedConditions.elementToBeClickable(Otp)).click();
+			
+			Actions action = new Actions(ldriver);
+			action.click(Otp);
+			
 			//Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);
