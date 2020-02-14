@@ -82,6 +82,7 @@ public class Login {
 
 		try {
 
+			Thread.sleep(20000);
 			Otp.click();
 			logger.info("OTP clicked");
 			Thread.sleep(10000);
