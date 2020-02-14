@@ -3,10 +3,8 @@ package com.onco.webtests;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -33,15 +31,15 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
-		options.addArguments("headless");
-		options.addArguments("window-size=1920,1080");
+		options.addArguments("headless","window-size=1920,1280");
+		//options.addArguments("headless","window-size=1920,1080");
 		options.addArguments("start-maximized");
 		options.addArguments("no-sandbox");
 		driver = new ChromeDriver(options);
+		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-
+		
 		Thread.sleep(10000);
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
@@ -101,6 +99,7 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		PaymentsRazorPay pay = new PaymentsRazorPay(driver);
 		pay.netbanking();
 
+		Thread.sleep(20000);
 		Dashboard dashboard = new Dashboard(driver);
 
 	}

@@ -27,31 +27,31 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(name = "patientName")
+	@FindBy(name ="patientName")
 	@CacheLookup
 	private WebElement patientname;
 
-	@FindBy(name = "cancerType")
+	@FindBy(name ="cancerType")
 	@CacheLookup
 	private WebElement typeofCancer;
 
-	@FindBy(name = "cancerStage")
+	@FindBy(name ="cancerStage")
 	@CacheLookup
 	private WebElement cancerStage;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
+	@FindBy(xpath ="/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
 	@CacheLookup
 	private WebElement email;
 
-	@FindBy(xpath = "/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
+	@FindBy(xpath ="/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
 	@CacheLookup
 	private WebElement generalCondition;
 
-	@FindBy(xpath = "/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
+	@FindBy(xpath ="/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
 	@CacheLookup
 	private WebElement fileupload;
 
-	@FindBy(xpath = "//html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
+	@FindBy(xpath ="//html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
 	@CacheLookup
 	private WebElement continueButton;
 
@@ -63,16 +63,13 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-
-			WebDriverWait wait = new WebDriverWait(ldriver, 30);
-			wait.until(ExpectedConditions.visibilityOf(patientname)).sendKeys(pname);
+			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	public void cancertype() {

@@ -1,5 +1,6 @@
 package com.onco.pages;
 
+import org.codehaus.plexus.logging.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -56,6 +57,7 @@ public class Dashboard {
 
 			selectindiapanal.click();
 			proceedbutton.click();
+			
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

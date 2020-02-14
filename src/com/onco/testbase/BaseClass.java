@@ -38,15 +38,16 @@ public class BaseClass {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			options.addArguments("headless");
-			options.addArguments("window-size=1920,1080");
+			options.addArguments("headless","window-size=1920,1280");
+			//options.addArguments("headless","window-size=1920,1080");
 			options.addArguments("start-maximized");
 			options.addArguments("no-sandbox");
 			driver = new ChromeDriver(options);
-			driver.get(url);
 			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.get(url);
+		
 
 		}
 
