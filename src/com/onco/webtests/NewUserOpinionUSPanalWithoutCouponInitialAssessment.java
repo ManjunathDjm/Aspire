@@ -34,6 +34,10 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 		options.addArguments("headless","window-size=1920,1080");
 		options.addArguments("start-maximized");
 		options.addArguments("no-sandbox");
+		options.addArguments("--incognito");
+		options.addArguments("--disable-gpu");
+		options.addArguments("--no-sandbox");
+		options.addArguments("--allow-insecure-localhost");
 		driver = new ChromeDriver(options);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

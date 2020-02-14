@@ -80,7 +80,6 @@ public class Login {
 
 		try {
 
-		    ldriver.navigate().refresh();
 			Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);

@@ -41,6 +41,10 @@ public class BaseClass {
 			options.addArguments("headless","window-size=1920,1080");
 			options.addArguments("start-maximized");
 			options.addArguments("no-sandbox");
+			options.addArguments("--incognito");
+			options.addArguments("--disable-gpu");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--allow-insecure-localhost");
 			driver = new ChromeDriver(options);
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
