@@ -82,17 +82,14 @@ public class Login {
 
 		try {
 
-			Thread.sleep(20000);
 			Otp.click();
 			logger.info("OTP clicked");
-			Thread.sleep(10000);
 			Otp.sendKeys(otp);
 			logger.info("OTP entered");
-			Thread.sleep(10000);
 			proceedButton.click();
 			logger.info("Proceed Button clicked");
 
-		} catch (NoSuchElementException | InterruptedException e) {
+		} catch (NoSuchElementException  e) {
 			e.printStackTrace();
 		}
 
