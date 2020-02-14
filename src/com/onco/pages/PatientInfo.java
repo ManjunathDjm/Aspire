@@ -28,7 +28,7 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath ="//input[@placeholder='Enter patient name (optional)']")
+	@FindBy(xpath = "//input[@placeholder='Enter patient name (optional)']")
 	@CacheLookup
 	private WebElement patientname;
 
@@ -64,7 +64,6 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-
 			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
@@ -84,7 +83,6 @@ public class PatientInfo {
 			logger.info("CancerType selected");
 
 		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
