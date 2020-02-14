@@ -39,10 +39,6 @@ public class BaseClass {
 			ChromeOptions options = new ChromeOptions();
 			options.setPageLoadStrategy(PageLoadStrategy.NONE);
 			options.addArguments("headless","window-size=1920,1080");
-			options.addArguments("start-maximized");
-			options.addArguments("no-sandbox");
-			options.addArguments("--incognito");
-			options.addArguments("--disable-gpu");
 			driver = new ChromeDriver(options);
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);

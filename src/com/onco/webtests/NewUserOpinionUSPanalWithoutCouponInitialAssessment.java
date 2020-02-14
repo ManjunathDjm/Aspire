@@ -3,6 +3,7 @@ package com.onco.webtests;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -30,13 +31,10 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
+	
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
 		options.addArguments("headless","window-size=1920,1080");
-		options.addArguments("start-maximized");
-		options.addArguments("no-sandbox");
-		options.addArguments("--incognito");
-		options.addArguments("--disable-gpu");
-		driver = new ChromeDriver(options);
+	    driver = new ChromeDriver(options);
 		driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(url);

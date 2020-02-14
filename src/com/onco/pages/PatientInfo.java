@@ -64,10 +64,9 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			Actions act = new Actions(ldriver);
-			act.moveToElement(patientname).perform();
-			new WebDriverWait(ldriver, 60).until(ExpectedConditions.visibilityOf(patientname));
-			act.moveToElement(patientname).click().perform();
+		 
+            WebDriverWait wait = new WebDriverWait(ldriver, 100);
+            wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.name("patientName")));
 			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
