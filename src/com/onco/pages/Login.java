@@ -31,10 +31,10 @@ public class Login {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Login.class);
 
-	@FindBy(name = "countryCode")
+	@FindBy(name ="countryCode")
 	WebElement countryCode;
 
-	@FindBy(name = "contact")
+	@FindBy(name ="contact")
 	@CacheLookup
 	WebElement phoneNumber;
 
@@ -42,15 +42,15 @@ public class Login {
 	@CacheLookup
 	WebElement loginVIAOTPbutton;
 
-	@FindBy(xpath = "//body//input[1]")
+	@FindBy(xpath ="//body//input[1]")
 	@CacheLookup
 	WebElement Otp;
 
-	@FindBy(xpath = "//*[@type='submit']")
+	@FindBy(xpath ="//*[@type='submit']")
 	@CacheLookup
 	WebElement proceedButton;
 
-	@FindBy(xpath = "//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
+	@FindBy(xpath ="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
 	@CacheLookup
 	private WebElement delete;
 
