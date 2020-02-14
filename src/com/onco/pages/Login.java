@@ -13,6 +13,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.gargoylesoftware.htmlunit.Page;
+
 import java.awt.Desktop.Action;
 
 import org.apache.log4j.Logger;
@@ -80,11 +82,7 @@ public class Login {
 
 		try {
 
-			
-			Actions action = new Actions(ldriver);
-			action.click(Otp);
-			
-			//Otp.click();
+			Otp.click();
 			logger.info("OTP clicked");
 			Otp.sendKeys(otp);
 			logger.info("OTP entered");
