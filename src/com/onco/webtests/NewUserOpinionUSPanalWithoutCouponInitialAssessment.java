@@ -31,7 +31,6 @@ public class NewUserOpinionUSPanalWithoutCouponInitialAssessment extends BaseCla
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-	
 		options.setPageLoadStrategy(PageLoadStrategy.NONE);
 		options.addArguments("headless","window-size=1920,1080");
 	    driver = new ChromeDriver(options);

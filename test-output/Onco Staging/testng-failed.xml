@@ -21,6 +21,24 @@
   <test thread-count="9" name="PatientPortal">
     <classes>
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
+      <class name="com.onco.webtests.NewUserOpinionUSPanelWithCoupon"/>
     </classes>
   </test> <!-- PatientPortal -->
+  <test name="PatientPortal(failed)">
+    <classes>
+      <class name="com.onco.webtests.NewUserOpinionUSPanelWithCoupon">
+        <methods>
+          <include name="newUserOpinionUSPanal"/>
+          <include name="delete"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanelWithCoupon -->
+      <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
+        <methods>
+          <include name="tearDown"/>
+          <include name="openBrowser"/>
+          <include name="delete"/>
+        </methods>
+      </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
+    </classes>
+  </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->

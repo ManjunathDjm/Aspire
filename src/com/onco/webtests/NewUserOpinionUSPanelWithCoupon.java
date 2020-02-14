@@ -1,5 +1,8 @@
 package com.onco.webtests;
 
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
@@ -27,12 +30,12 @@ public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
 
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-
-		options.addArguments("window-size=1280,800");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--headless");
-		options.addArguments("--start-maximized");
-		options.setExperimentalOption("useAutomationExtension", false);
+		options.setPageLoadStrategy(PageLoadStrategy.NONE);
+		options.addArguments("headless","window-size=1920,1080");
+	    driver = new ChromeDriver(options);
+		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get(url);
 		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().deleteAllCookies();
@@ -52,7 +55,7 @@ public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
 	}
 
 	@Parameters({ "name", "email", "phone", "patientname", "otp", "UScoupon" })
-	@Test(priority = 1)
+	@Test(priority = 2)
 	public void newUserOpinionUSPanal(String name, String email, String phone, String patientname, String otp,
 			String UScoupon) throws Exception {
 
