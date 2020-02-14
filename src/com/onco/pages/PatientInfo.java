@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -63,6 +64,10 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
+			Actions act = new Actions(ldriver);
+			act.moveToElement(patientname).perform();
+			new WebDriverWait(ldriver, 60).until(ExpectedConditions.visibilityOf(patientname));
+			act.moveToElement(patientname).click().perform();
 			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
