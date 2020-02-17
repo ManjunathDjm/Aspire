@@ -1,10 +1,5 @@
 package com.onco.webtests;
 
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.PageLoadStrategy;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -20,26 +15,11 @@ import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
 
 	@BeforeClass
-	@Parameters({ "deleteURL", "url", "browser", "phone", "otp" })
+	@Parameters({ "deleteURL", "url","phone", "otp" })
 	public void delete(String deleteURL, String url, String browser, String phone, String otp) throws Exception {
-
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-		options.setPageLoadStrategy(PageLoadStrategy.NONE);
-		options.addArguments("headless","window-size=1920,1080");
-	    driver = new ChromeDriver(options);
-		driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(url);
-		driver = new ChromeDriver(options);
-		driver.get(url);
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
 
 		SignUp sign = new SignUp(driver);
 		sign.signupicon();
@@ -97,6 +77,7 @@ public class NewUserOpinionUSPanelWithCoupon extends BaseClass {
 
 		Thread.sleep(20000);
 		Dashboard board = new Dashboard(driver);
+		board.notify();
 
 	}
 

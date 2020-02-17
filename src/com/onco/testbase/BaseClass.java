@@ -42,7 +42,7 @@ public class BaseClass {
 			driver = new ChromeDriver(options);
 			driver.manage().deleteAllCookies();
 			driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 			driver.get(url);
 		
 

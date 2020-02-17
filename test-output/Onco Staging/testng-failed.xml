@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Onco Staging]">
   <parameter name="cityname" value="bangalore"/>
-  <parameter name="discountURL" value="http://18.136.208.196/start/discount"/>
+  <parameter name="discountURL" value="http://backstage.onco.com/start/discount"/>
   <parameter name="otp" value="5813"/>
   <parameter name="env" value="staging"/>
   <parameter name="INDcoupon" value="INDMA19"/>
@@ -21,24 +21,6 @@
   <test thread-count="9" name="PatientPortal">
     <classes>
       <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment"/>
-      <class name="com.onco.webtests.NewUserOpinionUSPanelWithCoupon"/>
     </classes>
   </test> <!-- PatientPortal -->
-  <test name="PatientPortal(failed)">
-    <classes>
-      <class name="com.onco.webtests.NewUserOpinionUSPanelWithCoupon">
-        <methods>
-          <include name="newUserOpinionUSPanal"/>
-          <include name="delete"/>
-        </methods>
-      </class> <!-- com.onco.webtests.NewUserOpinionUSPanelWithCoupon -->
-      <class name="com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment">
-        <methods>
-          <include name="tearDown"/>
-          <include name="openBrowser"/>
-          <include name="delete"/>
-        </methods>
-      </class> <!-- com.onco.webtests.NewUserOpinionUSPanalWithoutCouponInitialAssessment -->
-    </classes>
-  </test> <!-- PatientPortal(failed) -->
 </suite> <!-- Failed suite [Onco Staging] -->

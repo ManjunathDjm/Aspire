@@ -1,6 +1,6 @@
 package com.onco.pages;
 
-import org.codehaus.plexus.logging.Logger;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +18,8 @@ import org.openqa.selenium.support.PageFactory;
 public class Dashboard {
 
 	WebDriver ldriver;
+	private static final Logger logger = Logger.getLogger(Dashboard.class);
+
 
 	@FindBy(xpath = "/html/body/app-root/patient-dashboard-component/div[2]/div/div[2]/div/div/div[3]/div[3]/div[2]/div/div[2]/div/button")
 	@CacheLookup
@@ -56,7 +58,9 @@ public class Dashboard {
 		try {
 
 			selectindiapanal.click();
+			logger.info("Selected india panal");
 			proceedbutton.click();
+			logger.info("Proceeed button clicked");
 			
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -66,6 +70,7 @@ public class Dashboard {
 	public void dashboard() {
 		try {
 			continuebutton.click();
+			logger.info("Continue button clicked");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -74,6 +79,7 @@ public class Dashboard {
 	public void logout() {
 		try {
 			logout.click();
+			logger.info("logout clicked");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
