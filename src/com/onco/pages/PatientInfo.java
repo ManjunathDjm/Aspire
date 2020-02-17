@@ -9,7 +9,9 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -28,15 +30,15 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath = "//input[@placeholder='Enter patient name (optional)']")
+	@FindBy(xpath = "//*[@ name='patientName']")
 	@CacheLookup
 	private WebElement patientname;
 
-	@FindBy(name = "cancerType")
+	@FindBy(name = "//*[@ name='cancerType']")
 	@CacheLookup
 	private WebElement typeofCancer;
 
-	@FindBy(name = "cancerStage")
+	@FindBy(name = "//*[@ name='cancerStage']")
 	@CacheLookup
 	private WebElement cancerStage;
 
@@ -64,6 +66,7 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
+			
 			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
