@@ -66,8 +66,8 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			
-			patientname.sendKeys(pname);
+			ldriver.findElement(By.xpath("//*[@ name='patientName']")).sendKeys(pname);
+			//patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
