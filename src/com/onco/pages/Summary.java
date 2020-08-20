@@ -40,7 +40,7 @@ public class Summary {
 	@CacheLookup
 	WebElement couponapply;;
 
-	@FindBy(xpath = "//button[@class='case-data-btn continue-btn col-md-12 continue-btn-active']")
+	@FindBy(xpath = "//button[contains(text(),'PAY AT HOSPITAL')]")
 	@CacheLookup
 	WebElement payathospital;
 

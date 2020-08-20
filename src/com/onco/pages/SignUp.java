@@ -26,35 +26,27 @@ public class SignUp {
 	private static final Logger logger = Logger.getLogger(SignUp.class);
 
 	@FindBy(xpath = "//li[@class='ng-tns-c1-0 ng-star-inserted']//a[1]")
-	@CacheLookup
 	WebElement signUpIcon;
 
 	@FindBy(xpath = "/html/body/app-root/login/div/div[2]/div[2]/a")
-	@CacheLookup
 	WebElement signUplink;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div[2]/div[2]/div[1]/div/form/div[1]/input")
-	@CacheLookup
+	@FindBy(xpath = "//input[@placeholder='Name']")
 	WebElement yourName;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
-	@CacheLookup
+	@FindBy(xpath = "//input[@placeholder='Email']")
 	WebElement yourEmail;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")
-	@CacheLookup
+	@FindBy(xpath = "//select[@name='countryCode']")
 	WebElement countryCode;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[2]/input")
-	@CacheLookup
+	@FindBy(xpath = "//input[@placeholder='Phone No']")
 	WebElement phoneNumber;
 
 	@FindBy(name = "patientQueryId")
-	@CacheLookup
 	WebElement patientQuery;
 
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[5]/button")
-	@CacheLookup
+	@FindBy(xpath = "//body//form//button[1]")
 	WebElement startNowButton;
 
 	public SignUp(WebDriver rdriver) {
@@ -132,6 +124,6 @@ public class SignUp {
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-
+	
 	}
 }

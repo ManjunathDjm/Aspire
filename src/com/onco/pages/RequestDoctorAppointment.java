@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.onco.testbase.BaseClass;
+
+import org.apache.bcel.generic.LoadClass;
 import org.apache.log4j.Logger;
 
 /**
@@ -25,21 +27,30 @@ public class RequestDoctorAppointment {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestDoctorAppointment.class);
 
-	@FindBy(xpath = "//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
+	@FindBy(xpath = "//html//body//app-root//req-doc-appointment//div//div//div//div//div//div//input[@placeholder='Select Location']")
 	@CacheLookup
 	WebElement location;
+	
+	@FindBy(xpath = "/html/body/app-root/req-doc-appointment/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div[1]")
+	@CacheLookup
+	WebElement bangalore;
+	
 
-	@FindBy(xpath = "//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")
+	@FindBy(xpath = "//body/app-root/req-doc-appointment/div/div[3]/div[1]/div[1]/div[2]")
 	@CacheLookup
 	WebElement specialisationDropdownSurgicalOncologist;
+	
+	@FindBy(xpath = "//div[contains(text(),'Surgical Oncologist')]")
+	@CacheLookup
+	WebElement Surgicaloncologist;
 
 	@FindBy(xpath = "//input[@placeholder='Any specific requirements']")
 	@CacheLookup
 	WebElement specific_test;
 
-	@FindBy(xpath = "/html/body/app-root/req-doc-appointment/div/div[2]/div[2]/section/div[3]/div[1]/section/div/div[1]/div[3]/div")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/req-doc-appointment[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]")
 	@CacheLookup
-	WebElement find_cancer_specialist;
+	WebElement findoncologist;
 
 	public RequestDoctorAppointment(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -57,7 +68,9 @@ public class RequestDoctorAppointment {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			location.sendKeys("Bangalore", Keys.TAB);
+		
+			location.sendKeys("Bengaluru, Karnataka");
+			bangalore.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -67,21 +80,21 @@ public class RequestDoctorAppointment {
 	public void surgicalOncologist() {
 
 		try {
+		
 			logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
-			Select specialisation = new Select(ldriver.findElement(By.xpath(
-					"//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 			specialisationDropdownSurgicalOncologist.click();
-			specialisation.selectByIndex(1);
-			specialisationDropdownSurgicalOncologist.click();
+			Surgicaloncologist.click();
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void radiationOncologist() {
+	public void radiationOncologist() throws InterruptedException {
 
 		try {
+			
+			Thread.sleep(20000);
 			logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
 			Select specialisation = new Select(ldriver.findElement(By.xpath(
 					"//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
@@ -95,11 +108,12 @@ public class RequestDoctorAppointment {
 		}
 	}
 
-	public void button() {
+	public void button() throws InterruptedException {
 
 		try {
-			logger.info(find_cancer_specialist.isDisplayed());
-			find_cancer_specialist.click();
+			Thread.sleep(20000);
+			logger.info(findoncologist.isDisplayed());
+			findoncologist.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

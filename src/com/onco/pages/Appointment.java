@@ -25,7 +25,7 @@ public class Appointment {
 
 	private static final Logger logger = Logger.getLogger(Appointment.class);
 
-	@FindBy(xpath = "//div[@class='col-md-8 col-xs-12 results-list']//div[1]//div[1]//div[3]//div[1]//div[2]//div[1]//div[2]//button[1]")
+	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div/div/div[2]/div/div[3]/div/div[2]/div/div[2]/button")
 	@CacheLookup
 	WebElement bookappointment;
 

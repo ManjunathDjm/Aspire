@@ -30,15 +30,15 @@ public class PatientInfo {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(PatientInfo.class);
 
-	@FindBy(xpath = "//*[@ name='patientName']")
+	@FindBy(xpath = "//*[@name='patientName']")
 	@CacheLookup
 	private WebElement patientname;
 
-	@FindBy(name = "//*[@ name='cancerType']")
+	@FindBy(name = "//*[@name='cancerType']")
 	@CacheLookup
 	private WebElement typeofCancer;
 
-	@FindBy(name = "//*[@ name='cancerStage']")
+	@FindBy(name = "//*[@name='cancerStage']")
 	@CacheLookup
 	private WebElement cancerStage;
 
@@ -46,7 +46,7 @@ public class PatientInfo {
 	@CacheLookup
 	private WebElement email;
 
-	@FindBy(xpath = "/html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[4]/div[2]/select")
+	@FindBy(xpath = "//select[@name='condition']")
 	@CacheLookup
 	private WebElement generalCondition;
 
@@ -54,7 +54,7 @@ public class PatientInfo {
 	@CacheLookup
 	private WebElement fileupload;
 
-	@FindBy(xpath = "//html/body/app-root/patient-info/div/div[2]/div[2]/div/div[1]/div/div[3]/div[7]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[7]")
 	@CacheLookup
 	private WebElement continueButton;
 
@@ -66,8 +66,7 @@ public class PatientInfo {
 	public void patientname(String pname) {
 
 		try {
-			ldriver.findElement(By.xpath("//*[@ name='patientName']")).sendKeys(pname);
-			//patientname.sendKeys(pname);
+			patientname.sendKeys(pname);
 			logger.info("Patientname Entered");
 
 		} catch (NoSuchElementException e) {
@@ -107,11 +106,14 @@ public class PatientInfo {
 	public void condition() {
 
 		try {
-
+            try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			Select Condition = new Select(ldriver.findElement(By.name("condition")));
-			Condition.selectByIndex(1);
-			generalCondition.click();
-			logger.info("GeneralCondition Selected");
+			Condition.selectByVisibleText("Active");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

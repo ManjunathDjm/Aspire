@@ -20,9 +20,8 @@ public class Service {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Service.class);
 
-	@FindBy(xpath = "//div[@class='row']//div[1]//div[1]//div[2]")
-	@CacheLookup
-	WebElement appointment;
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]")
+	WebElement Ineedtobookadoctorappointment;
 
 	@FindBy(xpath = "//div[@class='service-card-bg right_oncologist']//h2[@class='offer-text'][contains(text(),'Get Online Opinion')]")
 	@CacheLookup
@@ -43,22 +42,13 @@ public class Service {
 
 	public void appointment() {
 
-		try {
-
-			for (int i = 0; i <= 2; i++) {
-
 				try {
 					Thread.sleep(3000);
+					Ineedtobookadoctorappointment.click();
+					logger.info("Appointment clicked");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				appointment.click();
-				logger.info("Appointment clicked");
-				break;
-			}
-		} catch (NoSuchElementException e) {
-			e.printStackTrace();
-		}
 
 	}
 
