@@ -6,22 +6,18 @@
 		<listener class-name="com.onco.extinctreport.ExtinctTestNG"/>
 </listeners>
     <parameter name="env" value="staging"/>
-    <parameter name="browser" value="Chrome"/>
+    <parameter name="browser" value="chrome"/>
     <parameter name="url"  value="https://backstage.onco.com/"/>
-    <parameter name="deleteURL"  value="https://backstage.onco.com/start/delete-me/"/>
     <parameter name="name" value="test_onco"/>
     <parameter name="email" value="manjunath.119j@gmail.com"/>
     <parameter name="phone" value="8310744975"/>
     <parameter name="otp" value="4423"/>
-    <parameter name="UScoupon" value="INTLMA19"/>
-    <parameter name="INDcoupon" value="INDMA19"/>
-    <parameter name="pname" value="testtest"/>
-    <parameter name="discountURL" value="http://backstage.onco.com/start/discount"/>
-    <parameter name="hospitalname" value="test hospital"/>
+    <parameter name="pname" value="test_test"/>
     <parameter name="cityname" value="bangalore"/>
+    <parameter name="concerns" value="my concerns"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion"/>
+       <class name="com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

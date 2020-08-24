@@ -23,9 +23,9 @@ public class Service {
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]")
 	WebElement Ineedtobookadoctorappointment;
 
-	@FindBy(xpath = "//div[@class='service-card-bg right_oncologist']//h2[@class='offer-text'][contains(text(),'Get Online Opinion')]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[1]")
 	@CacheLookup
-	WebElement opinion;
+	WebElement Ineedanonlineopinionforcancertreatment;
 
 	@FindBy(xpath = "//div[@class='container']//div[3]//div[1]//div[2]")
 	@CacheLookup
@@ -52,20 +52,12 @@ public class Service {
 
 	}
 
-	public void opinion() {
+	public void ineedanonlineopinionforcancertreatment() {
 
-		try {
-
-			for (int i = 0; i <= 2; i++) {
-				try {
-
-					opinion.click();
-					break;
-				} catch (Exception e) {
-
-				}
-			}
-			logger.info("Opinion clicked");
+	     try {
+	    	 
+	    	Ineedanonlineopinionforcancertreatment.click(); 
+			logger.info("Ineedanonlineopinionforcancertreatment clicked");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block

@@ -34,27 +34,27 @@ public class PatientInfo {
 	@CacheLookup
 	private WebElement patientname;
 
-	@FindBy(name = "//*[@name='cancerType']")
+	@FindBy(xpath = "//select[@name='cancerType']")
 	@CacheLookup
 	private WebElement typeofCancer;
 
-	@FindBy(name = "//*[@name='cancerStage']")
+	@FindBy(xpath = "//select[@name='cancerStage']")
 	@CacheLookup
 	private WebElement cancerStage;
-
-	@FindBy(xpath = "/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[2]/input")
-	@CacheLookup
-	private WebElement email;
 
 	@FindBy(xpath = "//select[@name='condition']")
 	@CacheLookup
 	private WebElement generalCondition;
+	
+	@FindBy(xpath = "/html/body/app-root/patient-info/div/div[2]/div[2]/div[1]/div[1]/div/div[3]/div[5]/div[2]/div[1]/div[1]/label/span")
+	@CacheLookup
+	private WebElement chemo;
 
 	@FindBy(xpath = "/html/body/app-root/patient-info/div[2]/div[2]/div/div[1]/div/div[3]/div[6]/div/div/div/div/div[2]/div")
 	@CacheLookup
 	private WebElement fileupload;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/patient-info[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[3]/div[7]")
+	@FindBy(xpath = "/html/body/app-root/patient-info/div/div[2]/div[2]/div[1]/div[1]/div/div[3]/div[7]")
 	@CacheLookup
 	private WebElement continueButton;
 
@@ -106,7 +106,7 @@ public class PatientInfo {
 	public void condition() {
 
 		try {
-            try {
+			try {
 				Thread.sleep(10000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -114,16 +114,46 @@ public class PatientInfo {
 			}
 			Select Condition = new Select(ldriver.findElement(By.name("condition")));
 			Condition.selectByVisibleText("Active");
+			logger.info("Condition selected");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public void treatment() {
+
+		try {
+			try {
+				Thread.sleep(20000);
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			chemo.click();
+			logger.info("treatment selected");
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
+
+	}
 
 	public void continuebutton() {
 
 		try {
-
+			try {
+				Thread.sleep(20000);
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			continueButton.click();
 			logger.info("continue button clicked");
 

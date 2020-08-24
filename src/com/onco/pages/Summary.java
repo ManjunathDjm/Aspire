@@ -44,9 +44,9 @@ public class Summary {
 	@CacheLookup
 	WebElement payathospital;
 
-	@FindBy(xpath = "//button[@class='case-data-btn continue-btn pay-now-btn continue-btn-active']")
+	@FindBy(xpath = "//button[contains(text(),'PAY VIA CARD')]")
 	@CacheLookup
-	WebElement paynow;
+	WebElement netbankingpaynow;
 
 	// @FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
 	// WebElement deletecoupon;
@@ -82,24 +82,26 @@ public class Summary {
 	public void summary() {
 
 		try {
-			if (payathospital.isEnabled()) {
-				try {
-					Thread.sleep(20000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				payathospital.click();
-				logger.info("Clicked on pay at hospital");
-			} else {
-				paynow.click();
-				logger.info("Clicked on paynow");
-			}
+
+			payathospital.click();
+			logger.info("pay at hospital clicked");
+
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 
 		}
+	}
 
+	public void netbanking() {
+
+		try {
+
+			netbankingpaynow.click();
+			logger.info("Clicked on netbankingpaynow");
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+
+		}
 	}
 
 }

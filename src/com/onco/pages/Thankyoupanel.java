@@ -14,39 +14,25 @@ import org.openqa.selenium.support.PageFactory;
  * @author manjunathdj
  *
  */
-public class ThankYou {
+public class Thankyoupanel {
 
 	WebDriver ldriver;
-	private static final Logger logger = Logger.getLogger(ThankYou.class);
+	private static final Logger logger = Logger.getLogger(Thankyoupanel.class);
 
-	@FindBy(xpath = "//div[contains(text(),'GET NOW')]")
-	@CacheLookup
-	WebElement getnow;
-
-	@FindBy(xpath = "//u[contains(text(),'Take me to Home Page')]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/thank-you[1]/div[1]/div[3]/div[2]/div[1]/span[1]/u[1]")
 	@CacheLookup
 	WebElement takemetohomepage;
 
-	public ThankYou(WebDriver rdriver) {
+	public Thankyoupanel(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
 
-	public void getnow() {
-
-		try {
-			getnow.click();
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public void Takemetohomepage() {
+	public void takemetohomepage() {
 
 		try {
 			takemetohomepage.click();
+			logger.info("Successfully clicked on Take me to home page link");
 			Thread.sleep(20000);
 		} catch (Exception e) {
 			// TODO: handle exception
