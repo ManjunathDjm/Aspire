@@ -19,6 +19,7 @@ import com.onoco.testrail.APIClient;
 import com.onoco.testrail.APIException;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import com.onco.misc.*;
 
 /**
  * Methods to launch browsers and take screenshots on test case fail Base class
@@ -56,9 +57,11 @@ public class BaseClass {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+			
+			
 		}
 	}
-
+	
 	@AfterClass
 	public static void addResultForTestCase(String testCaseId, int status, String error)
 			throws IOException, APIException {
@@ -75,8 +78,8 @@ public class BaseClass {
 
 	}
 
-	@AfterMethod
-	public static void closedriver() {
+	@AfterMethod()
+	public static void closedriver1() {
 		driver.quit();
 
 	}

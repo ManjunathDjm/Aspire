@@ -27,9 +27,9 @@ public class Service {
 	@CacheLookup
 	WebElement Ineedanonlineopinionforcancertreatment;
 
-	@FindBy(xpath = "//div[@class='container']//div[3]//div[1]//div[2]")
+	@FindBy(xpath = "//body/app-root/select-service/div/div/div/div/div[2]")
 	@CacheLookup
-	WebElement labtest;
+	WebElement Iwanttotalktoanoncologist;
 
 	@FindBy(xpath = "//div[@class='row']//button[@class='close']")
 	@CacheLookup
@@ -66,7 +66,7 @@ public class Service {
 
 	}
 
-	public void labtest() {
+	public void iwanttotalktoanoncologist() {
 
 		try {
 			try {
@@ -75,7 +75,7 @@ public class Service {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			labtest.click();
+			Iwanttotalktoanoncologist.click();
 			logger.info("labtest clicked");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block

@@ -29,21 +29,9 @@ public class Appointment {
 	@CacheLookup
 	WebElement bookappointment;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/book-appointment[1]/div[4]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[1]")
+	@FindBy(xpath = "//button[contains(text(),'BOOK ON PRIORITY')]")
 	@CacheLookup
-	WebElement cal;
-
-	@FindBy(xpath = "/html/body/app-root/book-appointment/section/div/div[2]/div[1]/div[8]/div/div")
-	@CacheLookup
-	WebElement calendarday;
-
-	@FindBy(xpath = "/html/body/app-root/book-appointment/div[4]/div/div/div/div/div[2]/div[1]/button")
-	@CacheLookup
-	WebElement calendar;
-
-	@FindBy(xpath = "//button[contains(text(),'12:00 PM - 3:00 PM')]")
-	@CacheLookup
-	WebElement calendar_time;
+	WebElement bookonpriority;
 
 	public Appointment(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -57,45 +45,20 @@ public class Appointment {
 
 			bookappointment.click();
 			logger.info("Book appointment clicked");
-			ldriver.switchTo().defaultContent();
-			cal.click();
-			logger.info("calendar is clicked");
-			calendar_time.click();
-			logger.info("calendar date clicked");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 
 	}
-
-	public void calendar() {
-
-		ldriver.findElement(By.className("modal-content")).click();
-		List<WebElement> allDates = ldriver.findElements(
-				By.xpath("//div[@class='book-appt-datetime-modal modal fade in']//div[@class='container-fluid']"));
+	public void bookonpriority() {
 		
-		for (WebElement ele : allDates) {
-
-			String date = ele.getText();
-
-			if (date.equalsIgnoreCase("28")) {
-				ele.click();
-				break;
-			}
-
-		}
-
-	}
-
-	public void exploreMore() {
-
 		try {
-
-			calendar.click();
+			bookonpriority.click();
 		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+	
 	}
 }

@@ -1,6 +1,10 @@
 package com.onco.webtests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import com.onco.pages.Concerns;
@@ -13,14 +17,15 @@ import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
 import com.onco.pages.Thankyoupanel;
 import com.onco.testbase.BaseClass;
+import com.onco.misc.*;
 
 public class NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel extends BaseClass {
-
+	
 	@Parameters({ "name", "email", "phone", "otp", "pname", "concerns" })
 	@Test(description = "New User | I need an online opinion for cancer treatment | New User Opinion -US panel. TC_ID=C203")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String pname, String concerns) throws Exception {
-
+		
 		SignUp signup = new SignUp(driver);
 		signup.signupicon();
 		Thread.sleep(20000);

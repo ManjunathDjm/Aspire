@@ -25,7 +25,7 @@ public class Calendar {
 	@CacheLookup
 	WebElement calendarmodal;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/book-appointment[1]/book-appt-datetime-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]")
+	@FindBy(xpath = "//button[contains(text(),'Thursday, August 27')]")
 	WebElement thursday;
 
 	@FindBy(xpath = "//button[contains(text(),'9:00 AM - 12:00 PM')]")
@@ -42,31 +42,58 @@ public class Calendar {
 
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/book-appointment[1]/book-appt-datetime-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/button[1]")
 	WebElement friday;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Saturday, August 22')]")
 	WebElement saturday;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Sunday, August 23')]")
 	WebElement sunday;
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/book-appointment[1]/book-appt-datetime-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/button[1]")
+	WebElement monday;
+
+	@FindBy(xpath = "//span[contains(text(),'Select')]")
+	WebElement selectprefereddatetime;
 	
-	@FindBy(xpath="/html[1]/body[1]/app-root[1]/book-appointment[1]/book-appt-datetime-modal[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[4]/button[1]")
-    WebElement monday;	
+	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 11:00 AM')]")
+	WebElement  talktooncologisttimeslot;
+	
+	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 10:20 AM')]")
+	WebElement  subtimeslot;
+	
+	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 10:20 AM')]")
+	WebElement  sat;
+	
+	
 
 	public Calendar(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
 
-	public void dayone()  {
-		
-                try {
-                	ldriver.switchTo().activeElement();
-    				thursday.click();
-                    timeslot1.click();
-				} catch (NoSuchElementException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			    
+	public void prefereddatetime() {
+
+		try {
+		    selectprefereddatetime.click();
+		    sat.click();
+			talktooncologisttimeslot.click();
+			subtimeslot.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public void dayone() {
+
+		try {
+			ldriver.switchTo().activeElement();
+			thursday.click();
+			timeslot1.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
