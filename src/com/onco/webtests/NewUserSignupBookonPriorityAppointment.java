@@ -3,6 +3,7 @@ package com.onco.webtests;
 import java.io.IOException;
 
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -87,7 +88,7 @@ public class NewUserSignupBookonPriorityAppointment extends BaseClass {
 	}
 }
 	
-	@AfterTest
+	@AfterClass
 	public void delete1() {
 		
 		try {

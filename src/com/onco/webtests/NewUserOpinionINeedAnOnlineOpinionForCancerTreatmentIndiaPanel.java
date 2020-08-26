@@ -88,7 +88,7 @@ public class NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel exte
 
 	}
 
-	@AfterTest
+	@AfterClass
 	public void delete1() {
 
 		try {

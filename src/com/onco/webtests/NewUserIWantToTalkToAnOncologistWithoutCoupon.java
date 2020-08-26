@@ -69,7 +69,7 @@ public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
 
 	}
 
-	@AfterTest
+	@AfterClass
 	public void delete1() {
 
 		try {

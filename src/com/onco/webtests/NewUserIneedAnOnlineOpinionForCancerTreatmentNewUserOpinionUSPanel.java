@@ -89,7 +89,7 @@ public class NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel 
 
 	}
 
-	@AfterTest
+	@AfterClass
 	public void delete1() {
 		
 		try {

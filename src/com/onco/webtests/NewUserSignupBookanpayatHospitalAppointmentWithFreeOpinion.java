@@ -86,7 +86,7 @@ public class NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion extends 
 		}
 	}
 
-	@AfterTest
+	@AfterClass
 	public void delete1() {
 
 		try {
