@@ -1,8 +1,13 @@
 package com.onco.webtests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.onco.misc.Deletelead;
 import com.onco.pages.Appointment;
 import com.onco.pages.Login;
 import com.onco.pages.PatientInfo;
@@ -81,5 +86,20 @@ public class NewUserSignupBookonPriorityAppointment extends BaseClass {
 		NewUserSignupBookonPriorityAppointment.addResultForTestCase("2579", TEST_CASE_FAILED_STATUS, "");
 	}
 }
+	
+	@AfterTest
+	public void delete1() {
+		
+		try {
+			Deletelead delete = new Deletelead();
+			delete.delete();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
+	}
 }
+
+
+

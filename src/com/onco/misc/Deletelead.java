@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import java.io.IOException;
 
 import org.testng.Assert;
-
+import org.testng.annotations.Test;
 
 public class Deletelead {
 	
@@ -19,7 +19,7 @@ public class Deletelead {
 
 				.headers("AUTHORIZATION", "Bearer ").contentType("application/json")
 				.body("{\n" + 
-						"    \"phoneNumber\": \"+918310744975\",\n" + 
+						"    \"phoneNumber\": \"+919036890379\",\n" + 
 						"    \"leadDelSecKey\": \"Eno0nduK!tthakaPPa@1\"\n" + 
 						"}")
 				.when().post("/onco-auth/oapi/user-cred/remove-lead");

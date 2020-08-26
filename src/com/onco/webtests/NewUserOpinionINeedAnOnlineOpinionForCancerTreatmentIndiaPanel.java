@@ -1,8 +1,14 @@
 package com.onco.webtests;
 
+import java.io.IOException;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.onco.misc.Deletelead;
 import com.onco.pages.Concerns;
 import com.onco.pages.FreeOpinion;
 import com.onco.pages.Login;
@@ -82,4 +88,16 @@ public class NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel exte
 
 	}
 
+	@AfterTest
+	public void delete1() {
+
+		try {
+			Deletelead delete = new Deletelead();
+			delete.delete();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 }

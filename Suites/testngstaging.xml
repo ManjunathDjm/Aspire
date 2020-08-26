@@ -15,9 +15,14 @@
     <parameter name="pname" value="test_test"/>
     <parameter name="cityname" value="bangalore"/>
     <parameter name="concerns" value="my concerns"/>
+    <parameter name="requirments" value="my requirments"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
+       <class name="com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel"/>
        <class name="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon"/>
+       <class name="com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel"/>
+       <class name="com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion"/>
+       <class name="com.onco.webtests.NewUserSignupBookonPriorityAppointment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

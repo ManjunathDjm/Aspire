@@ -29,7 +29,7 @@ public class PaymentsRazorPay {
 	@CacheLookup
 	WebElement netBanking1;
 	
-	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div/div/button[3]/div/i")
+	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div[1]/div/button[2]/div/div[2]/div/label")
 	@CacheLookup
 	WebElement netBanking2;
 	

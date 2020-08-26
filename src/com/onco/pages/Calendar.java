@@ -55,14 +55,14 @@ public class Calendar {
 	@FindBy(xpath = "//span[contains(text(),'Select')]")
 	WebElement selectprefereddatetime;
 	
+	@FindBy(xpath = "//button[contains(text(),'Saturday, August 29')]")
+	WebElement  day;
+	
 	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 11:00 AM')]")
-	WebElement  talktooncologisttimeslot;
+	WebElement  timeslot;
 	
 	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 10:20 AM')]")
 	WebElement  subtimeslot;
-	
-	@FindBy(xpath = "//button[contains(text(),'10:00 AM - 10:20 AM')]")
-	WebElement  sat;
 	
 	
 
@@ -75,10 +75,14 @@ public class Calendar {
 
 		try {
 		    selectprefereddatetime.click();
-		    sat.click();
-			talktooncologisttimeslot.click();
+			day.click();
+			timeslot.click();
+			Thread.sleep(20000);
 			subtimeslot.click();
 		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
