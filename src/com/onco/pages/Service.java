@@ -34,6 +34,12 @@ public class Service {
 	@FindBy(xpath = "//div[@class='row']//button[@class='close']")
 	@CacheLookup
 	WebElement initialAssessmentClose;
+	
+	@FindBy(xpath = "	/html/body/app-root/select-service/div/div[2]/div[1]/div[2]/div[4]")
+	@CacheLookup
+	WebElement iwanttobookdiagnostictest;
+	
+
 
 	public Service(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -83,4 +89,22 @@ public class Service {
 		}
 	}
 
+	public void iwanttobooklabtest() {
+
+		try {
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			iwanttobookdiagnostictest.click();
+			logger.info("labtest clicked");
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	
 }

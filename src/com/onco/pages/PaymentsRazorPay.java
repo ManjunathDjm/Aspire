@@ -29,9 +29,23 @@ public class PaymentsRazorPay {
 	@CacheLookup
 	WebElement netBanking1;
 	
-	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div[1]/div/button[2]/div/div[2]/div/label")
+	@FindBy(xpath = "//body//payment-summary//div//div//div//div//div[2]")
 	@CacheLookup
 	WebElement netBanking2;
+	
+	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div[1]/div/button[1]")
+	@CacheLookup
+	WebElement phonepe;
+	
+	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div[1]/div/button[2]")
+	@CacheLookup
+	WebElement sbinet;
+	
+	@FindBy(xpath ="//*[@id=\"footer-cta\"]")
+	@CacheLookup
+	WebElement pay;
+	
+	
 	
 	@FindBy(xpath = "//*[@id=\"modal-close\"]")
 	@CacheLookup
@@ -60,8 +74,10 @@ public class PaymentsRazorPay {
 	public void netbanking() throws InterruptedException {
 
 		try {
+			
 
 			ldriver.switchTo().frame(ldriver.findElement(By.className("razorpay-checkout-frame")));
+	
 			if(netBanking1.isDisplayed()) {
 				netBanking1.click();
 				logger.info("Clicked on netbanking one");

@@ -18,11 +18,7 @@
     <parameter name="requirments" value="my requirments"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel"/>
-       <class name="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon"/>
-       <class name="com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel"/>
-       <class name="com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion"/>
-       <class name="com.onco.webtests.NewUserSignupBookonPriorityAppointment"/>
+       <class name="com.onco.webtests.NewUserBookAppointmentRequestCallOnco"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

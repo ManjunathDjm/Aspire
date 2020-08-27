@@ -18,10 +18,10 @@ import com.onco.pages.Summary;
 import com.onco.pages.ThankYou;
 import com.onco.testbase.BaseClass;
 
-public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
+public class NewUserIWantToTalkToAnOncologistWithCoupon extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp", "pname", "requirments" })
-	@Test(description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C2578")
+	@Test(description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C2577")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String pname, String requirments) throws Exception {
 
@@ -49,7 +49,6 @@ public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
 		Thread.sleep(20000);
 
 		Summary summary = new Summary(driver);
-		summary.deletecouponcode();
 		summary.netbanking();
 		Thread.sleep(20000);
 
@@ -63,9 +62,9 @@ public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
 		String actualTilte = driver.getPageSource();
 		if (actualTilte.contains("Take me to Home Page")) {
 			Assert.assertTrue(actualTilte.contains("Take me to Home Page"));
-			NewUserIWantToTalkToAnOncologistWithoutCoupon.addResultForTestCase("2578", TEST_CASE_PASSED_STATUS, "");
+			NewUserIWantToTalkToAnOncologistWithCoupon.addResultForTestCase("2577", TEST_CASE_PASSED_STATUS, "");
 		} else {
-			NewUserIWantToTalkToAnOncologistWithoutCoupon.addResultForTestCase("2577", TEST_CASE_FAILED_STATUS, "");
+			NewUserIWantToTalkToAnOncologistWithCoupon.addResultForTestCase("2577", TEST_CASE_FAILED_STATUS, "");
 		}
 
 	}

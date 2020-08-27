@@ -25,61 +25,67 @@ public class RequestLabTests {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(RequestLabTests.class);
 
-	@FindBy(xpath = "//div[@class='col-md-6 col-lg-6 col-xl-6']//input[@placeholder='Select Location']")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/req-lab-test[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/input[1]")
 	@CacheLookup
 	WebElement location;
+	
+	@FindBy(xpath = "/html/body/app-root/req-lab-test/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[1]/div[1]")
+	@CacheLookup
+	WebElement bangalore;
 
-	@FindBy(xpath = "//div[@class='custom-select right']//select[@placeholder='Select test type']")
+	@FindBy(xpath = "//div[contains(text(),'Select test type')]")
 	@CacheLookup
 	WebElement testtype;
-
-	@FindBy(xpath = "//div[@class='orange-rounded-inner-btn small']")
+	
+	@FindBy(xpath = "//div[contains(text(),'CT Scan')]")
+	@CacheLookup
+	WebElement ctscan;
+	
+	@FindBy(xpath = "//html//body//app-root//req-lab-test//div//div//div//div//div//div[contains(text(),'CONTINUE')]")
 	@CacheLookup
 	WebElement continueButton;
 
-	@FindBy(xpath = "/html/body/app-root/req-lab-test/div[2]/div[2]/section/div[3]/div[1]/section/div/div/div[2]/div[2]/div")
+	@FindBy(xpath = "//button[contains(text(),'BOOK APPOINTMENT')]")
 	@CacheLookup
-	WebElement requestCallback;
-
-	@FindBy(xpath = "//button[@class='callback-request-modal-close']")
+	WebElement booknow;
+	
+	@FindBy(xpath = "//body/app-root/req-lab-test/div/div/div/div/div/div/div/div/div/div/div[2]")
 	@CacheLookup
-	WebElement Requestcallclose;
+	WebElement requestcallback;
+	
+	
+	
 
 	public RequestLabTests(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 	}
 
-	public void location() {
+	public void location() throws InterruptedException {
+
 
 		try {
-
+			logger.info(location.isDisplayed());
+			location.click();
 			try {
-
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
+				Thread.sleep(2000);
+			} catch (NoSuchElementException e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			location.click();
-			logger.info("location clicked");
-			location.sendKeys("Mumbai", Keys.TAB);
-			logger.info("location entered");
-
+		
+			location.sendKeys("Bengaluru, Karnataka");
+			bangalore.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-	}
 
-	public void labtest() {
+	}
+	public void testtype() {
 
 		try {
-
-			Select test = new Select(ldriver.findElement(
-					By.xpath("//div[@class='custom-select right']//select[@placeholder='Select test type']")));
-			testtype.click();
-			test.selectByIndex(1);
-			testtype.click();
-			logger.info("Seelcted test type");
+           testtype.click();
+           ctscan.click();
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -90,16 +96,16 @@ public class RequestLabTests {
 		try {
 			logger.info(continueButton.isDisplayed());
 			continueButton.click();
+			booknow.click();
+			
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void requestCallback() {
-
-		requestCallback.click();
-
+	public void requestcall() {
+		location.click();
+		requestcallback.click();
 	}
-
 }

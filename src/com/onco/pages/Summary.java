@@ -24,7 +24,7 @@ public class Summary {
 	@CacheLookup
 	WebElement couponCode;
 
-	@FindBy(xpath = "//i[@class='fa fa-times']")
+	@FindBy(xpath = "//body//payment-summary//div//div//div//div//div[2]")
 	@CacheLookup
 	WebElement deletecoupon;
 

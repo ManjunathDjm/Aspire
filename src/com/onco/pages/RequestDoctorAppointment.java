@@ -31,7 +31,7 @@ public class RequestDoctorAppointment {
 	@CacheLookup
 	WebElement location;
 	
-	@FindBy(xpath = "/html/body/app-root/req-doc-appointment/div/div[3]/div[1]/div/div[1]/div/div[2]/div[1]/div[1]")
+	@FindBy(xpath = "/html/body/app-root/req-lab-test/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[1]/div[1]")
 	@CacheLookup
 	WebElement bangalore;
 	
@@ -51,6 +51,11 @@ public class RequestDoctorAppointment {
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/req-doc-appointment[1]/div[1]/div[3]/div[1]/div[1]/div[4]/div[1]")
 	@CacheLookup
 	WebElement findoncologist;
+	
+	@FindBy(xpath = "//body/app-root/req-doc-appointment/div/div/div/div/div/div/div/div[2]")
+	@CacheLookup
+	WebElement requestcallonco;
+
 
 	public RequestDoctorAppointment(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -119,4 +124,11 @@ public class RequestDoctorAppointment {
 		}
 
 	}
+	
+	public void requestcallonco() {
+		
+		location.click();
+		requestcallonco.click();
+	}
+	
 }
