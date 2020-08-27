@@ -35,7 +35,6 @@ public class RequestDoctorAppointment {
 	@CacheLookup
 	WebElement bangalore;
 	
-
 	@FindBy(xpath = "//body/app-root/req-doc-appointment/div/div[3]/div[1]/div[1]/div[2]")
 	@CacheLookup
 	WebElement specialisationDropdownSurgicalOncologist;

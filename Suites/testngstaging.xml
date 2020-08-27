@@ -18,7 +18,7 @@
     <parameter name="requirments" value="my requirments"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.NewUserBookAppointmentRequestCallOnco"/>
+       <class name="com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

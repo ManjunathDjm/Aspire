@@ -47,7 +47,16 @@ public class Summary {
 	@FindBy(xpath = "//button[contains(text(),'PAY VIA CARD')]")
 	@CacheLookup
 	WebElement netbankingpaynow;
-
+	
+	@FindBy(xpath = "//button[contains(text(),'Pay Using UPI')]")
+	@CacheLookup
+	WebElement payusingUPI;
+	
+	@FindBy(xpath = "//button[contains(text(),'Pay Using PAYTM')]")
+	@CacheLookup
+	WebElement paytm;
+	
+	
 	// @FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
 	// WebElement deletecoupon;
 
@@ -104,4 +113,14 @@ public class Summary {
 		}
 	}
 
-}
+	public void upi() {
+		
+		payusingUPI.click();
+	}
+
+  public void paytm() {
+	  
+	     paytm.click();
+  } 
+	 
+ }
