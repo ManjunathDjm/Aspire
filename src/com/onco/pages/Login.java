@@ -37,7 +37,11 @@ public class Login {
 	@FindBy(xpath ="//body//input[1]")
 	@CacheLookup
 	WebElement Otp;
-
+	
+	@FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/banner-strip-component[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
+	@CacheLookup
+	WebElement formotp;
+	
 	@FindBy(xpath ="//*[@type='submit']")
 	@CacheLookup
 	WebElement proceedButton;
@@ -58,28 +62,38 @@ public class Login {
 			Select countrycode = new Select(ldriver.findElement(By.name("countryCode")));
 			countrycode.selectByIndex(0);
 			// countryCode.click();
-			logger.info("Country code selected");
+			logger.info("Successfully selected country code");
 			phoneNumber.sendKeys(phone);
-			logger.info("Phone number entered");
+			logger.info("Successfully selected phone number");
 			loginVIAOTPbutton.click();
-			logger.info("Login via OTP clicked");
+			logger.info("Successfully clicked on Login via OTP clicked");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 
 	}
-
+	public void formotp(String otp) {
+		
+		try {
+			
+		formotp.sendKeys(otp);
+		proceedButton.click();
+		
+	}catch (NoSuchElementException e) {
+		e.printStackTrace();
+	}
+	}
 	public void otpDetails(String otp) {
 
 		try {
 
 			Otp.click();
-			logger.info("OTP clicked");
+			logger.info("Successfully clicked on OTP ");
 			Otp.sendKeys(otp);
-			logger.info("OTP entered");
+			logger.info("Successfully entered OTP ");
 			proceedButton.click();
-			logger.info("Proceed Button clicked");
+			logger.info("Successfully clicked on proceed Button");
 
 		} catch (NoSuchElementException  e) {
 			e.printStackTrace();

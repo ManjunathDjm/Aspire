@@ -79,7 +79,7 @@ public class BaseClass {
 	}
 
 	@AfterMethod()
-	public static void closedriver1() {
+	public static void closedriver() {
 		driver.quit();
 
 	}

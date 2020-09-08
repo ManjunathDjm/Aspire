@@ -51,7 +51,8 @@ public class NewUserSignupBookonPriorityAppointment extends BaseClass {
     Thread.sleep(20000);
     
     Calendar cal = new Calendar(driver);
-    cal.prefereddatetime();
+    cal.date();
+	cal.time();
     Thread.sleep(20000);
     
     Summary summary = new Summary(driver);

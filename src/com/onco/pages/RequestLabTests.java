@@ -33,7 +33,7 @@ public class RequestLabTests {
 	@CacheLookup
 	WebElement bangalore;
 
-	@FindBy(xpath = "//div[contains(text(),'Select test type')]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/req-lab-test[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/input[1]")
 	@CacheLookup
 	WebElement testtype;
 	
@@ -41,7 +41,7 @@ public class RequestLabTests {
 	@CacheLookup
 	WebElement ctscan;
 	
-	@FindBy(xpath = "//html//body//app-root//req-lab-test//div//div//div//div//div//div[contains(text(),'CONTINUE')]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/req-lab-test[1]/div[1]/div[2]/div[2]/div[1]/div[3]/div[1]")
 	@CacheLookup
 	WebElement continueButton;
 
@@ -65,8 +65,8 @@ public class RequestLabTests {
 
 
 		try {
-			logger.info(location.isDisplayed());
 			location.click();
+			logger.info("Successfully clicked on loaction dropdown");
 			try {
 				Thread.sleep(2000);
 			} catch (NoSuchElementException e) {
@@ -75,7 +75,9 @@ public class RequestLabTests {
 			}
 		
 			location.sendKeys("Bengaluru, Karnataka");
+			logger.info("Successfully entered location data");
 			bangalore.click();
+			logger.info("Successfully selected location");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -85,7 +87,9 @@ public class RequestLabTests {
 
 		try {
            testtype.click();
+           logger.info("Successfully clicked test type");
            ctscan.click();
+           logger.info("Successfully selected test type");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -94,9 +98,11 @@ public class RequestLabTests {
 	public void continueButton() {
 
 		try {
-			logger.info(continueButton.isDisplayed());
+	
 			continueButton.click();
+			logger.info("Successfully clicked on continue button");
 			booknow.click();
+			logger.info("Successfully clicked on booknow button");
 			
 
 		} catch (NoSuchElementException e) {
@@ -106,6 +112,8 @@ public class RequestLabTests {
 
 	public void requestcall() {
 		location.click();
+		logger.info("Successfully clicked on location dropdown");
 		requestcallback.click();
+		logger.info("Successfully selected request call back");
 	}
 }

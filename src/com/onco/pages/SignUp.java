@@ -64,7 +64,7 @@ public class SignUp {
 		try {
 
 			signUpIcon.click();
-			logger.info("Signup icon clicked");
+			logger.info("Successfully clicked on Signup icon");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -77,17 +77,16 @@ public class SignUp {
 		try {
 
 			signUplink.click();
-			logger.info("signUP link clicked");
+			logger.info("Successfully clicked on Signup link icon");
 
 			yourName.sendKeys(name);
-			logger.info("your name is entered ");
+			logger.info("Successfully entered name");
 
-			logger.info(yourEmail.isDisplayed());
 			yourEmail.sendKeys(email);
-			logger.info("Email is entered ");
+			logger.info("Successfully entered email");
 
 			phoneNumber.sendKeys(phone);
-			logger.info("Phone number is entered");
+			logger.info("Successfully entered phone");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -102,7 +101,7 @@ public class SignUp {
 					By.xpath("/html/body/app-root/app-register/div/div[2]/div[1]/div/form/div[3]/div[1]/select")));
 			countrycode.selectByIndex(0);
 			countryCode.click();
-			logger.info("Country code selected");
+			logger.info("Successfully selected country code");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -117,9 +116,9 @@ public class SignUp {
 			Select patientquery = new Select(ldriver.findElement(By.name("patientQueryId")));
 			patientquery.selectByIndex(1);
 			patientQuery.click();
-			logger.info("Country code selected");
+			logger.info("Successfully selected patient query");
 			startNowButton.click();
-			logger.info("Start now button clicked");
+			logger.info("Successfully clicked on start now button");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

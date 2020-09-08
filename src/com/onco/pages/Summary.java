@@ -43,6 +43,10 @@ public class Summary {
 	@FindBy(xpath = "//button[contains(text(),'PAY AT HOSPITAL')]")
 	@CacheLookup
 	WebElement payathospital;
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/case-summary[1]/div[1]/div[2]/div[1]/section[1]/div[2]/div[1]/payment-summary[1]/div[1]/div[1]/div[4]/button[1]")
+	@CacheLookup
+	WebElement labbook;
 
 	@FindBy(xpath = "//button[contains(text(),'PAY VIA CARD')]")
 	@CacheLookup
@@ -69,7 +73,7 @@ public class Summary {
 
 		try {
 			deletecoupon.click();
-			logger.info("Delete coupon clicked");
+			logger.info("Successfully Delete coupon ");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -79,9 +83,9 @@ public class Summary {
 
 		try {
 			couponcodefield.sendKeys(UScoupon);
-			logger.info("Coupon code entered");
+			logger.info("Successfully entered coupon");
 			couponapply.click();
-			logger.info("Coupon colde applied");
+			logger.info("Successfully applied coupon");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -91,9 +95,8 @@ public class Summary {
 	public void summary() {
 
 		try {
-
 			payathospital.click();
-			logger.info("pay at hospital clicked");
+			logger.info("Successfully clicked on pay at hospital");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -104,23 +107,29 @@ public class Summary {
 	public void netbanking() {
 
 		try {
-
+			
 			netbankingpaynow.click();
-			logger.info("Clicked on netbankingpaynow");
+			logger.info("Successfully clicked on netbanking button");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 
 		}
 	}
 
+	public void labbook() {
+		labbook.click();
+		logger.info("Successfully clicked on book appointment button");
+	}
 	public void upi() {
 		
 		payusingUPI.click();
+		logger.info("Successfully clicked on book UPI payment button");
 	}
 
   public void paytm() {
 	  
 	     paytm.click();
+	     logger.info("Successfully clicked on book paytm payment button");
   } 
 	 
  }

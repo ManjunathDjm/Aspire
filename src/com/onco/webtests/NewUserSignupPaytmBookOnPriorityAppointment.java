@@ -19,10 +19,10 @@ import com.onco.testbase.BaseClass;
 
 public class NewUserSignupPaytmBookOnPriorityAppointment extends BaseClass {
 
-	@Parameters({ "name", "email", "phone", "otp", "pname" })
+	@Parameters({ "name", "email", "phone", "otp" })
 	@Test(description = "New User Signup| Paytm|Book on priority appointment. TC_ID=C3074")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
-			String otp, String pname) throws Exception {
+			String otp) throws Exception {
 
 		SignUp signup = new SignUp(driver);
 		signup.signupicon();
@@ -48,7 +48,8 @@ public class NewUserSignupPaytmBookOnPriorityAppointment extends BaseClass {
 		Thread.sleep(20000);
 
 		Calendar cal = new Calendar(driver);
-		cal.prefereddatetime();
+		cal.date();
+		cal.time();
 		Thread.sleep(20000);
 
 		Summary summary = new Summary(driver);

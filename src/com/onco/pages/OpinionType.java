@@ -39,7 +39,7 @@ public class OpinionType {
 		try {
 
 			indianPanelButton.click();
-			logger.info("India Panal button clicked");
+			logger.info("Successfullt clicked on India Panal button");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 		}
@@ -51,7 +51,7 @@ public class OpinionType {
 		try {
 
 			selectUsPanelButton.click();
-			logger.info("US Panal button clicked");
+			logger.info("Successfullt clicked on US Panal button");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}

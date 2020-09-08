@@ -36,6 +36,7 @@ public class ThankYou {
 
 		try {
 			getnow.click();
+			logger.info("Succesfully clicked on get now button");
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -47,6 +48,7 @@ public class ThankYou {
 
 		try {
 			takemetohomepage.click();
+			logger.info("Succesfully clicked on take me to home page link");
 			Thread.sleep(20000);
 		} catch (Exception e) {
 			// TODO: handle exception

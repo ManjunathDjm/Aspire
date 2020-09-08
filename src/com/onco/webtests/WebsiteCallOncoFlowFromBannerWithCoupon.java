@@ -4,42 +4,34 @@ import java.io.IOException;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import com.onco.misc.Deletelead;
 import com.onco.pages.Calendar;
+import com.onco.pages.Homepage;
 import com.onco.pages.Login;
 import com.onco.pages.PaymentsRazorPay;
 import com.onco.pages.Requestcallonco;
-import com.onco.pages.SignUp;
 import com.onco.pages.Summary;
-import com.onco.pages.ThankYou;
 import com.onco.testbase.BaseClass;
+import com.onco.misc.*;
 
-public class NewUserUPIpaymentIWantToTalkToOncologist extends BaseClass {
-
-	@Parameters({ "name", "email", "phone", "otp","requirments" })
-	@Test(description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C3073")
+public class WebsiteCallOncoFlowFromBannerWithCoupon extends BaseClass {
+	
+	@Parameters({ "name", "email", "phone", "otp","requirments"})
+	@Test(description = "Website | Call onco flow from banner with coupon. TC_ID=C2584")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String requirments) throws Exception {
-
-		SignUp signup = new SignUp(driver);
-		signup.signupicon();
+		
 		Thread.sleep(20000);
-		signup.signuppage(name, email, phone);
-		signup.patientQuery();
-		Thread.sleep(20000);
+		Homepage home = new Homepage(driver);
+		home.formfill(name, email, phone);
+        Thread.sleep(20000);		
 
 		Login login = new Login(driver);
-		login.otpDetails(otp);
+		login.formotp(otp);
 		Thread.sleep(20000);
-
-		com.onco.pages.Service service = new com.onco.pages.Service(driver);
-		service.iwanttotalktoanoncologist();
-		Thread.sleep(20000);
-
+		
 		Requestcallonco callonco = new Requestcallonco(driver);
 		callonco.selectdate();
 		
@@ -51,22 +43,28 @@ public class NewUserUPIpaymentIWantToTalkToOncologist extends BaseClass {
 		Thread.sleep(20000);
 
 		Summary summary = new Summary(driver);
-		summary.upi();
+		summary.netbanking();
+		Thread.sleep(20000);
+		
+		PaymentsRazorPay payment = new PaymentsRazorPay(driver);
+		payment.netbanking();
 		Thread.sleep(20000);
 
 		String actualTilte = driver.getPageSource();
-		if (actualTilte.contains("netdox@icici")) {
-			Assert.assertTrue(actualTilte.contains("netdox@icici"));
-			NewUserUPIpaymentIWantToTalkToOncologist.addResultForTestCase("3073", TEST_CASE_PASSED_STATUS, "");
+		if (actualTilte.contains("Thank you!")) {
+			Assert.assertTrue(actualTilte.contains("Thank you!"));
+			WebsiteCallOncoFlowFromBannerWithCoupon.addResultForTestCase("2584",
+					TEST_CASE_PASSED_STATUS, "");
 		} else {
-			NewUserUPIpaymentIWantToTalkToOncologist.addResultForTestCase("3073", TEST_CASE_FAILED_STATUS, "");
+			WebsiteCallOncoFlowFromBannerWithCoupon.addResultForTestCase("2584",
+					TEST_CASE_FAILED_STATUS, "");
 		}
 
 	}
 
 	@AfterClass
 	public void delete1() {
-
+		
 		try {
 			Deletelead delete = new Deletelead();
 			delete.delete();

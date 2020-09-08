@@ -20,10 +20,10 @@ import com.onco.testbase.BaseClass;
 
 public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
 
-	@Parameters({ "name", "email", "phone", "otp", "pname", "requirments" })
+	@Parameters({ "name", "email", "phone", "otp", "requirments" })
 	@Test(description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C2578")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
-			String otp, String pname, String requirments) throws Exception {
+			String otp, String requirments) throws Exception {
 
 		SignUp signup = new SignUp(driver);
 		signup.signupicon();
@@ -40,11 +40,13 @@ public class NewUserIWantToTalkToAnOncologistWithoutCoupon extends BaseClass {
 		service.iwanttotalktoanoncologist();
 		Thread.sleep(20000);
 
-		Calendar calendar = new Calendar(driver);
-		calendar.prefereddatetime();
+		Requestcallonco callonco = new Requestcallonco(driver);
+		callonco.selectdate();
+		
+		Calendar cal = new Calendar(driver);
+	    cal.calloncotime();
 		Thread.sleep(20000);
 
-		Requestcallonco callonco = new Requestcallonco(driver);
 		callonco.requestcallonco(requirments);
 		Thread.sleep(20000);
 

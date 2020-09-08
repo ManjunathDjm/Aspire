@@ -30,26 +30,27 @@ public class Requestcallonco {
 	@FindBy(xpath = "//div[contains(text(),'I need guidance on how to protect a cancer patient')]")
 	@CacheLookup
 	WebElement ineedguidancecheckbox;
-	
+
 	@FindBy(xpath = "//div[contains(text(),'I have specific questions on my diagnosis')]")
 	@CacheLookup
 	WebElement ihavespecificquestion;
-	
+
 	@FindBy(xpath = "//div[contains(text(),'I have other questions around cancer')]")
 	@CacheLookup
 	WebElement ihavequestionsaroundcancer;
-	
+
 	@FindBy(xpath = "//textarea[@placeholder='Type your requirements here']")
 	@CacheLookup
 	WebElement requirmentstextbox;
-	
-	@FindBy(xpath = "//html//body//app-root//req-call-onco//div//div//div//div//div[contains(text(),'BOOK APPOINTMENT')]")
+
+	@FindBy(xpath = "//body/app-root/req-call-onco/div/div/div/div[2]/div[1]")
 	@CacheLookup
 	WebElement bookappointmentbutton;
-	
-	
-	
-	
+
+	@FindBy(xpath = "/html/body/app-root/req-call-onco/div/div[4]/div[1]/div[1]/div[1]/div[2]")
+	@CacheLookup
+	WebElement selectdate;
+
 	public Requestcallonco(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
@@ -58,11 +59,22 @@ public class Requestcallonco {
 	public void requestcallonco(String requirments) throws InterruptedException {
 
 		ineedguidancecheckbox.click();
+		logger.info("Successfully selected i need guidance checkbox");
 		ihavespecificquestion.click();
+		logger.info("Successfully selected i have specific question checkbox");
 		ihavequestionsaroundcancer.click();
+		logger.info("Successfully selected i have questions around  cancer");
 		requirmentstextbox.sendKeys(requirments);
+		logger.info("Successfully entered requirments data");
 		Thread.sleep(10000);
 		bookappointmentbutton.click();
-		 
+		logger.info("Successfully click on bookappointment button");
+
 	}
+
+	public void selectdate() {
+
+		selectdate.click();
+		logger.info("Successfully clicked select button");
 	}
+}

@@ -25,31 +25,24 @@ public class Concerns {
 	private static final Logger logger = Logger.getLogger(Service.class);
 
 	@FindBy(xpath = "//div[contains(text(),'My current treatment is not working')]")
-	@CacheLookup
 	WebElement mycurrenttreatmentnotworking;
 
 	@FindBy(xpath = "//div[contains(text(),'I am experiencing side-effects')]")
-	@CacheLookup
 	WebElement iamexperiencingsideeffects;
 
 	@FindBy(xpath = "//div[contains(text(),'I need advice on advanced therapies')]")
-	@CacheLookup
 	WebElement ineedadviceonadvancedtheraphies;
 
 	@FindBy(xpath = "//div[contains(text(),'I need a second opinion on my treatment')]")
-	@CacheLookup
 	WebElement ineedsecondopiniononmytreatment;
 
 	@FindBy(xpath = "//div[contains(text(),'Others')]")
-	@CacheLookup
 	WebElement others;
 	
 	@FindBy(xpath = "//textarea[@placeholder='Type your other concerns here']")
-	@CacheLookup
 	WebElement typeconcerns;
 	
-	@FindBy(xpath = "//html//body//app-root//your-concern//div//div//div//div//div[contains(text(),'CONTINUE')]")
-	@CacheLookup
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/your-concern[1]/div[1]/div[4]/div[1]/div[3]/div[1]/span[1]")
 	WebElement Continue;
 
 	public Concerns(WebDriver rdriver) {
@@ -63,14 +56,19 @@ public class Concerns {
    
 			mycurrenttreatmentnotworking.click();
 			Assert.assertTrue(true, "checkbox clicked");
+			logger.info("Successfully selected mycurrenttreatmentnotworking checkbox");
 			iamexperiencingsideeffects.click();
+			logger.info("Successfully selected iamexperiencingsideeffects checkbox");
 			Assert.assertTrue(true, "checkbox clicked");
 			ineedadviceonadvancedtheraphies.click();
+			logger.info("Successfully selected ineedadviceonadvancedtheraphies checkbox");
 			Assert.assertTrue(true, "checkbox clicked");
 			ineedsecondopiniononmytreatment.click();
+			logger.info("Successfully selected ineedsecondopiniononmytreatment checkbox");
 			Assert.assertTrue(true, "checkbox clicked");
 			others.click();
 			Assert.assertTrue(true, "checkbox clicked");
+			logger.info("Successfully selected others checkbox");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -87,7 +85,9 @@ public class Concerns {
 				e.printStackTrace();
 			}
 			typeconcerns.sendKeys(concerns);
+			logger.info("Successfully entered concerns");
 			Continue.click();
+			logger.info("Successfully clicked on  continue button");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -1,5 +1,6 @@
 package com.onco.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.apache.commons.math3.analysis.function.Exp;
 import org.apache.log4j.Logger;
@@ -22,93 +24,69 @@ public class Homepage {
 
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Homepage.class);
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[2]/input[1]")
+	
+	@FindBy(xpath = "//button[contains(text(),'SCHEDULE A CALL')]")
 	@CacheLookup
-	WebElement nameField;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[4]/input[1]")
+	WebElement scheduleacallbanner;
+	
+	@FindBy(name = "name")
 	@CacheLookup
-	WebElement emailField;
-
-	@FindBy(name = "/html/body/app-root/home/div[1]/div/div[2]/div[2]/start-case-form/form/div[7]/select")
+	WebElement patientname;
+	
+	@FindBy(name = "mail")
 	@CacheLookup
-	WebElement countryCode;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[8]/input[1]")
+	WebElement mail;
+	
+	@FindBy(name = "contact")
 	@CacheLookup
-	WebElement phoneFiled;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/button[1]/span[1]")
+	WebElement contact;
+	
+	@FindBy(id = "book-appt-landing-signup")
 	@CacheLookup
-	WebElement patientChoice;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[10]/div[1]/ul[1]/li[1]/a[1]")
+	WebElement startnow;
+	
+	@FindBy(id = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[1]/div[2]/button[1]")
 	@CacheLookup
-	WebElement dropOption1;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[13]/input[1]")
-	@CacheLookup
-	WebElement selectTerms;
-
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[1]/div[1]/div[2]/div[2]/start-case-form[1]/form[1]/div[15]/button[1]")
-	@CacheLookup
-	WebElement submit;
+	WebElement getnow;
+		
+	
 
 	public Homepage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(ldriver, this);
 	}
 
-	public void formfill(String patientname, String email, String phone) {
+	public void formfill(String name, String email, String phone) {
 
 		try {
 
-			nameField.sendKeys(patientname);
-			logger.info("Name field entered");
-
-			emailField.sendKeys(email);
-			logger.info("Email field entered");
-
-			phoneFiled.sendKeys(phone);
-			logger.info("Phone entered");
-
+			scheduleacallbanner.click();
+			logger.info("Successfully clicked on banner");
+			patientname.sendKeys(name);
+			logger.info("Successfully entered name in to form");
+			mail.sendKeys(email);
+			logger.info("Successfully entered mail in to form");
+			contact.sendKeys(phone);
+			logger.info("Successfully entered phone in to form");
+			startnow.click();
+			logger.info("Successfully clicked on starnow button");
+			
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
-	public void patientquery() {
-
-		try {
-
-			patientChoice.click();
-			logger.info("Patient choice clicked");
-
-			dropOption1.click();
-			logger.info("Dropodown choice clicked");
-
-			selectTerms.click();
-			logger.info("T&C selected");
-
-		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public void submit() {
-
-		try {
-
-			submit.click();
-			logger.info("Submit clicked");
-
-		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
+   public void getfreeopinion() {
+	   
+	    getnow.click();
+	    logger.info("Successfully clicked on getnow button");
+	   
+		Select TypeofCancer = new Select(ldriver.findElement(By.xpath("//div//div//div//div//div[1]//div[2]//ng-select[1]//div[1]//div[1]//div[2]")));
+		TypeofCancer.selectByIndex(1);
+		logger.info("Successfully selected type of cancer");
+	   
+	   
+   }
+   
 }

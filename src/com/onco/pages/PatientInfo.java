@@ -67,7 +67,7 @@ public class PatientInfo {
 
 		try {
 			patientname.sendKeys(pname);
-			logger.info("Patientname Entered");
+			logger.info("Successfully entered Patientname");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -82,7 +82,8 @@ public class PatientInfo {
 			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
 			TypeofCancer.selectByIndex(1);
 			typeofCancer.click();
-			logger.info("CancerType selected");
+			logger.info("Successfully selected type of cancer");
+
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -97,7 +98,7 @@ public class PatientInfo {
 			Select Cancerstage = new Select(ldriver.findElement(By.name("cancerStage")));
 			Cancerstage.selectByIndex(1);
 			cancerStage.click();
-			logger.info("CancerStage Selected");
+			logger.info("Successfully selected CancerStage ");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -114,7 +115,7 @@ public class PatientInfo {
 			}
 			Select Condition = new Select(ldriver.findElement(By.name("condition")));
 			Condition.selectByVisibleText("Active");
-			logger.info("Condition selected");
+			logger.info("Successfully selected Condition");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -134,7 +135,7 @@ public class PatientInfo {
 				e.printStackTrace();
 			}
 			chemo.click();
-			logger.info("treatment selected");
+			logger.info("Successfully selected treatment recived");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -155,7 +156,7 @@ public class PatientInfo {
 				e.printStackTrace();
 			}
 			continueButton.click();
-			logger.info("continue button clicked");
+			logger.info("Successfully click on continue button ");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();

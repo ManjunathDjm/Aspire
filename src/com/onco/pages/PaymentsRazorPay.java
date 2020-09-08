@@ -1,14 +1,11 @@
 package com.onco.pages;
 
-import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.server.handler.GetAllWindowHandles;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -29,7 +26,7 @@ public class PaymentsRazorPay {
 	@CacheLookup
 	WebElement netBanking1;
 	
-	@FindBy(xpath = "//body//payment-summary//div//div//div//div//div[2]")
+	@FindBy(xpath = "//*[@id=\"form-common\"]/div[1]/div/div/div[2]/div[2]/div/button[3]")
 	@CacheLookup
 	WebElement netBanking2;
 	
@@ -44,7 +41,6 @@ public class PaymentsRazorPay {
 	@FindBy(xpath ="//*[@id=\"footer-cta\"]")
 	@CacheLookup
 	WebElement pay;
-	
 	
 	
 	@FindBy(xpath = "//*[@id=\"modal-close\"]")
@@ -81,7 +77,7 @@ public class PaymentsRazorPay {
 			if(netBanking1.isDisplayed()) {
 				netBanking1.click();
 				logger.info("Clicked on netbanking one");
-			} else {
+			} else if(netBanking2.isDisplayed()) {
 				netBanking2.click();
 				logger.info("Clicked on netbanking two");
 			}

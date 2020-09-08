@@ -51,7 +51,8 @@ public class NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion extends 
 		Thread.sleep(20000);
 
 		Calendar cal = new Calendar(driver);
-		cal.dayone();
+		cal.date();
+		cal.time();
 		Thread.sleep(20000);
 
 		Summary summary = new Summary(driver);

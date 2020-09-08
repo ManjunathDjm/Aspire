@@ -1,13 +1,9 @@
 package com.onco.misc;
 
 import io.restassured.RestAssured;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 import java.io.IOException;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 public class Deletelead {
 	
@@ -17,7 +13,7 @@ public class Deletelead {
 
 		Response res = RestAssured.given().contentType("application/json")
 
-				.headers("AUTHORIZATION", "Bearer ").contentType("application/json")
+				.headers("", " ").contentType("application/json")
 				.body("{\n" + 
 						"    \"phoneNumber\": \"+919036890379\",\n" + 
 						"    \"leadDelSecKey\": \"Eno0nduK!tthakaPPa@1\"\n" + 
@@ -25,9 +21,6 @@ public class Deletelead {
 				.when().post("/onco-auth/oapi/user-cred/remove-lead");
 
 		System.out.print(res.prettyPrint());
-		System.out.print(res.statusCode());
-		String bodyStringValue = res.body().asString();
-
 
 	}
 

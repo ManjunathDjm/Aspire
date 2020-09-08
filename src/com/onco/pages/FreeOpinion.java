@@ -26,11 +26,9 @@ public class FreeOpinion {
 	private static final Logger logger = Logger.getLogger(FreeOpinion.class);
 
 	@FindBy(xpath = "//html//body//app-root//initial-assessment//div//div//div//div//span[contains(text(),'Download Free Opinion')]")
-	@CacheLookup
 	WebElement downloadfreeopinion;
 	
-	@FindBy(xpath = "//html//body//app-root//initial-assessment//div//div//div//div//div[contains(text(),'CONTINUE')]")
-	@CacheLookup
+	@FindBy(xpath = "//span[contains(text(),'CONTINUE')]")
 	WebElement continuebutton;
 
 

@@ -31,7 +31,7 @@ public class RequestDoctorAppointment {
 	@CacheLookup
 	WebElement location;
 	
-	@FindBy(xpath = "/html/body/app-root/req-lab-test/div/div[2]/div[2]/div[1]/div[2]/div[1]/div/div[1]/div/div[2]/div[1]/div[1]")
+	@FindBy(xpath = "//html//body//app-root//req-doc-appointment//div//div//div//div//div//div//div//div//div[contains(text(),'Bengaluru, Karnataka')]")
 	@CacheLookup
 	WebElement bangalore;
 	
@@ -64,8 +64,8 @@ public class RequestDoctorAppointment {
 	public void appointment() {
 
 		try {
-			logger.info(location.isDisplayed());
 			location.click();
+			logger.info("Successfully clicked on location");
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
@@ -74,7 +74,9 @@ public class RequestDoctorAppointment {
 			}
 		
 			location.sendKeys("Bengaluru, Karnataka");
+			logger.info("Successfully typed location");
 			bangalore.click();
+			logger.info("Successfully clicked on location");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -85,9 +87,10 @@ public class RequestDoctorAppointment {
 
 		try {
 		
-			logger.info(specialisationDropdownSurgicalOncologist.isDisplayed());
 			specialisationDropdownSurgicalOncologist.click();
+			logger.info("Successfully selected specialisationDropdownSurgicalOncologist");
 			Surgicaloncologist.click();
+			logger.info("Successfully selected Surgicaloncologist");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -103,8 +106,10 @@ public class RequestDoctorAppointment {
 			Select specialisation = new Select(ldriver.findElement(By.xpath(
 					"//div[@class='col-md-6 col-lg-6 col-xl-6']//select[@placeholder='Select Specialisation']")));
 			specialisationDropdownSurgicalOncologist.click();
+			logger.info("Successfully clicked on Surgicaloncologist");
 			specialisation.selectByIndex(2);
 			specialisationDropdownSurgicalOncologist.click();
+			logger.info("Successfully selected Surgicaloncologist");
 
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
@@ -116,8 +121,8 @@ public class RequestDoctorAppointment {
 
 		try {
 			Thread.sleep(20000);
-			logger.info(findoncologist.isDisplayed());
 			findoncologist.click();
+			logger.info("Successfully clicked on FindOncologist");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -127,7 +132,9 @@ public class RequestDoctorAppointment {
 	public void requestcallonco() {
 		
 		location.click();
+		logger.info("Successfully clicked on location");
 		requestcallonco.click();
+		logger.info("Successfully selected request call onco");
 	}
 	
 }

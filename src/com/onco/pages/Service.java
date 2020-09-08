@@ -51,7 +51,7 @@ public class Service {
 				try {
 					Thread.sleep(3000);
 					Ineedtobookadoctorappointment.click();
-					logger.info("Appointment clicked");
+					logger.info("Succesfully clicked on Appointment ");
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -63,7 +63,7 @@ public class Service {
 	     try {
 	    	 
 	    	Ineedanonlineopinionforcancertreatment.click(); 
-			logger.info("Ineedanonlineopinionforcancertreatment clicked");
+			logger.info("Successfully selected Ineedanonlineopinionforcancertreatment clicked");
 
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
@@ -82,7 +82,7 @@ public class Service {
 				e.printStackTrace();
 			}
 			Iwanttotalktoanoncologist.click();
-			logger.info("labtest clicked");
+			logger.info("Successfully selected Iwanttotalktoanoncologist");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -99,7 +99,7 @@ public class Service {
 				e.printStackTrace();
 			}
 			iwanttobookdiagnostictest.click();
-			logger.info("labtest clicked");
+			logger.info("Successfully selected iwanttobookdiagnostictest");
 		} catch (NoSuchElementException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

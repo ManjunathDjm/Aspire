@@ -24,9 +24,9 @@ import com.onco.testbase.BaseClass;
 
 public class NewUserINeedToBookADiagnosticTestRequestCallOnco extends BaseClass {
 
-	@Parameters({ "name", "email", "phone","otp","pname" })
+	@Parameters({ "name", "email", "phone","otp"})
 	@Test(description = "New user | I need to book a diagnostic test. TC_ID=C2581")
-	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,String otp, String pname) throws Exception {
+	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,String otp) throws Exception {
 
     SignUp signup = new SignUp(driver);
     signup.signupicon();

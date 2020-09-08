@@ -24,9 +24,9 @@ import com.onco.testbase.BaseClass;
 
 public class NewUserINeedToBookADiagnosticTest extends BaseClass {
 
-	@Parameters({ "name", "email", "phone","otp","pname" })
+	@Parameters({ "name", "email", "phone","otp"})
 	@Test(description = "New user | I need to book a diagnostic test. TC_ID=C2580")
-	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,String otp, String pname) throws Exception {
+	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,String otp) throws Exception {
 
     SignUp signup = new SignUp(driver);
     signup.signupicon();
@@ -49,7 +49,7 @@ public class NewUserINeedToBookADiagnosticTest extends BaseClass {
     Thread.sleep(20000);
     
     Summary summary = new Summary(driver);
-    summary.netbanking();
+    summary.labbook();
     Thread.sleep(20000);
     
     ThankYou page = new ThankYou(driver);
