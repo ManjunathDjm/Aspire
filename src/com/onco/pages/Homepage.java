@@ -104,7 +104,7 @@ public class Homepage {
 	public void formfill(String name, String email, String phone) {
 
 		try {
-
+          
 			patientname.sendKeys(name);
 			logger.info("Successfully entered name in to form");
 			mail.sendKeys(email);
@@ -132,7 +132,9 @@ public class Homepage {
 	public void cancertype() throws InterruptedException {
 
 		cancertypedropdown.click();
+		logger.info("Successfully clicked on cancer type dropdown" );
 		bloodcancer.click();
+		logger.info("Successfully clicked on blood cancer" );
 		Thread.sleep(20000);
 
 	}
@@ -140,21 +142,21 @@ public class Homepage {
 	public void cancerstage() {
 
 		cancerstagedropdoen.click();
+		logger.info("Successfully clicked on cancer stage dropdown" );
 		cancerstage.click();
+		logger.info("Successfully clicked on cancer stage" );
 
 	}
 
 	public void generalcondition() {
 		generalconditiondropdown.click();
+		logger.info("Successfully clicked on general condtion dropdown");
 		generalcondition.click();
+		logger.info("Successfully selected general condition");
 		treatmentrecived.click();
+		logger.info("Successfully clicked on treatment recived");
 		getfreeopinionbutton.click();
-		try {
-			Thread.sleep(20000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		logger.info("Successfully clicked on get free opinion button"); 
 
 	}
 }
