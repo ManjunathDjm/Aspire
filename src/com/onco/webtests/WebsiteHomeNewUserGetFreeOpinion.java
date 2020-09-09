@@ -18,16 +18,20 @@ import com.onco.misc.*;
 
 public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
 	
-	@Parameters({ "name", "email", "phone", "otp","requirments"})
+	@Parameters({ "name", "email", "phone", "otp"})
 	@Test(description = "Website | Home| New user | Get free opinion TC_ID=C2585")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
-			String otp, String requirments) throws Exception {
+			String otp) throws Exception {
 		
 		Thread.sleep(20000);
 		Homepage home = new Homepage(driver);
 		home.getfreeopinion();
-        Thread.sleep(20000);		
-        
+		home.cancertype();
+		home.cancerstage();
+		home.generalcondition();
+		home.formfill(name, email, phone);
+        Thread.sleep(20000);	
+             
 		String actualTilte = driver.getPageSource();
 		if (actualTilte.contains("Thank you!")) {
 			Assert.assertTrue(actualTilte.contains("Thank you!"));

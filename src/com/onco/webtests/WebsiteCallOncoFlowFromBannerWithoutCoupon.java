@@ -25,6 +25,7 @@ public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
 		
 		Thread.sleep(20000);
 		Homepage home = new Homepage(driver);
+		home.bannar();
 		home.formfill(name, email, phone);
         Thread.sleep(20000);		
 
