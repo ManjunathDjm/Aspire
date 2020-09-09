@@ -48,6 +48,25 @@ public class Homepage {
 	@FindBy(id = "book-appt-landing-signup")
 	@CacheLookup
 	WebElement startnow;
+	
+	// get free opinion form
+	
+	@FindBy(xpath = "//div[@id='freeOpinionFormModal']//div//div//div//div//form//div//div//div//input[@placeholder='Name']")
+	@CacheLookup
+	WebElement patient;
+
+	@FindBy(xpath = "//div[@id='freeOpinionFormModal']//div//div//div//div//form//div//div//div//input[@placeholder='Email']")
+	@CacheLookup
+	WebElement emailid;
+
+	@FindBy(xpath = "//div[@id='freeOpinionFormModal']//div//div//div//div//form//div//div//div//input[@placeholder='Phone No']")
+	@CacheLookup
+	WebElement phonenumber;
+
+	@FindBy(xpath = "//body/app-root/div/div/home/div/get-free-opinion-strip/app-free-opinion-form/div[@id='freeOpinionFormModal']/div/div/div/div/form/div/div[2]")
+	@CacheLookup
+	WebElement startnow1;
+	
 
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[1]/div[2]/button[1]")
 	@CacheLookup
@@ -65,9 +84,14 @@ public class Homepage {
 	@CacheLookup
 	WebElement generalconditiondropdown;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[3]/div[1]/div[2]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[2]/span[1]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[3]/div[1]/div[2]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[1]/span[1]")
 	@CacheLookup
-	WebElement bloodcancer;
+	WebElement breastcancer;
+	
+	@FindBy(xpath = "//app-free-opinion-form//div//div//div[contains(text(),'DOWNLOAD FREE OPINION')]")
+	@CacheLookup
+	WebElement formdownloadfreeopinion;
+	
 
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[3]/div[2]/div[2]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[2]/span[1]")
 	@CacheLookup
@@ -133,7 +157,7 @@ public class Homepage {
 
 		cancertypedropdown.click();
 		logger.info("Successfully clicked on cancer type dropdown" );
-		bloodcancer.click();
+		breastcancer.click();
 		logger.info("Successfully clicked on blood cancer" );
 		Thread.sleep(20000);
 
@@ -156,7 +180,16 @@ public class Homepage {
 		treatmentrecived.click();
 		logger.info("Successfully clicked on treatment recived");
 		getfreeopinionbutton.click();
-		logger.info("Successfully clicked on get free opinion button"); 
+		logger.info("Successfully clicked on get free opinion");
 
 	}
+
+	 public void freeopinionform(String name, String email, String phone) {
+		 
+		 patient.sendKeys(name);
+		 emailid.sendKeys(email);
+		 phonenumber.sendKeys(phone);
+		 startnow1.click();
+	 }
+
 }

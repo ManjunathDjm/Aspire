@@ -16,10 +16,10 @@ import com.onco.pages.Summary;
 import com.onco.testbase.BaseClass;
 import com.onco.misc.*;
 
-public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
+public class WebsiteHomeExistingUserGetFreeOpinionForIdontknow extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "Website | Home| New user | Get free opinion TC_ID=C2585")
+	@Test(description = "Website | Home| Existing user | Get free opinion for 'i dont know' TC_ID=C2587")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 
@@ -39,9 +39,9 @@ public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
 		String actualTilte = driver.getPageSource();
 		if (actualTilte.contains("Your Free Opinion")) {
 			Assert.assertTrue(actualTilte.contains("Your Free Opinion"));
-			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2585", TEST_CASE_PASSED_STATUS, "");
+			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2587", TEST_CASE_PASSED_STATUS, "");
 		} else {
-			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2585", TEST_CASE_FAILED_STATUS, "");
+			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2587", TEST_CASE_FAILED_STATUS, "");
 		}
 
 	}

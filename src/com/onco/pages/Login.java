@@ -9,6 +9,7 @@ import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+import org.apache.commons.net.io.FromNetASCIIOutputStream;
 import org.apache.log4j.Logger;
 
 /**
@@ -46,6 +47,17 @@ public class Login {
 	@CacheLookup
 	WebElement proceedButton;
 
+	// free opinion otp 
+	
+	@FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/app-free-opinion-form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
+	@CacheLookup
+	WebElement formotp1;
+	
+	@FindBy(xpath ="//body/app-root/div/div/home/div/get-free-opinion-strip/app-free-opinion-form/div[@id='freeOpinionFormModal']/div/div/div/div/form/div/div/button[1]")
+	@CacheLookup
+	WebElement startnowbutton;
+	
+	
 	@FindBy(xpath ="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
 	@CacheLookup
 	private WebElement delete;
@@ -83,6 +95,13 @@ public class Login {
 	}catch (NoSuchElementException e) {
 		e.printStackTrace();
 	}
+	}
+	
+	public void freeopinionotp(String otp) {
+		
+		formotp1.sendKeys(otp);
+		startnowbutton.click();
+		
 	}
 	public void otpDetails(String otp) {
 
