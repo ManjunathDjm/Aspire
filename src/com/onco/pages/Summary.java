@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import groovyjarjarasm.asm.tree.TryCatchBlockNode;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -43,7 +46,7 @@ public class Summary {
 	@FindBy(xpath = "//button[contains(text(),'PAY AT HOSPITAL')]")
 	@CacheLookup
 	WebElement payathospital;
-	
+
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/case-summary[1]/div[1]/div[2]/div[1]/section[1]/div[2]/div[1]/payment-summary[1]/div[1]/div[1]/div[4]/button[1]")
 	@CacheLookup
 	WebElement labbook;
@@ -51,16 +54,15 @@ public class Summary {
 	@FindBy(xpath = "//button[contains(text(),'PAY VIA CARD')]")
 	@CacheLookup
 	WebElement netbankingpaynow;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Pay Using UPI')]")
 	@CacheLookup
 	WebElement payusingUPI;
-	
+
 	@FindBy(xpath = "//button[contains(text(),'Pay Using PAYTM')]")
 	@CacheLookup
 	WebElement paytm;
-	
-	
+
 	// @FindBy(xpath="/html/body/app-root/case-summary/div/div[2]/div/section/div[2]/div[1]/payment-summary/div[1]/div/div[1]/div/div/div[2]/i")
 	// WebElement deletecoupon;
 
@@ -107,7 +109,7 @@ public class Summary {
 	public void netbanking() {
 
 		try {
-			
+
 			netbankingpaynow.click();
 			logger.info("Successfully clicked on netbanking button");
 		} catch (NoSuchElementException e) {
@@ -117,19 +119,26 @@ public class Summary {
 	}
 
 	public void labbook() {
-		labbook.click();
-		logger.info("Successfully clicked on book appointment button");
-	}
-	public void upi() {
+        try {
+        	labbook.click();
+    		logger.info("Successfully clicked on book appointment button");
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
+	}
+
+	public void upi() {
+
 		payusingUPI.click();
 		logger.info("Successfully clicked on book UPI payment button");
 	}
 
-  public void paytm() {
-	  
-	     paytm.click();
-	     logger.info("Successfully clicked on book paytm payment button");
-  } 
-	 
- }
+	public void paytm() {
+
+		paytm.click();
+		logger.info("Successfully clicked on book paytm payment button");
+	}
+
+}

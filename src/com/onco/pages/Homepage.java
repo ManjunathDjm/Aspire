@@ -48,9 +48,9 @@ public class Homepage {
 	@FindBy(id = "book-appt-landing-signup")
 	@CacheLookup
 	WebElement startnow;
-	
+
 	// get free opinion form
-	
+
 	@FindBy(xpath = "//div[@id='freeOpinionFormModal']//div//div//div//div//form//div//div//div//input[@placeholder='Name']")
 	@CacheLookup
 	WebElement patient;
@@ -66,7 +66,6 @@ public class Homepage {
 	@FindBy(xpath = "//body/app-root/div/div/home/div/get-free-opinion-strip/app-free-opinion-form/div[@id='freeOpinionFormModal']/div/div/div/div/form/div/div[2]")
 	@CacheLookup
 	WebElement startnow1;
-	
 
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[1]/div[2]/button[1]")
 	@CacheLookup
@@ -88,10 +87,15 @@ public class Homepage {
 	@CacheLookup
 	WebElement breastcancer;
 	
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[3]/div[1]/div[2]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[18]/span[1]")
+	@CacheLookup
+	WebElement idontknow;		
+			
+			
 	@FindBy(xpath = "//app-free-opinion-form//div//div//div[contains(text(),'DOWNLOAD FREE OPINION')]")
 	@CacheLookup
 	WebElement formdownloadfreeopinion;
-	
 
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[3]/div[2]/div[2]/ng-select[1]/ng-dropdown-panel[1]/div[1]/div[2]/div[2]/span[1]")
 	@CacheLookup
@@ -108,6 +112,23 @@ public class Homepage {
 	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/section[1]/div[1]/div[2]/div[4]/div[2]/button[1]")
 	@CacheLookup
 	WebElement getfreeopinionbutton;
+	
+	@FindBy(xpath = "//u[contains(text(),'Download a sample report')]")
+	@CacheLookup
+	WebElement downloadsamplereportlink;
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/what-do-we-do[1]/section[1]/div[1]/div[2]/div[2]/div[1]")
+	@CacheLookup
+	WebElement bookdoctorconsulationtab;
+	
+	@FindBy(xpath = "//div[@id='carouselExampleSlidesOnly']")
+	@CacheLookup
+	WebElement courosalslides;
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/what-do-we-do[1]/section[1]/div[1]/div[3]/app-doctor-carousel-v2[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[6]")
+	@CacheLookup
+	WebElement doctorimage;
+	
 
 	public Homepage(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -128,7 +149,7 @@ public class Homepage {
 	public void formfill(String name, String email, String phone) {
 
 		try {
-          
+
 			patientname.sendKeys(name);
 			logger.info("Successfully entered name in to form");
 			mail.sendKeys(email);
@@ -156,9 +177,9 @@ public class Homepage {
 	public void cancertype() throws InterruptedException {
 
 		cancertypedropdown.click();
-		logger.info("Successfully clicked on cancer type dropdown" );
+		logger.info("Successfully clicked on cancer type dropdown");
 		breastcancer.click();
-		logger.info("Successfully clicked on blood cancer" );
+		logger.info("Successfully clicked on blood cancer");
 		Thread.sleep(20000);
 
 	}
@@ -166,9 +187,9 @@ public class Homepage {
 	public void cancerstage() {
 
 		cancerstagedropdoen.click();
-		logger.info("Successfully clicked on cancer stage dropdown" );
+		logger.info("Successfully clicked on cancer stage dropdown");
 		cancerstage.click();
-		logger.info("Successfully clicked on cancer stage" );
+		logger.info("Successfully clicked on cancer stage");
 
 	}
 
@@ -184,12 +205,31 @@ public class Homepage {
 
 	}
 
-	 public void freeopinionform(String name, String email, String phone) {
-		 
-		 patient.sendKeys(name);
-		 emailid.sendKeys(email);
-		 phonenumber.sendKeys(phone);
-		 startnow1.click();
-	 }
+	public void freeopinionform(String name, String email, String phone) {
 
+		patient.sendKeys(name);
+		emailid.sendKeys(email);
+		phonenumber.sendKeys(phone);
+		startnow1.click();
+	}
+
+	public void samplereport () {
+		
+		downloadsamplereportlink.click();
+		
+	}
+	public void doctorconsultationtab () {
+		
+		bookdoctorconsulationtab.click();
+		logger.info("Successfully clicked on doctor consultation tab");
+		courosalslides.isDisplayed();
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		doctorimage.click();
+		logger.info("Successfully clicked on doctor image");
+	}
 }

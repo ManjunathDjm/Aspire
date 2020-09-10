@@ -45,7 +45,7 @@ public class PatientInfo {
 	@FindBy(xpath = "//select[@name='condition']")
 	@CacheLookup
 	private WebElement generalCondition;
-	
+
 	@FindBy(xpath = "/html/body/app-root/patient-info/div/div[2]/div[2]/div[1]/div[1]/div/div[3]/div[5]/div[2]/div[1]/div[1]/label/span")
 	@CacheLookup
 	private WebElement chemo;
@@ -84,7 +84,6 @@ public class PatientInfo {
 			typeofCancer.click();
 			logger.info("Successfully selected type of cancer");
 
-
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
@@ -121,7 +120,7 @@ public class PatientInfo {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void treatment() {
 
 		try {

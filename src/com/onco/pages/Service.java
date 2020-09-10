@@ -39,6 +39,12 @@ public class Service {
 	@CacheLookup
 	WebElement iwanttobookdiagnostictest;
 	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[5]")
+	@CacheLookup
+	WebElement iamconfusedineedhelpingettingstarted;
+	
+	
+	
 
 
 	public Service(WebDriver rdriver) {
@@ -106,5 +112,13 @@ public class Service {
 		}
 	}
 
-	
+	public void iamconfused() {
+		try {
+			iamconfusedineedhelpingettingstarted.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
 }

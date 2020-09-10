@@ -24,10 +24,10 @@ public class Login {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Login.class);
 
-	@FindBy(name ="countryCode")
+	@FindBy(name = "countryCode")
 	WebElement countryCode;
 
-	@FindBy(name ="contact")
+	@FindBy(name = "contact")
 	@CacheLookup
 	WebElement phoneNumber;
 
@@ -35,30 +35,29 @@ public class Login {
 	@CacheLookup
 	WebElement loginVIAOTPbutton;
 
-	@FindBy(xpath ="//body//input[1]")
+	@FindBy(xpath = "//body//input[1]")
 	@CacheLookup
 	WebElement Otp;
-	
-	@FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/banner-strip-component[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/banner-strip-component[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
 	@CacheLookup
 	WebElement formotp;
-	
-	@FindBy(xpath ="//*[@type='submit']")
+
+	@FindBy(xpath = "//*[@type='submit']")
 	@CacheLookup
 	WebElement proceedButton;
 
-	// free opinion otp 
-	
-	@FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/app-free-opinion-form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
+	// free opinion otp
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/get-free-opinion-strip[1]/app-free-opinion-form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
 	@CacheLookup
 	WebElement formotp1;
-	
-	@FindBy(xpath ="//body/app-root/div/div/home/div/get-free-opinion-strip/app-free-opinion-form/div[@id='freeOpinionFormModal']/div/div/div/div/form/div/div/button[1]")
+
+	@FindBy(xpath = "//body/app-root/div/div/home/div/get-free-opinion-strip/app-free-opinion-form/div[@id='freeOpinionFormModal']/div/div/div/div/form/div/div/button[1]")
 	@CacheLookup
 	WebElement startnowbutton;
-	
-	
-	@FindBy(xpath ="//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
+
+	@FindBy(xpath = "//body/app-root/patient-dashboard-component[@class='ng-tns-c3-16 ng-star-inserted']/div[@class='dashboard-container']/div[@class='ng-tns-c3-16']/div[@class='col-md-3 hidden-sm hidden-xs dashboard-col-left onboarding-nav-container']/div/div[@class='col-md-12 dashboard-left-separator']/onboarding-nav[@class='ng-tns-c3-16']/div[@class='row']/div[@class='onboarding-nav-container']/div[@class='footer-links-ctn']/a[1]")
 	@CacheLookup
 	private WebElement delete;
 
@@ -85,24 +84,26 @@ public class Login {
 		}
 
 	}
+
 	public void formotp(String otp) {
-		
+
 		try {
-			
-		formotp.sendKeys(otp);
-		proceedButton.click();
-		
-	}catch (NoSuchElementException e) {
-		e.printStackTrace();
+
+			formotp.sendKeys(otp);
+			proceedButton.click();
+
+		} catch (NoSuchElementException e) {
+			e.printStackTrace();
+		}
 	}
-	}
-	
+
 	public void freeopinionotp(String otp) {
-		
+
 		formotp1.sendKeys(otp);
 		startnowbutton.click();
-		
+
 	}
+
 	public void otpDetails(String otp) {
 
 		try {
@@ -114,7 +115,7 @@ public class Login {
 			proceedButton.click();
 			logger.info("Successfully clicked on proceed Button");
 
-		} catch (NoSuchElementException  e) {
+		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
 

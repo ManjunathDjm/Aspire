@@ -37,7 +37,7 @@ public class RequestLabTests {
 	@CacheLookup
 	WebElement testtype;
 	
-	@FindBy(xpath = "//div[contains(text(),'CT Scan')]")
+	@FindBy(xpath = "//div//div//div//div//div//div//div//div//div[3]//div[1]")
 	@CacheLookup
 	WebElement ctscan;
 	

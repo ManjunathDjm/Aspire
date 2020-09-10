@@ -17,27 +17,27 @@ import com.onco.testbase.BaseClass;
 import com.onco.misc.*;
 
 public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
-	
-	@Parameters({ "name", "email", "phone", "otp","requirments"})
+
+	@Parameters({ "name", "email", "phone", "otp", "requirments" })
 	@Test(description = "Website | Call onco flow from banner without coupon TC_ID=C2583")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String requirments) throws Exception {
-		
+
 		Thread.sleep(20000);
 		Homepage home = new Homepage(driver);
 		home.bannar();
 		home.formfill(name, email, phone);
-        Thread.sleep(20000);		
+		Thread.sleep(20000);
 
 		Login login = new Login(driver);
 		login.formotp(otp);
 		Thread.sleep(20000);
-		
+
 		Requestcallonco callonco = new Requestcallonco(driver);
 		callonco.selectdate();
-		
+
 		Calendar cal = new Calendar(driver);
-	    cal.calloncotime();
+		cal.calloncotime();
 		Thread.sleep(20000);
 
 		callonco.requestcallonco(requirments);
@@ -47,7 +47,7 @@ public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
 		summary.deletecouponcode();
 		summary.netbanking();
 		Thread.sleep(20000);
-		
+
 		PaymentsRazorPay payment = new PaymentsRazorPay(driver);
 		payment.netbanking();
 		Thread.sleep(20000);
@@ -55,18 +55,16 @@ public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
 		String actualTilte = driver.getPageSource();
 		if (actualTilte.contains("Thank you!")) {
 			Assert.assertTrue(actualTilte.contains("Thank you!"));
-			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2583",
-					TEST_CASE_PASSED_STATUS, "");
+			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2583", TEST_CASE_PASSED_STATUS, "");
 		} else {
-			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2583",
-					TEST_CASE_FAILED_STATUS, "");
+			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2583", TEST_CASE_FAILED_STATUS, "");
 		}
 
 	}
 
 	@AfterClass
 	public void delete1() {
-		
+
 		try {
 			Deletelead delete = new Deletelead();
 			delete.delete();
