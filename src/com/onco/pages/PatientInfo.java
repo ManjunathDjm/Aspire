@@ -80,7 +80,7 @@ public class PatientInfo {
 		try {
 
 			Select TypeofCancer = new Select(ldriver.findElement(By.name("cancerType")));
-			TypeofCancer.selectByIndex(1);
+			TypeofCancer.selectByIndex(5);
 			typeofCancer.click();
 			logger.info("Successfully selected type of cancer");
 

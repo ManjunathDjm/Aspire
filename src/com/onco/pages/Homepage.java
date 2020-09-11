@@ -129,6 +129,46 @@ public class Homepage {
 	@CacheLookup
 	WebElement doctorimage;
 	
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/what-do-we-do[1]/section[1]/div[1]/div[3]/div[1]/div[1]/div[2]/a[1]/u[1]")
+	@CacheLookup
+	WebElement seepricing;
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/section[2]/recognition-from-media[1]/div[1]/div[1]/div[1]/div[1]")
+	@CacheLookup
+	WebElement yoursotory;
+	
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/section[2]/recognition-from-media[1]/div[1]/div[1]/div[2]")
+	@CacheLookup
+	WebElement etprime;
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/section[2]/recognition-from-media[1]/div[1]/div[1]/div[3]/div[1]")
+	@CacheLookup
+	WebElement ajtak;
+	
+	//talk now
+	
+	
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/talk-now-strip[1]/section[1]/div[1]/div[1]/div[2]/div[1]")
+	@CacheLookup
+	WebElement talknow;
+	
+
+	@FindBy(xpath = "//form[@class='loginCard ng-pristine ng-valid ng-touched']//input[@placeholder='Name']")
+	@CacheLookup
+	WebElement talknowname;
+	
+	@FindBy(xpath = "//form[@class='loginCard ng-pristine ng-valid ng-touched']//input[@placeholder='Email']")
+	@CacheLookup
+	WebElement talknowemail;
+	
+	@FindBy(xpath = "//form[@class='loginCard ng-pristine ng-valid ng-touched']//input[@placeholder='Phone No']")
+	@CacheLookup
+	WebElement talknowphone;
+	
+	
+	
 
 	public Homepage(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -208,9 +248,13 @@ public class Homepage {
 	public void freeopinionform(String name, String email, String phone) {
 
 		patient.sendKeys(name);
+		logger.info("Successfully entered patient name");
 		emailid.sendKeys(email);
+		logger.info("Successfully entered email");
 		phonenumber.sendKeys(phone);
+		logger.info("Successfully entered phone");
 		startnow1.click();
+		logger.info("Successfully clicked on startnow button");
 	}
 
 	public void samplereport () {
@@ -231,5 +275,54 @@ public class Homepage {
 		}
 		doctorimage.click();
 		logger.info("Successfully clicked on doctor image");
+
+	}
+	
+	public void seepricing() {
+		
+		try {
+			seepricing.click();
+			logger.info("Successfully clicked on see pricing");
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
+	}
+	
+	public void oncoinnews () {
+		
+		yoursotory.click();
+		logger.info("Successfully clicked on yourstory");
+		etprime.click();
+		logger.info("Successfully clicked on etprime");
+		ajtak.click();
+		logger.info("Successfully clicked on ajtak");
+		
+	}
+	
+	public void talknow() {
+		
+		try {
+			talknow.click();
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+	
+	public void talknowform(String name,String email,String phone) {
+		
+		
+		try {
+			
+			talknowname.sendKeys(name);
+			talknowemail.sendKeys(email);
+			talknowphone.sendKeys(phone);
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

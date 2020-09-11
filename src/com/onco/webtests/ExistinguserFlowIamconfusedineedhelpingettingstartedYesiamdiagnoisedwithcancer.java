@@ -11,6 +11,7 @@ import com.onco.misc.Deletelead;
 import com.onco.pages.Login;
 import com.onco.pages.PatientInfo;
 import com.onco.pages.SignUp;
+import com.onco.pages.FreeOpinion;
 import com.onco.pages.Iamconfused;
 import com.onco.testbase.BaseClass;
 
@@ -48,10 +49,14 @@ public class ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoise
 		info.treatment();
 		info.continuebutton();
 		Thread.sleep(20000);
+		
+		FreeOpinion opinion = new FreeOpinion(driver);
+		opinion.downloadopinionlink();
+		Thread.sleep(20000);
 
 		String actualTilte = driver.getPageSource();
-		if (actualTilte.contains("Thank you!")) {
-			Assert.assertTrue(actualTilte.contains("Thank you!"));
+		if (actualTilte.contains("Your Free Opinion")) {
+			Assert.assertTrue(actualTilte.contains("Your Free Opinion"));
 			ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer.addResultForTestCase("2609", TEST_CASE_PASSED_STATUS, "");
 		} else {
 			ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer.addResultForTestCase("2609", TEST_CASE_FAILED_STATUS, "");
