@@ -20,11 +20,11 @@ import com.onco.pages.Calendar;
 import com.onco.pages.Iamconfused;
 import com.onco.testbase.BaseClass;
 
-public class ExistinguserFlowIamconfusedineedhelpingettingstarted extends BaseClass {
+public class ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms extends BaseClass {
 
-	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "ExistinguserFlowBookAppointment. TC_ID=C2606")
-	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
+	@Parameters({"phone", "otp" })
+	@Test(description = "ExistinguserFlowBookAppointment. TC_ID=C2607")
+	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion( String phone,
 			String otp) throws Exception {
 
 		SignUp signup = new SignUp(driver);
@@ -43,14 +43,15 @@ public class ExistinguserFlowIamconfusedineedhelpingettingstarted extends BaseCl
 		
 		Iamconfused confused = new Iamconfused(driver);
 		confused.iamexperiencingsymptoms();
+		confused.requestcallback();
 		Thread.sleep(20000);
 
 		String actualTilte = driver.getPageSource();
-		if (actualTilte.contains("Your Free Opinione")) {
-			Assert.assertTrue(actualTilte.contains("Your Free Opinion"));
-			ExistinguserFlowIamconfusedineedhelpingettingstarted.addResultForTestCase("2606", TEST_CASE_PASSED_STATUS, "");
+		if (actualTilte.contains("Thank you!")) {
+			Assert.assertTrue(actualTilte.contains("Thank you!"));
+			ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms.addResultForTestCase("2607", TEST_CASE_PASSED_STATUS, "");
 		} else {
-			ExistinguserFlowIamconfusedineedhelpingettingstarted.addResultForTestCase("2606", TEST_CASE_FAILED_STATUS, "");
+			ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms.addResultForTestCase("2607", TEST_CASE_FAILED_STATUS, "");
 		}
 	}
 

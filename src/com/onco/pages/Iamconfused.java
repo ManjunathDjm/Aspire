@@ -1,15 +1,11 @@
 
 package com.onco.pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-import org.apache.commons.net.io.FromNetASCIIOutputStream;
 import org.apache.log4j.Logger;
 
 /**
@@ -24,11 +20,17 @@ public class Iamconfused {
 	WebDriver ldriver;
 	private static final Logger logger = Logger.getLogger(Iamconfused.class);
 
-	@FindBy(name = "/html/body/app-root/confused/div/div[3]/div[1]/div[1]/div[2]")
+	@FindBy(xpath = "//div[@class='flex-center opt-ctn']//img[@class='cursor-pointer ng-star-inserted']")
 	WebElement noiamexperiencingsymptoms;
-	
-	@FindBy(name = "/html[1]/body[1]/app-root[1]/confused[1]/div[1]/div[3]/div[1]/div[1]/div[3]/img[1]")
+
+	@FindBy(xpath = "//div[@class='flex-center']//img[@class='cursor-pointer ng-star-inserted']")
 	WebElement yesiamiagnoisedwithcancer;
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/confused[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[3]/span[1]")
+	WebElement requestcallback;
+
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/confused[1]/div[1]/div[3]/div[1]/div[2]/div[1]/div[2]/div[3]")
+	WebElement getfreeopinionbutton;
 
 	public Iamconfused(WebDriver rdriver) {
 		ldriver = rdriver;
@@ -38,16 +40,36 @@ public class Iamconfused {
 	public void iamexperiencingsymptoms() {
 
 		try {
-         noiamexperiencingsymptoms.click();
+			noiamexperiencingsymptoms.click();
+			logger.info("Successfuly clicked on no i am experiencing symptoms radio button");
 		} catch (NoSuchElementException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	public void iamdiagnoisedwithcancer () {
-	   try {
-		yesiamiagnoisedwithcancer.click(); 
-	   }catch (NoSuchElementException e) {
-		}		
+
+	public void iamdiagnoisedwithcancer() {
+		try {
+			yesiamiagnoisedwithcancer.click();
+			logger.info("Successfuly clicked on yes i am giagnoised with cancer radio button");
+		} catch (NoSuchElementException e) {
+		}
 	}
+
+	public void requestcallback() {
+		try {
+			requestcallback.click();
+			logger.info("Successfuly clicked on request call back button");
+		} catch (NoSuchElementException e) {
+		}
+	}
+
+	public void getfreeopinion() {
+		try {
+			getfreeopinionbutton.click();
+			logger.info("Successfuly clicked on get free opinion button");
+		} catch (NoSuchElementException e) {
+		}
+	}
+
 }

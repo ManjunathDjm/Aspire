@@ -18,7 +18,7 @@
     <parameter name="requirments" value="my requirments"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstarted"/>
+       <class name="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
