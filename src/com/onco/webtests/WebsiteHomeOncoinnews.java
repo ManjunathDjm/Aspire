@@ -18,7 +18,7 @@ import com.onco.misc.*;
 
 public class WebsiteHomeOncoinnews extends BaseClass {
 
-	@Test(description = "Website | Home| New user | Get free opinion TC_ID=C2597")
+	@Test(priority=20,description = "Website | Home| New user | Get free opinion TC_ID=C2597")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion() throws Exception {
 
 		Thread.sleep(20000);
@@ -35,7 +35,5 @@ public class WebsiteHomeOncoinnews extends BaseClass {
 		}
 
 	}
-
-
 	
 }

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Onco_Staging">
+              <span class="suite-name border-failed">Onco Staging</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Onco_Staging">
+                    <span>testngstaging.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Onco_Staging">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Onco_Staging">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Onco_Staging">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Onco_Staging">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Onco_Staging">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Onco_Staging">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">15 methods, 2 failed,   13 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods failed suite-Onco_Staging"> (hide)</a> <!-- hide-methods failed suite-Onco_Staging -->
+                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods failed suite-Onco_Staging"> (show)</a> <!-- show-methods failed suite-Onco_Staging -->
+                    </span>
+                    <div class="method-list-content failed suite-Onco_Staging">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserSignupBookonPriorityAppointment" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Onco_Staging -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Onco_Staging" class="hide-methods passed suite-Onco_Staging"> (hide)</a> <!-- hide-methods passed suite-Onco_Staging -->
+                      <a href="#" panel-name="suite-Onco_Staging" class="show-methods passed suite-Onco_Staging"> (show)</a> <!-- show-methods passed suite-Onco_Staging -->
+                    </span>
+                    <div class="method-list-content passed suite-Onco_Staging">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserINeedToBookADiagnosticTest" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserBookAppointmentRequestCallOnco" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, test_onco, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, test_onco, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.ExistinguserFlowBookLabDiagnostic" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Onco_Staging" title="com.onco.webtests.ExistinguserFlowBookAppointment" hash-for-method="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Onco_Staging -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Onco_Staging" class="panel Onco_Staging">
+          <div class="suite-Onco_Staging-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MBP&apos;, ip: &apos;2409:4071:2089:d6a2:b5af:7b07:a08d:9046%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.6&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:50243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 92df5781f7b39948b4ff225cabbb0000
+*** Element info: {Using=xpath, value=/html[1]/body[1]/app-root[1]/select-service[1]/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.onco.pages.Service.appointment(Service.java:59)
+	at com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment.NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(NewUserSignupPaytmBookOnPriorityAppointment.java:37)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(New User Signup| Paytm|Book on priority appointment. TC_ID=C3074)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-failed -->
+          <div class="suite-Onco_Staging-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserSignupBookonPriorityAppointment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[contains(text(),&apos;GET NOW&apos;)]&quot;}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Manjunaths-MBP&apos;, ip: &apos;2409:4071:2089:d6a2:b5af:7b07:a08d:9046%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.6&apos;, java.version: &apos;1.8.0_231&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/p6/cbrrv70s47j...}, goog:chromeOptions: {debuggerAddress: localhost:50055}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: none, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: c222774371ed5a7293e66dd101085682
+*** Element info: {Using=xpath, value=//div[contains(text(),&apos;GET NOW&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.onco.pages.ThankYou.getnow(ThankYou.java:38)
+	at com.onco.webtests.NewUserSignupBookonPriorityAppointment.NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(NewUserSignupBookonPriorityAppointment.java:67)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(New User Signup- Book on priority appointment . TC_ID=C2579)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-failed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                  <em>
+(New user | I want to talk to an Oncologist without coupon. TC_ID=C3073)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                  <em>
+(New user | I want to talk to an Oncologist without coupon. TC_ID=C2578)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.ExistinguserFlowBookAppointment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                  <em>
+(ExistinguserFlowBookAppointment. TC_ID=C2606)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserBookAppointmentRequestCallOnco</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                  <em>
+(New User | Book Appointment | Request call onco. TC_ID=C2582)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(8310744975, 4423)</span>
+                  <em>
+(ExistinguserFlowBookAppointment. TC_ID=C2607)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                  <em>
+(New user | I want to talk to an Oncologist without coupon. TC_ID=C2577)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                  <em>
+(New user | I need to book a diagnostic test. TC_ID=C2581)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</span>
+                  <em>
+(New User | I need an online opinion for cancer treatment | New User Opinion -US panel. TC_ID=C203)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, test_onco, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, test_onco, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(8310744975, test_onco, 4423)</span>
+                  <em>
+(Existing user Flow | I am confused i need help in getting started yes i am diagnoised with cancer TC_ID=C2609)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.ExistinguserFlowBookLabDiagnostic</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(8310744975, 4423)</span>
+                  <em>
+(Existing user Flow | Book Lab Diagnostic. TC_ID=C2605)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</span>
+                  <em>
+(New User Opinion| I need an online opinion for cancer treatment -India panel. TC_ID=C202)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserINeedToBookADiagnosticTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                  <em>
+(New user | I need to book a diagnostic test. TC_ID=C2580)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+          <div class="suite-Onco_Staging-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)">
+                  </a> <!-- NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test) -->
+                  <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion</span>
+                  <span class="parameters">(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</span>
+                  <em>
+(New User Signup - Book an pay at hospital appointment with Free opinion. TC_ID=C201)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Onco_Staging-class-passed -->
+        </div> <!-- panel Onco_Staging -->
+        <div panel-name="test-xml-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/Users/manjunathdj/Applications/qa-lead-desk-web/Suites/testngstaging.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Onco Staging&quot;&gt;
+  &lt;parameter name=&quot;requirments&quot; value=&quot;my requirments&quot;/&gt;
+  &lt;parameter name=&quot;phone&quot; value=&quot;8310744975&quot;/&gt;
+  &lt;parameter name=&quot;pname&quot; value=&quot;test_test&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;cityname&quot; value=&quot;bangalore&quot;/&gt;
+  &lt;parameter name=&quot;name&quot; value=&quot;test_onco&quot;/&gt;
+  &lt;parameter name=&quot;otp&quot; value=&quot;4423&quot;/&gt;
+  &lt;parameter name=&quot;env&quot; value=&quot;staging&quot;/&gt;
+  &lt;parameter name=&quot;concerns&quot; value=&quot;my concerns&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;https://backstage.onco.com/&quot;/&gt;
+  &lt;parameter name=&quot;email&quot; value=&quot;manjunath.1001j@gmail.com&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.onco.extinctreport.ExtinctTestNG&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;9&quot; verbose=&quot;0&quot; name=&quot;PatientPortal&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserBookAppointmentRequestCallOnco&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserINeedToBookADiagnosticTest&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserSignupBookonPriorityAppointment&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.ExistinguserFlowBookAppointment&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.ExistinguserFlowBookLabDiagnostic&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms&quot;/&gt;
+      &lt;class name=&quot;com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- PatientPortal --&gt;
+&lt;/suite&gt; &lt;!-- Onco Staging --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Onco Staging</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">PatientPortal (15 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Onco Staging</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Onco Staging</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Onco_Staging');
+function tableData_Onco_Staging() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(15);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(0, 2, 'com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer')
+data.setCell(0, 3, 494783);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(1, 2, 'com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(1, 3, 476820);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(2, 2, 'com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel')
+data.setCell(2, 3, 357669);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(3, 2, 'com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel')
+data.setCell(3, 3, 356560);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(4, 2, 'com.onco.webtests.ExistinguserFlowBookLabDiagnostic')
+data.setCell(4, 3, 299065);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(5, 2, 'com.onco.webtests.ExistinguserFlowBookAppointment')
+data.setCell(5, 3, 261199);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(6, 2, 'com.onco.webtests.NewUserSignupBookonPriorityAppointment')
+data.setCell(6, 3, 229833);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(7, 2, 'com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon')
+data.setCell(7, 3, 203685);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(8, 2, 'com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon')
+data.setCell(8, 3, 200066);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(9, 2, 'com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist')
+data.setCell(9, 3, 161313);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(10, 2, 'com.onco.webtests.NewUserINeedToBookADiagnosticTest')
+data.setCell(10, 3, 160322);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(11, 2, 'com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment')
+data.setCell(11, 3, 117627);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(12, 2, 'com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco')
+data.setCell(12, 3, 107833);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(13, 2, 'com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms')
+data.setCell(13, 3, 105500);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion')
+data.setCell(14, 2, 'com.onco.webtests.NewUserBookAppointmentRequestCallOnco')
+data.setCell(14, 3, 68951);
+window.suiteTableData['Onco_Staging']= { tableData: data, tableDiv: 'times-div-Onco_Staging'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 1 hours</span>
+              <div id="times-div-Onco_Staging">
+              </div> <!-- times-div-Onco_Staging -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Onco Staging</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Onco_Staging" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserBookAppointmentRequestCallOnco</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                <span class="method-start">14984 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">83935 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">84106 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">86431 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</span>
+                <span class="method-start">97432 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">455101 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">455227 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserINeedToBookADiagnosticTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">455952 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                <span class="method-start">467362 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">627684 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">627802 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">628460 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                <span class="method-start">639841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">747675 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">747851 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">748523 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                <span class="method-start">760275 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">960342 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">960523 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">961361 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                <span class="method-start">972722 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">1176408 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">1176596 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">1177325 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test, my concerns)</span>
+                <span class="method-start">1185683 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">1542243 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">1542394 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">1543054 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</span>
+                <span class="method-start">1551834 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">2028655 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">2028800 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserSignupBookonPriorityAppointment</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">2029652 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, test_test)</span>
+                <span class="method-start">2036165 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">2265999 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">2266187 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">2266878 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                <span class="method-start">2269915 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">2387543 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">2387662 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">2390009 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423, my requirments)</span>
+                <span class="method-start">2393165 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">2554479 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.ExistinguserFlowBookAppointment</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">2554644 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(test_onco, manjunath.1001j@gmail.com, 8310744975, 4423)</span>
+                <span class="method-start">2560035 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">2821234 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.ExistinguserFlowBookLabDiagnostic</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">2821412 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)</span>
+                <span class="method-start">2824006 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">3123072 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">3123205 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, 4423)</span>
+                <span class="method-start">3128723 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">3234223 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openBrowser(chrome, https://backstage.onco.com/)</span>
+                <span class="method-start">3234341 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(8310744975, test_onco, 4423)</span>
+                <span class="method-start">3239626 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closedriver</span>
+                <span class="method-start">3734410 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">delete1</span>
+                <span class="method-start">3734526 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

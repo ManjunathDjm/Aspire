@@ -21,7 +21,7 @@ import com.onco.testbase.BaseClass;
 public class NewUserUPIpaymentIWantToTalkToOncologist extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp","requirments" })
-	@Test(description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C3073")
+	@Test(priority=11,description = "New user | I want to talk to an Oncologist without coupon. TC_ID=C3073")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String requirments) throws Exception {
 
@@ -60,19 +60,6 @@ public class NewUserUPIpaymentIWantToTalkToOncologist extends BaseClass {
 			NewUserUPIpaymentIWantToTalkToOncologist.addResultForTestCase("3073", TEST_CASE_PASSED_STATUS, "");
 		} else {
 			NewUserUPIpaymentIWantToTalkToOncologist.addResultForTestCase("3073", TEST_CASE_FAILED_STATUS, "");
-		}
-
-	}
-
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		}
 
 	}

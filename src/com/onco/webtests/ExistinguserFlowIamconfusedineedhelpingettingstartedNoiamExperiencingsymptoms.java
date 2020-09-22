@@ -23,7 +23,7 @@ import com.onco.testbase.BaseClass;
 public class ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms extends BaseClass {
 
 	@Parameters({"phone", "otp" })
-	@Test(description = "ExistinguserFlowBookAppointment. TC_ID=C2607")
+	@Test(priority=13,description = "ExistinguserFlowBookAppointment. TC_ID=C2607")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion( String phone,
 			String otp) throws Exception {
 
@@ -53,18 +53,5 @@ public class ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperienci
 		} else {
 			ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms.addResultForTestCase("2607", TEST_CASE_FAILED_STATUS, "");
 		}
-	}
-
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
 }

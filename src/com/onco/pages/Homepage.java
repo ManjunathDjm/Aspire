@@ -154,8 +154,7 @@ public class Homepage {
 	@CacheLookup
 	WebElement talknow;
 	
-
-	@FindBy(xpath = "//form[@class='loginCard ng-pristine ng-valid ng-touched']//input[@placeholder='Name']")
+	@FindBy(className = "material-input form-control ng-pristine ng-valid ng-touched")
 	@CacheLookup
 	WebElement talknowname;
 	
@@ -301,22 +300,10 @@ public class Homepage {
 		
 	}
 	
-	public void talknow() {
+	public void talknow(String name,String email,String phone) {
 		
 		try {
 			talknow.click();
-		} catch (NoSuchElementException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-	
-	public void talknowform(String name,String email,String phone) {
-		
-		
-		try {
-			
 			talknowname.sendKeys(name);
 			talknowemail.sendKeys(email);
 			talknowphone.sendKeys(phone);
@@ -324,5 +311,6 @@ public class Homepage {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 	}
 }

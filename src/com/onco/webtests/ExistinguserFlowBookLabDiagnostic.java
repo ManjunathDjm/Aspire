@@ -14,7 +14,7 @@ import com.onco.testbase.BaseClass;
 public class ExistinguserFlowBookLabDiagnostic extends BaseClass {
 
 	@Parameters({"phone","otp"})
-	@Test(description = "Existing user Flow | Book Lab Diagnostic. TC_ID=C2605")
+	@Test(priority=12,description = "Existing user Flow | Book Lab Diagnostic. TC_ID=C2605")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String phone,String otp) throws Exception {
 
     SignUp signup = new SignUp(driver);

@@ -23,7 +23,7 @@ import com.onco.testbase.BaseClass;
 public class NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp", "pname", "concerns" })
-	@Test(description = "New User Opinion| I need an online opinion for cancer treatment -India panel. TC_ID=C202")
+	@Test(priority=7,description = "New User Opinion| I need an online opinion for cancer treatment -India panel. TC_ID=C202")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String pname, String concerns) throws Exception {
 

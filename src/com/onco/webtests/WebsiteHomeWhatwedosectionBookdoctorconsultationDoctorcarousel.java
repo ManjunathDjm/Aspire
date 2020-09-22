@@ -19,7 +19,7 @@ import com.onco.misc.*;
 public class WebsiteHomeWhatwedosectionBookdoctorconsultationDoctorcarousel extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "	Website | Home | What we do section | Book doctor consultations -Doctor carouselTC_ID=C2591")
+	@Test(priority=21,description = "	Website | Home | What we do section | Book doctor consultations -Doctor carouselTC_ID=C2591")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 

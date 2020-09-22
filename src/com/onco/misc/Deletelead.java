@@ -15,7 +15,7 @@ public class Deletelead {
 
 				.headers("", " ").contentType("application/json")
 				.body("{\n" + 
-						"    \"phoneNumber\": \"+919036890379\",\n" + 
+						"    \"phoneNumber\": \"+918310744975\",\n" + 
 						"    \"leadDelSecKey\": \"Eno0nduK!tthakaPPa@1\"\n" + 
 						"}")
 				.when().post("/onco-auth/oapi/user-cred/remove-lead");

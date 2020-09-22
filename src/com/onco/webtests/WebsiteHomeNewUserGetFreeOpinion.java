@@ -19,7 +19,7 @@ import com.onco.misc.*;
 public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "Website | Home| New user | Get free opinion TC_ID=C2585")
+	@Test(priority=19,description = "Website | Home| New user | Get free opinion TC_ID=C2585")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 
@@ -43,19 +43,5 @@ public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
 		} else {
 			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2585", TEST_CASE_FAILED_STATUS, "");
 		}
-
-	}
-
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
 }

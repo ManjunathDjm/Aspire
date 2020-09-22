@@ -18,7 +18,7 @@ import com.onco.misc.*;
 
 public class WebsiteHomeWhatWeDoSectionGetthebesttreatmentoptions extends BaseClass {
 
-	@Test(description = "Website | Home | What we do section | Get the best treatment options - Click on download sample reportTC_ID=C2590")
+	@Test(priority=22,description = "Website | Home | What we do section | Get the best treatment options - Click on download sample reportTC_ID=C2590")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(
 			) throws Exception {
 
@@ -34,19 +34,5 @@ public class WebsiteHomeWhatWeDoSectionGetthebesttreatmentoptions extends BaseCl
 		} else {
 			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2590", TEST_CASE_FAILED_STATUS, "");
 		}
-
-	}
-
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
 }

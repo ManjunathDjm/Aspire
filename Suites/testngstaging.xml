@@ -18,7 +18,21 @@
     <parameter name="requirments" value="my requirments"/>
   <test thread-count="9" name="PatientPortal">
     <classes>  
-       <class name="com.onco.webtests.WebsiteHomeConfusedaboutyourtreatmentoptions"/>
+       <class name="com.onco.webtests.NewUserBookAppointmentRequestCallOnco"/>
+       <class name="com.onco.webtests.NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel"/>
+       <class name="com.onco.webtests.NewUserINeedToBookADiagnosticTest"/>
+       <class name="com.onco.webtests.NewUserINeedToBookADiagnosticTestRequestCallOnco"/>
+       <class name="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithCoupon"/>
+       <class name="com.onco.webtests.NewUserIWantToTalkToAnOncologistWithoutCoupon"/>
+       <class name="com.onco.webtests.NewUserOpinionINeedAnOnlineOpinionForCancerTreatmentIndiaPanel"/>
+       <class name="com.onco.webtests.NewUserSignupBookanpayatHospitalAppointmentWithFreeOpinion"/>
+       <class name="com.onco.webtests.NewUserSignupBookonPriorityAppointment"/>
+       <class name="com.onco.webtests.NewUserSignupPaytmBookOnPriorityAppointment"/>
+       <class name="com.onco.webtests.NewUserUPIpaymentIWantToTalkToOncologist"/>
+       <class name="com.onco.webtests.ExistinguserFlowBookAppointment"/>
+       <class name="com.onco.webtests.ExistinguserFlowBookLabDiagnostic"/>
+       <class name="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedNoiamExperiencingsymptoms"/>
+       <class name="com.onco.webtests.ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer"/>   
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

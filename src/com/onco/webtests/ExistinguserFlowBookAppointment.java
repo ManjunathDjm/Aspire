@@ -22,7 +22,7 @@ import com.onco.testbase.BaseClass;
 public class ExistinguserFlowBookAppointment extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "ExistinguserFlowBookAppointment. TC_ID=C2606")
+	@Test(priority=11,description = "ExistinguserFlowBookAppointment. TC_ID=C2606")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 
@@ -75,16 +75,4 @@ public class ExistinguserFlowBookAppointment extends BaseClass {
 		}
 	}
 
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
 }

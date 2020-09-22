@@ -23,7 +23,7 @@ import com.onco.testbase.BaseClass;
 public class NewUserBookAppointmentRequestCallOnco extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp"})
-	@Test(description = "New User | Book Appointment | Request call onco. TC_ID=C2582")
+	@Test(priority=1,description = "New User | Book Appointment | Request call onco. TC_ID=C2582")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 

@@ -18,7 +18,7 @@ import com.onco.testbase.BaseClass;
 public class ExistinguserFlowIamconfusedineedhelpingettingstartedYesiamdiagnoisedwithcancer extends BaseClass {
 
 	@Parameters({"phone","name", "otp" })
-	@Test(description = "Existing user Flow | I am confused i need help in getting started yes i am diagnoised with cancer TC_ID=C2609")
+	@Test(priority=14,description = "Existing user Flow | I am confused i need help in getting started yes i am diagnoised with cancer TC_ID=C2609")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion( String phone,String pname,
 			String otp) throws Exception {
 

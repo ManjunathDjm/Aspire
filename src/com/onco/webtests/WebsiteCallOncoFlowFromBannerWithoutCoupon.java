@@ -19,7 +19,7 @@ import com.onco.misc.*;
 public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp", "requirments" })
-	@Test(description = "Website | Call onco flow from banner without coupon TC_ID=C2583")
+	@Test(priority=16,description = "Website | Call onco flow from banner without coupon TC_ID=C2583")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String requirments) throws Exception {
 
@@ -59,19 +59,5 @@ public class WebsiteCallOncoFlowFromBannerWithoutCoupon extends BaseClass {
 		} else {
 			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2583", TEST_CASE_FAILED_STATUS, "");
 		}
-
-	}
-
-	@AfterClass
-	public void delete1() {
-
-		try {
-			Deletelead delete = new Deletelead();
-			delete.delete();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
 	}
 }

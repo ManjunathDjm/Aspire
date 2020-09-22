@@ -20,7 +20,7 @@ import com.onco.testbase.BaseClass;
 public class NewUserSignupPaytmBookOnPriorityAppointment extends BaseClass {
 
 	@Parameters({ "name", "email", "phone", "otp" })
-	@Test(description = "New User Signup| Paytm|Book on priority appointment. TC_ID=C3074")
+	@Test(priority=10,description = "New User Signup| Paytm|Book on priority appointment. TC_ID=C3074")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp) throws Exception {
 

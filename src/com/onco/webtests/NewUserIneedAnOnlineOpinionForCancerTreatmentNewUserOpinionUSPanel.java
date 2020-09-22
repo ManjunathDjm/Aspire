@@ -24,7 +24,7 @@ import com.onco.misc.*;
 public class NewUserIneedAnOnlineOpinionForCancerTreatmentNewUserOpinionUSPanel extends BaseClass {
 	
 	@Parameters({ "name", "email", "phone", "otp", "pname", "concerns" })
-	@Test(description = "New User | I need an online opinion for cancer treatment | New User Opinion -US panel. TC_ID=C203")
+	@Test(priority=2,description = "New User | I need an online opinion for cancer treatment | New User Opinion -US panel. TC_ID=C203")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,
 			String otp, String pname, String concerns) throws Exception {
 		

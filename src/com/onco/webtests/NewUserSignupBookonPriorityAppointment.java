@@ -24,7 +24,7 @@ import com.onco.testbase.BaseClass;
 public class NewUserSignupBookonPriorityAppointment extends BaseClass {
 
 	@Parameters({ "name", "email", "phone","otp","pname" })
-	@Test(description = "New User Signup- Book on priority appointment . TC_ID=C2579")
+	@Test(priority=9,description = "New User Signup- Book on priority appointment . TC_ID=C2579")
 	public void NewUserSignupbookanpayatHospitalAppointmentWithFreeOpinion(String name, String email, String phone,String otp, String pname) throws Exception {
 
     SignUp signup = new SignUp(driver);
