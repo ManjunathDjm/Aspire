@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.commons.math3.analysis.function.Exp;
@@ -167,6 +168,21 @@ public class Homepage {
 	WebElement talknowphone;
 	
 	
+	//diagnostic test
+	@FindBy(xpath ="/html[1]/body[1]/app-root[1]/div[1]/div[1]/home[1]/div[4]/what-do-we-do[1]/section[1]/div[1]/div[2]/div[4]/div[1]")
+	WebElement bookdisgnostictest;
+	
+	@FindBy(css="button[class='book-test-btn']")
+	WebElement booknow;
+	
+	@FindBy(className="start-now-btn-mobile")
+	WebElement disgnosticpagebooknow;
+	
+	@FindBy(xpath="/html[1]/body[1]/app-root[1]/div[1]/div[1]/diagnostic[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[1]/div[1]/ng-select[1]/div[1]/div[1]/div[2]")
+	WebElement selecttest;
+	
+	
+	
 	
 
 	public Homepage(WebDriver rdriver) {
@@ -209,7 +225,6 @@ public class Homepage {
 		JavascriptExecutor js = (JavascriptExecutor) ldriver;
 		js.executeScript("window.scrollBy(0,400)", "");
 		Thread.sleep(20000);
-		getnow.click();
 
 	}
 
@@ -313,4 +328,24 @@ public class Homepage {
 		}
 
 	}
+public void bookdiagnostictest() throws InterruptedException {
+		
+		try {
+			bookdisgnostictest.click();
+			booknow.click();
+			Thread.sleep(20000);
+			ArrayList<String> tabs2 = new ArrayList<String> (ldriver.getWindowHandles());
+		    ldriver.switchTo().window(tabs2.get(0));
+		    //ldriver.close();
+		    ldriver.switchTo().window(tabs2.get(1));
+			disgnosticpagebooknow.click();
+			selecttest.click();
+			Select test = new Select(selecttest);
+			test.deselectByValue("PET CT (All Types)");
+			
+		} catch (NoSuchElementException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+}
 }

@@ -39,7 +39,7 @@ public class Login {
 	@CacheLookup
 	WebElement Otp;
 
-	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/banner-strip-component[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[3]/otpinput[1]/input[1]")
+	@FindBy(xpath = "/html[1]/body[1]/app-root[1]/div[1]/banner-strip-component[1]/forms-main-modal[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/app-start-form[1]/div[1]/form[1]/div[2]/div[1]/otpinput[1]/input[1]")
 	@CacheLookup
 	WebElement formotp;
 

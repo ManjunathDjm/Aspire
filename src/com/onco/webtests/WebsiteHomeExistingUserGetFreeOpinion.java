@@ -25,7 +25,6 @@ public class WebsiteHomeExistingUserGetFreeOpinion extends BaseClass {
 
 		Thread.sleep(20000);
 		Homepage home = new Homepage(driver);
-		home.getfreeopinion();
 		home.cancertype();
 		home.cancerstage();
 		home.generalcondition();
@@ -43,5 +42,17 @@ public class WebsiteHomeExistingUserGetFreeOpinion extends BaseClass {
 		} else {
 			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2586", TEST_CASE_FAILED_STATUS, "");
 		}
+	}
+	@AfterClass
+	public void delete1() {
+
+		try {
+			Deletelead delete = new Deletelead();
+			delete.delete();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }

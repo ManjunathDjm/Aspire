@@ -37,5 +37,17 @@ public class WebsiteHomeWhatwedosectionBookdoctorconsultationDoctorcarousel exte
 		}
 
 	}
+	@AfterClass
+	public void delete1() {
+
+		try {
+			Deletelead delete = new Deletelead();
+			delete.delete();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
+}
 

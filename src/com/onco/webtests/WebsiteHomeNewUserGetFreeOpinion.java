@@ -44,4 +44,16 @@ public class WebsiteHomeNewUserGetFreeOpinion extends BaseClass {
 			WebsiteCallOncoFlowFromBannerWithoutCoupon.addResultForTestCase("2585", TEST_CASE_FAILED_STATUS, "");
 		}
 	}
+	@AfterClass
+	public void delete1() {
+
+		try {
+			Deletelead delete = new Deletelead();
+			delete.delete();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 }

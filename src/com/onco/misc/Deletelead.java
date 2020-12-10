@@ -9,7 +9,7 @@ public class Deletelead {
 	
 	public void delete() throws IOException {
 
-		RestAssured.baseURI = "https://backstage.onco.com";
+		RestAssured.baseURI = "https://omsobelixstg.onco.com";
 
 		Response res = RestAssured.given().contentType("application/json")
 

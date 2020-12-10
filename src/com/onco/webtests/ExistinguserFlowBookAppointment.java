@@ -1,14 +1,9 @@
 package com.onco.webtests;
 
-import java.io.IOException;
 
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.onco.misc.Deletelead;
 import com.onco.pages.Appointment;
 import com.onco.pages.Login;
 import com.onco.pages.PaymentsRazorPay;
