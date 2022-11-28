@@ -8,7 +8,7 @@
     <parameter name="url"  value="https://uat-iacst.aakash.ac.in/iacst-single-step"/>
   <test thread-count="9" name="Test Player">
     <classes>  
-        <class name="com.aakash.smoketests.Generatejwt"/>
+        <class name="com.aakash.smoketests.jwt"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

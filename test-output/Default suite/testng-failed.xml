@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.aakash.webtests.ResultVerification">
+      <class name="com.aakash.smoketests.JWT">
         <methods>
-          <include name="openBrowser"/>
-          <include name="loginandsubmittest"/>
-          <include name="teardown"/>
+          <include name="testJWTWithRsa"/>
         </methods>
-      </class> <!-- com.aakash.webtests.ResultVerification -->
+      </class> <!-- com.aakash.smoketests.JWT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
