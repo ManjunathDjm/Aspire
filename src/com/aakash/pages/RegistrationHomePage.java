@@ -17,7 +17,7 @@ import com.aakash.utils.PropertiesData;
  *
  */
 
-public class RegistrationHome {
+public class RegistrationHomePage {
 
 	WebDriver ldriver;
 
@@ -78,7 +78,7 @@ public class RegistrationHome {
 	@FindBy(xpath = "/html/body/div[2]/div/div/section[1]/div[2]/div/div/div/article/section[2]/form/div[2]/div/div[12]/input[2]")
 	WebElement completeregistration;
 
-	public RegistrationHome(WebDriver rdriver) {
+	public RegistrationHomePage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

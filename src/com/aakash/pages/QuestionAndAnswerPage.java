@@ -16,11 +16,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class QuestionAndAnswer {
+public class QuestionAndAnswerPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(QuestionAndAnswer.class);
+	//private static final Logger logger = Logger.getLogger(QuestionAndAnswer.class);
 
 	@FindBy(className = "option-choice-id")
 	WebElement AnsweroptionA;
@@ -58,7 +58,7 @@ public class QuestionAndAnswer {
 	@FindBy(className = "que-review")
 	WebElement review;
 
-	public QuestionAndAnswer(WebDriver rdriver) {
+	public QuestionAndAnswerPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

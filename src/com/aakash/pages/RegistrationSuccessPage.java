@@ -15,11 +15,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class RegistrationSuccess {
+public class RegistrationSuccessPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(RegistrationSuccess.class);
+	private static final Logger logger = Logger.getLogger(RegistrationSuccessPage.class);
 
 	@FindBy(tagName = "strong")
 	WebElement RegisterNumberText;
@@ -27,7 +27,7 @@ public class RegistrationSuccess {
 	@FindBy(xpath = "/html/body/div[2]/div/div/section[1]/div[2]/div/div/div/article/section[2]/form/div[2]/div/div[2]/a")
 	WebElement Begintest;
 
-	public RegistrationSuccess(WebDriver rdriver) {
+	public RegistrationSuccessPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

@@ -18,11 +18,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class RevampRecaluclate {
+public class RevampRecaluclatePage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(RevampRecaluclate.class);
+	private static final Logger logger = Logger.getLogger(RevampRecaluclatePage.class);
 
 	@FindBy(xpath = "(//div[@class='button btn_class2'])[1]")
 	WebElement StartTest;
@@ -31,7 +31,7 @@ public class RevampRecaluclate {
 	WebElement Resumetest;
 	
 
-	public RevampRecaluclate(WebDriver rdriver) {
+	public RevampRecaluclatePage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

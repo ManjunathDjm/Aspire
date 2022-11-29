@@ -15,16 +15,16 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class LeaveTestPopup {
+public class LeaveTestPopupPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(LeaveTestPopup.class);
+	private static final Logger logger = Logger.getLogger(LeaveTestPopupPage.class);
 
 	@FindBy(xpath = "//*[contains(text(),'Resume')]")
 	WebElement Resumebutton;
 
-	public LeaveTestPopup(WebDriver rdriver) {
+	public LeaveTestPopupPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

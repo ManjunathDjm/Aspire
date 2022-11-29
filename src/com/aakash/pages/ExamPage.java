@@ -16,11 +16,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class Result {
+public class ExamPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(Result.class);
+	private static final Logger logger = Logger.getLogger(ExamPage.class);
 
 	@FindBy(xpath = "//a[normalize-space()='Result']")
 	WebElement Resulttab;
@@ -34,7 +34,7 @@ public class Result {
 	@FindBy(xpath = "//a[normalize-space()='Edit']")
 	WebElement Editbutton;
 
-	public Result(WebDriver rdriver) {
+	public ExamPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

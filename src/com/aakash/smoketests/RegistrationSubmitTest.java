@@ -6,10 +6,10 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aakash.extinctreport.CustomListner;
-import com.aakash.pages.QuestionAndAnswer;
-import com.aakash.pages.RegistrationHome;
-import com.aakash.pages.RegistrationSuccess;
-import com.aakash.pages.RevampRecaluclate;
+import com.aakash.pages.QuestionAndAnswerPage;
+import com.aakash.pages.RegistrationHomePage;
+import com.aakash.pages.RegistrationSuccessPage;
+import com.aakash.pages.RevampRecaluclatePage;
 import com.aakash.testbase.BaseClass;
 
 @Listeners(CustomListner.class)
@@ -25,7 +25,7 @@ public class RegistrationSubmitTest extends BaseClass {
 	public void RegisterAndSubmitTest()
 			throws Exception {
 
-        RegistrationHome registration = new RegistrationHome(driver);
+        RegistrationHomePage registration = new RegistrationHomePage(driver);
         registration.Mobile("mobilenumber");
         registration.Otp("otp");
         registration.verifyOtp();
@@ -41,14 +41,14 @@ public class RegistrationSubmitTest extends BaseClass {
         registration.citystate();
         registration.completeregistration();
    
-	    RegistrationSuccess success = new RegistrationSuccess(driver);
+	    RegistrationSuccessPage success = new RegistrationSuccessPage(driver);
 	    success.begintest();
          
-        RevampRecaluclate revamp = new RevampRecaluclate(driver);
+        RevampRecaluclatePage revamp = new RevampRecaluclatePage(driver);
         revamp.revamp();
         Assert.assertEquals(true, true);
         
-        QuestionAndAnswer qa = new QuestionAndAnswer(driver);
+        QuestionAndAnswerPage qa = new QuestionAndAnswerPage(driver);
         qa.selectAnswer();
         qa.deselectAnswer();
         qa.nextquestion();

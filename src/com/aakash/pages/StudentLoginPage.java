@@ -18,11 +18,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class StudentLogin {
+public class StudentLoginPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(StudentLogin.class);
+	private static final Logger logger = Logger.getLogger(StudentLoginPage.class);
 
 	@FindBy(id = "edit-user-rollnumber")
 	WebElement Rollnumber;
@@ -45,7 +45,7 @@ public class StudentLogin {
 	@FindBy(partialLinkText = "Forgot password")
 	WebElement forgotpassword;
 
-	public StudentLogin(WebDriver rdriver) {
+	public StudentLoginPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

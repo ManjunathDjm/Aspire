@@ -15,11 +15,11 @@ import org.apache.log4j.Logger;
  *
  */
 
-public class Home {
+public class HomePage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(Home.class);
+	private static final Logger logger = Logger.getLogger(HomePage.class);
 
 	@FindBy(linkText = "Login now")
 	WebElement Loginnow;
@@ -30,7 +30,7 @@ public class Home {
 	@FindBy(partialLinkText = "My account")
 	WebElement MyAccount;
 
-	public Home(WebDriver rdriver) {
+	public HomePage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 

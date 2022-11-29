@@ -5,12 +5,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.aakash.pages.Result;
-import com.aakash.pages.RevampRecaluclate;
-import com.aakash.pages.StudentLogin;
+import com.aakash.pages.ExamPage;
+import com.aakash.pages.RevampRecaluclatePage;
+import com.aakash.pages.StudentLoginPage;
 import com.aakash.extinctreport.CustomListner;
-import com.aakash.pages.Home;
-import com.aakash.pages.QuestionAndAnswer;
+import com.aakash.pages.HomePage;
+import com.aakash.pages.QuestionAndAnswerPage;
 import com.aakash.testbase.BaseClass;
 
 @Listeners(CustomListner.class)
@@ -24,25 +24,25 @@ public class StartTestandCountQuestionsaccordingToState extends BaseClass {
 	@Test(priority = 4)
 	public void starttestandcountquestionsaccordingtostate() throws Exception {
 
-		Home home = new Home(driver);
+		HomePage home = new HomePage(driver);
 		home.loginlink();
 		Assert.assertEquals(true, true);
 
-		StudentLogin login = new StudentLogin(driver);
+		StudentLoginPage login = new StudentLoginPage(driver);
 		login.rollnumber("rollnumber");
 		login.Dateofbirth();
 		Assert.assertEquals(true, true);
 
-		Result result = new Result(driver);
+		ExamPage result = new ExamPage(driver);
 		result.result();
 		result.selectexam();
 		Assert.assertEquals(true, true);
 
-		RevampRecaluclate revamp = new RevampRecaluclate(driver);
+		RevampRecaluclatePage revamp = new RevampRecaluclatePage(driver);
 		revamp.revamp();
 		Assert.assertEquals(true, true);
 
-		QuestionAndAnswer questionanswer = new QuestionAndAnswer(driver);
+		QuestionAndAnswerPage questionanswer = new QuestionAndAnswerPage(driver);
 		questionanswer.selectAnswer();
 		questionanswer.nextquestion();
 		questionanswer.selectAnswer();
