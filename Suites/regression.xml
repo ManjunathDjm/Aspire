@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Aakash TestPlayer Regression">
-<listeners>
-<listener class-name="com.aakash.extinctreport.ExtinctTestNG"/>
-</listeners>
+<suite name="Amazon Test">
     <parameter name="browser" value="chrome"/>
-    <parameter name="url"  value="https://uat-iacst.aakash.ac.in/iacst-single-step"/>
-  <test thread-count="9" name="Test Player">
+    <parameter name="url"  value="https://www.amazon.com"/>
+  <test thread-count="9" name="Test">
     <classes>  
-        <class name="com.aakash.regressiontests.VerifyEnableDisableOfbeginTestButton"/>
+        <class name="com.amazon.tests.TestCaseOne"/>
+        <class name="com.amazon.tests.TestCaseTwo"/>
+        <class name="com.amazon.tests.TestCaseThree"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

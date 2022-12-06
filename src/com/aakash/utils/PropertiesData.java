@@ -11,7 +11,7 @@ public class PropertiesData {
 	public static void loadData() throws Exception {
 
 		properties = new Properties();
-		File f = new File("D:\\Toppr Automation Projects\\AakashTestPlayer\\src\\com\\aakash\\config\\config.properties");
+		File f = new File("E:\\testplayerautomation\\src\\com\\amazon\\config\\config.properties");
 		FileReader obj = new FileReader(f);
 		properties.load(obj);
 		
