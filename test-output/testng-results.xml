@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Amazon Test" duration-ms="120413" started-at="2022-12-06T09:32:08Z" finished-at="2022-12-06T09:34:08Z">
+  <suite name="Amazon Test" duration-ms="127249" started-at="2022-12-06T10:04:38Z" finished-at="2022-12-06T10:06:46Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="120413" started-at="2022-12-06T09:32:08Z" finished-at="2022-12-06T09:34:08Z">
+    <test name="Test" duration-ms="127249" started-at="2022-12-06T10:04:38Z" finished-at="2022-12-06T10:06:46Z">
       <class name="com.amazon.tests.TestCaseTwo">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseTwo@f75083]" name="openBrowser" is-config="true" duration-ms="2614" started-at="2022-12-06T09:32:38Z" finished-at="2022-12-06T09:32:41Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseTwo@f75083]" name="openBrowser" is-config="true" duration-ms="2039" started-at="2022-12-06T10:05:09Z" finished-at="2022-12-06T10:05:11Z">
           <params>
             <param index="0">
               <value>
@@ -23,17 +23,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:2, instance:com.amazon.tests.TestCaseTwo@f75083]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="27244" started-at="2022-12-06T09:32:41Z" finished-at="2022-12-06T09:33:08Z">
+        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:2, instance:com.amazon.tests.TestCaseTwo@f75083]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="35660" started-at="2022-12-06T10:05:11Z" finished-at="2022-12-06T10:05:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AttempttheTestAndPayAttentionToQuestionState -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseTwo@f75083]" name="teardown" is-config="true" duration-ms="762" started-at="2022-12-06T09:33:08Z" finished-at="2022-12-06T09:33:09Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseTwo@f75083]" name="teardown" is-config="true" duration-ms="1530" started-at="2022-12-06T10:05:46Z" finished-at="2022-12-06T10:05:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.amazon.tests.TestCaseTwo -->
       <class name="com.amazon.tests.TestCaseThree">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseThree@698dc7]" name="openBrowser" is-config="true" duration-ms="1874" started-at="2022-12-06T09:33:09Z" finished-at="2022-12-06T09:33:11Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseThree@698dc7]" name="openBrowser" is-config="true" duration-ms="2128" started-at="2022-12-06T10:05:48Z" finished-at="2022-12-06T10:05:50Z">
           <params>
             <param index="0">
               <value>
@@ -49,17 +49,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:3, instance:com.amazon.tests.TestCaseThree@698dc7]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="56322" started-at="2022-12-06T09:33:11Z" finished-at="2022-12-06T09:34:07Z">
+        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:3, instance:com.amazon.tests.TestCaseThree@698dc7]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="54794" started-at="2022-12-06T10:05:50Z" finished-at="2022-12-06T10:06:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AttempttheTestAndPayAttentionToQuestionState -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseThree@698dc7]" name="teardown" is-config="true" duration-ms="1217" started-at="2022-12-06T09:34:07Z" finished-at="2022-12-06T09:34:08Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseThree@698dc7]" name="teardown" is-config="true" duration-ms="847" started-at="2022-12-06T10:06:45Z" finished-at="2022-12-06T10:06:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.amazon.tests.TestCaseThree -->
       <class name="com.amazon.tests.TestCaseOne">
-        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="openBrowser" is-config="true" duration-ms="4062" started-at="2022-12-06T09:32:08Z" finished-at="2022-12-06T09:32:12Z">
+        <test-method status="PASS" signature="openBrowser(java.lang.String, java.lang.String)[pri:0, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="openBrowser" is-config="true" duration-ms="3446" started-at="2022-12-06T10:04:38Z" finished-at="2022-12-06T10:04:42Z">
           <params>
             <param index="0">
               <value>
@@ -75,11 +75,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:1, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="25518" started-at="2022-12-06T09:32:12Z" finished-at="2022-12-06T09:32:37Z">
+        <test-method status="PASS" signature="AttempttheTestAndPayAttentionToQuestionState()[pri:1, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="AttempttheTestAndPayAttentionToQuestionState" duration-ms="25054" started-at="2022-12-06T10:04:42Z" finished-at="2022-12-06T10:05:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AttempttheTestAndPayAttentionToQuestionState -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="teardown" is-config="true" duration-ms="738" started-at="2022-12-06T09:32:37Z" finished-at="2022-12-06T09:32:38Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.amazon.tests.TestCaseOne@166ebe0]" name="teardown" is-config="true" duration-ms="1702" started-at="2022-12-06T10:05:07Z" finished-at="2022-12-06T10:05:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
