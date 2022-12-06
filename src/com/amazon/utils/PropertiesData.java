@@ -1,4 +1,4 @@
-package com.aakash.utils;
+package com.amazon.utils;
 
 import java.io.File;
 import java.io.FileReader;
