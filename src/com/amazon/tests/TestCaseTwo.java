@@ -3,7 +3,7 @@ package com.amazon.tests;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import com.amazon.pages.ExamDetailsPage;
+import com.amazon.pages.AmazonPage;
 import com.amazon.testbase.BaseClass;
 
 public class TestCaseTwo extends BaseClass {
@@ -14,9 +14,9 @@ public class TestCaseTwo extends BaseClass {
 	}
 
 	@Test(priority = 2)
-	public void AttempttheTestAndPayAttentionToQuestionState() throws Exception {
+	public void Testcasetwo() throws Exception {
 
-		ExamDetailsPage home = new ExamDetailsPage(driver);
+		AmazonPage home = new AmazonPage(driver);
 		Thread.sleep(10000);
 		home.search("electronics");
 		home.inputpricetwo("minimum", "maximum");

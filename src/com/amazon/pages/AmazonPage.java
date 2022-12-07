@@ -10,11 +10,11 @@ import com.amazon.utils.PropertiesData;
 import org.apache.log4j.Logger;
 
 
-public class ExamDetailsPage {
+public class AmazonPage {
 
 	WebDriver ldriver;
 
-	private static final Logger logger = Logger.getLogger(ExamDetailsPage.class);
+	private static final Logger logger = Logger.getLogger(AmazonPage.class);
 
 
 	@FindBy(xpath = "//input[@id='twotabsearchtextbox']")
@@ -50,7 +50,7 @@ public class ExamDetailsPage {
 	@FindBy(xpath = "//input[@name='proceedToRetailCheckout']")
 	WebElement proceed;
 
-	public ExamDetailsPage(WebDriver rdriver) {
+	public AmazonPage(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
 
